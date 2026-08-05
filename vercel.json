@@ -3,8 +3,11 @@
   "framework": null,
   "buildCommand": null,
   "outputDirectory": ".",
+  "rewrites": [
+    { "source": "/", "destination": "/pages/homepage.html" }
+  ],
   "routes": [
     { "handle": "filesystem" },
-    { "src": "/.*", "dest": "/index.html" }
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }

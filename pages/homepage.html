@@ -3,10 +3,43 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Artum8 Labs - Where Art Meets Innovation</title>
-    <meta name="description" content="Premium digital innovation studio specializing in advanced web applications, immersive 3D environments, and mission-critical fintech/healthtech solutions." />
-    <link rel="preload" href="../css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="../css/main.css"></noscript>
+    <meta name="theme-color" content="#0a0a0f" />
+    <title>Artum8 Labs - Digital Innovation Studio | Web Applications, 3D Experiences, Fintech & Healthtech Solutions</title>
+    <meta name="description" content="Premium digital innovation studio specializing in advanced web applications, immersive 3D environments, and mission-critical fintech/healthtech solutions. Transforming visions into digital reality." />
+    <link rel="canonical" href="https://www.artum8labs.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Artum8 Labs - Digital Innovation Studio" />
+    <meta property="og:description" content="Premium digital innovation studio specializing in advanced web applications, immersive 3D environments, and mission-critical fintech/healthtech solutions." />
+    <meta property="og:image" content="https://www.artum8labs.com/images/logo.png" />
+    <meta property="og:url" content="https://www.artum8labs.com/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Artum8 Labs - Digital Innovation Studio" />
+    <meta name="twitter:description" content="Premium digital innovation studio specializing in advanced web applications, immersive 3D environments, and mission-critical fintech/healthtech solutions." />
+    <meta name="twitter:image" content="https://www.artum8labs.com/images/logo.png" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Artum8 Labs",
+      "url": "https://www.artum8labs.com/",
+      "logo": "https://www.artum8labs.com/images/logo.png",
+      "sameAs": [
+        "https://x.com/artum8labs",
+        "https://linkedin.com/company/artum8labs",
+        "https://github.com/mazhar23/artum8labs"
+      ],
+      "email": "hello@artum8labs.com"
+    }
+    </script>
+
+    <link rel="preload" href="/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/main.css"></noscript>
 
     <style>
         /* Magical Bento Box Effects */
@@ -422,6 +455,7 @@
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" /></noscript>
 </head>
 <body class="bg-primary text-white overflow-x-hidden">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- Navigation Header -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-primary/90 backdrop-blur-md border-b border-secondary/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -429,8 +463,8 @@
                 <!-- Logo -->
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
-                        <a href="homepage.html" class="flex items-center">
-                            <img src="../images/logo.png" alt="Artum8 Labs Logo" class="h-12 w-auto" width="192" height="48" />
+                        <a href="/" class="flex items-center">
+                            <img src="/images/logo.png" alt="Artum8 Labs Logo" class="h-12 w-auto" width="192" height="48" />
                         </a>
                     </div>
                 </div>
@@ -438,15 +472,15 @@
                 <!-- Desktop Navigation -->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-1">
-                        <a href="homepage.html" class="text-accent font-semibold px-3 py-2 rounded-md text-sm hover:bg-accent/10 transition-colors duration-300">Home</a>
+                        <a href="/" class="text-accent font-semibold px-3 py-2 rounded-md text-sm hover:bg-accent/10 transition-colors duration-300">Home</a>
 
-                        <a href="services_deep_dive.html" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Services</a>
+                        <a href="/pages/services_deep_dive.html" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Services</a>
 
-                        <a href="portfolio_showcase.html" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Portfolio</a>
+                        <a href="/pages/portfolio_showcase.html" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Portfolio</a>
 
-                        <a href="about_team_universe.html" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Team</a>
-                        <a href="client_success_hub.html" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Success Stories</a>
-                        <a href="innovation_lab.html" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Innovation Lab</a>
+                        <a href="/pages/about_team_universe.html" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Team</a>
+                        <a href="/pages/client_success_hub.html" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Success Stories</a>
+                        <a href="/pages/innovation_lab.html" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Innovation Lab</a>
                     </div>
                 </div>
 
@@ -457,7 +491,7 @@
 
                 <!-- Mobile menu button -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-300 hover:text-accent p-2">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-accent p-2" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                         </svg>
@@ -469,28 +503,28 @@
         <!-- Mobile Navigation Menu -->
         <div id="mobile-menu" class="md:hidden hidden bg-primary/95 backdrop-blur-md">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="homepage.html" class="text-accent block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="/" class="text-accent block px-3 py-2 rounded-md text-base font-medium">Home</a>
 
                 <!-- Mobile Services Section -->
                 <div class="py-2">
                     <div class="text-gray-400 text-xs font-semibold uppercase tracking-wider px-3 py-1">Services</div>
-                    <a href="services_deep_dive.html" class="text-gray-300 hover:text-accent block px-6 py-2 rounded-md text-sm">Web Applications</a>
-                    <a href="services_deep_dive.html" class="text-gray-300 hover:text-accent block px-6 py-2 rounded-md text-sm">3D Websites</a>
-                    <a href="services_deep_dive.html" class="text-gray-300 hover:text-accent block px-6 py-2 rounded-md text-sm">Fintech Solutions</a>
-                    <a href="services_deep_dive.html" class="text-gray-300 hover:text-accent block px-6 py-2 rounded-md text-sm">Healthtech Platforms</a>
+                    <a href="/pages/services_deep_dive.html" class="text-gray-300 hover:text-accent block px-6 py-2 rounded-md text-sm">Web Applications</a>
+                    <a href="/pages/services_deep_dive.html" class="text-gray-300 hover:text-accent block px-6 py-2 rounded-md text-sm">3D Websites</a>
+                    <a href="/pages/services_deep_dive.html" class="text-gray-300 hover:text-accent block px-6 py-2 rounded-md text-sm">Fintech Solutions</a>
+                    <a href="/pages/services_deep_dive.html" class="text-gray-300 hover:text-accent block px-6 py-2 rounded-md text-sm">Healthtech Platforms</a>
                 </div>
 
                 <!-- Mobile Portfolio Section -->
                 <div class="py-2">
                     <div class="text-gray-400 text-xs font-semibold uppercase tracking-wider px-3 py-1">Portfolio</div>
-                    <a href="portfolio_showcase.html" class="text-gray-300 hover:text-accent block px-6 py-2 rounded-md text-sm">FinanceFlow Pro</a>
-                    <a href="portfolio_showcase.html" class="text-gray-300 hover:text-accent block px-6 py-2 rounded-md text-sm">MedConnect Platform</a>
-                    <a href="portfolio_showcase.html" class="text-gray-300 hover:text-accent block px-6 py-2 rounded-md text-sm">Immersive Brand Experience</a>
+                    <a href="/pages/portfolio_showcase.html" class="text-gray-300 hover:text-accent block px-6 py-2 rounded-md text-sm">FinanceFlow Pro</a>
+                    <a href="/pages/portfolio_showcase.html" class="text-gray-300 hover:text-accent block px-6 py-2 rounded-md text-sm">MedConnect Platform</a>
+                    <a href="/pages/portfolio_showcase.html" class="text-gray-300 hover:text-accent block px-6 py-2 rounded-md text-sm">Immersive Brand Experience</a>
                 </div>
 
-                <a href="about_team_universe.html" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Team</a>
-                <a href="client_success_hub.html" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Success Stories</a>
-                <a href="innovation_lab.html" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Innovation Lab</a>
+                <a href="/pages/about_team_universe.html" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Team</a>
+                <a href="/pages/client_success_hub.html" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Success Stories</a>
+                <a href="/pages/innovation_lab.html" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Innovation Lab</a>
                 <a href="#contact" class="btn-primary block mx-3 mt-4 text-center">Start Your Transformation</a>
             </div>
         </div>
@@ -512,11 +546,12 @@
             loop
             playsinline
             preload="metadata"
+            poster="images/hero-poster.jpg"
             disablePictureInPicture
             controlsList="nodownload nofullscreen noremoteplayback"
             style="will-change: transform;"
         >
-            <source src="../videos/banner.mp4" type="video/mp4">
+            <source src="/videos/banner.mp4" type="video/mp4" media="(min-width: 768px)">
         </video>
 
         <!-- Video Overlay System -->
@@ -540,9 +575,10 @@
         </div>
 
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <main id="main-content" class="grid lg:grid-cols-2 gap-12 items-center">
                 <!-- Hero Content -->
                 <div class="space-y-8" style="margin-top: 3in;">
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Artum8 Labs — Digital Innovation Studio</h1>
                     <p id="typewriter-text" class="text-xl md:text-2xl font-light animated-gradient-text">
                         
                     </p>
@@ -555,7 +591,7 @@
                         <a href="#contact" class="btn-primary text-lg px-8 py-4 transform hover:scale-105 transition-all duration-300">
                             Start Your Transformation
                         </a>
-                        <a href="portfolio_showcase.html" class="btn-secondary text-lg px-8 py-4 transform hover:scale-105 transition-all duration-300">
+                        <a href="/pages/portfolio_showcase.html" class="btn-secondary text-lg px-8 py-4 transform hover:scale-105 transition-all duration-300">
                             Explore Our Universe
                         </a>
                     </div>
@@ -617,62 +653,62 @@
                     <!-- First set of logos -->
                     <div class="flex-shrink-0 flex items-center gap-8 px-4">
                         <div class="group bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl p-4 hover:border-blue-300 transition-all duration-300 hover:bg-white flex items-center justify-center min-w-[120px] shadow-sm">
-                            <img src="../images/company-logo-1.svg" alt="Company Logo 1" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-1.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>1</span></div>'">
+                            <img src="/images/company-logo-1.svg" alt="Company Logo 1" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-1.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>1</span></div>'">
                         </div>
 
                         <div class="group bg-white backdrop-blur-sm border border-gray-200 rounded-xl p-4 hover:border-accent hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center min-w-[120px] shadow-sm hover:-translate-y-1">
-                            <img src="../images/company-logo-2.svg" alt="Company Logo 2" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-2.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>2</span></div>'">
+                            <img src="/images/company-logo-2.svg" alt="Company Logo 2" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-2.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>2</span></div>'">
                         </div>
 
                         <div class="group bg-white backdrop-blur-sm border border-gray-200 rounded-xl p-4 hover:border-accent hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center min-w-[120px] shadow-sm hover:-translate-y-1">
-                            <img src="../images/company-logo-3.svg" alt="Company Logo 3" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-3.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>3</span></div>'">
+                            <img src="/images/company-logo-3.svg" alt="Company Logo 3" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-3.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>3</span></div>'">
                         </div>
 
                         <div class="group bg-white backdrop-blur-sm border border-gray-200 rounded-xl p-4 hover:border-accent hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center min-w-[120px] shadow-sm hover:-translate-y-1">
-                            <img src="../images/company-logo-4.svg" alt="Company Logo 4" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-4.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>4</span></div>'">
+                            <img src="/images/company-logo-4.svg" alt="Company Logo 4" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-4.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>4</span></div>'">
                         </div>
 
                         <div class="group bg-white backdrop-blur-sm border border-gray-200 rounded-xl p-4 hover:border-accent hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center min-w-[120px] shadow-sm hover:-translate-y-1">
-                            <img src="../images/company-logo-5.svg" alt="Company Logo 5" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-5.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>5</span></div>'">
+                            <img src="/images/company-logo-5.svg" alt="Company Logo 5" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-5.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>5</span></div>'">
                         </div>
 
                         <div class="group bg-white backdrop-blur-sm border border-gray-200 rounded-xl p-4 hover:border-accent hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center min-w-[120px] shadow-sm hover:-translate-y-1">
-                            <img src="../images/company-logo-6.svg" alt="Company Logo 6" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-6.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>6</span></div>'">
+                            <img src="/images/company-logo-6.svg" alt="Company Logo 6" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-6.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>6</span></div>'">
                         </div>
 
                         <div class="group bg-white backdrop-blur-sm border border-gray-200 rounded-xl p-4 hover:border-accent hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center min-w-[120px] shadow-sm hover:-translate-y-1">
-                            <img src="../images/company-logo-7.svg" alt="Company Logo 7" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-7.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>7</span></div>'">
+                            <img src="/images/company-logo-7.svg" alt="Company Logo 7" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-7.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>7</span></div>'">
                         </div>
                     </div>
 
                     <!-- Duplicate set for seamless loop -->
                     <div class="flex-shrink-0 flex items-center gap-8 px-4">
                         <div class="group bg-white backdrop-blur-sm border border-gray-200 rounded-xl p-4 hover:border-accent hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center min-w-[120px] shadow-sm hover:-translate-y-1">
-                            <img src="../images/company-logo-1.svg" alt="Company Logo 1" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-1.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>1</span></div>'">
+                            <img src="/images/company-logo-1.svg" alt="Company Logo 1" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-1.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>1</span></div>'">
                         </div>
 
                         <div class="group bg-white backdrop-blur-sm border border-gray-200 rounded-xl p-4 hover:border-accent hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center min-w-[120px] shadow-sm hover:-translate-y-1">
-                            <img src="../images/company-logo-2.svg" alt="Company Logo 2" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-2.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>2</span></div>'">
+                            <img src="/images/company-logo-2.svg" alt="Company Logo 2" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-2.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>2</span></div>'">
                         </div>
 
                         <div class="group bg-white backdrop-blur-sm border border-gray-200 rounded-xl p-4 hover:border-accent hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center min-w-[120px] shadow-sm hover:-translate-y-1">
-                            <img src="../images/company-logo-3.svg" alt="Company Logo 3" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-3.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>3</span></div>'">
+                            <img src="/images/company-logo-3.svg" alt="Company Logo 3" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-3.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>3</span></div>'">
                         </div>
 
                         <div class="group bg-white backdrop-blur-sm border border-gray-200 rounded-xl p-4 hover:border-accent hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center min-w-[120px] shadow-sm hover:-translate-y-1">
-                            <img src="../images/company-logo-4.svg" alt="Company Logo 4" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-4.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>4</span></div>'">
+                            <img src="/images/company-logo-4.svg" alt="Company Logo 4" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-4.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>4</span></div>'">
                         </div>
 
                         <div class="group bg-white backdrop-blur-sm border border-gray-200 rounded-xl p-4 hover:border-accent hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center min-w-[120px] shadow-sm hover:-translate-y-1">
-                            <img src="../images/company-logo-5.svg" alt="Company Logo 5" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-5.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>5</span></div>'">
+                            <img src="/images/company-logo-5.svg" alt="Company Logo 5" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-5.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>5</span></div>'">
                         </div>
 
                         <div class="group bg-white backdrop-blur-sm border border-gray-200 rounded-xl p-4 hover:border-accent hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center min-w-[120px] shadow-sm hover:-translate-y-1">
-                            <img src="../images/company-logo-6.svg" alt="Company Logo 6" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-6.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>6</span></div>'">
+                            <img src="/images/company-logo-6.svg" alt="Company Logo 6" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-6.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>6</span></div>'">
                         </div>
 
                         <div class="group bg-white backdrop-blur-sm border border-gray-200 rounded-xl p-4 hover:border-accent hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center min-w-[120px] shadow-sm hover:-translate-y-1">
-                            <img src="../images/company-logo-7.svg" alt="Company Logo 7" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-7.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>7</span></div>'">
+                            <img src="/images/company-logo-7.svg" alt="Company Logo 7" class="w-12 h-12 object-contain" loading="lazy" onerror="console.log('Failed to load company-logo-7.svg'); this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-12 h-12 bg-gradient-to-br from-accent/20 to-purple-400/20 rounded-lg flex items-center justify-center\'><span class=\'text-xs font-semibold text-accent\'>7</span></div>'">
                         </div>
                     </div>
                 </div>
@@ -893,7 +929,7 @@
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div class="text-center">
                                 <div class="w-32 h-32 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center mb-6 mx-auto overflow-hidden">
-                                    <img src="../images/AI-Powered Automation.png" alt="AI-Powered Automation Logo" class="w-20 h-20 object-contain" width="80" height="80" style="aspect-ratio: 135 / 144;" />
+                                    <img src="/images/AI-Powered Automation.png" alt="AI-Powered Automation Logo" class="w-20 h-20 object-contain" width="80" height="80" style="aspect-ratio: 135 / 144;" />
                                 </div>
                                 <h3 class="text-2xl font-bold text-gray-800 mb-4">AI-Powered Automation</h3>
                                 <p class="text-gray-600">Reduce operational costs by up to 60% with intelligent automation</p>
@@ -921,7 +957,7 @@
                     <div class="absolute inset-0 bg-gradient-to-br from-accent/5 to-purple-400/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div class="relative z-10">
                         <div class="w-16 h-16 bg-gradient-to-br from-accent to-accent-600 rounded-xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-500 overflow-hidden">
-                            <img src="../images/Web Applications.png" alt="Web Applications Logo" class="w-12 h-12 object-contain" width="48" height="48" />
+                            <img src="/images/Web Applications.png" alt="Web Applications Logo" class="w-12 h-12 object-contain" width="48" height="48" />
                         </div>
                         <h3 class="text-2xl font-bold text-white mb-4">Web Applications</h3>
                         <p class="text-gray-300 mb-6">Enterprise-grade web applications with modern frameworks and scalable architecture.</p>
@@ -933,7 +969,7 @@
                             <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full border border-accent/30">TypeScript</span>
                         </div>
 
-                        <a href="services_deep_dive.html" aria-label="Learn more about Web Applications" class="inline-flex items-center text-accent hover:text-accent-400 transition-colors duration-300">
+                        <a href="/pages/services_deep_dive.html" aria-label="Learn more about Web Applications" class="inline-flex items-center text-accent hover:text-accent-400 transition-colors duration-300">
                             Learn More
                             <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -947,7 +983,7 @@
                     <div class="absolute inset-0 bg-gradient-to-br from-purple-400/5 to-accent/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div class="relative z-10">
                         <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-500 overflow-hidden">
-                            <img src="../images/3d websites.png" alt="3D Websites Logo" class="w-12 h-12 object-contain" width="48" height="48" style="aspect-ratio: 101 / 96;" />
+                            <img src="/images/3d websites.png" alt="3D Websites Logo" class="w-12 h-12 object-contain" width="48" height="48" style="aspect-ratio: 101 / 96;" />
                         </div>
                         <h3 class="text-2xl font-bold text-white mb-4">3D Websites</h3>
                         <p class="text-gray-300 mb-6">Immersive 3D experiences that captivate users and create memorable brand interactions.</p>
@@ -959,7 +995,7 @@
                             <span class="px-3 py-1 bg-purple-400/20 text-purple-300 text-xs rounded-full border border-purple-400/30">Blender</span>
                         </div>
 
-                        <a href="services_deep_dive.html" aria-label="Learn more about 3D Websites" class="inline-flex items-center text-purple-300 hover:text-purple-200 transition-colors duration-300">
+                        <a href="/pages/services_deep_dive.html" aria-label="Learn more about 3D Websites" class="inline-flex items-center text-purple-300 hover:text-purple-200 transition-colors duration-300">
                             Explore More
                             <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -973,7 +1009,7 @@
                     <div class="absolute inset-0 bg-gradient-to-br from-accent/5 to-purple-400/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div class="relative z-10">
                         <div class="w-16 h-16 bg-gradient-to-br from-accent to-accent-600 rounded-xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-500 overflow-hidden">
-                            <img src="../images/fintech solutions.png" alt="Fintech Solutions Logo" class="w-12 h-12 object-contain" width="48" height="48" />
+                            <img src="/images/fintech solutions.png" alt="Fintech Solutions Logo" class="w-12 h-12 object-contain" width="48" height="48" />
                         </div>
                         <h3 class="text-2xl font-bold text-white mb-4">Fintech Solutions</h3>
                          <p class="text-gray-300 mb-6">Mission-critical financial platforms with advanced security and regulatory compliance.</p>
@@ -985,7 +1021,7 @@
                              <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full border border-accent/30">AWS</span>
                          </div>
 
-                         <a href="services_deep_dive.html" aria-label="Learn more about Fintech Solutions" class="inline-flex items-center text-accent hover:text-accent-400 transition-colors duration-300">
+                         <a href="/pages/services_deep_dive.html" aria-label="Learn more about Fintech Solutions" class="inline-flex items-center text-accent hover:text-accent-400 transition-colors duration-300">
                              Discover More
                              <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -999,7 +1035,7 @@
                     <div class="absolute inset-0 bg-gradient-to-br from-purple-400/5 to-accent/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div class="relative z-10">
                         <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-500 overflow-hidden">
-                            <img src="../images/healthtech.png" alt="Healthtech Logo" class="w-12 h-12 object-contain" width="48" height="48" style="aspect-ratio: 86 / 80;" />
+                            <img src="/images/healthtech.png" alt="Healthtech Logo" class="w-12 h-12 object-contain" width="48" height="48" style="aspect-ratio: 86 / 80;" />
                         </div>
                         <h3 class="text-2xl font-bold text-white mb-4">Healthtech Platforms</h3>
                          <p class="text-gray-300 mb-6">HIPAA-compliant healthcare solutions with advanced accessibility and patient-centered design.</p>
@@ -1011,7 +1047,7 @@
                              <span class="px-3 py-1 bg-purple-400/20 text-purple-300 text-xs rounded-full border border-purple-400/30">ML/AI</span>
                          </div>
 
-                         <a href="services_deep_dive.html" aria-label="Learn more about Healthtech Platforms" class="inline-flex items-center text-purple-300 hover:text-purple-200 transition-colors duration-300">
+                         <a href="/pages/services_deep_dive.html" aria-label="Learn more about Healthtech Platforms" class="inline-flex items-center text-purple-300 hover:text-purple-200 transition-colors duration-300">
                              See More
                              <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -1053,7 +1089,7 @@
                             <span class="px-2 py-1 bg-accent/20 text-accent text-xs rounded">WebSocket</span>
                         </div>
                         <div class="flex gap-3">
-                            <a href="portfolio_showcase.html" class="flex-1 btn-primary text-center text-sm py-2">View Case Study</a>
+                            <a href="/pages/portfolio_showcase.html" class="flex-1 btn-primary text-center text-sm py-2">View Case Study</a>
                             <span class="px-4 py-2 border border-accent text-accent rounded-lg cursor-not-allowed opacity-50 text-sm">Live Demo</span>
                         </div>
                     </div>
@@ -1062,7 +1098,7 @@
                 <!-- Portfolio Item 2 -->
                 <div class="group relative bg-gradient-to-br from-primary/50 to-secondary/50 backdrop-blur-sm border border-purple-400/20 rounded-2xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-dramatic">
                     <div class="aspect-video overflow-hidden">
-                        <img src="../images/MedConnect Telemedicine Platform.png" alt="MedConnect Platform" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" width="400" height="225" onerror="this.src='https://images.pixabay.com/photo/2017/10/24/00/39/bot-icon-2883144_1280.png?auto=compress&cs=tinysrgb&w=500'; this.onerror=null;" />
+                        <img src="/images/MedConnect Telemedicine Platform.png" alt="MedConnect Platform" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" width="400" height="225" onerror="this.src='https://images.pixabay.com/photo/2017/10/24/00/39/bot-icon-2883144_1280.png?auto=compress&cs=tinysrgb&w=500'; this.onerror=null;" />
                     </div>
                     <div class="p-6">
                         <h3 class="text-2xl font-bold text-white mb-2">MedConnect Platform</h3>
@@ -1077,7 +1113,7 @@
                             <span class="px-2 py-1 bg-purple-400/20 text-purple-300 text-xs rounded">FHIR</span>
                         </div>
                         <div class="flex gap-3">
-                            <a href="portfolio_showcase.html" class="flex-1 btn-secondary text-center text-sm py-2">View Case Study</a>
+                            <a href="/pages/portfolio_showcase.html" class="flex-1 btn-secondary text-center text-sm py-2">View Case Study</a>
                             <span class="px-4 py-2 border border-purple-400 text-purple-300 rounded-lg cursor-not-allowed opacity-50 text-sm">Live Demo</span>
                         </div>
                     </div>
@@ -1101,7 +1137,7 @@
                             <span class="px-2 py-1 bg-accent/20 text-accent text-xs rounded">GSAP</span>
                         </div>
                         <div class="flex gap-3">
-                            <a href="portfolio_showcase.html" class="flex-1 btn-primary text-center text-sm py-2">View Case Study</a>
+                            <a href="/pages/portfolio_showcase.html" class="flex-1 btn-primary text-center text-sm py-2">View Case Study</a>
                             <span class="px-4 py-2 border border-accent text-accent rounded-lg cursor-not-allowed opacity-50 text-sm">Live Demo</span>
                         </div>
                     </div>
@@ -1109,7 +1145,7 @@
             </div>
 
             <div class="text-center mt-12">
-                <a href="portfolio_showcase.html" class="btn-primary text-lg px-8 py-4">View Complete Portfolio</a>
+                <a href="/pages/portfolio_showcase.html" class="btn-primary text-lg px-8 py-4">View Complete Portfolio</a>
             </div>
         </div>
     </section>
@@ -1223,7 +1259,7 @@
             </div>
 
             <div class="text-center mt-12">
-                <a href="client_success_hub.html" class="btn-primary text-lg px-8 py-4">View All Success Stories</a>
+                <a href="/pages/client_success_hub.html" class="btn-primary text-lg px-8 py-4">View All Success Stories</a>
             </div>
         </div>
     </section>
@@ -1276,7 +1312,7 @@
                         </div>
                     </div>
                     
-                    <a href="innovation_lab.html" class="btn-primary text-lg px-8 py-4">Explore Innovation Lab</a>
+                    <a href="/pages/innovation_lab.html" class="btn-primary text-lg px-8 py-4">Explore Innovation Lab</a>
                 </div>
                 
                 <div class="relative">
@@ -1436,6 +1472,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer class="relative bg-primary border-t border-secondary/20 overflow-hidden">
         <!-- Background Video -->
@@ -1445,8 +1483,9 @@
             muted
             loop
             playsinline
-            preload="metadata">
-            <source src="../videos/background-logo-video.mp4" type="video/mp4">
+            preload="metadata"
+            poster="images/logo.png">
+            <source src="/videos/background-logo-video.mp4" type="video/mp4" media="(min-width: 768px)">
         </video>
 
         <!-- Video Overlay -->
@@ -1487,12 +1526,12 @@
                 <div class="footer-links">
                     <h3 class="text-lg font-semibold text-white mb-6">Quick Links</h3>
                     <ul class="space-y-3">
-                        <li><a href="homepage.html" class="text-accent hover:text-accent text-sm transition-colors duration-300" style="color: #ff6b35 !important;">Home</a></li>
-                        <li><a href="services_deep_dive.html" class="text-accent hover:text-accent text-sm transition-colors duration-300" style="color: #ff6b35 !important;">Services</a></li>
-                        <li><a href="portfolio_showcase.html" class="text-accent hover:text-accent text-sm transition-colors duration-300" style="color: #ff6b35 !important;">Portfolio</a></li>
-                        <li><a href="about_team_universe.html" class="text-accent hover:text-accent text-sm transition-colors duration-300" style="color: #ff6b35 !important;">Team</a></li>
-                        <li><a href="client_success_hub.html" class="text-accent hover:text-accent text-sm transition-colors duration-300" style="color: #ff6b35 !important;">Success Stories</a></li>
-                        <li><a href="innovation_lab.html" class="text-accent hover:text-accent text-sm transition-colors duration-300" style="color: #ff6b35 !important;">Innovation Lab</a></li>
+                        <li><a href="/" class="text-accent hover:text-accent text-sm transition-colors duration-300" style="color: #ff6b35 !important;">Home</a></li>
+                        <li><a href="/pages/services_deep_dive.html" class="text-accent hover:text-accent text-sm transition-colors duration-300" style="color: #ff6b35 !important;">Services</a></li>
+                        <li><a href="/pages/portfolio_showcase.html" class="text-accent hover:text-accent text-sm transition-colors duration-300" style="color: #ff6b35 !important;">Portfolio</a></li>
+                        <li><a href="/pages/about_team_universe.html" class="text-accent hover:text-accent text-sm transition-colors duration-300" style="color: #ff6b35 !important;">Team</a></li>
+                        <li><a href="/pages/client_success_hub.html" class="text-accent hover:text-accent text-sm transition-colors duration-300" style="color: #ff6b35 !important;">Success Stories</a></li>
+                        <li><a href="/pages/innovation_lab.html" class="text-accent hover:text-accent text-sm transition-colors duration-300" style="color: #ff6b35 !important;">Innovation Lab</a></li>
                     </ul>
                 </div>
 
@@ -1500,10 +1539,10 @@
                 <div class="footer-links">
                     <h3 class="text-lg font-semibold text-white mb-6">Services</h3>
                     <ul class="space-y-3">
-                        <li><a href="services_deep_dive.html" class="text-accent hover:text-accent text-sm transition-colors duration-300" style="color: #ff6b35 !important;">Web Applications</a></li>
-                        <li><a href="services_deep_dive.html" class="text-accent hover:text-accent text-sm transition-colors duration-300" style="color: #ff6b35 !important;">3D Websites</a></li>
-                        <li><a href="services_deep_dive.html" class="text-accent hover:text-accent text-sm transition-colors duration-300" style="color: #ff6b35 !important;">Fintech Solutions</a></li>
-                        <li><a href="services_deep_dive.html" class="text-accent hover:text-accent text-sm transition-colors duration-300" style="color: #ff6b35 !important;">Healthtech Platforms</a></li>
+                        <li><a href="/pages/services_deep_dive.html" class="text-accent hover:text-accent text-sm transition-colors duration-300" style="color: #ff6b35 !important;">Web Applications</a></li>
+                        <li><a href="/pages/services_deep_dive.html" class="text-accent hover:text-accent text-sm transition-colors duration-300" style="color: #ff6b35 !important;">3D Websites</a></li>
+                        <li><a href="/pages/services_deep_dive.html" class="text-accent hover:text-accent text-sm transition-colors duration-300" style="color: #ff6b35 !important;">Fintech Solutions</a></li>
+                        <li><a href="/pages/services_deep_dive.html" class="text-accent hover:text-accent text-sm transition-colors duration-300" style="color: #ff6b35 !important;">Healthtech Platforms</a></li>
                         <li><span class="text-accent cursor-pointer text-sm transition-colors duration-300" style="color: #ff6b35 !important;">Consultation</span></li>
                         <li><span class="text-accent cursor-pointer text-sm transition-colors duration-300" style="color: #ff6b35 !important;">Support</span></li>
                     </ul>
@@ -1541,7 +1580,7 @@
 
     <!-- Magic Bento JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-    <script src="../js/MagicBento.js" defer></script>
+    <script src="/js/MagicBento.js" defer></script>
 
     <!-- JavaScript -->
     <script>
@@ -1849,6 +1888,8 @@
     </script>
 
     <!-- Scramble Text Effect -->
-    <script src="../js/scrambled-text.js" defer></script>
+    <script src="/js/scrambled-text.js" defer></script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
 </body>
 </html>
+

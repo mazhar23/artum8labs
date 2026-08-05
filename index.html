@@ -3,88 +3,83 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Artum8 Labs Portfolio</title>
+    <meta name="theme-color" content="#0a0a0f" />
+    <title>Artum8 Labs - Digital Innovation Studio | Web Applications, 3D Experiences, Fintech & Healthtech Solutions</title>
+    <meta name="description" content="Premium digital innovation studio specializing in advanced web applications, immersive 3D environments, and mission-critical fintech/healthtech solutions. Transforming visions into digital reality." />
+    <link rel="canonical" href="https://www.artum8labs.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Artum8 Labs - Digital Innovation Studio" />
+    <meta property="og:description" content="Premium digital innovation studio specializing in advanced web applications, immersive 3D environments, and mission-critical fintech/healthtech solutions." />
+    <meta property="og:image" content="https://www.artum8labs.com/images/logo.png" />
+    <meta property="og:url" content="https://www.artum8labs.com/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Artum8 Labs - Digital Innovation Studio" />
+    <meta name="twitter:description" content="Premium digital innovation studio specializing in advanced web applications, immersive 3D environments, and mission-critical fintech/healthtech solutions." />
+    <meta name="twitter:image" content="https://www.artum8labs.com/images/logo.png" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Artum8 Labs",
+      "url": "https://www.artum8labs.com/",
+      "logo": "https://www.artum8labs.com/images/logo.png",
+      "sameAs": [
+        "https://x.com/artum8labs",
+        "https://linkedin.com/company/artum8labs",
+        "https://github.com/mazhar23/artum8labs"
+      ],
+      "email": "hello@artum8labs.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "G Block, Bandra Kurla Complex, Bandra East",
+        "addressLocality": "Mumbai",
+        "addressRegion": "Maharashtra",
+        "postalCode": "400051",
+        "addressCountry": "IN"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Artum8 Labs",
+      "url": "https://www.artum8labs.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.artum8labs.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    </noscript>
     <link rel="stylesheet" href="css/main.css" />
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-        
-        .loader-container {
-            text-align: center;
-            color: white;
-        }
-        
-        .logo {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            opacity: 0;
-            animation: fadeInUp 1s ease-out forwards;
-        }
-        
-        .tagline {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            opacity: 0;
-            animation: fadeInUp 1s ease-out 0.5s forwards;
-        }
-        
-        .loading-spinner {
-            width: 50px;
-            height: 50px;
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            border-top: 3px solid white;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto;
-            opacity: 0;
-            animation: fadeInUp 1s ease-out 1s forwards, spin 1s linear 1s infinite;
-        }
-        
-        .loading-text {
-            margin-top: 20px;
-            font-size: 1rem;
-            opacity: 0;
-            animation: fadeInUp 1s ease-out 1.5s forwards;
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .fade-out {
-            animation: fadeOut 0.5s ease-out forwards;
-        }
-        
-        @keyframes fadeOut {
-            from {
-                opacity: 1;
-            }
-            to {
-                opacity: 0;
-            }
-        }
+        html { scroll-behavior: smooth; }
+        body { margin: 0; padding: 0; font-family: 'Inter', Arial, sans-serif; background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%); color: #fff; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .loader-container { text-align: center; }
+        .logo { font-size: 3rem; font-weight: 800; margin-bottom: 16px; opacity: 0; animation: fadeInUp 0.8s ease-out forwards; }
+        .tagline { font-size: 1.25rem; margin-bottom: 32px; opacity: 0; color: #d1d5db; animation: fadeInUp 0.8s ease-out 0.3s forwards; }
+        .loading-spinner { width: 48px; height: 48px; border: 3px solid rgba(255, 255, 255, 0.2); border-top: 3px solid #ff6b35; border-radius: 50%; margin: 0 auto 24px; opacity: 0; animation: fadeInUp 0.8s ease-out 0.6s forwards, spin 1s linear 0.6s infinite; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .fade-out { animation: fadeOut 0.4s ease-out forwards; }
+        @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
+        .skip-link { position: absolute; top: -40px; left: 6px; background: #ff6b35; color: #fff; padding: 8px 16px; border-radius: 4px; text-decoration: none; z-index: 1000; }
+        .skip-link:focus { top: 6px; }
     </style>
 </head>
 <body>
@@ -92,23 +87,15 @@
         <div class="logo">Artum8 Labs</div>
         <div class="tagline">Innovating Tomorrow's Solutions</div>
         <div class="loading-spinner"></div>
-        <div class="loading-text">Loading Portfolio...</div>
+        <a href="pages/homepage.html" class="btn-primary text-lg px-8 py-4 transform hover:scale-105 transition-all duration-300" style="display: inline-block; background: #ff6b35; color: #fff; border-radius: 8px; text-decoration: none; opacity: 0; animation: fadeInUp 0.8s ease-out 1s forwards;">Enter Portfolio</a>
     </div>
 
     <script>
-        // Redirect to homepage after loading animation
         setTimeout(function() {
-            document.getElementById('loaderContainer').classList.add('fade-out');
-            setTimeout(function() {
-                window.location.href = 'pages/homepage.html';
-            }, 500);
-        }, 3000);
-        
-        // Preload the homepage for faster transition
-        const link = document.createElement('link');
-        link.rel = 'prefetch';
-        link.href = 'pages/homepage.html';
-        document.head.appendChild(link);
+            window.location.href = 'pages/homepage.html';
+        }, 800);
     </script>
 </body>
 </html>
+
+
