@@ -1,0 +1,36 @@
+/* Scramble Text Effect Styles */
+.scramble-char {
+  display: inline-block;
+  will-change: transform;
+  transition: none;
+}
+
+.footer-links a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #d1d5db;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #64c175;
+}
+
+.footer-links .scramble-char {
+  position: relative;
+  z-index: 1;
+}
+
+/* Add a subtle glow effect on hover */
+.footer-links a:hover .scramble-char {
+  text-shadow: 0 0 8px rgba(255, 107, 53, 0.3);
+}
+
+/* Ensure smooth performance */
+.footer-links {
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

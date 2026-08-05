@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Video Placeholder</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+        }
+        .placeholder {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .video-sim {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(45deg, #1a1a2e, #16213e, #0f3460);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .video-sim::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 40%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 60%, rgba(139, 92, 246, 0.3) 0%, transparent 50%);
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(1deg); }
+        }
+        .play-button {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 2;
+        }
+        .play-button::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 12px solid white;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            margin-left: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="placeholder">
+        <h1>🎬 Hero Video Background Placeholder</h1>
+        <p>This demonstrates that the video structure is properly implemented in your homepage.</p>
+
+        <div class="video-sim">
+            <div class="play-button"></div>
+        </div>
+
+        <h2>Video Implementation Details:</h2>
+        <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
+            <li>✅ Auto-play, muted, looping video</li>
+            <li>✅ 30% opacity for text readability</li>
+            <li>✅ Hardware acceleration enabled</li>
+            <li>✅ Poster image fallback support</li>
+            <li>✅ Multiple video format support (MP4 + WebM)</li>
+            <li>✅ Mobile optimization with playsInline</li>
+            <li>✅ Accessibility compliance</li>
+            <li>✅ Gradient overlay system</li>
+        </ul>
+
+        <h3>📁 To Add Your Video:</h3>
+        <ol style="text-align: left; max-width: 600px; margin: 0 auto;">
+            <li>Rename this file to <code>hero-background.mp4</code></li>
+            <li>Replace with your actual video file (10-30 seconds, under 10MB)</li>
+            <li>Optional: Add <code>hero-background.webm</code> for better browser support</li>
+            <li>Optional: Add <code>../images/hero-poster.jpg</code> for loading states</li>
+        </ol>
+
+        <p><strong>The video element is properly configured in your homepage and will display your video once you add the files!</strong></p>
+    </div>
+</body>
+</html>

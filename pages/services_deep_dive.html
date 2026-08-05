@@ -1,0 +1,2035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services Deep-Dive - Artum8 Labs</title>
+    <meta name="description" content="Explore our four specialized practice areas: Web Applications, 3D Websites, Fintech Solutions, and Healthtech Platforms. Technical excellence meets creative innovation." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/MagicBento.css" />
+    <link rel="stylesheet" href="../css/gradient-text.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- React Dependencies -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/motion@11.15.0/dist/motion.js"></script>
+    <script src="../js/MagicBento.js"></script>
+    <script src="../js/LogoLoop.js"></script>
+</head>
+<body class="bg-primary text-white overflow-x-hidden">
+    <!-- Navigation Header -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-primary/90 backdrop-blur-md border-b border-secondary/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <a href="homepage.html" class="flex items-center">
+                            <img src="../images/logo.png" alt="Artum8 Labs Logo" class="h-12 w-auto" />
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="homepage.html" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Home</a>
+                        <a href="services_deep_dive.html" class="text-accent font-semibold px-3 py-2 rounded-md text-sm">Services</a>
+                        <a href="portfolio_showcase.html" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Portfolio</a>
+                        <a href="about_team_universe.html" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Team</a>
+                        <a href="client_success_hub.html" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Success Stories</a>
+                        <a href="innovation_lab.html" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Innovation Lab</a>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="#contact" class="btn-primary">Start Your Transformation</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-accent p-2">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-primary/95 backdrop-blur-md">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="homepage.html" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="services_deep_dive.html" class="text-accent block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="portfolio_showcase.html" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
+                <a href="about_team_universe.html" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Team</a>
+                <a href="client_success_hub.html" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Success Stories</a>
+                <a href="innovation_lab.html" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Innovation Lab</a>
+                <a href="#contact" class="btn-primary block mx-3 mt-4 text-center">Start Your Transformation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-16 overflow-hidden">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-primary">
+            <!-- Floating Geometric Elements -->
+            <div class="absolute top-20 left-10 w-20 h-20 border border-accent/20 rotate-45 animate-spin" style="animation-duration: 20s;"></div>
+            <div class="absolute bottom-20 right-10 w-16 h-16 border border-purple-400/20 rotate-12 animate-spin" style="animation-duration: 15s;"></div>
+            <div class="absolute top-1/2 left-20 w-12 h-12 bg-gradient-to-r from-accent/10 to-purple-400/10 rotate-45 animate-pulse"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+                <span class="block animated-gradient-text">Services Deep-Dive</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 font-light mb-8">
+                Four Specialized Practice Areas Delivering Technical Excellence
+            </p>
+            <p class="text-lg text-gray-400 max-w-3xl mx-auto mb-12">
+                Explore our comprehensive service ecosystem where each practice area represents years of specialized expertise, cutting-edge technology implementations, and proven methodologies that transform digital visions into reality.
+            </p>
+
+            <!-- Service Navigation Pills -->
+            <div class="flex flex-wrap justify-center gap-4 mb-16">
+                <button class="service-nav-btn active" data-service="web-apps">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    Web Applications
+                </button>
+                <button class="service-nav-btn" data-service="3d-websites">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                    </svg>
+                    3D Websites
+                </button>
+                <button class="service-nav-btn" data-service="fintech">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    Fintech Solutions
+                </button>
+                <button class="service-nav-btn" data-service="healthtech">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                    </svg>
+                    Healthtech Platforms
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Web Applications Section -->
+    <section id="web-apps" class="service-section py-20 bg-gradient-to-b from-secondary to-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-accent to-accent-600 rounded-xl flex items-center justify-center mr-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-bold text-white animated-gradient-text">Web Applications</h2>
+                    </div>
+                    <p class="text-xl text-gray-300 mb-8">
+                        Enterprise-grade web applications built with modern frameworks, scalable architecture, and performance-first principles.
+                    </p>
+                    
+                    <!-- Key Features -->
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-6 h-6 text-accent mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white">Full-Stack Excellence</h3>
+                                <p class="text-gray-300">React, Vue.js, Angular frontends with Node.js, Python, and .NET backends</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-6 h-6 text-accent mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white">Cloud-Native Architecture</h3>
+                                <p class="text-gray-300">AWS, Azure, and GCP deployments with auto-scaling and high availability</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-6 h-6 text-accent mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white">Performance Optimization</h3>
+                                <p class="text-gray-300">Sub-2-second load times with advanced caching and CDN strategies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Code Preview -->
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-accent/20 rounded-2xl p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-white">Live Code Preview</h3>
+                            <div class="flex space-x-2">
+                                <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                                <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                            </div>
+                        </div>
+                        <div class="bg-primary/80 rounded-lg p-4 font-mono text-sm">
+                            <div class="text-purple-300">// React Component with TypeScript</div>
+                            <div class="text-blue-300">import</div> <div class="text-white">{ useState, useEffect }</div> <div class="text-blue-300">from</div> <div class="text-green-300">'react'</div><div class="text-white">;</div>
+                            <br />
+                            <div class="text-blue-300">const</div> <div class="text-yellow-300">Dashboard</div> <div class="text-white">= () => {</div>
+                            <div class="ml-4 text-blue-300">const</div> <div class="text-white">[data, setData] = useState(null);</div>
+                            <div class="ml-4 text-blue-300">const</div> <div class="text-white">[loading, setLoading] = useState(true);</div>
+                            <br />
+                            <div class="ml-4 text-blue-300">useEffect</div><div class="text-white">(() => {</div>
+                            <div class="ml-8 text-green-300">fetchAnalytics</div><div class="text-white">().then(setData);</div>
+                            <div class="ml-4 text-white">}, []);</div>
+                            <div class="text-white">};</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technology Stack -->
+            <div class="mb-16">
+                <div id="tech-stack-heading" class="text-3xl font-bold text-white mb-2 text-center"></div>
+                <div class="bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-accent/20 rounded-2xl p-8">
+                    <div class="text-center mb-8">
+                        <div id="tech-stack-heading" class="text-3xl font-bold text-white mb-2"></div>
+                        <p class="text-gray-300 text-lg">Complete Technology Ecosystem</p>
+                    </div>
+
+                    <!-- Interactive Tech Stack Grid -->
+                    <div class="relative max-w-5xl -mt-12 mx-auto h-[30rem] md:h-[40rem] w-full group rounded-[30px]">
+                        <!-- Outer Gradient Border (on hover) -->
+                        <div class="absolute inset-0 rounded-[30px] p-[2px] bg-gradient-to-br from-blue-500 via-purple-500 to-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0">
+                            <div class="w-full h-full bg-gray-900/80 backdrop-blur-sm rounded-[28px]"></div>
+                        </div>
+
+                        <!-- Inner Content Area -->
+                        <div class="relative z-10 h-full w-full rounded-[28px] bg-gray-900/80 backdrop-blur-sm border border-gray-800 group-hover:border-transparent p-4 md:p-6 overflow-hidden shadow-[0_0_30px_5px_rgba(128,90,213,0.4)]">
+                            <div class="tech-stack-interactive-grid" id="tech-stack-grid">
+                                <!-- Tech Stack Icons Grid -->
+                                <div class="grid grid-cols-5 md:grid-cols-8 lg:grid-cols-10 gap-2 md:gap-3 lg:gap-4 p-4 max-w-7xl mx-auto tech-stack-icons-grid" style="display: grid !important; grid-template-columns: repeat(5, 1fr) !important;">
+                                    <!-- Logo Loop Component -->
+                                    <div class="tech-icon-grid-item">
+                                        <div id="logo-loop-container" style="width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;">
+                                            <!-- Logo Loop will be rendered here -->
+                                        </div>
+                                    </div>
+
+                                    <!-- Vue.js -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="https://blobs.vusercontent.net/blob/vuejs-8wX7Z8pQ4J9K2L5M6N3B7V.svg" alt="Vue.js" class="tech-icon-simple" />
+                                    </div>
+
+                                    <!-- Node.js -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="../images/nodejs-icon.svg" alt="Node.js" class="tech-icon-simple" />
+                                    </div>
+
+                                    <!-- Python -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="../images/python-icon.svg" alt="Python" class="tech-icon-simple" />
+                                    </div>
+
+                                    <!-- Go -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="../images/go-programming-language-icon.svg" alt="Go" class="tech-icon-simple" />
+                                    </div>
+
+                                    <!-- Java -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="../images/java-programming-language-icon.svg" alt="Java" class="tech-icon-simple" />
+                                    </div>
+
+                                    <!-- PHP -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="../images/php-programming-language-icon.svg" alt="PHP" class="tech-icon-simple" />
+                                    </div>
+
+                                    <!-- Ruby on Rails -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="../images/ruby-on-rails-icon.svg" alt="Ruby on Rails" class="tech-icon-simple" />
+                                    </div>
+
+                                    <!-- PostgreSQL -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="https://blobs.vusercontent.net/blob/postgresql-7VU6h7tiQ8ujKYE2P29KN0PB47hnDq.svg" alt="PostgreSQL" class="tech-icon-simple" />
+                                    </div>
+
+                                    <!-- MongoDB -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="https://blobs.vusercontent.net/blob/mongodb-87NICIHmGaUWpkZSVHtlqwUtYtxo6u.svg" alt="MongoDB" class="tech-icon-simple" />
+                                    </div>
+
+                                    <!-- Three.js -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="../images/Threejs-logo.svg" alt="Three.js" class="tech-icon-simple" />
+                                    </div>
+
+                                    <!-- WebGL -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="../images/WebGL-Logo.wine.svg" alt="WebGL" class="tech-icon-simple" />
+                                    </div>
+
+                                    <!-- GSAP -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="../images/gsap.svg" alt="GSAP" class="tech-icon-simple" />
+                                    </div>
+
+                                    <!-- Framer Motion -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="../images/framer-motion.svg" alt="Framer Motion" class="tech-icon-simple" />
+                                    </div>
+
+                                    <!-- Tailwind CSS -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="https://blobs.vusercontent.net/blob/tail-JL2jfpVsuUmTUGcF0ZHIPmJaSsFoRD.svg" alt="Tailwind CSS" class="tech-icon-simple" />
+                                    </div>
+
+                                    <!-- CSS -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="https://blobs.vusercontent.net/blob/css-CSU2CgkqJxkoGckuaI1btkiTroS5W2.svg" alt="CSS" class="tech-icon-simple" />
+                                    </div>
+
+                                    <!-- Docker -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="../images/docker-icon.svg" alt="Docker" class="tech-icon-simple" />
+                                    </div>
+
+                                    <!-- Kubernetes -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="../images/kubernetes-icon.svg" alt="Kubernetes" class="tech-icon-simple" />
+                                    </div>
+
+                                    <!-- TensorFlow -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="../images/tensorflow-icon.svg" alt="TensorFlow" class="tech-icon-simple" />
+                                    </div>
+
+                                    <!-- PyTorch -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="../images/pytorch-icon.svg" alt="PyTorch" class="tech-icon-simple" />
+                                    </div>
+
+                                    <!-- WebRTC -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="../images/webrtc.svg" alt="WebRTC" class="tech-icon-simple" />
+                                    </div>
+
+                                    <!-- Solidity -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="../images/solidity-icon.svg" alt="Solidity" class="tech-icon-simple" />
+                                    </div>
+
+                                    <!-- AWS -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="../images/aws-icon.svg" alt="AWS" class="tech-icon-simple" />
+                                    </div>
+
+                                    <!-- Figma -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="../images/figma-icon.svg" alt="Figma" class="tech-icon-simple" />
+                                    </div>
+
+                                    <!-- Git -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="../images/git-icon.svg" alt="Git" class="tech-icon-simple" />
+                                    </div>
+
+                                    <!-- REST API -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="../images/rest-api-icon.svg" alt="REST API" class="tech-icon-simple" />
+                                    </div>
+
+                                    <!-- Security -->
+                                    <div class="tech-icon-grid-item">
+                                        <div class="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center">
+                                            <svg class="w-6 h-6 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <!-- n8n -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="../images/n8n-icon.svg" alt="n8n" class="tech-icon-simple" />
+                                    </div>
+
+                                    <!-- Shopify -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="../images/shopify-icon.svg" alt="Shopify" class="tech-icon-simple" />
+                                    </div>
+
+                                    <!-- Flutter -->
+                                    <div class="tech-icon-grid-item">
+                                        <img src="../images/flutter-icon.svg" alt="Flutter" class="tech-icon-simple" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack-grid hidden">
+                        <!-- React -->
+                        <div class="tech-card">
+                            <img src="https://blobs.vusercontent.net/blob/re-QaCxpSWTfWe7B2Ejs1ujeocpUln1Xd.svg" alt="React" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">React</span>
+                        </div>
+
+                        <!-- Next.js -->
+                        <div class="tech-card">
+                            <img src="https://blobs.vusercontent.net/blob/next-obA0NGpX2JV0ZHBxU0MKgj1BAgAlgf.svg" alt="Next.js" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">Next.js</span>
+                        </div>
+
+                        <!-- Node.js -->
+                        <div class="tech-card">
+                            <img src="../images/nodejs-icon.svg" alt="Node.js" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">Node.js</span>
+                        </div>
+
+                        <!-- Express.js -->
+                        <div class="tech-card">
+                            <img src="../images/expressjs-icon.svg" alt="Express.js" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">Express.js</span>
+                        </div>
+
+                        <!-- Python -->
+                        <div class="tech-card">
+                            <img src="../images/python-icon.svg" alt="Python" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">Python</span>
+                        </div>
+
+                        <!-- Go -->
+                        <div class="tech-card">
+                            <img src="../images/go-programming-language-icon.svg" alt="Go" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">Go</span>
+                        </div>
+
+                        <!-- Java -->
+                        <div class="tech-card">
+                            <img src="../images/java-programming-language-icon.svg" alt="Java" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">Java</span>
+                        </div>
+
+                        <!-- PHP -->
+                        <div class="tech-card">
+                            <img src="../images/php-programming-language-icon.svg" alt="PHP" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">PHP</span>
+                        </div>
+
+                        <!-- Ruby on Rails -->
+                        <div class="tech-card">
+                            <img src="../images/ruby-on-rails-icon.svg" alt="Ruby on Rails" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">Ruby on Rails</span>
+                        </div>
+
+                        <!-- Django -->
+                        <div class="tech-card">
+                            <img src="../images/djangoproject-icon.svg" alt="Django" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">Django</span>
+                        </div>
+
+                        <!-- PostgreSQL -->
+                        <div class="tech-card">
+                            <img src="https://blobs.vusercontent.net/blob/postgresql-7VU6h7tiQ8ujKYE2P29KN0PB47hnDq.svg" alt="PostgreSQL" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">PostgreSQL</span>
+                        </div>
+
+                        <!-- MongoDB -->
+                        <div class="tech-card">
+                            <img src="https://blobs.vusercontent.net/blob/mongodb-87NICIHmGaUWpkZSVHtlqwUtYtxo6u.svg" alt="MongoDB" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">MongoDB</span>
+                        </div>
+
+                        <!-- Three.js -->
+                        <div class="tech-card">
+                            <img src="../images/Threejs-logo.svg" alt="Three.js" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">Three.js</span>
+                        </div>
+
+                        <!-- WebGL -->
+                        <div class="tech-card">
+                            <img src="../images/WebGL-Logo.wine.svg" alt="WebGL" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">WebGL</span>
+                        </div>
+
+                        <!-- GSAP -->
+                        <div class="tech-card">
+                            <img src="../images/gsap.svg" alt="GSAP" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">GSAP</span>
+                        </div>
+
+                        <!-- Framer Motion -->
+                        <div class="tech-card">
+                            <img src="../images/framer-motion.svg" alt="Framer Motion" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">Framer Motion</span>
+                        </div>
+
+                        <!-- Tailwind CSS -->
+                        <div class="tech-card">
+                            <img src="https://blobs.vusercontent.net/blob/tail-JL2jfpVsuUmTUGcF0ZHIPmJaSsFoRD.svg" alt="Tailwind CSS" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">Tailwind CSS</span>
+                        </div>
+
+                        <!-- CSS -->
+                        <div class="tech-card">
+                            <img src="https://blobs.vusercontent.net/blob/css-CSU2CgkqJxkoGckuaI1btkiTroS5W2.svg" alt="CSS" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">CSS</span>
+                        </div>
+
+                        <!-- Docker -->
+                        <div class="tech-card">
+                            <img src="../images/docker-icon.svg" alt="Docker" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">Docker</span>
+                        </div>
+
+                        <!-- Kubernetes -->
+                        <div class="tech-card">
+                            <img src="../images/kubernetes-icon.svg" alt="Kubernetes" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">Kubernetes</span>
+                        </div>
+
+                        <!-- TensorFlow -->
+                        <div class="tech-card">
+                            <img src="../images/tensorflow-icon.svg" alt="TensorFlow" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">TensorFlow</span>
+                        </div>
+
+                        <!-- PyTorch -->
+                        <div class="tech-card">
+                            <img src="../images/pytorch-icon.svg" alt="PyTorch" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">PyTorch</span>
+                        </div>
+
+                        <!-- WebRTC -->
+                        <div class="tech-card">
+                            <img src="../images/webrtc.svg" alt="WebRTC" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">WebRTC</span>
+                        </div>
+
+                        <!-- Solidity -->
+                        <div class="tech-card">
+                            <img src="../images/solidity-icon.svg" alt="Solidity" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">Solidity</span>
+                        </div>
+
+                        <!-- AWS -->
+                        <div class="tech-card">
+                            <img src="../images/aws-icon.svg" alt="AWS" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">AWS</span>
+                        </div>
+
+                        <!-- Figma -->
+                        <div class="tech-card">
+                            <img src="../images/figma-icon.svg" alt="Figma" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">Figma</span>
+                        </div>
+
+                        <!-- Git -->
+                        <div class="tech-card">
+                            <img src="../images/git-icon.svg" alt="Git" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">Git</span>
+                        </div>
+
+                        <!-- REST APIs -->
+                        <div class="tech-card">
+                            <img src="../images/rest-api-icon.svg" alt="REST APIs" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">REST APIs</span>
+                        </div>
+
+                        <!-- Security -->
+                        <div class="tech-card">
+                            <img src="/placeholder.svg?height=64&width=64" alt="Security" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">Security</span>
+                        </div>
+
+                        <!-- n8n -->
+                        <div class="tech-card">
+                            <img src="../images/n8n-icon.svg" alt="n8n" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">n8n</span>
+                        </div>
+
+                        <!-- Shopify -->
+                        <div class="tech-card">
+                            <img src="../images/shopify-icon.svg" alt="Shopify" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">Shopify</span>
+                        </div>
+
+                        <!-- Flutter -->
+                        <div class="tech-card">
+                            <img src="../images/flutter-icon.svg" alt="Flutter" class="tech-icon" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=64'; this.onerror=null;" />
+                            <span class="tech-name">Flutter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance Benchmarks -->
+            <div class="bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-accent/20 rounded-2xl p-8">
+                <h3 class="text-2xl font-bold text-white mb-8 text-center">Performance Benchmarks</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">< 2s</div>
+                        <div class="text-white font-semibold mb-1">Load Time</div>
+                        <div class="text-gray-300 text-sm">Average page load across all devices</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">99.9%</div>
+                        <div class="text-white font-semibold mb-1">Uptime</div>
+                        <div class="text-gray-300 text-sm">Guaranteed service availability</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">95+</div>
+                        <div class="text-white font-semibold mb-1">Lighthouse Score</div>
+                        <div class="text-gray-300 text-sm">Performance, accessibility, SEO</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D Websites Section -->
+    <section id="3d-websites" class="service-section hidden py-20 bg-gradient-to-b from-primary to-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <!-- Interactive 3D Demo -->
+                <div class="relative order-2 lg:order-1">
+                    <div class="aspect-square bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-purple-400/20 rounded-2xl overflow-hidden relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-64 h-64 relative transform-gpu" id="demo-cube">
+                                <div class="cube-3d w-full h-full relative transform-gpu transition-transform duration-1000 hover:rotate-y-45 hover:rotate-x-15">
+                                    <!-- 3D Cube Faces -->
+                                    <div class="cube-face-3d front absolute inset-0 bg-gradient-to-br from-purple-400/30 to-accent/30 backdrop-blur-sm border border-purple-400/40 rounded-xl flex items-center justify-center">
+                                        <div class="text-center">
+                                            <svg class="w-16 h-16 text-white mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                                            </svg>
+                                            <div class="text-white font-semibold">WebGL</div>
+                                        </div>
+                                    </div>
+                                    <div class="cube-face-3d back absolute inset-0 bg-gradient-to-br from-accent/30 to-purple-400/30 backdrop-blur-sm border border-accent/40 rounded-xl flex items-center justify-center transform rotate-y-180">
+                                        <div class="text-center">
+                                            <svg class="w-16 h-16 text-white mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                            </svg>
+                                            <div class="text-white font-semibold">Three.js</div>
+                                        </div>
+                                    </div>
+                                    <div class="cube-face-3d right absolute inset-0 bg-gradient-to-br from-purple-400/30 to-accent/30 backdrop-blur-sm border border-purple-400/40 rounded-xl flex items-center justify-center transform rotate-y-90">
+                                        <div class="text-center">
+                                            <svg class="w-16 h-16 text-white mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                                            </svg>
+                                            <div class="text-white font-semibold">GSAP</div>
+                                        </div>
+                                    </div>
+                                    <div class="cube-face-3d left absolute inset-0 bg-gradient-to-br from-accent/30 to-purple-400/30 backdrop-blur-sm border border-accent/40 rounded-xl flex items-center justify-center transform rotate-y-270">
+                                        <div class="text-center">
+                                            <svg class="w-16 h-16 text-white mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                                            </svg>
+                                            <div class="text-white font-semibold">Blender</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4 text-center">
+                            <p class="text-white text-sm">Hover to interact with 3D elements</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-1 lg:order-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center mr-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-bold text-white animated-gradient-text">3D Websites</h2>
+                    </div>
+                    <p class="text-xl text-gray-300 mb-8">
+                        Immersive 3D experiences that captivate users and create memorable brand interactions through cutting-edge WebGL technology.
+                    </p>
+                    
+                    <!-- Key Features -->
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-6 h-6 text-purple-300 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white">WebGL Mastery</h3>
+                                <p class="text-gray-300">Custom shaders, particle systems, and real-time 3D rendering</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-6 h-6 text-purple-300 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white">Cross-Platform Compatibility</h3>
+                                <p class="text-gray-300">Optimized for desktop, mobile, and VR/AR devices</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-6 h-6 text-purple-300 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white">Performance Optimization</h3>
+                                <p class="text-gray-300">60fps animations with intelligent LOD and culling systems</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3D Capabilities Matrix -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <div class="bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-purple-400/20 rounded-2xl p-6 text-center">
+                    <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-white mb-2">Interactive Models</h3>
+                    <p class="text-gray-300 text-sm">Product configurators and 3D showcases</p>
+                </div>
+                <div class="bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-purple-400/20 rounded-2xl p-6 text-center">
+                    <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-white mb-2">Spatial Audio</h3>
+                    <p class="text-gray-300 text-sm">Immersive soundscapes and 3D audio</p>
+                </div>
+                <div class="bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-purple-400/20 rounded-2xl p-6 text-center">
+                    <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-white mb-2">Physics Simulation</h3>
+                    <p class="text-gray-300 text-sm">Realistic interactions and animations</p>
+                </div>
+                <div class="bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-purple-400/20 rounded-2xl p-6 text-center">
+                    <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-white mb-2">AR/VR Ready</h3>
+                    <p class="text-gray-300 text-sm">WebXR integration for immersive experiences</p>
+                </div>
+            </div>
+
+            <!-- Browser Compatibility -->
+            <div class="bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-purple-400/20 rounded-2xl p-8">
+                <h3 class="text-2xl font-bold text-white mb-8 text-center">Browser Compatibility & Performance</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-purple-300 mb-2">98%</div>
+                        <div class="text-white font-semibold mb-1">Browser Support</div>
+                        <div class="text-gray-300 text-sm">Chrome, Firefox, Safari, Edge</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-purple-300 mb-2">60fps</div>
+                        <div class="text-white font-semibold mb-1">Smooth Animation</div>
+                        <div class="text-gray-300 text-sm">Consistent frame rate across devices</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-purple-300 mb-2">< 5MB</div>
+                        <div class="text-white font-semibold mb-1">Asset Size</div>
+                        <div class="text-gray-300 text-sm">Optimized 3D models and textures</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fintech Solutions Section -->
+    <section id="fintech" class="service-section hidden py-20 bg-gradient-to-b from-secondary to-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-accent to-accent-600 rounded-xl flex items-center justify-center mr-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-bold text-white animated-gradient-text">Fintech Solutions</h2>
+                    </div>
+                    <p class="text-xl text-gray-300 mb-8">
+                        Mission-critical financial platforms with advanced security, regulatory compliance, and real-time processing capabilities.
+                    </p>
+                    
+                    <!-- Key Features -->
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-6 h-6 text-accent mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white">Enterprise Security</h3>
+                                <p class="text-gray-300">SOC 2 Type II, PCI DSS Level 1, and bank-grade encryption</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-6 h-6 text-accent mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white">Regulatory Compliance</h3>
+                                <p class="text-gray-300">GDPR, PSD2, Open Banking, and regional financial regulations</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-6 h-6 text-accent mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white">Real-Time Processing</h3>
+                                <p class="text-gray-300">High-frequency trading, instant payments, and live analytics</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trading Interface Demo -->
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-accent/20 rounded-2xl p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-white">Trading Dashboard</h3>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                                <span class="text-green-400 text-sm">Live</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Mock Trading Interface -->
+                        <div class="space-y-4">
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="bg-primary/60 rounded-lg p-3">
+                                    <div class="text-xs text-gray-400 mb-1">BTC/USD</div>
+                                    <div class="text-lg font-bold text-green-400">$42,350.00</div>
+                                    <div class="text-xs text-green-400">+2.34%</div>
+                                </div>
+                                <div class="bg-primary/60 rounded-lg p-3">
+                                    <div class="text-xs text-gray-400 mb-1">ETH/USD</div>
+                                    <div class="text-lg font-bold text-red-400">$2,890.50</div>
+                                    <div class="text-xs text-red-400">-1.12%</div>
+                                </div>
+                                <div class="bg-primary/60 rounded-lg p-3">
+                                    <div class="text-xs text-gray-400 mb-1">Portfolio</div>
+                                    <div class="text-lg font-bold text-white">$125,430</div>
+                                    <div class="text-xs text-green-400">+5.67%</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Chart Placeholder -->
+                            <div class="bg-primary/60 rounded-lg p-4 h-32 flex items-center justify-center">
+                                <svg class="w-full h-full" viewBox="0 0 300 100">
+                                    <polyline fill="none" stroke="#64c175" stroke-width="2" points="0,80 50,60 100,70 150,40 200,50 250,30 300,20"/>
+                                    <circle cx="300" cy="20" r="3" fill="#64c175"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Certifications -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-white mb-8 text-center">Security & Compliance Certifications</h3>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-accent/20 rounded-2xl p-6 text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-accent to-accent-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <h4 class="text-white font-semibold mb-2">SOC 2 Type II</h4>
+                        <p class="text-gray-300 text-sm">Security & availability controls</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-accent/20 rounded-2xl p-6 text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-accent to-accent-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+                            </svg>
+                        </div>
+                        <h4 class="text-white font-semibold mb-2">PCI DSS Level 1</h4>
+                        <p class="text-gray-300 text-sm">Payment card industry compliance</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-accent/20 rounded-2xl p-6 text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-accent to-accent-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                            </svg>
+                        </div>
+                        <h4 class="text-white font-semibold mb-2">ISO 27001</h4>
+                        <p class="text-gray-300 text-sm">Information security management</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-accent/20 rounded-2xl p-6 text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-accent to-accent-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                            </svg>
+                        </div>
+                        <h4 class="text-white font-semibold mb-2">Banking Partners</h4>
+                        <p class="text-gray-300 text-sm">Tier 1 financial institutions</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fintech Capabilities -->
+            <div class="bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-accent/20 rounded-2xl p-8">
+                <h3 class="text-2xl font-bold text-white mb-8 text-center">Platform Capabilities</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-accent mb-2">< 50ms</div>
+                        <div class="text-white font-semibold mb-1">Trade Execution</div>
+                        <div class="text-gray-300 text-sm">Ultra-low latency processing</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-accent mb-2">99.99%</div>
+                        <div class="text-white font-semibold mb-1">Uptime SLA</div>
+                        <div class="text-gray-300 text-sm">Mission-critical availability</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-accent mb-2">10M+</div>
+                        <div class="text-white font-semibold mb-1">Transactions/Day</div>
+                        <div class="text-gray-300 text-sm">High-volume processing</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-accent mb-2">256-bit</div>
+                        <div class="text-white font-semibold mb-1">Encryption</div>
+                        <div class="text-gray-300 text-sm">Bank-grade security</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Healthtech Platforms Section -->
+    <section id="healthtech" class="service-section hidden py-20 bg-gradient-to-b from-primary to-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <!-- Patient Dashboard Demo -->
+                <div class="relative order-2 lg:order-1">
+                    <div class="bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-purple-400/20 rounded-2xl p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-white">Patient Dashboard</h3>
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-green-400 text-sm">HIPAA Compliant</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Mock Patient Interface -->
+                        <div class="space-y-4">
+                            <div class="bg-primary/60 rounded-lg p-4">
+                                <div class="flex items-center space-x-3 mb-3">
+                                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=100&auto=format&fit=crop" alt="Patient" class="w-12 h-12 rounded-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=100'; this.onerror=null;" />
+                                    <div>
+                                        <div class="text-white font-semibold">Sarah Johnson</div>
+                                        <div class="text-gray-300 text-sm">Patient ID: #12345</div>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-3 gap-3">
+                                    <div class="text-center">
+                                        <div class="text-lg font-bold text-green-400">120/80</div>
+                                        <div class="text-xs text-gray-400">Blood Pressure</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-lg font-bold text-blue-400">72</div>
+                                        <div class="text-xs text-gray-400">Heart Rate</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-lg font-bold text-purple-400">98.6°F</div>
+                                        <div class="text-xs text-gray-400">Temperature</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Appointments -->
+                            <div class="bg-primary/60 rounded-lg p-4">
+                                <h4 class="text-white font-semibold mb-3">Upcoming Appointments</h4>
+                                <div class="space-y-2">
+                                    <div class="flex justify-between items-center">
+                                        <div>
+                                            <div class="text-white text-sm">Dr. Smith - Cardiology</div>
+                                            <div class="text-gray-400 text-xs">Tomorrow, 2:00 PM</div>
+                                        </div>
+                                        <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <div>
+                                            <div class="text-white text-sm">Lab Results Review</div>
+                                            <div class="text-gray-400 text-xs">Friday, 10:00 AM</div>
+                                        </div>
+                                        <div class="w-2 h-2 bg-yellow-400 rounded-full"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-1 lg:order-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center mr-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-bold text-white animated-gradient-text">Healthtech Platforms</h2>
+                    </div>
+                    <p class="text-xl text-gray-300 mb-8">
+                        HIPAA-compliant healthcare solutions with advanced accessibility, patient-centered design, and seamless integration capabilities.
+                    </p>
+                    
+                    <!-- Key Features -->
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-6 h-6 text-purple-300 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white">HIPAA Compliance</h3>
+                                <p class="text-gray-300">End-to-end encryption, audit trails, and privacy controls</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-6 h-6 text-purple-300 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white">WCAG 2.1 AA Accessibility</h3>
+                                <p class="text-gray-300">Screen reader support, keyboard navigation, and inclusive design</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-6 h-6 text-purple-300 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white">FHIR Integration</h3>
+                                <p class="text-gray-300">Seamless EHR connectivity and interoperability standards</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Healthcare Standards -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-white mb-8 text-center">Healthcare Standards & Integrations</h3>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-purple-400/20 rounded-2xl p-6 text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <h4 class="text-white font-semibold mb-2">HIPAA</h4>
+                        <p class="text-gray-300 text-sm">Privacy & security compliance</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-purple-400/20 rounded-2xl p-6 text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <h4 class="text-white font-semibold mb-2">FHIR R4</h4>
+                        <p class="text-gray-300 text-sm">Healthcare interoperability</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-purple-400/20 rounded-2xl p-6 text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                            </svg>
+                        </div>
+                        <h4 class="text-white font-semibold mb-2">WCAG 2.1 AA</h4>
+                        <p class="text-gray-300 text-sm">Accessibility standards</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-purple-400/20 rounded-2xl p-6 text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                            </svg>
+                        </div>
+                        <h4 class="text-white font-semibold mb-2">AI/ML Ready</h4>
+                        <p class="text-gray-300 text-sm">Predictive analytics integration</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Patient Outcomes -->
+            <div class="bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-purple-400/20 rounded-2xl p-8">
+                <h3 class="text-2xl font-bold text-white mb-8 text-center">Patient Outcomes & Metrics</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-purple-300 mb-2">250%</div>
+                        <div class="text-white font-semibold mb-1">Patient Satisfaction</div>
+                        <div class="text-gray-300 text-sm">Improvement in user experience</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-purple-300 mb-2">50%</div>
+                        <div class="text-white font-semibold mb-1">Cost Reduction</div>
+                        <div class="text-gray-300 text-sm">Operational efficiency gains</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-purple-300 mb-2">99.9%</div>
+                        <div class="text-white font-semibold mb-1">Data Security</div>
+                        <div class="text-gray-300 text-sm">HIPAA compliance rate</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-purple-300 mb-2">24/7</div>
+                        <div class="text-white font-semibold mb-1">Support</div>
+                        <div class="text-gray-300 text-sm">Patient care availability</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Expertise Section -->
+    <section class="py-20 bg-gradient-to-b from-secondary to-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 animated-gradient-text">Meet Our Service Experts</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Specialized team members with deep expertise in each practice area
+                </p>
+            </div>
+
+            <!-- MagicBento Container -->
+            <div id="magic-bento-container" class="mb-16"></div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Web Apps Expert -->
+                <div class="group relative bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-accent/20 rounded-2xl p-6 transform transition-all duration-500 hover:scale-105 hover:shadow-dramatic">
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-white mb-2">Mazhar Khan</h3>
+                        <p class="text-accent font-semibold mb-2">Lead Full-Stack Engineer</p>
+                        <p class="text-gray-300 text-sm mb-4">10+ years building scalable web applications with React, Node.js, and cloud architectures.</p>
+                        <div class="flex flex-wrap gap-2 justify-center">
+                            <span class="px-2 py-1 bg-accent/20 text-accent text-xs rounded">React</span>
+                            <span class="px-2 py-1 bg-accent/20 text-accent text-xs rounded">Node.js</span>
+                            <span class="px-2 py-1 bg-accent/20 text-accent text-xs rounded">AWS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3D Expert -->
+                <div class="group relative bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-purple-400/20 rounded-2xl p-6 transform transition-all duration-500 hover:scale-105 hover:shadow-dramatic">
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-white mb-2">Maya Rodriguez</h3>
+                        <p class="text-purple-300 font-semibold mb-2">3D Experience Director</p>
+                        <p class="text-gray-300 text-sm mb-4">WebGL specialist with expertise in Three.js, Blender, and immersive web experiences.</p>
+                        <div class="flex flex-wrap gap-2 justify-center">
+                            <span class="px-2 py-1 bg-purple-400/20 text-purple-300 text-xs rounded">Three.js</span>
+                            <span class="px-2 py-1 bg-purple-400/20 text-purple-300 text-xs rounded">WebGL</span>
+                            <span class="px-2 py-1 bg-purple-400/20 text-purple-300 text-xs rounded">Blender</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fintech Expert -->
+                <div class="group relative bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-accent/20 rounded-2xl p-6 transform transition-all duration-500 hover:scale-105 hover:shadow-dramatic">
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-white mb-2">David Kim</h3>
+                        <p class="text-accent font-semibold mb-2">Fintech Solutions Architect</p>
+                        <p class="text-gray-300 text-sm mb-4">Former Goldman Sachs engineer specializing in high-frequency trading and blockchain systems.</p>
+                        <div class="flex flex-wrap gap-2 justify-center">
+                            <span class="px-2 py-1 bg-accent/20 text-accent text-xs rounded">Blockchain</span>
+                            <span class="px-2 py-1 bg-accent/20 text-accent text-xs rounded">Python</span>
+                            <span class="px-2 py-1 bg-accent/20 text-accent text-xs rounded">Security</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Healthtech Expert -->
+                <div class="group relative bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-purple-400/20 rounded-2xl p-6 transform transition-all duration-500 hover:scale-105 hover:shadow-dramatic">
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-white mb-2">Dr. Sarah Williams</h3>
+                        <p class="text-purple-300 font-semibold mb-2">Healthtech Platform Lead</p>
+                        <p class="text-gray-300 text-sm mb-4">MD turned engineer with deep expertise in HIPAA compliance and healthcare interoperability.</p>
+                        <div class="flex flex-wrap gap-2 justify-center">
+                            <span class="px-2 py-1 bg-purple-400/20 text-purple-300 text-xs rounded">HIPAA</span>
+                            <span class="px-2 py-1 bg-purple-400/20 text-purple-300 text-xs rounded">FHIR</span>
+                            <span class="px-2 py-1 bg-purple-400/20 text-purple-300 text-xs rounded">ML/AI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="about_team_universe.html" class="btn-primary text-lg px-8 py-4">Meet the Full Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-b from-primary to-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 animated-gradient-text">Ready to Transform Your Digital Presence?</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Let's discuss which service area aligns with your vision and technical requirements.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Service-Specific Contact Form -->
+                <div class="bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-accent/20 rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-white mb-6">Service-Specific Consultation</h3>
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="firstName" class="block text-sm font-medium text-gray-300 mb-2">First Name</label>
+                                <input type="text" id="firstName" name="firstName" class="input-field bg-primary/50 border-gray-600 text-white placeholder-gray-400" placeholder="John" />
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-sm font-medium text-gray-300 mb-2">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" class="input-field bg-primary/50 border-gray-600 text-white placeholder-gray-400" placeholder="Doe" />
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="input-field bg-primary/50 border-gray-600 text-white placeholder-gray-400" placeholder="john@company.com" />
+                        </div>
+                        <div>
+                            <label for="company" class="block text-sm font-medium text-gray-300 mb-2">Company</label>
+                            <input type="text" id="company" name="company" class="input-field bg-primary/50 border-gray-600 text-white placeholder-gray-400" placeholder="Your Company" />
+                        </div>
+                        <div>
+                            <label for="service" class="block text-sm font-medium text-gray-300 mb-2">Primary Service Interest</label>
+                            <select id="service" name="service" class="input-field bg-primary/50 border-gray-600 text-white">
+                                <option value>Select a service</option>
+                                <option value="web-apps">Web Applications</option>
+                                <option value="3d-websites">3D Websites</option>
+                                <option value="fintech">Fintech Solutions</option>
+                                <option value="healthtech">Healthtech Platforms</option>
+                                <option value="consultation">Technical Consultation</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="budget" class="block text-sm font-medium text-gray-300 mb-2">Project Budget Range</label>
+                            <select id="budget" name="budget" class="input-field bg-primary/50 border-gray-600 text-white">
+                                <option value>Select budget range</option>
+                                <option value="50k-100k">$50K - $100K</option>
+                                <option value="100k-250k">$100K - $250K</option>
+                                <option value="250k-500k">$250K - $500K</option>
+                                <option value="500k+">$500K+</option>
+                                <option value="consultation">Consultation First</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Project Requirements</label>
+                            <textarea id="message" name="message" rows="4" class="input-field bg-primary/50 border-gray-600 text-white placeholder-gray-400" placeholder="Describe your technical requirements, timeline, and specific challenges..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full btn-primary text-lg py-4">Request Service Consultation</button>
+                    </form>
+                </div>
+
+                <!-- Service Comparison -->
+                <div class="space-y-8">
+                    <div class="bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-purple-400/20 rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold text-white mb-6">Service Comparison</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-accent to-accent-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-white">Web Applications</h4>
+                                    <p class="text-gray-300 text-sm">Best for: Enterprise platforms, SaaS products, complex business logic</p>
+                                    <p class="text-accent text-sm">Timeline: 3-6 months</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-white">3D Websites</h4>
+                                    <p class="text-gray-300 text-sm">Best for: Brand experiences, product showcases, creative campaigns</p>
+                                    <p class="text-purple-300 text-sm">Timeline: 2-4 months</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-accent to-accent-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-white">Fintech Solutions</h4>
+                                    <p class="text-gray-300 text-sm">Best for: Trading platforms, payment systems, financial analytics</p>
+                                    <p class="text-accent text-sm">Timeline: 4-8 months</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-white">Healthtech Platforms</h4>
+                                    <p class="text-gray-300 text-sm">Best for: Patient portals, telemedicine, healthcare management</p>
+                                    <p class="text-purple-300 text-sm">Timeline: 4-6 months</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-accent/20 rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold text-white mb-6">Office Locations</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="text-accent font-semibold mb-2">Mumbai</h4>
+                                <p class="text-gray-300 text-sm mb-1">G Block, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051, India</p>
+                                <p class="text-gray-300 text-sm">Phone: 8898660011</p>
+                            </div>
+                            <div>
+                                <h4 class="text-accent font-semibold mb-2">Gandhinagar, Gujarat</h4>
+                                <p class="text-gray-300 text-sm mb-1">8th Floor, GIFT One Tower, Building 56A, Gandhinagar, Gujarat 382355, India</p>
+                                <p class="text-gray-300 text-sm">Phone: 9904038110</p>
+                            </div>
+                            <div>
+                                <h4 class="text-accent font-semibold mb-2">Delaware, USA</h4>
+                                <p class="text-gray-300 text-sm mb-1">On The Green, Dover, Delaware</p>
+                                <p class="text-gray-300 text-sm">Phone: 302-888-8088</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary border-t border-secondary/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <img src="../images/logo.png" alt="Artum8 Labs Logo" class="h-14 w-auto" />
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Visionary architects of digital experiences, transforming visions into digital reality through advanced web applications, immersive 3D environments, and mission-critical solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center text-accent hover:bg-accent hover:text-white transition-colors duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center text-accent hover:bg-accent hover:text-white transition-colors duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center text-accent hover:bg-accent hover:text-white transition-colors duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24c6.624 0 11.99-5.367 11.99-11.987C24.007 5.367 18.641.001 12.017.001z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center text-accent hover:bg-accent hover:text-white transition-colors duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.5.75C6.146.75 1 5.896 1 12.25c0 5.089 3.292 9.387 7.863 10.91.575-.105.79-.251.79-.546 0-.273-.014-1.178-.014-2.142-2.889.532-3.636-.704-3.866-1.35-.13-.331-.69-1.352-1.18-1.625-.402-.216-.977-.748-.014-.762.906-.014 1.553.834 1.769 1.179 1.035 1.74 2.688 1.25 3.349.948.1-.747.402-1.25.733-1.538-2.559-.287-5.232-1.279-5.232-5.678 0-1.25.445-2.285 1.178-3.09-.115-.288-.517-1.467.115-3.048 0 0 .963-.302 3.163 1.179.92-.259 1.897-.388 2.875-.388.977 0 1.955.129 2.875.388 2.2-1.495 3.162-1.179 3.162-1.179.633 1.581.23 2.76.115 3.048.733.805 1.179 1.825 1.179 3.09 0 4.413-2.688 5.391-5.247 5.678.417.36.776 1.05.776 2.128 0 1.538-.014 2.774-.014 3.162 0 .302.216.662.79.547C20.709 21.637 24 17.324 24 12.25 24 5.896 18.854.75 12.5.75z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="homepage.html" class="text-gray-300 hover:text-accent transition-colors duration-300">Home</a></li>
+                        <li><a href="services_deep_dive.html" class="text-gray-300 hover:text-accent transition-colors duration-300">Services</a></li>
+                        <li><a href="portfolio_showcase.html" class="text-gray-300 hover:text-accent transition-colors duration-300">Portfolio</a></li>
+                        <li><a href="about_team_universe.html" class="text-gray-300 hover:text-accent transition-colors duration-300">Team</a></li>
+                        <li><a href="client_success_hub.html" class="text-gray-300 hover:text-accent transition-colors duration-300">Success Stories</a></li>
+                        <li><a href="innovation_lab.html" class="text-gray-300 hover:text-accent transition-colors duration-300">Innovation Lab</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#web-apps" class="text-gray-300 hover:text-accent transition-colors duration-300">Web Applications</a></li>
+                        <li><a href="#3d-websites" class="text-gray-300 hover:text-accent transition-colors duration-300">3D Websites</a></li>
+                        <li><a href="#fintech" class="text-gray-300 hover:text-accent transition-colors duration-300">Fintech Solutions</a></li>
+                        <li><a href="#healthtech" class="text-gray-300 hover:text-accent transition-colors duration-300">Healthtech Platforms</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-colors duration-300">Consultation</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-colors duration-300">Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Office Locations -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-6">Office Locations</h3>
+                    <ul class="space-y-3">
+                        <li class="text-gray-300 hover:text-accent transition-colors duration-300">
+                            <strong>Mumbai:</strong> G Block, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051, India<br>Phone: 8898660011
+                        </li>
+                        <li class="text-gray-300 hover:text-accent transition-colors duration-300">
+                            <strong>Gandhinagar, Gujarat:</strong> 8th Floor, GIFT One Tower, Building 56A, Gandhinagar, Gujarat 382355, India<br>Phone: 9904038110
+                        </li>
+                        <li class="text-gray-300 hover:text-accent transition-colors duration-300">
+                            <strong>Delaware, USA:</strong> On The Green, Dover, Delaware<br>Phone: 302-888-8088
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-secondary/20 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-300 text-sm">© 2025 Artum8 Labs. All Rights Reserved.</p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-accent text-sm transition-colors duration-300">Privacy Policy</a>
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-accent text-sm transition-colors duration-300">Terms of Service</a>
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-accent text-sm transition-colors duration-300">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- React DecryptedText Integration -->
+    <script type="text/babel" data-type="module">
+        // DecryptedText Component (adapted for global scope)
+        function DecryptedText({
+          text,
+          speed = 50,
+          maxIterations = 10,
+          sequential = false,
+          revealDirection = 'start',
+          useOriginalCharsOnly = false,
+          characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()_+',
+          className = '',
+          parentClassName = '',
+          encryptedClassName = '',
+          animateOn = 'hover',
+          ...props
+        }) {
+          const [displayText, setDisplayText] = React.useState(text);
+          const [isHovering, setIsHovering] = React.useState(false);
+          const [isScrambling, setIsScrambling] = React.useState(false);
+          const [revealedIndices, setRevealedIndices] = React.useState(new Set());
+          const [hasAnimated, setHasAnimated] = React.useState(false);
+          const containerRef = React.useRef(null);
+
+          React.useEffect(() => {
+            let interval;
+            let currentIteration = 0;
+
+            const getNextIndex = revealedSet => {
+              const textLength = text.length;
+              switch (revealDirection) {
+                case 'start':
+                  return revealedSet.size;
+                case 'end':
+                  return textLength - 1 - revealedSet.size;
+                case 'center': {
+                  const middle = Math.floor(textLength / 2);
+                  const offset = Math.floor(revealedSet.size / 2);
+                  const nextIndex = revealedSet.size % 2 === 0 ? middle + offset : middle - offset - 1;
+
+                  if (nextIndex >= 0 && nextIndex < textLength && !revealedSet.has(nextIndex)) {
+                    return nextIndex;
+                  }
+
+                  for (let i = 0; i < textLength; i++) {
+                    if (!revealedSet.has(i)) return i;
+                  }
+                  return 0;
+                }
+                default:
+                  return revealedSet.size;
+              }
+            };
+
+            const availableChars = useOriginalCharsOnly
+              ? Array.from(new Set(text.split(''))).filter(char => char !== ' ')
+              : characters.split('');
+
+            const shuffleText = (originalText, currentRevealed) => {
+              if (useOriginalCharsOnly) {
+                const positions = originalText.split('').map((char, i) => ({
+                  char,
+                  isSpace: char === ' ',
+                  index: i,
+                  isRevealed: currentRevealed.has(i)
+                }));
+
+                const nonSpaceChars = positions.filter(p => !p.isSpace && !p.isRevealed).map(p => p.char);
+
+                for (let i = nonSpaceChars.length - 1; i > 0; i--) {
+                  const j = Math.floor(Math.random() * (i + 1));
+                  [nonSpaceChars[i], nonSpaceChars[j]] = [nonSpaceChars[j], nonSpaceChars[i]];
+                }
+
+                let charIndex = 0;
+                return positions
+                  .map(p => {
+                    if (p.isSpace) return ' ';
+                    if (p.isRevealed) return originalText[p.index];
+                    return nonSpaceChars[charIndex++];
+                  })
+                  .join('');
+              } else {
+                return originalText
+                  .split('')
+                  .map((char, i) => {
+                    if (char === ' ') return ' ';
+                    if (currentRevealed.has(i)) return originalText[i];
+                    return availableChars[Math.floor(Math.random() * availableChars.length)];
+                  })
+                  .join('');
+              }
+            };
+
+            if (isHovering) {
+              setIsScrambling(true);
+              interval = setInterval(() => {
+                setRevealedIndices(prevRevealed => {
+                  if (sequential) {
+                    if (prevRevealed.size < text.length) {
+                      const nextIndex = getNextIndex(prevRevealed);
+                      const newRevealed = new Set(prevRevealed);
+                      newRevealed.add(nextIndex);
+                      setDisplayText(shuffleText(text, newRevealed));
+                      return newRevealed;
+                    } else {
+                      clearInterval(interval);
+                      setIsScrambling(false);
+                      return prevRevealed;
+                    }
+                  } else {
+                    setDisplayText(shuffleText(text, prevRevealed));
+                    currentIteration++;
+                    if (currentIteration >= maxIterations) {
+                      clearInterval(interval);
+                      setIsScrambling(false);
+                      setDisplayText(text);
+                    }
+                    return prevRevealed;
+                  }
+                });
+              }, speed);
+            } else {
+              setDisplayText(text);
+              setRevealedIndices(new Set());
+              setIsScrambling(false);
+            }
+
+            return () => {
+              if (interval) clearInterval(interval);
+            };
+          }, [isHovering, text, speed, maxIterations, sequential, revealDirection, characters, useOriginalCharsOnly]);
+
+          React.useEffect(() => {
+            if (animateOn !== 'view') return;
+
+            const observerCallback = entries => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting && !hasAnimated) {
+                  setIsHovering(true);
+                  setHasAnimated(true);
+                }
+              });
+            };
+
+            const observerOptions = {
+              root: null,
+              rootMargin: '0px',
+              threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
+            const currentRef = containerRef.current;
+            if (currentRef) {
+              observer.observe(currentRef);
+            }
+
+            return () => {
+              if (currentRef) {
+                observer.unobserve(currentRef);
+              }
+            };
+          }, [animateOn, hasAnimated]);
+
+          const hoverProps =
+            animateOn === 'hover'
+              ? {
+                  onMouseEnter: () => setIsHovering(true),
+                  onMouseLeave: () => setIsHovering(false)
+                }
+              : {};
+
+          const styles = {
+            wrapper: {
+              display: 'inline-block',
+              whiteSpace: 'pre-wrap'
+            },
+            srOnly: {
+              position: 'absolute',
+              width: '1px',
+              height: '1px',
+              padding: 0,
+              margin: '-1px',
+              overflow: 'hidden',
+              clip: 'rect(0,0,0,0)',
+              border: 0
+            }
+          };
+
+          return React.createElement('span', {
+            className: parentClassName,
+            ref: containerRef,
+            style: styles.wrapper,
+            ...hoverProps,
+            ...props
+          }, [
+            React.createElement('span', { key: 'sr', style: styles.srOnly }, displayText),
+            React.createElement('span', { key: 'visible', 'aria-hidden': 'true' },
+              displayText.split('').map((char, index) => {
+                const isRevealedOrDone = revealedIndices.has(index) || !isScrambling || !isHovering;
+                return React.createElement('span', {
+                  key: index,
+                  className: isRevealedOrDone ? className : encryptedClassName
+                }, char);
+              })
+            )
+          ]);
+        }
+
+        // Render the DecryptedText component
+        const root = ReactDOM.createRoot(document.getElementById('tech-stack-heading'));
+        root.render(
+          React.createElement(DecryptedText, {
+            text: "Technology Stack",
+            speed: 100,
+            maxIterations: 20,
+            characters: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()_+",
+            className: "revealed",
+            parentClassName: "all-letters animated-gradient-text",
+            encryptedClassName: "encrypted",
+            animateOn: "hover"
+          })
+        );
+    </script>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Service navigation functionality
+        const serviceNavButtons = document.querySelectorAll('.service-nav-btn');
+        const serviceSections = document.querySelectorAll('.service-section');
+
+        serviceNavButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetService = button.getAttribute('data-service');
+                
+                // Update active button
+                serviceNavButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                // Show target section, hide others
+                serviceSections.forEach(section => {
+                    if (section.id === targetService) {
+                        section.classList.remove('hidden');
+                    } else {
+                        section.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Interactive 3D cube rotation
+        const demoCube = document.getElementById('demo-cube');
+        let rotationX = 0;
+        let rotationY = 0;
+
+        if (demoCube) {
+            demoCube.addEventListener('mousemove', (e) => {
+                const rect = demoCube.getBoundingClientRect();
+                const centerX = rect.left + rect.width / 2;
+                const centerY = rect.top + rect.height / 2;
+                
+                const mouseX = e.clientX - centerX;
+                const mouseY = e.clientY - centerY;
+                
+                rotationY = (mouseX / rect.width) * 30;
+                rotationX = -(mouseY / rect.height) * 30;
+                
+                demoCube.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+            });
+
+            demoCube.addEventListener('mouseleave', () => {
+                demoCube.style.transform = 'rotateX(0deg) rotateY(0deg)';
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Interactive Tech Stack Icons Grid
+        const techIconItems = document.querySelectorAll('.tech-icon-grid-item');
+
+        techIconItems.forEach((item, index) => {
+            // Add click effect for better interactivity
+            item.addEventListener('click', () => {
+                // Add a brief scale animation on click
+                item.style.transform = 'translateY(-4px) scale(1.2)';
+                setTimeout(() => {
+                    item.style.transform = '';
+                }, 150);
+            });
+
+            // Add subtle hover sound effect (visual feedback)
+            item.addEventListener('mouseenter', () => {
+                item.style.transition = 'all 0.2s ease';
+            });
+
+            item.addEventListener('mouseleave', () => {
+                item.style.transition = 'all 0.3s ease';
+            });
+        });
+
+        // Add scroll effect for the grid container
+        const techGrid = document.getElementById('tech-stack-grid');
+        if (techGrid) {
+            techGrid.addEventListener('scroll', () => {
+                // Optional: Add scroll-based effects if needed
+            });
+        }
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+
+            // Simulate form submission
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+
+            submitButton.textContent = 'Sending Request...';
+            submitButton.disabled = true;
+
+            setTimeout(() => {
+                submitButton.textContent = 'Consultation Requested!';
+                submitButton.classList.remove('btn-primary');
+                submitButton.classList.add('bg-success', 'text-white');
+
+                setTimeout(() => {
+                    submitButton.textContent = originalText;
+                    submitButton.disabled = false;
+                    submitButton.classList.add('btn-primary');
+                    submitButton.classList.remove('bg-success', 'text-white');
+                    this.reset();
+                }, 2000);
+            }, 1500);
+        });
+
+        // Initialize MagicBento
+        document.addEventListener('DOMContentLoaded', function() {
+            const magicBentoContainer = document.getElementById('magic-bento-container');
+            if (magicBentoContainer && typeof MagicBento !== 'undefined') {
+                const magicBento = new MagicBento(magicBentoContainer, {
+                    items: [
+                        {
+                            title: "Mazhar Khan",
+                            subtitle: "Lead Full-Stack Engineer",
+                            description: "10+ years building scalable web applications with React, Node.js, and cloud architectures.",
+                            tags: ["React", "Node.js", "AWS"],
+                            size: "large"
+                        },
+                        {
+                            title: "Maya Rodriguez",
+                            subtitle: "3D Experience Director",
+                            description: "WebGL specialist with expertise in Three.js, Blender, and immersive web experiences.",
+                            tags: ["Three.js", "WebGL", "Blender"],
+                            size: "medium"
+                        },
+                        {
+                            title: "David Kim",
+                            subtitle: "Fintech Solutions Architect",
+                            description: "Former Goldman Sachs engineer specializing in high-frequency trading and blockchain systems.",
+                            tags: ["Blockchain", "Python", "Security"],
+                            size: "medium"
+                        },
+                        {
+                            title: "Dr. Sarah Williams",
+                            subtitle: "Healthtech Platform Lead",
+                            description: "MD turned engineer with deep expertise in HIPAA compliance and healthcare interoperability.",
+                            tags: ["HIPAA", "FHIR", "ML/AI"],
+                            size: "large"
+                        }
+                    ]
+                });
+            }
+
+            // Initialize Logo Loop
+            const logoLoopContainer = document.getElementById('logo-loop-container');
+            if (logoLoopContainer && typeof LogoLoop !== 'undefined') {
+                const logoLoop = new LogoLoop(logoLoopContainer, {
+                    logos: [
+                        'https://blobs.vusercontent.net/blob/re-QaCxpSWTfWe7B2Ejs1ujeocpUln1Xd.svg',
+                        'https://blobs.vusercontent.net/blob/next-obA0NGpX2JV0ZHBxU0MKgj1BAgAlgf.svg',
+                        'https://blobs.vusercontent.net/blob/vuejs-8wX7Z8pQ4J9K2L5M6N3B7V.svg',
+                        'https://blobs.vusercontent.net/blob/angular-9K8L7M6N5B4V3C2X1Z.svg'
+                    ],
+                    interval: 3000,
+                    transitionDuration: 500,
+                    size: 32
+                });
+            }
+        });
+
+        // CSS for service navigation buttons and Logo Loop
+        const style = document.createElement('style');
+        style.textContent = `
+            .service-nav-btn {
+                @apply px-6 py-3 bg-secondary/50 text-gray-300 rounded-lg border border-gray-600 transition-all duration-300 hover:bg-accent hover:text-white hover:border-accent flex items-center font-semibold;
+            }
+            .service-nav-btn.active {
+                @apply bg-accent text-white border-accent;
+            }
+            .cube-3d {
+                perspective: 1000px;
+                transform-style: preserve-3d;
+            }
+            .cube-face-3d {
+                transform-style: preserve-3d;
+            }
+            .cube-face-3d.front {
+                transform: translateZ(128px);
+            }
+            .cube-face-3d.back {
+                transform: rotateY(180deg) translateZ(128px);
+            }
+            .cube-face-3d.right {
+                transform: rotateY(90deg) translateZ(128px);
+            }
+            .cube-face-3d.left {
+                transform: rotateY(-90deg) translateZ(128px);
+            }
+
+            /* Tech Stack Grid Styles (Hidden) */
+            .tech-stack-grid {
+                display: none;
+            }
+
+            .tech-card {
+                display: none;
+            }
+
+            /* Simple Tech Stack Icons Grid */
+            .tech-icon-grid-item {
+                display: flex !important;
+                justify-content: center;
+                align-items: center;
+                padding: 0.5rem;
+                border-radius: 8px;
+                background: rgba(255, 255, 255, 0.02);
+                border: 1px solid rgba(255, 107, 53, 0.1);
+                transition: all 0.3s ease;
+                cursor: pointer;
+                animation: float 6s ease-in-out infinite;
+                min-height: 60px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .tech-icon-grid-item:nth-child(1) { animation-delay: 0s; }
+            .tech-icon-grid-item:nth-child(2) { animation-delay: 0.1s; }
+            .tech-icon-grid-item:nth-child(3) { animation-delay: 0.2s; }
+            .tech-icon-grid-item:nth-child(4) { animation-delay: 0.3s; }
+            .tech-icon-grid-item:nth-child(5) { animation-delay: 0.4s; }
+            .tech-icon-grid-item:nth-child(6) { animation-delay: 0.5s; }
+            .tech-icon-grid-item:nth-child(7) { animation-delay: 0.6s; }
+            .tech-icon-grid-item:nth-child(8) { animation-delay: 0.7s; }
+            .tech-icon-grid-item:nth-child(9) { animation-delay: 0.8s; }
+            .tech-icon-grid-item:nth-child(10) { animation-delay: 0.9s; }
+            .tech-icon-grid-item:nth-child(11) { animation-delay: 1s; }
+            .tech-icon-grid-item:nth-child(12) { animation-delay: 1.1s; }
+            .tech-icon-grid-item:nth-child(13) { animation-delay: 1.2s; }
+            .tech-icon-grid-item:nth-child(14) { animation-delay: 1.3s; }
+            .tech-icon-grid-item:nth-child(15) { animation-delay: 1.4s; }
+            .tech-icon-grid-item:nth-child(16) { animation-delay: 1.5s; }
+            .tech-icon-grid-item:nth-child(17) { animation-delay: 1.6s; }
+            .tech-icon-grid-item:nth-child(18) { animation-delay: 1.7s; }
+            .tech-icon-grid-item:nth-child(19) { animation-delay: 1.8s; }
+            .tech-icon-grid-item:nth-child(20) { animation-delay: 1.9s; }
+            .tech-icon-grid-item:nth-child(21) { animation-delay: 2s; }
+            .tech-icon-grid-item:nth-child(22) { animation-delay: 2.1s; }
+            .tech-icon-grid-item:nth-child(23) { animation-delay: 2.2s; }
+            .tech-icon-grid-item:nth-child(24) { animation-delay: 2.3s; }
+            .tech-icon-grid-item:nth-child(25) { animation-delay: 2.4s; }
+            .tech-icon-grid-item:nth-child(26) { animation-delay: 2.5s; }
+            .tech-icon-grid-item:nth-child(27) { animation-delay: 2.6s; }
+            .tech-icon-grid-item:nth-child(28) { animation-delay: 2.7s; }
+            .tech-icon-grid-item:nth-child(29) { animation-delay: 2.8s; }
+            .tech-icon-grid-item:nth-child(30) { animation-delay: 2.9s; }
+
+            .tech-icon-grid-item:hover {
+                transform: translateY(-4px) scale(1.1);
+                background: rgba(255, 107, 53, 0.1);
+                border-color: rgba(255, 107, 53, 0.3);
+                box-shadow: 0 8px 25px rgba(255, 107, 53, 0.2);
+            }
+
+            .tech-icon-simple {
+                width: 32px;
+                height: 32px;
+                object-fit: contain;
+                border-radius: 6px;
+                background: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(8px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                padding: 4px;
+                transition: all 0.3s ease;
+            }
+
+            .tech-icon-grid-item:hover .tech-icon-simple {
+                transform: scale(1.15) rotate(5deg);
+                background: rgba(255, 107, 53, 0.15);
+                border-color: rgba(255, 107, 53, 0.4);
+                box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+            }
+
+            /* Floating animation */
+            @keyframes float {
+                0%, 100% {
+                    transform: translateY(0px);
+                }
+                50% {
+                    transform: translateY(-6px);
+                }
+            }
+
+            /* Force grid layout */
+            .tech-stack-icons-grid {
+                display: grid !important;
+                grid-template-columns: repeat(5, 1fr) !important;
+                gap: 0.5rem !important;
+            }
+
+            @media (min-width: 768px) {
+                .tech-stack-icons-grid {
+                    grid-template-columns: repeat(8, 1fr) !important;
+                    gap: 0.75rem !important;
+                }
+            }
+
+            @media (min-width: 1024px) {
+                .tech-stack-icons-grid {
+                    grid-template-columns: repeat(10, 1fr) !important;
+                    gap: 1rem !important;
+                }
+            }
+
+            /* DecryptedText styles */
+            .encrypted {
+                color: rgba(255, 107, 53, 0.3);
+                text-shadow: 0 0 8px rgba(255, 107, 53, 0.2);
+            }
+
+            .revealed {
+                color: #ffffff;
+                text-shadow: 0 0 12px rgba(255, 107, 53, 0.4);
+                transition: all 0.3s ease;
+            }
+
+            .all-letters {
+                transition: all 0.3s ease;
+            }
+
+            /* Responsive adjustments */
+            @media (max-width: 1280px) {
+                .tech-icon-simple {
+                    width: 28px;
+                    height: 28px;
+                    padding: 3px;
+                }
+            }
+
+            @media (max-width: 1024px) {
+                .tech-icon-simple {
+                    width: 24px;
+                    height: 24px;
+                    padding: 2px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .tech-icon-simple {
+                    width: 20px;
+                    height: 20px;
+                    padding: 2px;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

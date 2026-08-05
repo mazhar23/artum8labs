@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+/* Removed @tailwind directives for direct browser compatibility */
+/* If using Tailwind via build tools, keep these lines */
+
+:root {
+  /* Primary Colors */
+  --color-primary: #0a0a0f; /* Deep space foundation */
+  --color-primary-50: #f8f8f9; /* Lightest primary tint */
+  --color-primary-100: #e5e5e7; /* Very light primary */
+  --color-primary-200: #d1d1d4; /* Light primary */
+  --color-primary-300: #b8b8bd; /* Medium light primary */
+  --color-primary-400: #9f9fa6; /* Medium primary */
+  --color-primary-500: #86868f; /* Base primary variant */
+  --color-primary-600: #6d6d78; /* Dark primary variant */
+  --color-primary-700: #545461; /* Darker primary */
+  --color-primary-800: #3b3b4a; /* Very dark primary */
+  --color-primary-900: #222233; /* Darkest primary */
+  --color-primary-950: #0a0a0f; /* Original primary */
+
+  /* Secondary Colors */
+  --color-secondary: #1a1a2e; /* Elevated surfaces */
+  --color-secondary-50: #f7f7f9; /* Lightest secondary tint */
+  --color-secondary-100: #e8e8ec; /* Very light secondary */
+  --color-secondary-200: #d9d9df; /* Light secondary */
+  --color-secondary-300: #c1c1ca; /* Medium light secondary */
+  --color-secondary-400: #a9a9b5; /* Medium secondary */
+  --color-secondary-500: #9191a0; /* Base secondary variant */
+  --color-secondary-600: #79798b; /* Dark secondary variant */
+  --color-secondary-700: #616176; /* Darker secondary */
+  --color-secondary-800: #494961; /* Very dark secondary */
+  --color-secondary-900: #31314c; /* Darkest secondary */
+  --color-secondary-950: #1a1a2e; /* Original secondary */
+
+  /* Accent Colors */
+  --color-accent: #64c175; /* Electric energy */
+  --color-accent-50: #fff7f5; /* Lightest accent tint */
+  --color-accent-100: #ffede6; /* Very light accent */
+  --color-accent-200: #ffd9cc; /* Light accent */
+  --color-accent-300: #ffbfa6; /* Medium light accent */
+  --color-accent-400: #ff9570; /* Medium accent */
+  --color-accent-500: #64c175; /* Original accent */
+  --color-accent-600: #64c175; /* Dark accent variant */
+  --color-accent-700: #cc4a21; /* Darker accent */
+  --color-accent-800: #b33a17; /* Very dark accent */
+  --color-accent-900: #992a0d; /* Darkest accent */
+  --color-accent-950: #801a03; /* Deepest accent */
+
+  /* Background Colors */
+  --color-background: #fafafa; /* Clean content canvas */
+  --color-surface: #ffffff; /* Pure interaction surfaces */
+
+  /* Text Colors */
+  --color-text-primary: #1a1a2e; /* Authoritative readability */
+  --color-text-secondary: #6b7280; /* Clear hierarchy - gray-500 */
+
+  /* Status Colors */
+  --color-success: #10b981; /* Positive reinforcement - emerald-500 */
+  --color-success-50: #ecfdf5; /* emerald-50 */
+  --color-success-100: #d1fae5; /* emerald-100 */
+  --color-success-500: #10b981; /* emerald-500 */
+  --color-success-600: #059669; /* emerald-600 */
+  --color-success-700: #047857; /* emerald-700 */
+
+  --color-warning: #f59e0b; /* Attention without alarm - amber-500 */
+  --color-warning-50: #fffbeb; /* amber-50 */
+  --color-warning-100: #fef3c7; /* amber-100 */
+  --color-warning-500: #f59e0b; /* amber-500 */
+  --color-warning-600: #d97706; /* amber-600 */
+  --color-warning-700: #b45309; /* amber-700 */
+
+  --color-error: #ef4444; /* Helpful concern - red-500 */
+  --color-error-50: #fef2f2; /* red-50 */
+  --color-error-100: #fee2e2; /* red-100 */
+  --color-error-500: #ef4444; /* red-500 */
+  --color-error-600: #dc2626; /* red-600 */
+  --color-error-700: #b91c1c; /* red-700 */
+
+  /* Shadows */
+  --shadow-subtle: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-dramatic: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Transitions */
+  --transition-fast: 300ms ease-out;
+  --transition-medium: 400ms ease-out;
+  --transition-slow: 600ms ease-out;
+}
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    background-color: var(--color-accent);
+    color: #fff;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 300ms ease;
+    outline: none;
+  }
+  .btn-primary:hover {
+    background-color: var(--color-accent-600);
+  }
+  .btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-accent-500);
+  }
+  .btn-primary:focus-visible {
+    box-shadow: 0 0 0 2px var(--color-accent-500);
+  }
+
+  .btn-secondary {
+    background-color: var(--color-secondary);
+    color: #fff;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 300ms ease;
+    outline: none;
+  }
+  .btn-secondary:hover {
+    background-color: var(--color-secondary-600);
+  }
+  .btn-secondary:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-secondary-500);
+  }
+
+  .card {
+    background-color: var(--color-surface);
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: var(--shadow-subtle);
+    padding: 1.5rem; /* p-6 */
+    transition: all 300ms;
+  }
+  .card:hover {
+    box-shadow: var(--shadow-dramatic);
+  }
+
+  .input-field {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border: 1px solid #d1d5db; /* gray-300 */
+    border-radius: 0.5rem; /* rounded-lg */
+    transition: all 300ms;
+    outline: none;
+  }
+  .input-field:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-accent-500);
+    border-color: var(--color-accent-500);
+  }
+
+  .text-gradient {
+    background: linear-gradient(to right, var(--color-accent), var(--color-accent-600));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+@layer utilities {
+  .animation-smooth {
+    transition: var(--transition-fast);
+  }
+
+  .animation-medium {
+    transition: var(--transition-medium);
+  }
+
+  .animation-slow {
+    transition: var(--transition-slow);
+  }
+
+  .shadow-custom {
+    box-shadow: var(--shadow-subtle);
+  }
+
+  .shadow-dramatic {
+    box-shadow: var(--shadow-dramatic);
+  }
+}

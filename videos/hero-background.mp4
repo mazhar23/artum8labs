@@ -1,0 +1,11 @@
+
+// This is a placeholder for your actual video file
+// Replace this file with your MP4 video (10-30 seconds, under 10MB)
+// The video element is configured to:
+// - Auto-play, muted, looping
+// - 30% opacity for text readability
+// - Hardware acceleration enabled
+// - Multiple format support (MP4 + WebM)
+// - Mobile optimization with playsInline
+// - Accessibility compliance
+// - Poster image fallback support
