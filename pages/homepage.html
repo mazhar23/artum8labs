@@ -158,14 +158,10 @@
 
         /* Staggered entrance animation */
         .magic-bento-card {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: slideInUp 0.8s ease-out forwards;
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
         }
-
-        .magic-bento-card:nth-child(1) { animation-delay: 0.1s; }
-        .magic-bento-card:nth-child(2) { animation-delay: 0.3s; }
-        .magic-bento-card:nth-child(3) { animation-delay: 0.5s; }
 
         @keyframes slideInUp {
             to {
@@ -1351,49 +1347,55 @@
 
             <div class="grid lg:grid-cols-2 gap-12">
                 <!-- Contact Form -->
-                <div class="magic-bento-card bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-accent/20 rounded-2xl p-8">
-                    <h3 class="text-2xl font-bold text-white mb-6">Get in Touch</h3>
+                <div class="bg-gradient-to-br from-secondary/90 to-primary/90 backdrop-blur-md border border-accent/30 hover:border-accent/60 transition-all duration-300 rounded-2xl p-8 shadow-2xl shadow-black/60">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-white">Get in Touch</h3>
+                        <a href="/pages/inquiry.html" class="text-xs text-accent hover:underline flex items-center gap-1 font-medium">
+                            Full Inquiry Page →
+                        </a>
+                    </div>
                     <form class="space-y-6">
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
-                                <label for="firstName" class="block text-sm font-medium text-gray-300 mb-2">First Name</label>
-                                <input type="text" id="firstName" name="firstName" class="input-field bg-primary/50 border-gray-600 text-white placeholder-gray-400" placeholder="John" />
+                                <label for="firstName" class="block text-sm font-medium text-gray-300 mb-2">First Name <span class="text-accent">*</span></label>
+                                <input type="text" id="firstName" name="firstName" required class="input-field bg-primary/50 border-gray-600 text-white placeholder-gray-400" placeholder="John" />
                             </div>
                             <div>
-                                <label for="lastName" class="block text-sm font-medium text-gray-300 mb-2">Last Name</label>
-                                <input type="text" id="lastName" name="lastName" class="input-field bg-primary/50 border-gray-600 text-white placeholder-gray-400" placeholder="Doe" />
+                                <label for="lastName" class="block text-sm font-medium text-gray-300 mb-2">Last Name <span class="text-accent">*</span></label>
+                                <input type="text" id="lastName" name="lastName" required class="input-field bg-primary/50 border-gray-600 text-white placeholder-gray-400" placeholder="Doe" />
                             </div>
                         </div>
                         <div>
-                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
-                            <input type="email" id="email" name="email" class="input-field bg-primary/50 border-gray-600 text-white placeholder-gray-400" placeholder="john@company.com" />
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email <span class="text-accent">*</span></label>
+                            <input type="email" id="email" name="email" required class="input-field bg-primary/50 border-gray-600 text-white placeholder-gray-400" placeholder="john@company.com" />
                         </div>
                         <div>
                             <label for="company" class="block text-sm font-medium text-gray-300 mb-2">Company</label>
                             <input type="text" id="company" name="company" class="input-field bg-primary/50 border-gray-600 text-white placeholder-gray-400" placeholder="Your Company" />
                         </div>
                         <div>
-                            <label for="service" class="block text-sm font-medium text-gray-300 mb-2">Service Interest</label>
-                            <select id="service" name="service" class="input-field bg-primary/50 border-gray-600 text-white">
-                                <option value>Select a service</option>
-                                <option value="web-apps">Web Applications</option>
-                                <option value="3d-websites">3D Websites</option>
-                                <option value="fintech">Fintech Solutions</option>
-                                <option value="healthtech">Healthtech Platforms</option>
-                                <option value="consultation">General Consultation</option>
+                            <label for="service" class="block text-sm font-medium text-gray-300 mb-2">Service Interest <span class="text-accent">*</span></label>
+                            <select id="service" name="service" required class="input-field bg-primary/50 border-gray-600 text-white">
+                                <option value="" disabled selected>Select a service</option>
+                                <option value="Web Applications">Web Applications</option>
+                                <option value="3D Websites & WebGL">3D Websites & WebGL</option>
+                                <option value="Fintech Solutions">Fintech Solutions</option>
+                                <option value="Healthtech Platforms">Healthtech Platforms</option>
+                                <option value="AI Engineering">AI Engineering</option>
+                                <option value="General Consultation">General Consultation</option>
                             </select>
                         </div>
                         <div>
-                            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Project Details</label>
-                            <textarea id="message" name="message" rows="4" class="input-field bg-primary/50 border-gray-600 text-white placeholder-gray-400" placeholder="Tell us about your project vision..."></textarea>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Project Details <span class="text-accent">*</span></label>
+                            <textarea id="message" name="message" rows="4" required class="input-field bg-primary/50 border-gray-600 text-white placeholder-gray-400" placeholder="Tell us about your project vision..."></textarea>
                         </div>
-                        <button type="submit" class="w-full btn-primary text-lg py-4">Start Your Transformation</button>
+                        <button type="submit" class="w-full btn-primary text-lg py-4 cursor-pointer">Start Your Transformation</button>
                     </form>
                 </div>
 
                 <!-- Contact Information -->
                 <div class="space-y-8">
-                    <div class="magic-bento-card bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-purple-400/20 rounded-2xl p-8">
+                    <div class="bg-gradient-to-br from-secondary/90 to-primary/90 backdrop-blur-md border border-purple-400/20 rounded-2xl p-8 shadow-2xl shadow-black/60">
                         <h3 class="text-2xl font-bold text-white mb-6">Let's Connect</h3>
                         <div class="space-y-6">
                             <div class="flex items-start space-x-4">
@@ -1453,7 +1455,7 @@
                         </div>
                     </div>
 
-                    <div class="magic-bento-card bg-gradient-to-br from-secondary/50 to-primary/50 backdrop-blur-sm border border-accent/20 rounded-2xl p-8">
+                    <div class="bg-gradient-to-br from-secondary/90 to-primary/90 backdrop-blur-md border border-accent/20 rounded-2xl p-8 shadow-2xl shadow-black/60">
                         <h3 class="text-2xl font-bold text-white mb-6">Response Time</h3>
                         <div class="space-y-4">
                             <div class="flex items-center justify-between">
@@ -1719,20 +1721,18 @@
             setInterval(createParticle, 4000);
         }
 
-        // Magical Bento Box Interactions with throttling (disabled on mobile)
-        if (!isMobile) {
-            const bentoCards = document.querySelectorAll('.magic-bento-card');
+        // Magical Bento Box Interactions (scoped safely)
+        const bentoCards = document.querySelectorAll('.magic-bento-card');
+        if (!isMobile && bentoCards.length > 0) {
             let lastBentoMouseMove = 0;
             let rafId = null;
 
-            bentoCards.forEach((card, index) => {
-                // Add will-change for performance
+            bentoCards.forEach((card) => {
                 card.style.willChange = 'transform';
 
-                // Mouse tracking for magnetic effect with throttling
                 const throttledBentoMouseMove = (e) => {
                     const now = Date.now();
-                    if (now - lastBentoMouseMove < 32) return; // Throttle to ~30fps
+                    if (now - lastBentoMouseMove < 32) return;
                     lastBentoMouseMove = now;
 
                     if (rafId) cancelAnimationFrame(rafId);
@@ -1746,154 +1746,21 @@
                         const rotateX = (mouseY / rect.height) * -10;
                         const rotateY = (mouseX / rect.width) * 10;
 
-                        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.1)`;
+                        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
                     });
                 };
 
                 card.addEventListener('mousemove', throttledBentoMouseMove);
-
                 card.addEventListener('mouseleave', () => {
                     if (rafId) cancelAnimationFrame(rafId);
                     card.style.transform = '';
                 });
-
-            // Click effect with ripple
-            card.addEventListener('click', (e) => {
-                const ripple = document.createElement('div');
-                ripple.style.position = 'absolute';
-                ripple.style.borderRadius = '50%';
-                ripple.style.background = 'rgba(255, 255, 255, 0.6)';
-                ripple.style.transform = 'scale(0)';
-                ripple.style.animation = 'ripple 0.6s linear';
-                ripple.style.left = (e.offsetX - 10) + 'px';
-                ripple.style.top = (e.offsetY - 10) + 'px';
-                ripple.style.width = '20px';
-                ripple.style.height = '20px';
-
-                card.appendChild(ripple);
-
-                setTimeout(() => {
-                    ripple.remove();
-                }, 600);
             });
-
-            // Enhanced hover sound effect (visual feedback)
-            card.addEventListener('mouseenter', () => {
-                card.style.transition = 'all 0.3s cubic-bezier(0.23, 1, 0.320, 1)';
-            });
-
-            card.addEventListener('mouseleave', () => {
-                card.style.transition = 'all 0.7s cubic-bezier(0.23, 1, 0.320, 1)';
-            });
-        });
         }
-
-        // Add ripple animation
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes ripple {
-                to {
-                    transform: scale(4);
-                    opacity: 0;
-                }
-            }
-
-            /* Mobile video fit */
-            @media (max-width: 768px) {
-                .hero-video {
-                    object-fit: contain !important;
-                }
-            }
-
-            /* Enhanced responsive grid */
-            @media (max-width: 1024px) {
-                .magic-bento-card:hover {
-                    transform: scale(1.08) !important;
-                }
-            }
-
-            @media (max-width: 768px) {
-                .magic-bento-card {
-                    margin-bottom: 2rem;
-                }
-
-                .magic-bento-card:hover {
-                    transform: scale(1.05) !important;
-                }
-
-                .magic-bento-card .group-hover\\:rotate-12 {
-                    transform: rotate(0deg) !important;
-                }
-
-                .magic-bento-card .group-hover\\:scale-110 {
-                    transform: scale(1) !important;
-                }
-            }
-
-            @media (max-width: 640px) {
-                .grid.md\\:grid-cols-2.lg\\:grid-cols-3 {
-                    grid-template-columns: 1fr !important;
-                }
-
-                .magic-bento-card {
-                    max-width: 100%;
-                }
-            }
-        `;
-        document.head.appendChild(style);
-
-        // Intersection Observer for scroll-triggered animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }, index * 200);
-                }
-            });
-        }, observerOptions);
-
-        bentoCards.forEach(card => {
-            observer.observe(card);
-        });
-
-        // Form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-
-            // Simulate form submission
-            const submitButton = this.querySelector('button[type="submit"]');
-            const originalText = submitButton.textContent;
-
-            submitButton.textContent = 'Sending...';
-            submitButton.disabled = true;
-
-            setTimeout(() => {
-                submitButton.textContent = 'Message Sent!';
-                submitButton.classList.remove('btn-primary');
-                submitButton.classList.add('bg-success', 'text-white');
-
-                setTimeout(() => {
-                    submitButton.textContent = originalText;
-                    submitButton.disabled = false;
-                    submitButton.classList.add('btn-primary');
-                    submitButton.classList.remove('bg-success', 'text-white');
-                    this.reset();
-                }, 2000);
-            }, 1500);
-        });
-
     </script>
+
+    <!-- Contact & Inquiry Form Email Dispatcher (routes to mazharkhan@programmer.net) -->
+    <script src="/js/contact-form.js"></script>
 
     <!-- Scramble Text Effect -->
     <script src="/js/scrambled-text.js" defer></script>

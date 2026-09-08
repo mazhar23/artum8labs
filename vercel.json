@@ -4,7 +4,11 @@
   "buildCommand": null,
   "outputDirectory": ".",
   "rewrites": [
-    { "source": "/", "destination": "/pages/homepage.html" }
+    { "source": "/", "destination": "/pages/homepage.html" },
+    { "source": "/inquiry", "destination": "/pages/inquiry.html" },
+    { "source": "/contact", "destination": "/pages/inquiry.html" },
+    { "source": "/start", "destination": "/pages/inquiry.html" },
+    { "source": "/transformation", "destination": "/pages/inquiry.html" }
   ],
   "routes": [
     { "handle": "filesystem" },

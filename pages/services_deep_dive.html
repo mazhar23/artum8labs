@@ -1780,35 +1780,7 @@
             });
         }
 
-        // Form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-
-            // Simulate form submission
-            const submitButton = this.querySelector('button[type="submit"]');
-            const originalText = submitButton.textContent;
-
-            submitButton.textContent = 'Sending Request...';
-            submitButton.disabled = true;
-
-            setTimeout(() => {
-                submitButton.textContent = 'Consultation Requested!';
-                submitButton.classList.remove('btn-primary');
-                submitButton.classList.add('bg-success', 'text-white');
-
-                setTimeout(() => {
-                    submitButton.textContent = originalText;
-                    submitButton.disabled = false;
-                    submitButton.classList.add('btn-primary');
-                    submitButton.classList.remove('bg-success', 'text-white');
-                    this.reset();
-                }, 2000);
-            }, 1500);
-        });
+        // Form submission is handled by /js/contact-form.js (dispatches to mazharkhan@programmer.net)
 
         // Initialize MagicBento
         document.addEventListener('DOMContentLoaded', function() {
@@ -2051,6 +2023,7 @@
         `;
         document.head.appendChild(style);
     </script>
+    <script src="/js/contact-form.js"></script>
 <script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
 </body>
 </html>
