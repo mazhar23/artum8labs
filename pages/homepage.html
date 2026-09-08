@@ -453,6 +453,9 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" /></noscript>
+
+    <!-- Google Preferred Sources — renders the "Add to Preferred Sources" badge -->
+    <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
 </head>
 <body class="bg-primary text-white overflow-x-hidden">
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -1566,8 +1569,13 @@
             </div>
 
             <div class="border-t border-secondary/20 mt-12 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
                     <p class="text-gray-300 text-sm">© 2025 A8. All Rights Reserved.</p>
+                    <!-- Google Preferred Sources badge —
+                         Lets visitors add artum8labs.com as a preferred source so your
+                         content is highlighted in AI Overviews, AI Mode, Top Stories,
+                         and Google Discover. -->
+                    <div google-add-preferred-source-btn data-theme="dark"></div>
                     <div class="flex space-x-6 mt-4 md:mt-0">
                         <span class="text-gray-300 hover:text-accent cursor-pointer text-sm transition-colors duration-300">Privacy Policy</span>
                         <span class="text-gray-300 hover:text-accent cursor-pointer text-sm transition-colors duration-300">Terms of Service</span>
