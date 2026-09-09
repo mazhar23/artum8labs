@@ -1,6 +1,7 @@
 /**
  * Vercel Edge Middleware for Markdown Content Negotiation (acceptmarkdown.com)
  * Intercepts requests with Accept: text/markdown and serves markdown versions with Vary headers.
+ * For nonexistent paths with Accept: text/markdown, returns 404.md with HTTP 404 status.
  */
 
 export const config = {
@@ -41,30 +42,29 @@ export default async function middleware(request) {
 
   // Only negotiate when client explicitly asks for text/markdown
   if (acceptHeader.includes('text/markdown')) {
-    const targetFile = MARKDOWN_ROUTES[pathname] || MARKDOWN_ROUTES[pathname + '.html'] || null;
+    const isKnown = Boolean(MARKDOWN_ROUTES[pathname] || MARKDOWN_ROUTES[pathname + '.html']);
+    const targetFile = MARKDOWN_ROUTES[pathname] || MARKDOWN_ROUTES[pathname + '.html'] || '/404.md';
 
-    if (targetFile) {
-      const targetUrl = new URL(targetFile, request.url);
-      try {
-        const response = await fetch(targetUrl);
-        if (response.ok) {
-          const body = await response.text();
-          return new Response(body, {
-            status: 200,
-            headers: {
-              'Content-Type': 'text/markdown; charset=utf-8',
-              'Vary': 'Accept, Accept-Encoding',
-              'Cache-Control': 'public, max-age=3600, s-maxage=86400',
-              'X-Content-Type-Options': 'nosniff',
-            },
-          });
-        }
-      } catch (err) {
-        // Fallback to next handler
+    const targetUrl = new URL(targetFile, request.url);
+    try {
+      const response = await fetch(targetUrl);
+      if (response.ok) {
+        const body = await response.text();
+        return new Response(body, {
+          status: isKnown ? 200 : 404,
+          headers: {
+            'Content-Type': 'text/markdown; charset=utf-8',
+            'Vary': 'Accept, Accept-Encoding',
+            'Cache-Control': isKnown ? 'public, max-age=3600, s-maxage=86400' : 'no-cache, no-store',
+            'X-Content-Type-Options': 'nosniff',
+          },
+        });
       }
+    } catch (err) {
+      // Fallback
     }
   }
 
-  // Standard passthrough with Vary header added
+  // Standard passthrough
   return;
 }
