@@ -16,7 +16,8 @@
   "scripts": {
     "build:css": "npx @dhiwise/component-tagger && npx tailwindcss -i ./css/tailwind.css -o ./css/main.css",
     "watch:css": "npx @dhiwise/component-tagger && npx tailwindcss -i ./css/tailwind.css -o ./css/main.css --watch",
-    "dev": "npm run watch:css"
+    "dev": "npm run watch:css",
+    "test": "node test/verify-agent-compliance.js"
   },
   "author": "",
   "license": "MIT",

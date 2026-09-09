@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /404.html
 
 Sitemap: https://www.artum8labs.com/sitemap.xml
-
-# Crawl-delay: 10

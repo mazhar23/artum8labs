@@ -3,15 +3,87 @@
   "framework": null,
   "buildCommand": null,
   "outputDirectory": ".",
-  "rewrites": [
-    { "source": "/", "destination": "/pages/homepage.html" },
-    { "source": "/inquiry", "destination": "/pages/inquiry.html" },
-    { "source": "/contact", "destination": "/pages/inquiry.html" },
-    { "source": "/start", "destination": "/pages/inquiry.html" },
-    { "source": "/transformation", "destination": "/pages/inquiry.html" }
+  "cleanUrls": true,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Vary",
+          "value": "Accept, Accept-Encoding"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.md",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/markdown; charset=utf-8"
+        },
+        {
+          "key": "Vary",
+          "value": "Accept, Accept-Encoding"
+        }
+      ]
+    },
+    {
+      "source": "/llms.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Vary",
+          "value": "Accept, Accept-Encoding"
+        }
+      ]
+    },
+    {
+      "source": "/llms-full.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Vary",
+          "value": "Accept, Accept-Encoding"
+        }
+      ]
+    },
+    {
+      "source": "/.well-known/agent-instructions.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Vary",
+          "value": "Accept, Accept-Encoding"
+        }
+      ]
+    }
   ],
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/about", "destination": "/pages/about.html" },
+    { "source": "/contact", "destination": "/pages/contact.html" },
+    { "source": "/inquiry", "destination": "/pages/inquiry.html" },
+    { "source": "/start", "destination": "/pages/inquiry.html" },
+    { "source": "/transformation", "destination": "/pages/inquiry.html" },
+    { "source": "/privacy", "destination": "/pages/privacy.html" },
+    { "source": "/terms", "destination": "/pages/terms.html" },
+    { "source": "/services", "destination": "/pages/services_deep_dive.html" },
+    { "source": "/portfolio", "destination": "/pages/portfolio_showcase.html" },
+    { "source": "/team", "destination": "/pages/about_team_universe.html" },
+    { "source": "/success-stories", "destination": "/pages/client_success_hub.html" },
+    { "source": "/innovation-lab", "destination": "/pages/innovation_lab.html" }
   ]
 }

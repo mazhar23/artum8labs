@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0a0f" />
+    <title>404 - Page Not Found | Artum8 Labs</title>
+    <meta name="description" content="The page or resource you are looking for does not exist on Artum8 Labs. Explore our services, portfolio, or contact us directly." />
+    <meta name="robots" content="noindex, follow" />
+
+    <!-- Fonts & CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/main.css" />
+
+    <style>
+        body {
+            background-color: #0a0a0f;
+            color: #f3f4f6;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .cyber-glow {
+            background: radial-gradient(circle at 50% 30%, rgba(255, 107, 53, 0.12) 0%, rgba(132, 0, 255, 0.08) 40%, transparent 70%);
+        }
+        .glass-card {
+            background: rgba(18, 18, 26, 0.75);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+        .animated-gradient-text {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 35%, #a855f7 70%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="cyber-glow">
+
+    <!-- Navigation Header -->
+    <nav class="bg-primary/90 backdrop-blur-md border-b border-white/10 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-3">
+                <img src="/images/logo.png" alt="Artum8 Labs Logo" class="h-10 w-auto" />
+            </a>
+            <div class="flex items-center gap-4 text-sm">
+                <a href="/" class="text-gray-300 hover:text-accent transition-colors">Home</a>
+                <a href="/services" class="text-gray-300 hover:text-accent transition-colors">Services</a>
+                <a href="/contact" class="btn-primary text-xs py-2 px-4">Get in Touch</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main 404 Hero -->
+    <main class="flex-grow flex items-center justify-center px-4 py-16">
+        <div class="max-w-2xl w-full text-center">
+            <div class="glass-card rounded-3xl p-8 sm:p-12 relative overflow-hidden">
+                <div class="font-mono text-7xl sm:text-8xl font-black text-accent/90 mb-4 tracking-tighter">404</div>
+                <h1 class="text-2xl sm:text-3xl font-bold text-white mb-4">
+                    Resource <span class="animated-gradient-text">Not Found</span>
+                </h1>
+                <p class="text-gray-300 text-base mb-8 max-w-md mx-auto leading-relaxed">
+                    The URL or endpoint you requested does not exist or has been moved. Use the navigation links below to explore Artum8 Labs.
+                </p>
+
+                <!-- Navigation Quick Actions -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-left mb-8">
+                    <a href="/" class="p-3 rounded-xl bg-white/5 hover:bg-accent/10 border border-white/10 hover:border-accent/30 transition-all text-sm block">
+                        <span class="text-accent font-semibold block">⚡ Home</span>
+                        <span class="text-xs text-gray-400">Main studio portal</span>
+                    </a>
+                    <a href="/services" class="p-3 rounded-xl bg-white/5 hover:bg-accent/10 border border-white/10 hover:border-accent/30 transition-all text-sm block">
+                        <span class="text-purple-400 font-semibold block">🛠️ Services</span>
+                        <span class="text-xs text-gray-400">Full capability matrix</span>
+                    </a>
+                    <a href="/portfolio" class="p-3 rounded-xl bg-white/5 hover:bg-accent/10 border border-white/10 hover:border-accent/30 transition-all text-sm block">
+                        <span class="text-emerald-400 font-semibold block">🚀 Portfolio</span>
+                        <span class="text-xs text-gray-400">Shipped case studies</span>
+                    </a>
+                    <a href="/about" class="p-3 rounded-xl bg-white/5 hover:bg-accent/10 border border-white/10 hover:border-accent/30 transition-all text-sm block">
+                        <span class="text-blue-400 font-semibold block">🏢 About</span>
+                        <span class="text-xs text-gray-400">Team & locations</span>
+                    </a>
+                    <a href="/contact" class="p-3 rounded-xl bg-white/5 hover:bg-accent/10 border border-white/10 hover:border-accent/30 transition-all text-sm block">
+                        <span class="text-orange-400 font-semibold block">✉️ Contact</span>
+                        <span class="text-xs text-gray-400">Direct brief submission</span>
+                    </a>
+                    <a href="/llms.txt" class="p-3 rounded-xl bg-white/5 hover:bg-accent/10 border border-white/10 hover:border-accent/30 transition-all text-sm block">
+                        <span class="text-yellow-400 font-mono font-semibold block">🤖 llms.txt</span>
+                        <span class="text-xs text-gray-400">Agent instructions</span>
+                    </a>
+                </div>
+
+                <!-- Machine-Readable Notice for AI Agents -->
+                <div class="border-t border-white/10 pt-6 text-left">
+                    <p class="text-xs font-mono text-gray-400 uppercase tracking-wider mb-2">Machine-Readable Discovery for AI Agents:</p>
+                    <p class="text-xs text-gray-300 font-mono bg-black/40 p-3 rounded-lg border border-white/5 leading-relaxed">
+                        Status: 404 Not Found<br />
+                        Sitemap: <a href="/sitemap.xml" class="text-accent underline">https://www.artum8labs.com/sitemap.xml</a><br />
+                        LLM Index: <a href="/llms.txt" class="text-accent underline">https://www.artum8labs.com/llms.txt</a><br />
+                        Direct Inquiries: mazharkhan@programmer.net
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-6 text-center text-xs text-gray-500">
+        © 2025 Artum8 Labs. All Rights Reserved. Lead Architect: <a href="mailto:mazharkhan@programmer.net" class="text-accent underline">mazharkhan@programmer.net</a>
+    </footer>
+
+</body>
+</html>
