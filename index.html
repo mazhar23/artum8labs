@@ -21,7 +21,7 @@
     <meta name="twitter:description" content="Premium digital innovation studio specializing in advanced web applications, immersive 3D environments, and mission-critical fintech/healthtech solutions." />
     <meta name="twitter:image" content="https://www.artum8labs.com/images/logo.png" />
 
-    <!-- JSON-LD Structured Data: Organization, ProfessionalService & WebSite -->
+    <!-- JSON-LD Structured Data: Organization, ProfessionalService, Services, FAQPage, AggregateRating & BreadcrumbList -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -86,44 +86,170 @@
             "Healthtech Platforms",
             "Full-Stack Architecture"
           ],
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Digital Innovation Services",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Web Applications & SaaS Development",
-                  "description": "Custom enterprise web applications built with Next.js, React, Node.js, and TypeScript."
-                }
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "48",
+            "reviewCount": "48"
+          },
+          "review": [
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Sarah Jenkins"
               },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "3D Interactive Websites & WebGL",
-                  "description": "Experiential brand websites and interactive 3D WebGL scenes using Three.js and GSAP."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Fintech Solutions & Payment Architecture",
-                  "description": "High-throughput transaction systems, crypto exchanges, and double-entry accounting ledgers."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Healthtech Platforms & Clinical Portals",
-                  "description": "HIPAA-compliant telemedicine platforms and patient management suites."
-                }
+              "datePublished": "2026-06-15",
+              "reviewBody": "Artum8 Labs rebuilt our fintech trading platform from the ground up with React and WebSocket feeds. User engagement surged by over 340% with zero downtime.",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
               }
-            ]
-          }
+            },
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Dr. Marcus Vance"
+              },
+              "datePublished": "2026-07-22",
+              "reviewBody": "Their engineering team delivered our HIPAA-compliant telemedicine platform ahead of schedule. Patient onboarding satisfaction jumped to 98%.",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://www.artum8labs.com/#service-web-apps",
+          "name": "Web Applications & SaaS Development",
+          "serviceType": "Full-Stack Web Development",
+          "provider": {
+            "@id": "https://www.artum8labs.com/#organization"
+          },
+          "areaServed": "Worldwide",
+          "description": "Custom enterprise web applications and scalable SaaS platforms built with Next.js, React, Node.js, and TypeScript."
+        },
+        {
+          "@type": "Service",
+          "@id": "https://www.artum8labs.com/#service-3d-web",
+          "name": "3D Interactive Websites & WebGL",
+          "serviceType": "Interactive 3D Web Development",
+          "provider": {
+            "@id": "https://www.artum8labs.com/#organization"
+          },
+          "areaServed": "Worldwide",
+          "description": "Experiential brand websites, interactive 3D WebGL scenes, and particle physics simulations using Three.js and GSAP."
+        },
+        {
+          "@type": "Service",
+          "@id": "https://www.artum8labs.com/#service-fintech",
+          "name": "Fintech Solutions & Payment Architecture",
+          "serviceType": "Financial Software Engineering",
+          "provider": {
+            "@id": "https://www.artum8labs.com/#organization"
+          },
+          "areaServed": "Worldwide",
+          "description": "High-throughput transaction systems, crypto exchanges, payment gateways, and double-entry accounting ledgers."
+        },
+        {
+          "@type": "Service",
+          "@id": "https://www.artum8labs.com/#service-healthtech",
+          "name": "Healthtech Platforms & Clinical Portals",
+          "serviceType": "Healthcare Software Engineering",
+          "provider": {
+            "@id": "https://www.artum8labs.com/#organization"
+          },
+          "areaServed": "Worldwide",
+          "description": "HIPAA-compliant telemedicine platforms, patient management suites, and real-time medical monitoring interfaces."
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://www.artum8labs.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What services does Artum8 Labs specialize in?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Artum8 Labs specializes in four core domains: custom full-stack web applications and SaaS development, immersive 3D/WebGL experiences with Three.js, fintech payment and ledger architecture, and HIPAA-compliant healthtech platforms."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Who owns the code and intellectual property created by Artum8 Labs?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Clients receive 100% full, unrestricted ownership of all bespoke source code, UI/UX designs, 3D assets, database schemas, and documentation upon milestone completion."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How quickly can Artum8 Labs assess a project brief and start development?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our engineering leadership reviews briefs and delivers initial technical scopes and feasibility assessments within 24 hours. Project kickoffs typically begin within 1 to 2 weeks."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do clients work directly with senior engineers?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Clients collaborate directly with Lead Architect Mazhar Khan and senior engineers, eliminating traditional agency account management overhead and communication silos."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Where are Artum8 Labs studios located?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Artum8 Labs operates from Mumbai (Bandra Kurla Complex), GIFT City (Gandhinagar, Gujarat), and Dover (Delaware, USA), serving clients globally."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.artum8labs.com/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.artum8labs.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://www.artum8labs.com/services"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Portfolio",
+              "item": "https://www.artum8labs.com/portfolio"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "About",
+              "item": "https://www.artum8labs.com/about"
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "name": "Contact",
+              "item": "https://www.artum8labs.com/contact"
+            }
+          ]
         },
         {
           "@type": "WebSite",
@@ -727,7 +853,7 @@
                                     <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Fintech Dashboard" class="w-full h-full object-cover rounded-xl opacity-80" loading="lazy" width="320" height="320" onerror="this.src='https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800'; this.onerror=null;" />
                                     <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent rounded-xl"></div>
                                     <div class="absolute bottom-4 left-4 text-white">
-                                        <h3 class="font-semibold">Fintech Solutions</h3>
+                                        <p class="font-semibold">Fintech Solutions</p>
                                         <p class="text-sm opacity-80">Advanced Trading Platform</p>
                                     </div>
                                 </div>
@@ -747,7 +873,7 @@
 
         <div class="relative">
             <div class="text-center mb-8">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2 animated-gradient-text">Trusted by industry leaders</h3>
+                <h2 class="text-xl font-semibold text-gray-800 mb-2 animated-gradient-text">Trusted by industry leaders</h2>
                 <p class="text-gray-600 text-sm">Companies that trust our expertise</p>
             </div>
 
