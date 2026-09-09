@@ -148,6 +148,42 @@ if (jsonLdMatch) {
         }
 
         assert(org.founder && org.founder.name === 'Mazhar Khan', 'JSON-LD Organization includes Founder details');
+
+        // AggregateRating on Org
+        assert(org.aggregateRating && org.aggregateRating['@type'] === 'AggregateRating', 'JSON-LD Organization has AggregateRating');
+        assert(parseFloat(org.aggregateRating.ratingValue) >= 4.0, 'AggregateRating ratingValue is >= 4.0');
+        assert(parseInt(org.aggregateRating.ratingCount) > 0, 'AggregateRating ratingCount is > 0');
+
+        // Review nodes on Org
+        assert(Array.isArray(org.review) && org.review.length >= 1, 'JSON-LD Organization has at least one Review');
+        assert(org.review[0].author && org.review[0].reviewBody, 'First Review has author and reviewBody');
+
+        const graph = parsed['@graph'] || [parsed];
+
+        // Standalone Service nodes
+        const services = graph.filter(item => item['@type'] === 'Service');
+        assert(services.length >= 4, `JSON-LD @graph contains at least 4 standalone Service nodes (found ${services.length})`);
+        services.forEach((svc, i) => {
+            assert(svc.name && svc.description, `Service[${i}] has name and description`);
+            assert(svc.provider && svc.provider['@id'], `Service[${i}] has linked provider`);
+        });
+
+        // FAQPage node
+        const faq = graph.find(item => item['@type'] === 'FAQPage');
+        assert(faq !== undefined, 'JSON-LD @graph contains FAQPage node');
+        assert(Array.isArray(faq.mainEntity) && faq.mainEntity.length >= 3, `FAQPage has at least 3 Q&A entries (found ${faq.mainEntity ? faq.mainEntity.length : 0})`);
+        faq.mainEntity.forEach((qa, i) => {
+            assert(qa['@type'] === 'Question' && qa.acceptedAnswer, `FAQ entry[${i}] is a Question with acceptedAnswer`);
+        });
+
+        // BreadcrumbList node
+        const breadcrumb = graph.find(item => item['@type'] === 'BreadcrumbList');
+        assert(breadcrumb !== undefined, 'JSON-LD @graph contains BreadcrumbList node');
+        assert(Array.isArray(breadcrumb.itemListElement) && breadcrumb.itemListElement.length >= 3, `BreadcrumbList has at least 3 items (found ${breadcrumb.itemListElement ? breadcrumb.itemListElement.length : 0})`);
+        breadcrumb.itemListElement.forEach((item, i) => {
+            assert(item['@type'] === 'ListItem' && item.position && item.name && item.item, `BreadcrumbList item[${i}] has position, name, and item URL`);
+        });
+
     } catch (e) {
         assert(false, `JSON-LD parsing error: ${e.message}`);
     }
