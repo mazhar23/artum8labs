@@ -79,6 +79,7 @@
     { "source": "/start", "destination": "/pages/inquiry.html" },
     { "source": "/transformation", "destination": "/pages/inquiry.html" },
     { "source": "/privacy", "destination": "/pages/privacy.html" },
+    { "source": "/privacy.md", "destination": "/privacy.md" },
     { "source": "/terms", "destination": "/pages/terms.html" },
     { "source": "/services", "destination": "/pages/services_deep_dive.html" },
     { "source": "/portfolio", "destination": "/pages/portfolio_showcase.html" },
