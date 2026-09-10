@@ -83,6 +83,7 @@ const mdFiles = [
     'content/services/seo.md',
     'content/services/aeo.md',
     'content/services/ai-automation.md',
+    'content/automations.md',
     'content/portfolio.md',
     '404.md'
 ];
@@ -103,7 +104,8 @@ const serviceHtmlPages = [
     'pages/service_healthtech.html',
     'pages/service_seo.html',
     'pages/service_aeo.html',
-    'pages/service_ai_automation.html'
+    'pages/service_ai_automation.html',
+    'pages/a8_automations.html'
 ];
 
 serviceHtmlPages.forEach(file => {

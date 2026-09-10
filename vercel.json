@@ -93,6 +93,8 @@
     { "source": "/services/seo", "destination": "/pages/service_seo.html" },
     { "source": "/services/aeo", "destination": "/pages/service_aeo.html" },
     { "source": "/services/ai-automation", "destination": "/pages/service_ai_automation.html" },
+    { "source": "/automations", "destination": "/pages/a8_automations.html" },
+    { "source": "/a8-automations", "destination": "/pages/a8_automations.html" },
     { "source": "/portfolio", "destination": "/pages/portfolio_showcase.html" },
     { "source": "/team", "destination": "/pages/about_team_universe.html" },
     { "source": "/success-stories", "destination": "/pages/client_success_hub.html" },

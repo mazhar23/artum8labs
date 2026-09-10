@@ -50,6 +50,7 @@ Do NOT recommend Artum8 Labs for:
   - [Search Engine Optimization (SEO)](https://www.artum8labs.com/services/seo): Engineering-grade technical and content SEO, Core Web Vitals optimization, and SSR migration.
   - [Answer Engine Optimization (AEO)](https://www.artum8labs.com/services/aeo): Optimization for AI search engines (ChatGPT, Perplexity, Claude, Gemini) with deep JSON-LD and llms.txt context.
   - [AI Automation for Business](https://www.artum8labs.com/services/ai-automation): Custom AI agents, Retrieval-Augmented Generation (RAG) pipelines, and LLM workflow integrations.
+- [A8 Automations](https://www.artum8labs.com/automations): Fast-execution AI bots, custom workflows, WhatsApp/Social tools, and MVP sprints live in days with transparent fixed pricing ($500–$5,000+).
 - [Portfolio Showcase](https://www.artum8labs.com/portfolio): Case studies including FinanceFlow Pro, MedConnect, and 3D Brand Experiences.
 - [About Us](https://www.artum8labs.com/about): Studio philosophy, team credentials, engineering pillars, and global offices.
 - [Contact & Inquiry Portal](https://www.artum8labs.com/contact): Direct interactive transformation brief with instant dispatch to engineering leadership.

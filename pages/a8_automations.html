@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0a0f" />
+    <title>A8 Automations — Fast AI Bots, Workflows & MVP Sprints | Artum8 Labs</title>
+    <meta name="description" content="Ship an AI bot, WhatsApp agent, lead-gen tool, or internal automation in days — not months. Fixed pricing, rapid execution by A8 Automations, backed by Artum8 Labs." />
+    <link rel="canonical" href="https://www.artum8labs.com/automations" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="A8 Automations — Fast AI Bots, Workflows & MVP Sprints" />
+    <meta property="og:description" content="Ship an AI bot, WhatsApp agent, lead-gen tool, or internal automation in days — not months. Fixed price, live this week." />
+    <meta property="og:image" content="https://www.artum8labs.com/images/logo.png" />
+    <meta property="og:url" content="https://www.artum8labs.com/automations" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="A8 Automations — Fast AI Bots, Workflows & MVP Sprints" />
+    <meta name="twitter:description" content="Ship an AI bot, WhatsApp agent, lead-gen tool, or internal automation in days — not months. Fixed price, live this week." />
+    <meta name="twitter:image" content="https://www.artum8labs.com/images/logo.png" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/gradient-text.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Motion & Animations Styling -->
+    <style>
+        .skip-link { position: absolute; top: -40px; left: 6px; background: #ff6b35; color: #fff; padding: 8px 16px; border-radius: 4px; text-decoration: none; z-index: 1000; }
+        .skip-link:focus { top: 6px; }
+
+        /* Custom Motion Graphics Keyframes */
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 15px rgba(255, 107, 53, 0.4), 0 0 30px rgba(147, 51, 234, 0.2); }
+            50% { box-shadow: 0 0 25px rgba(255, 107, 53, 0.8), 0 0 50px rgba(147, 51, 234, 0.5); }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        @keyframes floatParticle {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-12px) rotate(6deg); }
+        }
+
+        @keyframes spinRing {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .motion-float { animation: floatParticle 6s ease-in-out infinite; }
+        .spin-ring { animation: spinRing 24s linear infinite; }
+
+        /* Animated Buttons */
+        .btn-animated-primary {
+            background: linear-gradient(135deg, #ff6b35 0%, #d946ef 100%);
+            background-size: 200% 200%;
+            color: #ffffff;
+            font-weight: 700;
+            padding: 0.875rem 2rem;
+            border-radius: 0.75rem;
+            display: inline-flex;
+            items-center: center;
+            justify-content: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: pulseGlow 4s infinite;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .btn-animated-primary:hover {
+            transform: translateY(-2px) scale(1.02);
+            background-position: 100% 0;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.6);
+        }
+
+        .btn-animated-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 107, 53, 0.4);
+            color: #f3f4f6;
+            font-weight: 600;
+            padding: 0.875rem 2rem;
+            border-radius: 0.75rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(8px);
+        }
+
+        .btn-animated-secondary:hover {
+            background: rgba(255, 107, 53, 0.15);
+            border-color: #ff6b35;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .pricing-card-highlight {
+            border: 1px solid rgba(255, 107, 53, 0.5);
+            box-shadow: 0 0 30px rgba(255, 107, 53, 0.15);
+        }
+
+        .pricing-card-highlight:hover {
+            border-color: #ff6b35;
+            box-shadow: 0 0 45px rgba(255, 107, 53, 0.3);
+        }
+    </style>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://www.artum8labs.com/automations#service",
+          "name": "A8 Automations — Fast AI Bots & Workflows",
+          "serviceType": "AI Automation & Rapid Bot Engineering",
+          "description": "Ship an AI bot, WhatsApp agent, lead-gen tool, or internal automation in days. Fixed price, 3-5 day delivery, backed by Artum8 Labs.",
+          "provider": {
+            "@type": "Organization",
+            "name": "A8 Automations (Artum8 Labs)",
+            "url": "https://www.artum8labs.com"
+          },
+          "areaServed": "Worldwide",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Automation Packages",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Starter Automation ($500-$1,500)"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Growth Multi-Channel Bot ($2,000-$5,000)"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Scale Retainer ($1,000+/mo)"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.artum8labs.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "A8 Automations",
+              "item": "https://www.artum8labs.com/automations"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How is this different from Artum8 Labs enterprise services?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Enterprise projects need custom architecture and compliance work; A8 Automations delivers proven, repeatable builds at fixed prices in days."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can this grow into a bigger platform later?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes! Our builds are written in clean, production-grade code that hands off seamlessly to the main Artum8 Labs team if you scale into custom enterprise software."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-primary text-white overflow-x-hidden">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation Header -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-primary/90 backdrop-blur-md border-b border-secondary/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-3">
+                    <a href="/" class="flex items-center">
+                        <img src="/images/logo.png" alt="Artum8 Labs Logo" class="h-10 w-auto" width="160" height="40" />
+                    </a>
+                    <span class="text-xs px-2.5 py-1 bg-accent/20 border border-accent/40 rounded-full text-accent font-bold uppercase tracking-wider">A8 Automations</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="/" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Home</a>
+                        <a href="#services" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Services</a>
+                        <a href="#pricing" class="text-accent font-semibold px-3 py-2 rounded-md text-sm">Packages &amp; Pricing</a>
+                        <a href="#how-it-works" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">How It Works</a>
+                        <a href="#faq" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">FAQ</a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#pricing" class="btn-animated-primary text-xs py-2 px-4">See Packages</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-accent p-2" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-primary/95 backdrop-blur-md">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="/" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#services" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#pricing" class="text-accent block px-3 py-2 rounded-md text-base font-medium">Packages &amp; Pricing</a>
+                <a href="#how-it-works" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">How It Works</a>
+                <a href="#faq" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">FAQ</a>
+                <a href="#quote-form" class="btn-animated-primary block mx-3 mt-4 text-center">Get a Fixed Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+        <!-- 1. Hero Section -->
+        <section class="relative pt-28 pb-20 overflow-hidden bg-gradient-to-b from-primary via-secondary/40 to-primary">
+            <!-- Animated Background Motion Graphics -->
+            <div class="absolute inset-0 pointer-events-none overflow-hidden">
+                <div class="absolute top-1/4 left-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl motion-float"></div>
+                <div class="absolute bottom-10 right-10 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl motion-float" style="animation-delay: -3s;"></div>
+                <div class="absolute top-1/3 right-1/4 w-32 h-32 border border-accent/20 rounded-full spin-ring"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <!-- Trust Badge -->
+                <div class="inline-flex items-center space-x-2 px-4 py-2 bg-secondary/80 border border-white/10 rounded-full text-gray-300 text-xs font-medium mb-6 backdrop-blur-md">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    <span>Fast-Execution Arm of Artum8 Labs</span>
+                    <span class="text-gray-500">•</span>
+                    <span class="text-gray-400">Fixed Prices &amp; Rapid Turns</span>
+                </div>
+
+                <!-- Main Outcome Headline -->
+                <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold leading-tight mb-6">
+                    <span class="block text-white">AI Bots &amp; Automations,</span>
+                    <span class="block animated-gradient-text">Built and Live This Week</span>
+                </h1>
+
+                <!-- One-line Positioning Subhead -->
+                <p class="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto font-light mb-8 leading-relaxed">
+                    Ship an AI bot, WhatsApp agent, lead-gen tool, or internal workflow in days — not months. Fixed price, fast turnaround, no 6-month roadmap.
+                </p>
+
+                <!-- Two CTAs -->
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
+                    <a href="#pricing" class="btn-animated-primary w-full sm:w-auto">
+                        <span>See Packages &amp; Pricing</span>
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </a>
+                    <a href="#quote-form" class="btn-animated-secondary w-full sm:w-auto">
+                        <span>Get a Fixed Quote in 24h</span>
+                    </a>
+                </div>
+
+                <!-- Trust Strip -->
+                <div class="pt-8 border-t border-white/10 max-w-2xl mx-auto flex flex-wrap items-center justify-center gap-6 text-xs text-gray-400">
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <span>Backed by Artum8 Labs</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <span>10+ Years Engineering Track Record</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <span>100% Code Ownership</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Problem / Positioning Strip -->
+        <section class="py-16 bg-primary border-t border-secondary/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3">Why A8 Automations?</h2>
+                    <p class="text-gray-400 max-w-xl mx-auto text-sm">Stop choosing between fragile DIY tools and overpriced multi-month agencies.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="p-6 rounded-2xl bg-secondary/20 border border-white/10 opacity-75">
+                        <div class="text-red-400 font-semibold text-sm mb-2">❌ No-Code Builders (Zapier, ManyChat)</div>
+                        <h3 class="text-lg font-bold text-white mb-2">Fast but Generic</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">Breaks under high volume, lacks custom AI logic, and locks you into monthly tier limits with rigid templates.</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-secondary/20 border border-white/10 opacity-75">
+                        <div class="text-red-400 font-semibold text-sm mb-2">❌ Traditional Dev Agencies</div>
+                        <h3 class="text-lg font-bold text-white mb-2">Slow &amp; Overpriced</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">Requires $50k+ budgets, multi-month discovery phases, and endless scope meetings before writing code.</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-secondary/60 border border-accent/60 relative shadow-xl transform md:-translate-y-2">
+                        <div class="absolute -top-3 left-6 bg-accent text-white text-xs px-2.5 py-0.5 rounded-full font-bold uppercase">The A8 Way</div>
+                        <div class="text-accent font-semibold text-sm mb-2">⚡ A8 Automations</div>
+                        <h3 class="text-lg font-bold text-white mb-2">Custom-Built &amp; Live in Days</h3>
+                        <p class="text-gray-300 text-xs leading-relaxed">Production-grade Python/Node.js code, fixed prices starting at $500, delivered and live in 3 to 5 days.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Service Grid (6 tiles) -->
+        <section id="services" class="py-20 bg-gradient-to-b from-primary via-secondary/20 to-primary border-t border-secondary/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">What We Build For You</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Turnkey AI bots and automation workflows designed for rapid ROI.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Tile 1 -->
+                    <div class="p-8 rounded-2xl bg-secondary/40 border border-white/10 hover:border-accent/50 transition-all duration-300 flex flex-col justify-between group">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">WhatsApp &amp; Messaging Bots</h3>
+                            <p class="text-accent font-medium text-sm mb-4">"Turn WhatsApp into your highest-converting sales channel"</p>
+                            <p class="text-gray-400 text-xs leading-relaxed mb-6">Automated 24/7 lead qualification, instant catalog ordering, booking, and GPT-powered customer support built on WhatsApp Cloud API and n8n.</p>
+                        </div>
+                        <a href="#quote-form" class="text-xs text-accent font-bold flex items-center group-hover:underline">Build a WhatsApp Bot &rarr;</a>
+                    </div>
+
+                    <!-- Tile 2 -->
+                    <div class="p-8 rounded-2xl bg-secondary/40 border border-white/10 hover:border-accent/50 transition-all duration-300 flex flex-col justify-between group">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H7a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Social &amp; Community Bots</h3>
+                            <p class="text-accent font-medium text-sm mb-4">"Twitter/X, Discord &amp; Telegram bots that grow and moderate your community"</p>
+                            <p class="text-gray-400 text-xs leading-relaxed mb-6">Auto-reply bots, token-gated community access, automated content publishing, and engagement amplifiers tailored for Web3, SaaS, and creators.</p>
+                        </div>
+                        <a href="#quote-form" class="text-xs text-accent font-bold flex items-center group-hover:underline">Build a Social Bot &rarr;</a>
+                    </div>
+
+                    <!-- Tile 3 -->
+                    <div class="p-8 rounded-2xl bg-secondary/40 border border-white/10 hover:border-accent/50 transition-all duration-300 flex flex-col justify-between group">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z"/></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">AI Voice Agents</h3>
+                            <p class="text-accent font-medium text-sm mb-4">"Never miss a call again"</p>
+                            <p class="text-gray-400 text-xs leading-relaxed mb-6">Conversational AI phone agents for appointment scheduling, inbound receptionist triage, and outbound lead qualification with natural speech latency.</p>
+                        </div>
+                        <a href="#quote-form" class="text-xs text-accent font-bold flex items-center group-hover:underline">Deploy Voice Agent &rarr;</a>
+                    </div>
+
+                    <!-- Tile 4 -->
+                    <div class="p-8 rounded-2xl bg-secondary/40 border border-white/10 hover:border-accent/50 transition-all duration-300 flex flex-col justify-between group">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Lead-Gen &amp; Data Tools</h3>
+                            <p class="text-accent font-medium text-sm mb-4">"Niche-enriched lead lists and scraping tools, delivered as a live dashboard"</p>
+                            <p class="text-gray-400 text-xs leading-relaxed mb-6">Custom web scrapers, verified contact enrichment, competitor pricing trackers, and live lead dashboards delivered straight into Google Sheets or Airtable.</p>
+                        </div>
+                        <a href="#quote-form" class="text-xs text-accent font-bold flex items-center group-hover:underline">Build Scraping Tool &rarr;</a>
+                    </div>
+
+                    <!-- Tile 5 -->
+                    <div class="p-8 rounded-2xl bg-secondary/40 border border-white/10 hover:border-accent/50 transition-all duration-300 flex flex-col justify-between group">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Internal Ops Automations</h3>
+                            <p class="text-accent font-medium text-sm mb-4">"Replace 10 hours of manual work a week with one workflow"</p>
+                            <p class="text-gray-400 text-xs leading-relaxed mb-6">Automated invoice processing, CRM deal sync, support ticket triage, and multi-app data pipelines connecting Slack, Stripe, HubSpot, and Notion.</p>
+                        </div>
+                        <a href="#quote-form" class="text-xs text-accent font-bold flex items-center group-hover:underline">Automate Workflows &rarr;</a>
+                    </div>
+
+                    <!-- Tile 6 -->
+                    <div class="p-8 rounded-2xl bg-secondary/40 border border-white/10 hover:border-accent/50 transition-all duration-300 flex flex-col justify-between group">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">MVP Sprints</h3>
+                            <p class="text-accent font-medium text-sm mb-4">"A working product in 4 weeks, built for your next pitch or launch"</p>
+                            <p class="text-gray-400 text-xs leading-relaxed mb-6">Rapid full-stack React/Node.js product sprint delivered with database, authentication, and core workflow ready to pitch investors or launch to users.</p>
+                        </div>
+                        <a href="#quote-form" class="text-xs text-accent font-bold flex items-center group-hover:underline">Launch MVP Sprint &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Packages / Pricing Block -->
+        <section id="pricing" class="py-20 bg-primary border-t border-secondary/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-xs px-3 py-1 bg-accent/20 text-accent rounded-full font-bold uppercase tracking-wider">Transparent Pricing</span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-3 mb-4">Fixed Packages. Fast Turnaround.</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto text-base">Clear starting prices so you can self-qualify and get moving immediately.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Starter Card -->
+                    <div class="p-8 rounded-2xl bg-secondary/40 border border-white/10 flex flex-col justify-between transform hover:-translate-y-1 transition-all duration-300">
+                        <div>
+                            <div class="text-gray-400 text-sm font-semibold mb-2">Starter Package</div>
+                            <div class="text-4xl font-extrabold text-white mb-1">$500 – $1,500</div>
+                            <div class="text-xs text-accent font-semibold mb-6">Single bot or automation • 3–5 day delivery</div>
+                            <p class="text-gray-300 text-xs mb-6">Perfect for founders needing a single high-converting WhatsApp bot, Twitter/Discord bot, or web scraper built fast.</p>
+                            <ul class="space-y-3 text-xs text-gray-300 mb-8">
+                                <li class="flex items-center"><svg class="w-4 h-4 text-emerald-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>1 Custom Bot / Automation Workflow</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-emerald-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>GPT-4 &amp; Webhook Integration</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-emerald-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>3–5 Business Day Delivery</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-emerald-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>14 Days Free Maintenance</li>
+                            </ul>
+                        </div>
+                        <a href="#quote-form" class="btn-animated-secondary text-center text-xs py-3 w-full">Select Starter Package</a>
+                    </div>
+
+                    <!-- Growth Card (Highlighted) -->
+                    <div class="p-8 rounded-2xl bg-secondary/70 pricing-card-highlight flex flex-col justify-between relative transform hover:-translate-y-2 transition-all duration-300">
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-accent to-purple-500 text-white text-xs px-3 py-1 rounded-full font-bold uppercase">Most Popular</div>
+                        <div>
+                            <div class="text-accent text-sm font-semibold mb-2">Growth Package</div>
+                            <div class="text-4xl font-extrabold text-white mb-1">$2,000 – $5,000</div>
+                            <div class="text-xs text-accent font-semibold mb-6">Multi-channel setup + CRM • 1–2 week delivery</div>
+                            <p class="text-gray-300 text-xs mb-6">Ideal for growing teams needing multi-app workflow pipelines, AI voice agents, and full CRM integrations.</p>
+                            <ul class="space-y-3 text-xs text-gray-300 mb-8">
+                                <li class="flex items-center"><svg class="w-4 h-4 text-emerald-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Multi-Channel Bot Architecture</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-emerald-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>HubSpot / Stripe / Notion Sync</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-emerald-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>1–2 Week Turnaround Guarantee</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-emerald-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>30 Days Support &amp; SLA</li>
+                            </ul>
+                        </div>
+                        <a href="#quote-form" class="btn-animated-primary text-center text-xs py-3 w-full">Select Growth Package</a>
+                    </div>
+
+                    <!-- Retainer Card -->
+                    <div class="p-8 rounded-2xl bg-secondary/40 border border-white/10 flex flex-col justify-between transform hover:-translate-y-1 transition-all duration-300">
+                        <div>
+                            <div class="text-gray-400 text-sm font-semibold mb-2">Scale / Retainer</div>
+                            <div class="text-4xl font-extrabold text-white mb-1">$1,000+ <span class="text-base text-gray-400 font-normal">/mo</span></div>
+                            <div class="text-xs text-accent font-semibold mb-6">Ongoing management + new builds monthly</div>
+                            <p class="text-gray-300 text-xs mb-6">For fast-moving businesses wanting a dedicated automation engineering team to build, optimize, and maintain workflows continuously.</p>
+                            <ul class="space-y-3 text-xs text-gray-300 mb-8">
+                                <li class="flex items-center"><svg class="w-4 h-4 text-emerald-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Dedicated Automation Engineer</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-emerald-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Unlimited Maintenance &amp; Fixes</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-emerald-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>2 New Custom Workflows / Month</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-emerald-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Bridge to Artum8 Labs Enterprise</li>
+                            </ul>
+                        </div>
+                        <a href="#quote-form" class="btn-animated-secondary text-center text-xs py-3 w-full">Start Monthly Retainer</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Proof Section -->
+        <section class="py-16 bg-gradient-to-b from-primary via-secondary/20 to-primary border-t border-secondary/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Metrics Bar -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mb-16">
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-accent mb-1">500+</div>
+                        <div class="text-xs text-gray-400">Conversations Automated</div>
+                    </div>
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-accent mb-1">70%</div>
+                        <div class="text-xs text-gray-400">Fewer Manual Replies</div>
+                    </div>
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-accent mb-1">6 Days</div>
+                        <div class="text-xs text-gray-400">Average Delivery Time</div>
+                    </div>
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-accent mb-1">100%</div>
+                        <div class="text-xs text-gray-400">Fixed-Price Guarantee</div>
+                    </div>
+                </div>
+
+                <!-- Review Snippets (Fast-close style) -->
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="p-6 rounded-xl bg-secondary/40 border border-white/10 backdrop-blur-md">
+                        <div class="flex items-center space-x-1 text-yellow-400 mb-3">
+                            ★ ★ ★ ★ ★
+                        </div>
+                        <p class="text-gray-300 text-xs italic mb-4">"A8 Automations built our WhatsApp lead bot in 4 days. It qualified 300+ prospects in our first week without our sales team lifting a finger."</p>
+                        <div class="text-xs font-semibold text-white">— Founder, SaaS Growth Agency</div>
+                    </div>
+
+                    <div class="p-6 rounded-xl bg-secondary/40 border border-white/10 backdrop-blur-md">
+                        <div class="flex items-center space-x-1 text-yellow-400 mb-3">
+                            ★ ★ ★ ★ ★
+                        </div>
+                        <p class="text-gray-300 text-xs italic mb-4">"They replaced 15 hours of weekly manual CRM entry with an automated n8n pipeline. Fast, zero bugs, and cost less than $1,500."</p>
+                        <div class="text-xs font-semibold text-white">— Head of Operations, E-commerce Brand</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. How It Works (4 Steps) -->
+        <section id="how-it-works" class="py-20 bg-primary border-t border-secondary/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">How It Works</h2>
+                <p class="text-gray-400 max-w-xl mx-auto mb-16 text-sm">Low-risk, high-speed delivery protocol.</p>
+
+                <div class="grid md:grid-cols-4 gap-8 text-left">
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10 relative">
+                        <div class="w-8 h-8 rounded-full bg-accent text-white font-bold flex items-center justify-center text-sm mb-4">1</div>
+                        <h3 class="text-base font-bold text-white mb-2">Submit Your Use Case</h3>
+                        <p class="text-gray-400 text-xs">Fill our 3-field quick form describing what bot or workflow you need.</p>
+                    </div>
+
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10 relative">
+                        <div class="w-8 h-8 rounded-full bg-accent text-white font-bold flex items-center justify-center text-sm mb-4">2</div>
+                        <h3 class="text-base font-bold text-white mb-2">Fixed Quote in 24h</h3>
+                        <p class="text-gray-400 text-xs">Receive a clear fixed-price quote and timeline within 24 hours.</p>
+                    </div>
+
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10 relative">
+                        <div class="w-8 h-8 rounded-full bg-accent text-white font-bold flex items-center justify-center text-sm mb-4">3</div>
+                        <h3 class="text-base font-bold text-white mb-2">Built &amp; Delivered in Days</h3>
+                        <p class="text-gray-400 text-xs">We write the code, configure APIs, and deploy your live bot in 3 to 5 days.</p>
+                    </div>
+
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10 relative">
+                        <div class="w-8 h-8 rounded-full bg-accent text-white font-bold flex items-center justify-center text-sm mb-4">4</div>
+                        <h3 class="text-base font-bold text-white mb-2">Ongoing Support or Scale</h3>
+                        <p class="text-gray-400 text-xs">Enjoy 14+ days free support or seamlessly scale into Artum8 Labs enterprise apps.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. FAQ Block -->
+        <section id="faq" class="py-16 bg-gradient-to-b from-primary via-secondary/20 to-primary border-t border-secondary/20">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
+                <div class="space-y-6">
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10">
+                        <h3 class="text-lg font-semibold text-white mb-2">How is A8 Automations different from your main Artum8 Labs site?</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">Artum8 Labs enterprise projects require multi-month custom software architecture, HIPAA/PCI compliance, and large engineering teams. A8 Automations is our fast-execution arm built for turnkey AI bots, scrapers, and workflows deployed in days at fixed prices.</p>
+                    </div>
+
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10">
+                        <h3 class="text-lg font-semibold text-white mb-2">Can our automation build grow into a full platform later?</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">Yes! Every bot and workflow we build uses clean, production-grade Node.js/Python code. As your business grows, you can seamlessly hand off your codebase to the main Artum8 Labs team for full custom SaaS or enterprise scaling.</p>
+                    </div>
+
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10">
+                        <h3 class="text-lg font-semibold text-white mb-2">What tools and tech stack do you use?</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">We build with n8n, Python, Node.js, OpenAI GPT-4, Claude, Twilio, WhatsApp Cloud API, Twitter API, PostgreSQL, and custom webhooks to ensure zero vendor lock-in.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Radically Short CTA / Contact Form -->
+        <section id="quote-form" class="py-20 bg-primary border-t border-secondary/20">
+            <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <span class="text-xs px-3 py-1 bg-accent/20 text-accent rounded-full font-bold uppercase tracking-wider">Fast Turnaround</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-2">Get Your Fixed Quote in 24 Hours</h2>
+                <p class="text-gray-400 text-xs mb-8">No long discovery calls needed. Tell us what you want automated and we'll reply with a fixed quote.</p>
+
+                <div class="p-8 rounded-2xl bg-secondary/50 border border-white/10 backdrop-blur-md text-left shadow-2xl">
+                    <form id="fast-quote-form" class="space-y-4">
+                        <div>
+                            <label for="auto-name" class="block text-xs font-semibold text-gray-300 mb-1">Your Name</label>
+                            <input type="text" id="auto-name" name="name" required class="w-full px-4 py-2.5 bg-primary/90 border border-white/20 rounded-lg text-white text-sm focus:outline-none focus:border-accent" placeholder="Jane Doe" />
+                        </div>
+                        <div>
+                            <label for="auto-email" class="block text-xs font-semibold text-gray-300 mb-1">Email Address</label>
+                            <input type="email" id="auto-email" name="email" required class="w-full px-4 py-2.5 bg-primary/90 border border-white/20 rounded-lg text-white text-sm focus:outline-none focus:border-accent" placeholder="jane@company.com" />
+                        </div>
+                        <div>
+                            <label for="auto-details" class="block text-xs font-semibold text-gray-300 mb-1">What do you want automated?</label>
+                            <textarea id="auto-details" name="message" rows="3" required class="w-full px-4 py-2.5 bg-primary/90 border border-white/20 rounded-lg text-white text-sm focus:outline-none focus:border-accent" placeholder="e.g. WhatsApp sales bot, Twitter auto-reply bot, or n8n CRM sync workflow..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-animated-primary w-full py-3.5 text-sm font-bold mt-2">
+                            <span>Get Fixed Quote in 24 Hours &rarr;</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary border-t border-secondary/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="/images/logo.png" alt="Artum8 Labs Logo" class="h-10 w-auto" width="160" height="40" />
+                        <span class="text-xs px-2.5 py-1 bg-accent/20 border border-accent/40 rounded-full text-accent font-bold uppercase">A8 Automations</span>
+                    </div>
+                    <p class="text-gray-400 text-xs max-w-md">
+                        A8 Automations is the rapid-execution sprint arm of Artum8 Labs. Building AI bots, messaging agents, and internal automations live in days.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="/" class="text-gray-400 hover:text-accent">Home</a></li>
+                        <li><a href="/services" class="text-gray-400 hover:text-accent">Artum8 Enterprise Services</a></li>
+                        <li><a href="#pricing" class="text-accent font-semibold">Packages &amp; Pricing</a></li>
+                        <li><a href="#how-it-works" class="text-gray-400 hover:text-accent">How It Works</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-white mb-4">A8 Services</h3>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#services" class="text-gray-400 hover:text-accent">WhatsApp Bots</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-accent">Social &amp; Twitter Bots</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-accent">AI Voice Agents</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-accent">MVP Sprints</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-secondary/20 mt-12 pt-8 text-center text-gray-500 text-xs">
+                <p>&copy; 2026 Artum8 Labs — A8 Automations Arm. All rights reserved. | <a href="/privacy" class="hover:text-accent">Privacy Policy</a> | <a href="/terms" class="hover:text-accent">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/contact-form.js"></script>
+</body>
+</html>
