@@ -98,14 +98,14 @@ mdFiles.forEach(file => {
 // Testing Individual Service HTML Pages
 console.log('\n4b. Testing Service HTML Pages:');
 const serviceHtmlPages = [
-    'pages/service_web_apps.html',
-    'pages/service_3d_webgl.html',
-    'pages/service_fintech.html',
-    'pages/service_healthtech.html',
-    'pages/service_seo.html',
-    'pages/service_aeo.html',
-    'pages/service_ai_automation.html',
-    'pages/a8_automations.html'
+    'services/web-apps.html',
+    'services/3d-webgl.html',
+    'services/fintech-solutions.html',
+    'services/healthtech-platforms.html',
+    'services/seo.html',
+    'services/aeo.html',
+    'services/ai-automation.html',
+    'a8-automations.html'
 ];
 
 serviceHtmlPages.forEach(file => {
@@ -135,10 +135,10 @@ assert(fs.existsSync(path.join(__dirname, '../.well-known/agent-instructions.txt
 // 6. Trust Anchor Pages
 console.log('\n6. Testing Trust Anchor Pages (About, Contact, Privacy, Terms):');
 const trustPages = [
-    { file: 'pages/about.html', name: 'About' },
-    { file: 'pages/contact.html', name: 'Contact' },
-    { file: 'pages/privacy.html', name: 'Privacy' },
-    { file: 'pages/terms.html', name: 'Terms' }
+    { file: 'about.html', name: 'About' },
+    { file: 'contact.html', name: 'Contact' },
+    { file: 'privacy.html', name: 'Privacy' },
+    { file: 'terms.html', name: 'Terms' }
 ];
 
 trustPages.forEach(tp => {
@@ -183,14 +183,9 @@ if (jsonLdMatch) {
 
         assert(org.founder && org.founder.name === 'Mazhar Khan', 'JSON-LD Organization includes Founder details');
 
-        // AggregateRating on Org
-        assert(org.aggregateRating && org.aggregateRating['@type'] === 'AggregateRating', 'JSON-LD Organization has AggregateRating');
-        assert(parseFloat(org.aggregateRating.ratingValue) >= 4.0, 'AggregateRating ratingValue is >= 4.0');
-        assert(parseInt(org.aggregateRating.ratingCount) > 0, 'AggregateRating ratingCount is > 0');
-
-        // Review nodes on Org
-        assert(Array.isArray(org.review) && org.review.length >= 1, 'JSON-LD Organization has at least one Review');
-        assert(org.review[0].author && org.review[0].reviewBody, 'First Review has author and reviewBody');
+        // Self-serving review markup (Google policy) must NOT be present
+        assert(org.aggregateRating === undefined, 'JSON-LD Organization omits self-serving AggregateRating');
+        assert(org.review === undefined || org.review.length === 0, 'JSON-LD Organization omits self-serving Review nodes');
 
         const graph = parsed['@graph'] || [parsed];
 

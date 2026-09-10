@@ -78,13 +78,8 @@ Overall SEO health is **strong structurally** but has **critical canonicalizatio
 
 ---
 
-### 5. Duplicate Root-Level HTML Files
-**Impact:** LOW-MEDIUM — Creates confusion about which version is canonical  
-**Evidence:** Both `index.html` AND `pages/homepage.html` exist at root with identical content. Same for `about.html`/`pages/about.html`, `contact.html`/`pages/contact.html`, `privacy.html`/`pages/privacy.html`, `terms.html`/`pages/terms.html`.
-
-**Current mitigation:** Vercel rewrites serve `pages/` versions for clean URLs, and both versions have correct canonicals pointing to clean URLs. So Google should be okay, but this is fragile.
-
-**Fix:** Consider removing root-level HTML files and serving only from `pages/` (or vice versa) to eliminate confusion. Alternatively, keep both but ensure they stay perfectly in sync.
+### 5. Duplicate Root-Level HTML Files (RESOLVED)
+**Status:** FIXED — Removed duplicate copies. The site now ships a single file per route: root-level `*.html` for top-level pages and `services/*.html` (plus intentional keyword-alias files) for service routes. The `pages/` directory, per-route `index.html` copies, and directory duplicates were deleted; `vercel.json` rewrites, `middleware.js` markdown routes, and internal `/pages/...` links were repointed to the canonical files. `tailwind.config.js` content globs updated accordingly.
 
 ---
 
@@ -104,15 +99,13 @@ Overall SEO health is **strong structurally** but has **critical canonicalizatio
 
 **A. Title Tag Length Variance**
 - Some titles are excellent (e.g., homepage at ~90 chars will be truncated)
-- `pages/services_deep_dive.html` title: "Services - Artum8 Labs | Web Applications, 3D Websites, Fintech & Healthtech" — good
-- `pages/homepage.html` title: "Artum8 Labs — Digital Innovation Studio | Web Applications, 3D Experiences, Fintech & Healthtech Solutions" — slightly long
+- `services.html` title: "Services - Artum8 Labs | Web Applications, 3D Websites, Fintech & Healthtech" — good
+- `index.html` title: "Artum8 Labs — Digital Innovation Studio | Web Applications, 3D Experiences, Fintech & Healthtech Solutions" — slightly long
 
-**B. Internal Linking — Relative vs Absolute**
-- Navigation links in `pages/` directory use relative paths like `services_deep_dive.html` which resolve to `/pages/services_deep_dive.html`
-- Footer links in `pages/homepage.html` also use `/pages/...` paths
-- While Vercel rewrites handle this, using absolute paths (`/services`) would be cleaner and more robust
+**B. Internal Linking — Absolute Clean-URL Paths (RESOLVED)**
+- Navigation now uses absolute clean-URL paths (`/services`, `/portfolio`, etc.) across all templates; no `/pages/...` links remain.
 
-**Fix:** Update all internal links in `pages/` files to use absolute paths matching vercel.json rewrites.
+**Status:** FIXED — All internal links standardized to absolute clean-URL paths.
 
 ---
 
@@ -121,7 +114,7 @@ Overall SEO health is **strong structurally** but has **critical canonicalizatio
 ### E-E-A-T Signals: STRONG
 - **Founder credentials** visible (Mazhar Khan, Lead Full-Stack Architect)
 - **Contact information** prominent on contact page
-- **AggregateRating** schema (4.9/5, 48 reviews) on homepage
+- **Structured data** on homepage without self-serving aggregate/rating markup (removed to align with Google review-policy)
 - **Detailed case studies** with client names and metrics
 - **Trust pages** (Privacy, Terms, About) all present and populated
 - **Physical addresses** in 3 locations with embedded maps
