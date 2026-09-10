@@ -76,6 +76,13 @@ const mdFiles = [
     'content/privacy.md',
     'content/terms.md',
     'content/services.md',
+    'content/services/web-apps.md',
+    'content/services/3d-webgl.md',
+    'content/services/fintech.md',
+    'content/services/healthtech.md',
+    'content/services/seo.md',
+    'content/services/aeo.md',
+    'content/services/ai-automation.md',
     'content/portfolio.md',
     '404.md'
 ];
@@ -85,6 +92,31 @@ mdFiles.forEach(file => {
     const exists = fs.existsSync(filePath);
     const size = exists ? fs.statSync(filePath).size : 0;
     assert(exists && size > 100, `Markdown file ${file} exists and is populated (${size} bytes)`);
+});
+
+// Testing Individual Service HTML Pages
+console.log('\n4b. Testing Service HTML Pages:');
+const serviceHtmlPages = [
+    'pages/service_web_apps.html',
+    'pages/service_3d_webgl.html',
+    'pages/service_fintech.html',
+    'pages/service_healthtech.html',
+    'pages/service_seo.html',
+    'pages/service_aeo.html',
+    'pages/service_ai_automation.html'
+];
+
+serviceHtmlPages.forEach(file => {
+    const filePath = path.join(__dirname, '..', file);
+    const exists = fs.existsSync(filePath);
+    if (exists) {
+        const content = fs.readFileSync(filePath, 'utf8');
+        assert(content.length >= 1000, `Service page ${file} content length is ${content.length} chars (>= 1000 required)`);
+        assert(content.includes('application/ld+json'), `Service page ${file} includes JSON-LD structured data`);
+        assert(content.includes('<h1'), `Service page ${file} has an H1 heading`);
+    } else {
+        assert(false, `Service page ${file} exists`);
+    }
 });
 
 assert(fs.existsSync(path.join(__dirname, '../middleware.js')), 'middleware.js exists for Edge content negotiation');

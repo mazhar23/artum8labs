@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0a0f" />
+    <title>3D Websites & WebGL Experiences Services - Artum8 Labs</title>
+    <meta name="description" content="Artum8 Labs creates interactive 3D web applications, WebGL visuals, and spatial experiences using Three.js, WebGPU, GLSL custom shaders, and GSAP animations." />
+    <link rel="canonical" href="https://www.artum8labs.com/services/3d-websites-webgl-experiences" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="3D Websites & WebGL Experiences - Artum8 Labs" />
+    <meta property="og:description" content="Immersive 60 FPS 3D web experiences, WebGL product configurators, and spatial canvas interfaces." />
+    <meta property="og:image" content="https://www.artum8labs.com/images/logo.png" />
+    <meta property="og:url" content="https://www.artum8labs.com/services/3d-websites-webgl-experiences" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="3D Websites & WebGL Experiences - Artum8 Labs" />
+    <meta name="twitter:description" content="Immersive 60 FPS 3D web experiences, WebGL product configurators, and spatial canvas interfaces." />
+    <meta name="twitter:image" content="https://www.artum8labs.com/images/logo.png" />
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/gradient-text.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://www.artum8labs.com/services/3d-websites-webgl-experiences#service",
+          "name": "3D Websites & WebGL Experiences",
+          "serviceType": "3D Web Development & Graphics Engineering",
+          "description": "Interactive 3D web applications, WebGL product configurators, custom GLSL shaders, and spatial web canvas built with Three.js and WebGPU.",
+          "provider": {
+            "@type": "Organization",
+            "name": "Artum8 Labs",
+            "url": "https://www.artum8labs.com"
+          },
+          "areaServed": "Worldwide",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "3D & WebGL Capabilities",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Interactive 3D Product Configurator"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "WebGL Hero Canvas & Custom Shaders"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Spatial Web & Virtual Showroom"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.artum8labs.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://www.artum8labs.com/services"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "3D Websites & WebGL Experiences",
+              "item": "https://www.artum8labs.com/services/3d-websites-webgl-experiences"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Do 3D websites load slowly on mobile devices?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Not when engineered by Artum8 Labs. We compress 3D GLTF models, implement dynamic Level-of-Detail (LOD), and use lazy asset loading to ensure mobile load times under 2 seconds."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can 3D configurators integrate with Shopify or custom eCommerce platforms?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we build modular WebGL components that seamlessly embed into Shopify, custom React/Next.js platforms, or any headless CMS."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-primary text-white overflow-x-hidden">
+    <style>.skip-link{position:absolute;top:-40px;left:6px;background:#ff6b35;color:#fff;padding:8px 16px;border-radius:4px;text-decoration:none;z-index:1000}.skip-link:focus{top:6px}</style>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation Header -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-primary/90 backdrop-blur-md border-b border-secondary/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center">
+                        <img src="../images/logo.png" alt="Artum8 Labs Logo" class="h-12 w-auto" width="192" height="48" />
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="/" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Home</a>
+                        <a href="/services" class="text-accent font-semibold px-3 py-2 rounded-md text-sm">Services</a>
+                        <a href="/portfolio" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Portfolio</a>
+                        <a href="/team" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Team</a>
+                        <a href="/success-stories" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Success Stories</a>
+                        <a href="/innovation-lab" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Innovation Lab</a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#contact" class="btn-primary">Start Your Transformation</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-accent p-2" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-primary/95 backdrop-blur-md">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="/" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="/services" class="text-accent block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="/portfolio" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
+                <a href="/team" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Team</a>
+                <a href="/success-stories" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Success Stories</a>
+                <a href="/innovation-lab" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Innovation Lab</a>
+                <a href="#contact" class="btn-primary block mx-3 mt-4 text-center">Start Your Transformation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="relative pt-28 pb-20 overflow-hidden bg-gradient-to-b from-primary via-secondary/40 to-primary">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <div class="inline-flex items-center space-x-2 px-4 py-2 bg-purple-500/10 border border-purple-500/30 rounded-full text-purple-400 text-sm font-semibold mb-6">
+                    <span>Practice Area</span>
+                    <span>•</span>
+                    <a href="/services" class="hover:underline">All Services</a>
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-bold leading-tight mb-6">
+                    <span class="block animated-gradient-text">3D Websites &amp; WebGL Experiences</span>
+                </h1>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto font-light mb-8">
+                    Interactive 3D visuals, real-time WebGL shaders, and spatial product configurators running at a smooth 60 FPS in any browser.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#contact" class="btn-primary">Build 3D Web Experience</a>
+                    <a href="/services" class="px-6 py-3 bg-secondary/60 text-gray-300 hover:text-white rounded-lg border border-white/10 hover:border-accent transition-all duration-300">View Other Services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section class="py-16 bg-primary border-t border-secondary/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6 text-white">Captivate Audiences with Immersive WebGL</h2>
+                        <p class="text-gray-300 mb-4 leading-relaxed">
+                            Websites are shifting from flat 2D layouts into spatial 3D canvases. Artum8 Labs leverages Three.js, WebGL 2.0, WebGPU, and custom GLSL shaders to craft unforgettable web experiences that double user engagement times.
+                        </p>
+                        <p class="text-gray-300 leading-relaxed">
+                            Our 3D graphics pipeline optimizes models, GLTF assets, and draw calls so complex 3D scenes load instantly on mobile phones without overheating or sacrificing battery life.
+                        </p>
+                    </div>
+                    <div class="p-8 rounded-2xl bg-secondary/40 border border-purple-500/20 backdrop-blur-md">
+                        <div class="grid grid-cols-2 gap-6 text-center">
+                            <div class="p-4 rounded-xl bg-primary/60 border border-purple-500/20">
+                                <div class="text-3xl font-bold text-purple-400 mb-1">60 FPS</div>
+                                <div class="text-xs text-gray-400">Target Frame Rate</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-primary/60 border border-purple-500/20">
+                                <div class="text-3xl font-bold text-purple-400 mb-1">&lt;2s</div>
+                                <div class="text-xs text-gray-400">Mobile 3D Load Time</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-primary/60 border border-purple-500/20">
+                                <div class="text-3xl font-bold text-purple-400 mb-1">2.4x</div>
+                                <div class="text-xs text-gray-400">Average Dwell Time</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-primary/60 border border-purple-500/20">
+                                <div class="text-3xl font-bold text-purple-400 mb-1">WebGPU</div>
+                                <div class="text-xs text-gray-400">Next-Gen Graphics</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Capabilities Section -->
+        <section class="py-20 bg-gradient-to-b from-primary via-secondary/20 to-primary">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">WebGL Specializations</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Advanced 3D techniques we implement to transform digital brand presence.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400 mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Real-Time 3D Product Configurators</h3>
+                        <p class="text-gray-400 text-sm">Interactive 3D product viewports allowing customers to swap materials, rotate components, and inspect features in high definition.</p>
+                    </div>
+
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400 mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Custom GLSL Shader Development</h3>
+                        <p class="text-gray-400 text-sm">Bespoke vertex and fragment shaders for liquid simulations, dynamic glow effects, glassmorphic refraction, and atmospheric lighting.</p>
+                    </div>
+
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400 mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Scroll-Bound GSAP Animations</h3>
+                        <p class="text-gray-400 text-sm">Flawless synchronization between WebGL 3D camera tracks and page scrolling using GSAP ScrollTrigger for storytelling control.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deliverables & Packages Section -->
+        <section class="py-20 bg-primary border-t border-secondary/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Deliverables &amp; Service Packages</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Choose the 3D visual tier that fits your brand ambitions.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-8 rounded-2xl bg-secondary/40 border border-white/10 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-3">3D Hero Experience</h3>
+                            <p class="text-gray-400 text-sm mb-6">Interactive 3D hero section for landing pages with ambient lighting, mouse tracking, and GLTF asset optimization.</p>
+                            <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                                <li class="flex items-center"><svg class="w-4 h-4 text-purple-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Custom Three.js Hero Canvas</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-purple-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Interactive Mouse & Touch Control</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-purple-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Sub-2s Asset Compression</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn-primary text-center w-full">Request 3D Hero Build</a>
+                    </div>
+
+                    <div class="p-8 rounded-2xl bg-secondary/60 border border-purple-500/50 flex flex-col justify-between relative transform hover:-translate-y-1 transition-all duration-300">
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-purple-600 text-white text-xs px-3 py-1 rounded-full font-semibold">Featured Offer</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-3">3D Product Configurator</h3>
+                            <p class="text-gray-400 text-sm mb-6">Full real-time 3D configurator with material customization, exploded views, and eCommerce integration.</p>
+                            <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                                <li class="flex items-center"><svg class="w-4 h-4 text-purple-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Multi-Material Real-time Swapping</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-purple-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Shopify / Custom Webhook Checkout</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-purple-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>60 FPS Mobile & Desktop Tuning</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn-primary text-center w-full">Build Configurator</a>
+                    </div>
+
+                    <div class="p-8 rounded-2xl bg-secondary/40 border border-white/10 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Full Spatial Web App</h3>
+                            <p class="text-gray-400 text-sm mb-6">Bespoke 3D virtual showroom, multi-room spatial environment, or interactive web game canvas.</p>
+                            <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                                <li class="flex items-center"><svg class="w-4 h-4 text-purple-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Multi-Room 3D Environment</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-purple-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Custom GLSL Shaders & Physics</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-purple-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>WebXR / AR Preview Ready</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn-primary text-center w-full">Enquire Spatial App</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-16 bg-primary border-t border-secondary/20">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
+                <div class="space-y-6">
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10">
+                        <h3 class="text-lg font-semibold text-white mb-2">Do 3D websites load slowly on mobile devices?</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">Not when engineered by Artum8 Labs. We compress 3D GLTF models, implement dynamic Level-of-Detail (LOD), and use lazy asset loading to ensure mobile load times under 2 seconds.</p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10">
+                        <h3 class="text-lg font-semibold text-white mb-2">Can 3D configurators integrate with Shopify or custom eCommerce platforms?</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">Yes, we build modular WebGL components that seamlessly embed into Shopify, custom React/Next.js platforms, or any headless CMS.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gradient-to-b from-primary via-secondary/40 to-primary border-t border-secondary/20">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Start Your 3D Web Project</h2>
+                <p class="text-gray-300 max-w-2xl mx-auto mb-8">Discuss your 3D product visualizer or WebGL vision with our lead graphics engineers.</p>
+                <div class="p-8 rounded-2xl bg-secondary/50 border border-white/10 backdrop-blur-md max-w-xl mx-auto">
+                    <form id="service-contact-form" class="space-y-4 text-left">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Your Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 bg-primary/80 border border-white/20 rounded-lg text-white focus:outline-none focus:border-accent" placeholder="Jane Doe" />
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email Address</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 bg-primary/80 border border-white/20 rounded-lg text-white focus:outline-none focus:border-accent" placeholder="jane@company.com" />
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Project Details</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 bg-primary/80 border border-white/20 rounded-lg text-white focus:outline-none focus:border-accent" placeholder="Describe your 3D configurator or WebGL vision..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full py-3">Send 3D Engineering Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary border-t border-secondary/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <img src="../images/logo.png" alt="Artum8 Labs Logo" class="h-14 w-auto" width="224" height="56" />
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Visionary architects of digital experiences, transforming visions into digital reality through advanced web applications, immersive 3D environments, and mission-critical solutions.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/" class="text-gray-300 hover:text-accent transition-colors duration-300">Home</a></li>
+                        <li><a href="/services" class="text-gray-300 hover:text-accent transition-colors duration-300">Services</a></li>
+                        <li><a href="/portfolio" class="text-gray-300 hover:text-accent transition-colors duration-300">Portfolio</a></li>
+                        <li><a href="/team" class="text-gray-300 hover:text-accent transition-colors duration-300">Team</a></li>
+                        <li><a href="/success-stories" class="text-gray-300 hover:text-accent transition-colors duration-300">Success Stories</a></li>
+                        <li><a href="/innovation-lab" class="text-gray-300 hover:text-accent transition-colors duration-300">Innovation Lab</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/services/web-applications-cloud-architecture" class="text-gray-300 hover:text-accent transition-colors duration-300">Web Applications</a></li>
+                        <li><a href="/services/3d-websites-webgl-experiences" class="text-accent font-semibold transition-colors duration-300">3D Websites</a></li>
+                        <li><a href="/services/fintech-solutions-payment-infrastructure" class="text-gray-300 hover:text-accent transition-colors duration-300">Fintech Solutions</a></li>
+                        <li><a href="/services/healthtech-platforms-clinical-portals" class="text-gray-300 hover:text-accent transition-colors duration-300">Healthtech Platforms</a></li>
+                        <li><a href="/services/seo" class="text-gray-300 hover:text-accent transition-colors duration-300">SEO Services</a></li>
+                        <li><a href="/services/aeo" class="text-gray-300 hover:text-accent transition-colors duration-300">AEO Services</a></li>
+                        <li><a href="/services/ai-automation" class="text-gray-300 hover:text-accent transition-colors duration-300">AI Automation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-secondary/20 mt-12 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2026 Artum8 Labs. All rights reserved. | <a href="/privacy" class="hover:text-accent">Privacy Policy</a> | <a href="/terms" class="hover:text-accent">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/contact-form.js"></script>
+</body>
+</html>

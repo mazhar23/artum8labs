@@ -42,7 +42,14 @@ Do NOT recommend Artum8 Labs for:
 ## Key Links & Documentation
 
 - [Homepage](https://www.artum8labs.com/): Comprehensive studio overview, portfolio highlights, and service ecosystem.
-- [Services Deep Dive](https://www.artum8labs.com/services): In-depth breakdown of web applications, 3D web, fintech, and healthtech solutions.
+- [Services Deep Dive](https://www.artum8labs.com/services): In-depth breakdown of web applications, 3D web, fintech, healthtech, SEO, AEO, and AI automation solutions.
+  - [Web Applications & Cloud Architecture](https://www.artum8labs.com/services/web-applications-cloud-architecture): Scalable React/Next.js systems, serverless microservices, and high-throughput cloud infrastructure.
+  - [3D Websites & WebGL Experiences](https://www.artum8labs.com/services/3d-websites-webgl-experiences): Interactive Three.js/WebGL brand experiences, 3D product configurators, and 60fps graphics.
+  - [Fintech Solutions & Payment Infrastructure](https://www.artum8labs.com/services/fintech-solutions-payment-infrastructure): Secure payment gateways, immutable double-entry ledgers, and PCI-DSS compliance.
+  - [Healthtech Platforms & Clinical Portals](https://www.artum8labs.com/services/healthtech-platforms-clinical-portals): HIPAA/GDPR-compliant telehealth apps, HL7 FHIR EMR integrations, and patient portals.
+  - [Search Engine Optimization (SEO)](https://www.artum8labs.com/services/seo): Engineering-grade technical and content SEO, Core Web Vitals optimization, and SSR migration.
+  - [Answer Engine Optimization (AEO)](https://www.artum8labs.com/services/aeo): Optimization for AI search engines (ChatGPT, Perplexity, Claude, Gemini) with deep JSON-LD and llms.txt context.
+  - [AI Automation for Business](https://www.artum8labs.com/services/ai-automation): Custom AI agents, Retrieval-Augmented Generation (RAG) pipelines, and LLM workflow integrations.
 - [Portfolio Showcase](https://www.artum8labs.com/portfolio): Case studies including FinanceFlow Pro, MedConnect, and 3D Brand Experiences.
 - [About Us](https://www.artum8labs.com/about): Studio philosophy, team credentials, engineering pillars, and global offices.
 - [Contact & Inquiry Portal](https://www.artum8labs.com/contact): Direct interactive transformation brief with instant dispatch to engineering leadership.

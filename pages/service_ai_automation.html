@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0a0f" />
+    <title>AI Automation &amp; Custom Agent Engineering - Artum8 Labs</title>
+    <meta name="description" content="Artum8 Labs engineers custom AI agents, Retrieval-Augmented Generation (RAG) systems, multi-agent workflows, and LLM integrations to automate business operations." />
+    <link rel="canonical" href="https://www.artum8labs.com/services/ai-automation" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Automation & Custom Agent Engineering - Artum8 Labs" />
+    <meta property="og:description" content="Convert manual workflows into self-executing AI agents, RAG systems, and automated data pipelines driving 10x operational velocity." />
+    <meta property="og:image" content="https://www.artum8labs.com/images/logo.png" />
+    <meta property="og:url" content="https://www.artum8labs.com/services/ai-automation" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AI Automation & Custom Agent Engineering - Artum8 Labs" />
+    <meta name="twitter:description" content="Convert manual workflows into self-executing AI agents, RAG systems, and automated data pipelines driving 10x operational velocity." />
+    <meta name="twitter:image" content="https://www.artum8labs.com/images/logo.png" />
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/gradient-text.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://www.artum8labs.com/services/ai-automation#service",
+          "name": "AI Automation for Business",
+          "serviceType": "Artificial Intelligence Engineering & Workflow Automation",
+          "description": "Custom AI workflows, multi-agent systems, Retrieval-Augmented Generation (RAG), and LLM integrations converting manual business operations into self-executing pipelines.",
+          "provider": {
+            "@type": "Organization",
+            "name": "Artum8 Labs",
+            "url": "https://www.artum8labs.com"
+          },
+          "areaServed": "Worldwide",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "AI Engineering Capabilities",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "AI Automation Strategy Blueprint"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Custom Agent & RAG Pipeline Build"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Enterprise LLM Integration & Deployment"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.artum8labs.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://www.artum8labs.com/services"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "AI Automation for Business",
+              "item": "https://www.artum8labs.com/services/ai-automation"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How do you protect our private company data when using AI models?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We build Enterprise RAG systems using private vector stores and enterprise LLM APIs (or self-hosted open-source models like Llama 3) that explicitly guarantee your data is never used for AI model training."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What ROI can we expect from AI Automation?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Most clients achieve an 80% reduction in manual data processing time within 30 days of deployment, allowing staff to refocus on high-value strategic growth."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-primary text-white overflow-x-hidden">
+    <style>.skip-link{position:absolute;top:-40px;left:6px;background:#ff6b35;color:#fff;padding:8px 16px;border-radius:4px;text-decoration:none;z-index:1000}.skip-link:focus{top:6px}</style>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation Header -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-primary/90 backdrop-blur-md border-b border-secondary/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center">
+                        <img src="../images/logo.png" alt="Artum8 Labs Logo" class="h-12 w-auto" width="192" height="48" />
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="/" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Home</a>
+                        <a href="/services" class="text-accent font-semibold px-3 py-2 rounded-md text-sm">Services</a>
+                        <a href="/portfolio" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Portfolio</a>
+                        <a href="/team" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Team</a>
+                        <a href="/success-stories" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Success Stories</a>
+                        <a href="/innovation-lab" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Innovation Lab</a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#contact" class="btn-primary">Start Your Transformation</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-accent p-2" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-primary/95 backdrop-blur-md">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="/" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="/services" class="text-accent block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="/portfolio" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
+                <a href="/team" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Team</a>
+                <a href="/success-stories" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Success Stories</a>
+                <a href="/innovation-lab" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Innovation Lab</a>
+                <a href="#contact" class="btn-primary block mx-3 mt-4 text-center">Start Your Transformation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="relative pt-28 pb-20 overflow-hidden bg-gradient-to-b from-primary via-secondary/40 to-primary">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <div class="inline-flex items-center space-x-2 px-4 py-2 bg-pink-500/10 border border-pink-500/30 rounded-full text-pink-400 text-sm font-semibold mb-6">
+                    <span>Specialized Practice Area</span>
+                    <span>•</span>
+                    <a href="/services" class="hover:underline">All Services</a>
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-bold leading-tight mb-6">
+                    <span class="block animated-gradient-text">AI Automation for Business</span>
+                </h1>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto font-light mb-8">
+                    Custom AI Workflows, Autonomous Agents &amp; RAG Systems — converting manual, repetitive business processes into intelligent, self-executing automation pipelines.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#contact" class="btn-primary">Consult AI Engineer</a>
+                    <a href="/services" class="px-6 py-3 bg-secondary/60 text-gray-300 hover:text-white rounded-lg border border-white/10 hover:border-accent transition-all duration-300">View Other Services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section class="py-16 bg-primary border-t border-secondary/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6 text-white">10x Operational Speed with Intelligent Agents</h2>
+                        <p class="text-gray-300 mb-4 leading-relaxed">
+                            Artum8 Labs builds production-grade AI agents and automation pipelines that integrate directly into your internal databases, CRMs, and APIs. We eliminate operational bottlenecks by connecting large language models (LLMs) to real-world business actions.
+                        </p>
+                        <p class="text-gray-300 leading-relaxed">
+                            From custom Retrieval-Augmented Generation (RAG) knowledge systems to multi-agent orchestration with LangChain, LlamaIndex, and AutoGen, we transform labor-intensive workflows into automated systems running 24/7.
+                        </p>
+                    </div>
+                    <div class="p-8 rounded-2xl bg-secondary/40 border border-pink-500/20 backdrop-blur-md">
+                        <div class="grid grid-cols-2 gap-6 text-center">
+                            <div class="p-4 rounded-xl bg-primary/60 border border-pink-500/20">
+                                <div class="text-3xl font-bold text-pink-400 mb-1">10x</div>
+                                <div class="text-xs text-gray-400">Operational Velocity</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-primary/60 border border-pink-500/20">
+                                <div class="text-3xl font-bold text-pink-400 mb-1">80%</div>
+                                <div class="text-xs text-gray-400">Manual Task Reduction</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-primary/60 border border-pink-500/20">
+                                <div class="text-3xl font-bold text-pink-400 mb-1">Private RAG</div>
+                                <div class="text-xs text-gray-400">Zero Model Training Data</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-primary/60 border border-pink-500/20">
+                                <div class="text-3xl font-bold text-pink-400 mb-1">24/7</div>
+                                <div class="text-xs text-gray-400">Automated Execution</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Capabilities Section -->
+        <section class="py-20 bg-gradient-to-b from-primary via-secondary/20 to-primary">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Core AI Capabilities</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Enterprise AI engineering specializations designed for speed and security.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10 hover:border-pink-500/50 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-lg bg-pink-500/20 flex items-center justify-center text-pink-400 mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Custom AI Agent Development</h3>
+                        <p class="text-gray-400 text-sm">Autonomous multi-agent networks built with LangChain, LlamaIndex, and AutoGen that perform complex reasoning, API calls, and task execution.</p>
+                    </div>
+
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10 hover:border-pink-500/50 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-lg bg-pink-500/20 flex items-center justify-center text-pink-400 mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">RAG Knowledge Systems</h3>
+                        <p class="text-gray-400 text-sm">Secure vector database implementations (Pinecone, Qdrant, PGVector) connecting LLMs to your private documents and data stores for instant semantic query answering.</p>
+                    </div>
+
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10 hover:border-pink-500/50 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-lg bg-pink-500/20 flex items-center justify-center text-pink-400 mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Autonomous Data Extraction</h3>
+                        <p class="text-gray-400 text-sm">Automated parsing and structured JSON extraction from PDF contracts, invoice images, emails, and legacy documents with 99%+ accuracy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Target Personas Section -->
+        <section class="py-16 bg-primary border-t border-secondary/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white mb-4">Industries Transforming with AI</h2>
+                    <p class="text-gray-400">Tailored AI agent deployment across operations-heavy sectors.</p>
+                </div>
+                <div class="grid md:grid-cols-4 gap-6 text-center">
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10">
+                        <h3 class="text-lg font-semibold text-white mb-2">Operations SaaS</h3>
+                        <p class="text-gray-400 text-xs">Automated customer onboarding, support ticket triage, and CRM sync.</p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10">
+                        <h3 class="text-lg font-semibold text-white mb-2">Logistics &amp; Supply Chain</h3>
+                        <p class="text-gray-400 text-xs">Document parsing, carrier dispatch automation, and inventory tracking.</p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10">
+                        <h3 class="text-lg font-semibold text-white mb-2">Financial Services</h3>
+                        <p class="text-gray-400 text-xs">Automated compliance checking, report generation, and invoice reconciliation.</p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10">
+                        <h3 class="text-lg font-semibold text-white mb-2">Customer Support</h3>
+                        <p class="text-gray-400 text-xs">24/7 intelligent tier-1 ticket resolution with zero human intervention.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deliverables & Packages Section -->
+        <section class="py-20 bg-gradient-to-b from-primary via-secondary/20 to-primary border-t border-secondary/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Deliverables &amp; Service Packages</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Partner with Artum8 Labs for custom AI engineering.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-8 rounded-2xl bg-secondary/40 border border-white/10 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-3">AI Automation Strategy</h3>
+                            <p class="text-gray-400 text-sm mb-6">Workflow audit, ROI assessment, data pipeline planning, and model architecture blueprint.</p>
+                            <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                                <li class="flex items-center"><svg class="w-4 h-4 text-pink-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Process & Bottleneck Audit</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-pink-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>RAG & Agent Architecture Specs</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-pink-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Security & Data Privacy Blueprint</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn-primary text-center w-full">Request AI Strategy</a>
+                    </div>
+
+                    <div class="p-8 rounded-2xl bg-secondary/60 border border-pink-500/50 flex flex-col justify-between relative transform hover:-translate-y-1 transition-all duration-300">
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-pink-600 text-white text-xs px-3 py-1 rounded-full font-semibold">Flagship Build</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Custom Agent &amp; RAG Build</h3>
+                            <p class="text-gray-400 text-sm mb-6">Development and deployment of multi-agent workflows integrated with your database and internal tools.</p>
+                            <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                                <li class="flex items-center"><svg class="w-4 h-4 text-pink-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Private Vector Database Setup</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-pink-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Custom LangChain / LlamaIndex Agents</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-pink-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>CRM & Database API Integrations</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn-primary text-center w-full">Build AI Agent Pipeline</a>
+                    </div>
+
+                    <div class="p-8 rounded-2xl bg-secondary/40 border border-white/10 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Fine-Tuned LLM &amp; Maintenance</h3>
+                            <p class="text-gray-400 text-sm mb-6">On-premise deployment of open-source models (Llama 3/Mistral), prompt optimization, and index updates.</p>
+                            <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                                <li class="flex items-center"><svg class="w-4 h-4 text-pink-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Self-Hosted LLM Deployment</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-pink-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Continuous Prompt & Eval Optimization</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-pink-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Vector Index Re-sync Retainer</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn-primary text-center w-full">Enquire Enterprise AI</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-16 bg-primary border-t border-secondary/20">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
+                <div class="space-y-6">
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10">
+                        <h3 class="text-lg font-semibold text-white mb-2">How do you protect our private company data when using AI models?</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">We build Enterprise RAG systems using private vector stores and enterprise LLM APIs (or self-hosted open-source models like Llama 3) that explicitly guarantee your data is never used for AI model training.</p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10">
+                        <h3 class="text-lg font-semibold text-white mb-2">What ROI can we expect from AI Automation?</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">Most clients achieve an 80% reduction in manual data processing time within 30 days of deployment, allowing staff to refocus on high-value strategic growth.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gradient-to-b from-primary via-secondary/40 to-primary border-t border-secondary/20">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Automate Your Operations with Custom AI</h2>
+                <p class="text-gray-300 max-w-2xl mx-auto mb-8">Schedule an AI automation consultation with our lead AI engineers.</p>
+                <div class="p-8 rounded-2xl bg-secondary/50 border border-white/10 backdrop-blur-md max-w-xl mx-auto">
+                    <form id="service-contact-form" class="space-y-4 text-left">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Your Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 bg-primary/80 border border-white/20 rounded-lg text-white focus:outline-none focus:border-accent" placeholder="Jane Doe" />
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email Address</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 bg-primary/80 border border-white/20 rounded-lg text-white focus:outline-none focus:border-accent" placeholder="jane@company.com" />
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Project Details</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 bg-primary/80 border border-white/20 rounded-lg text-white focus:outline-none focus:border-accent" placeholder="Describe your operational workflow or AI automation goals..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full py-3">Send AI Automation Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary border-t border-secondary/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <img src="../images/logo.png" alt="Artum8 Labs Logo" class="h-14 w-auto" width="224" height="56" />
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Visionary architects of digital experiences, transforming visions into digital reality through advanced web applications, immersive 3D environments, and mission-critical solutions.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/" class="text-gray-300 hover:text-accent transition-colors duration-300">Home</a></li>
+                        <li><a href="/services" class="text-gray-300 hover:text-accent transition-colors duration-300">Services</a></li>
+                        <li><a href="/portfolio" class="text-gray-300 hover:text-accent transition-colors duration-300">Portfolio</a></li>
+                        <li><a href="/team" class="text-gray-300 hover:text-accent transition-colors duration-300">Team</a></li>
+                        <li><a href="/success-stories" class="text-gray-300 hover:text-accent transition-colors duration-300">Success Stories</a></li>
+                        <li><a href="/innovation-lab" class="text-gray-300 hover:text-accent transition-colors duration-300">Innovation Lab</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/services/web-applications-cloud-architecture" class="text-gray-300 hover:text-accent transition-colors duration-300">Web Applications</a></li>
+                        <li><a href="/services/3d-websites-webgl-experiences" class="text-gray-300 hover:text-accent transition-colors duration-300">3D Websites</a></li>
+                        <li><a href="/services/fintech-solutions-payment-infrastructure" class="text-gray-300 hover:text-accent transition-colors duration-300">Fintech Solutions</a></li>
+                        <li><a href="/services/healthtech-platforms-clinical-portals" class="text-gray-300 hover:text-accent transition-colors duration-300">Healthtech Platforms</a></li>
+                        <li><a href="/services/seo" class="text-gray-300 hover:text-accent transition-colors duration-300">SEO Services</a></li>
+                        <li><a href="/services/aeo" class="text-gray-300 hover:text-accent transition-colors duration-300">AEO Services</a></li>
+                        <li><a href="/services/ai-automation" class="text-accent font-semibold transition-colors duration-300">AI Automation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-secondary/20 mt-12 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2026 Artum8 Labs. All rights reserved. | <a href="/privacy" class="hover:text-accent">Privacy Policy</a> | <a href="/terms" class="hover:text-accent">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/contact-form.js"></script>
+</body>
+</html>

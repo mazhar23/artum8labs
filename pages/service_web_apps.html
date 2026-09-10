@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0a0f" />
+    <title>Web Applications & Cloud Architecture Services - Artum8 Labs</title>
+    <meta name="description" content="Artum8 Labs designs and engineers high-throughput web applications, serverless cloud architectures, microservices, and React/Next.js platforms built for scale." />
+    <link rel="canonical" href="https://www.artum8labs.com/services/web-applications-cloud-architecture" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Web Applications & Cloud Architecture - Artum8 Labs" />
+    <meta property="og:description" content="High-scale cloud-native web applications, serverless architectures, and microservices engineered for sub-100ms latencies." />
+    <meta property="og:image" content="https://www.artum8labs.com/images/logo.png" />
+    <meta property="og:url" content="https://www.artum8labs.com/services/web-applications-cloud-architecture" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Web Applications & Cloud Architecture - Artum8 Labs" />
+    <meta name="twitter:description" content="High-scale cloud-native web applications, serverless architectures, and microservices engineered for sub-100ms latencies." />
+    <meta name="twitter:image" content="https://www.artum8labs.com/images/logo.png" />
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/gradient-text.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://www.artum8labs.com/services/web-applications-cloud-architecture#service",
+          "name": "Web Applications & Cloud Architecture",
+          "serviceType": "Cloud Engineering & Web Application Development",
+          "description": "High-throughput cloud-native web applications, serverless microservice architectures, and modern React/Next.js enterprise systems built for global scale.",
+          "provider": {
+            "@type": "Organization",
+            "name": "Artum8 Labs",
+            "url": "https://www.artum8labs.com"
+          },
+          "areaServed": "Worldwide",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Cloud Engineering Capabilities",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Cloud Architecture Blueprint"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Full-Stack Web Application Build"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "DevOps & Cloud Migration"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.artum8labs.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://www.artum8labs.com/services"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Web Applications & Cloud Architecture",
+              "item": "https://www.artum8labs.com/services/web-applications-cloud-architecture"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Which cloud providers do you support?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We architect solutions on AWS, Google Cloud Platform (GCP), and Azure, utilizing serverless services, Kubernetes (EKS/GKE), and edge networks like Cloudflare and Vercel."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do you handle scalability under peak loads?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We implement auto-scaling groups, global CDN caching, asynchronous message queuing, and database connection pooling to handle sudden 10x traffic spikes effortlessly."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-primary text-white overflow-x-hidden">
+    <style>.skip-link{position:absolute;top:-40px;left:6px;background:#ff6b35;color:#fff;padding:8px 16px;border-radius:4px;text-decoration:none;z-index:1000}.skip-link:focus{top:6px}</style>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation Header -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-primary/90 backdrop-blur-md border-b border-secondary/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center">
+                        <img src="../images/logo.png" alt="Artum8 Labs Logo" class="h-12 w-auto" width="192" height="48" />
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="/" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Home</a>
+                        <a href="/services" class="text-accent font-semibold px-3 py-2 rounded-md text-sm">Services</a>
+                        <a href="/portfolio" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Portfolio</a>
+                        <a href="/team" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Team</a>
+                        <a href="/success-stories" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Success Stories</a>
+                        <a href="/innovation-lab" class="text-gray-300 hover:text-accent transition-colors duration-300 px-3 py-2 rounded-md text-sm">Innovation Lab</a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#contact" class="btn-primary">Start Your Transformation</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-accent p-2" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-primary/95 backdrop-blur-md">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="/" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="/services" class="text-accent block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="/portfolio" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
+                <a href="/team" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Team</a>
+                <a href="/success-stories" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Success Stories</a>
+                <a href="/innovation-lab" class="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Innovation Lab</a>
+                <a href="#contact" class="btn-primary block mx-3 mt-4 text-center">Start Your Transformation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="relative pt-28 pb-20 overflow-hidden bg-gradient-to-b from-primary via-secondary/40 to-primary">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <div class="inline-flex items-center space-x-2 px-4 py-2 bg-accent/10 border border-accent/30 rounded-full text-accent text-sm font-semibold mb-6">
+                    <span>Practice Area</span>
+                    <span>•</span>
+                    <a href="/services" class="hover:underline">All Services</a>
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-bold leading-tight mb-6">
+                    <span class="block animated-gradient-text">Web Applications &amp; Cloud Architecture</span>
+                </h1>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto font-light mb-8">
+                    Cloud-native systems engineered to process high-throughput workloads with sub-100ms response times and 99.99% operational uptime.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#contact" class="btn-primary">Schedule Technical Consultation</a>
+                    <a href="/services" class="px-6 py-3 bg-secondary/60 text-gray-300 hover:text-white rounded-lg border border-white/10 hover:border-accent transition-all duration-300">View Other Services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section class="py-16 bg-primary border-t border-secondary/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6 text-white">Engineering Resilient Web Systems at Scale</h2>
+                        <p class="text-gray-300 mb-4 leading-relaxed">
+                            Artum8 Labs architects modern web platforms for high-growth tech companies and global enterprises. We eliminate technical debt by deploying clean, modular codebases using TypeScript, Next.js, Node.js, and Kubernetes.
+                        </p>
+                        <p class="text-gray-300 leading-relaxed">
+                            Whether you need a multi-tenant SaaS backend, real-time data ingestion pipelines, or an SSR migration to improve performance and SEO, our engineering team brings a decade of battle-tested cloud expertise.
+                        </p>
+                    </div>
+                    <div class="p-8 rounded-2xl bg-secondary/40 border border-white/10 backdrop-blur-md">
+                        <div class="grid grid-cols-2 gap-6 text-center">
+                            <div class="p-4 rounded-xl bg-primary/60 border border-accent/20">
+                                <div class="text-3xl font-bold text-accent mb-1">&lt;100ms</div>
+                                <div class="text-xs text-gray-400">Global API Response</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-primary/60 border border-accent/20">
+                                <div class="text-3xl font-bold text-accent mb-1">99.99%</div>
+                                <div class="text-xs text-gray-400">Target SLA Availability</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-primary/60 border border-accent/20">
+                                <div class="text-3xl font-bold text-accent mb-1">10M+</div>
+                                <div class="text-xs text-gray-400">Daily Requests Processed</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-primary/60 border border-accent/20">
+                                <div class="text-3xl font-bold text-accent mb-1">Zero</div>
+                                <div class="text-xs text-gray-400">Downtime Deployments</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Capabilities Section -->
+        <section class="py-20 bg-gradient-to-b from-primary via-secondary/20 to-primary">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Key Engineering Capabilities</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Core technical specializations we execute to build world-class cloud applications.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10 hover:border-accent/50 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center text-accent mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Cloud-Native Microservices</h3>
+                        <p class="text-gray-400 text-sm">Modular microservices engineered with Go, Node.js, and Docker for effortless horizontal scaling and container orchestration on AWS EKS and GCP GKE.</p>
+                    </div>
+
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10 hover:border-accent/50 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center text-accent mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Event-Driven Architecture</h3>
+                        <p class="text-gray-400 text-sm">Real-time message streaming with Apache Kafka, RabbitMQ, and Redis Pub/Sub for asynchronous processing and sub-second data synchronization.</p>
+                    </div>
+
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10 hover:border-accent/50 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center text-accent mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Modern React & Next.js Platforms</h3>
+                        <p class="text-gray-400 text-sm">Ultra-responsive frontends utilizing Next.js App Router, React Server Components (RSC), and Tailwind CSS for flawless Core Web Vitals.</p>
+                    </div>
+
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10 hover:border-accent/50 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center text-accent mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Multi-Tenant Security & RBAC</h3>
+                        <p class="text-gray-400 text-sm">Enterprise isolation patterns, row-level security (RLS), OAuth2/OIDC single sign-on (SSO), and granular role-based permissions.</p>
+                    </div>
+
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10 hover:border-accent/50 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center text-accent mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Automated CI/CD & Infrastructure as Code</h3>
+                        <p class="text-gray-400 text-sm">Terraform and Pulumi infrastructure management paired with GitHub Actions pipelines for automated testing, preview deployments, and zero-downtime releases.</p>
+                    </div>
+
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10 hover:border-accent/50 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center text-accent mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">High-Performance Database Systems</h3>
+                        <p class="text-gray-400 text-sm">Optimized PostgreSQL, CockroachDB, and MongoDB cluster architectures with automated read-replicas, connection pooling, and caching.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deliverables & Packages Section -->
+        <section class="py-20 bg-primary border-t border-secondary/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Deliverables &amp; Service Packages</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Flexible engagement models tailored to your team's engineering roadmap.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-8 rounded-2xl bg-secondary/40 border border-white/10 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Cloud Architecture Audit</h3>
+                            <p class="text-gray-400 text-sm mb-6">Comprehensive review of your existing cloud infrastructure, bottleneck identification, and security hardening roadmap.</p>
+                            <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                                <li class="flex items-center"><svg class="w-4 h-4 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Infra Bottleneck & Cost Analysis</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Security & IAM Vulnerability Scan</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Scale Readiness Blueprint</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn-primary text-center w-full">Request Audit</a>
+                    </div>
+
+                    <div class="p-8 rounded-2xl bg-secondary/60 border border-accent/50 flex flex-col justify-between relative transform hover:-translate-y-1 transition-all duration-300">
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white text-xs px-3 py-1 rounded-full font-semibold">Most Popular</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Full-Stack Application Build</h3>
+                            <p class="text-gray-400 text-sm mb-6">End-to-end development of custom React/Next.js applications with resilient cloud backends from prototype to production.</p>
+                            <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                                <li class="flex items-center"><svg class="w-4 h-4 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Custom React / Next.js Frontend</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Microservice / API Gateway Backend</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>CI/CD & Kubernetes Deployment</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn-primary text-center w-full">Start Project Build</a>
+                    </div>
+
+                    <div class="p-8 rounded-2xl bg-secondary/40 border border-white/10 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-3">DevOps & Scale Retainer</h3>
+                            <p class="text-gray-400 text-sm mb-6">Dedicated cloud engineering partner for ongoing infrastructure optimization, scaling, and feature delivery.</p>
+                            <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                                <li class="flex items-center"><svg class="w-4 h-4 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>24/7 Infrastructure Monitoring</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Continuous Performance Tuning</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Priority SLA Technical Support</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn-primary text-center w-full">Enquire Retainer</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-16 bg-primary border-t border-secondary/20">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
+                <div class="space-y-6">
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10">
+                        <h3 class="text-lg font-semibold text-white mb-2">Which cloud providers do you support?</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">We architect solutions on AWS, Google Cloud Platform (GCP), and Azure, utilizing serverless services, Kubernetes (EKS/GKE), and edge networks like Cloudflare and Vercel.</p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-secondary/30 border border-white/10">
+                        <h3 class="text-lg font-semibold text-white mb-2">How do you handle scalability under peak loads?</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">We implement auto-scaling groups, global CDN caching, asynchronous message queuing, and database connection pooling to handle sudden 10x traffic spikes effortlessly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gradient-to-b from-primary via-secondary/40 to-primary border-t border-secondary/20">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Start Your Web Application Build</h2>
+                <p class="text-gray-300 max-w-2xl mx-auto mb-8">Discuss your technical requirements with our lead cloud architects.</p>
+                <div class="p-8 rounded-2xl bg-secondary/50 border border-white/10 backdrop-blur-md max-w-xl mx-auto">
+                    <form id="service-contact-form" class="space-y-4 text-left">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Your Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 bg-primary/80 border border-white/20 rounded-lg text-white focus:outline-none focus:border-accent" placeholder="Jane Doe" />
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email Address</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 bg-primary/80 border border-white/20 rounded-lg text-white focus:outline-none focus:border-accent" placeholder="jane@company.com" />
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Project Details</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 bg-primary/80 border border-white/20 rounded-lg text-white focus:outline-none focus:border-accent" placeholder="Describe your web application or cloud requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full py-3">Send Engineering Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary border-t border-secondary/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <img src="../images/logo.png" alt="Artum8 Labs Logo" class="h-14 w-auto" width="224" height="56" />
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Visionary architects of digital experiences, transforming visions into digital reality through advanced web applications, immersive 3D environments, and mission-critical solutions.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/" class="text-gray-300 hover:text-accent transition-colors duration-300">Home</a></li>
+                        <li><a href="/services" class="text-gray-300 hover:text-accent transition-colors duration-300">Services</a></li>
+                        <li><a href="/portfolio" class="text-gray-300 hover:text-accent transition-colors duration-300">Portfolio</a></li>
+                        <li><a href="/team" class="text-gray-300 hover:text-accent transition-colors duration-300">Team</a></li>
+                        <li><a href="/success-stories" class="text-gray-300 hover:text-accent transition-colors duration-300">Success Stories</a></li>
+                        <li><a href="/innovation-lab" class="text-gray-300 hover:text-accent transition-colors duration-300">Innovation Lab</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/services/web-applications-cloud-architecture" class="text-accent transition-colors duration-300 font-semibold">Web Applications</a></li>
+                        <li><a href="/services/3d-websites-webgl-experiences" class="text-gray-300 hover:text-accent transition-colors duration-300">3D Websites</a></li>
+                        <li><a href="/services/fintech-solutions-payment-infrastructure" class="text-gray-300 hover:text-accent transition-colors duration-300">Fintech Solutions</a></li>
+                        <li><a href="/services/healthtech-platforms-clinical-portals" class="text-gray-300 hover:text-accent transition-colors duration-300">Healthtech Platforms</a></li>
+                        <li><a href="/services/seo" class="text-gray-300 hover:text-accent transition-colors duration-300">SEO Services</a></li>
+                        <li><a href="/services/aeo" class="text-gray-300 hover:text-accent transition-colors duration-300">AEO Services</a></li>
+                        <li><a href="/services/ai-automation" class="text-gray-300 hover:text-accent transition-colors duration-300">AI Automation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-secondary/20 mt-12 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2026 Artum8 Labs. All rights reserved. | <a href="/privacy" class="hover:text-accent">Privacy Policy</a> | <a href="/terms" class="hover:text-accent">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/contact-form.js"></script>
+</body>
+</html>
