@@ -1,20 +1,22 @@
 # AI Automation for Business - Artum8 Labs
 
 ## Service Overview
-Custom AI Workflows, Agents & LLM Integration — converting manual, repetitive business processes into intelligent, self-executing AI agents and automation pipelines. Artum8 Labs connects LLMs to your enterprise databases, CRMs, and internal APIs to drive 10x operational velocity and drastically lower overhead.
+Custom AI Workflows, Agents & LLM Integration — Broadening AI automation into a general "AI Automation for Business" practice. We convert manual, repetitive business processes into intelligent, self-executing AI agents and automation pipelines across back-office, support, finance ops, and internal tooling.
 
 ## Key Capabilities & Features
 - **Custom AI Agent Development**: Multi-agent systems built with LangChain, LlamaIndex, AutoGen, and CrewAI tailored to operational workflows.
 - **RAG (Retrieval-Augmented Generation) Systems**: Secure vector database implementations (Pinecone, Qdrant, PGVector) querying your private enterprise docs.
 - **Workflow & Pipeline Automation**: End-to-end automation connecting n8n, Make, Zapier, and custom Node.js/Python microservices.
 - **Autonomous Data Extraction & Processing**: Automated ingestion and parsing of PDF invoices, contracts, emails, and unstructured documents.
-- **Fine-Tuned LLM & Private Model Deployment**: On-premise or private cloud deployment of open-source LLMs (Llama 3, Mistral) for strict privacy requirements.
+- **Computer Vision & Visual QA**: Visual defect detection, inventory counting, and quality assurance automation.
 
-## Target Industries & Buyer Personas
-- **Operations-Heavy SaaS**: Companies seeking automated customer onboarding, ticket triage, and data sync.
-- **Logistics & Supply Chain**: Organizations needing automated document processing, inventory tracking, and carrier communications.
-- **Financial Services**: Firms looking for automated compliance checks, report generation, and invoice processing.
-- **Customer Support & Agency Operations**: Teams aiming to handle 80% of routine inquiries and workflows automatically.
+## Target Industries & Business Types
+1. **Financial Services & Fintech Firms**: Automated reconciliation, fraud-flag triage, compliance document review, and KYC/AML workflow automation.
+2. **Healthcare Practices & Clinics**: Appointment scheduling automation, intake-form processing, claims/billing automation, and patient-communication workflows.
+3. **E-commerce & Retail**: Inventory sync, customer support automation, returns/refund processing, and personalized marketing workflows.
+4. **Professional Services Firms (Legal, Accounting, Consulting)**: Document intake/summarization, contract review assistance, and client-onboarding automation.
+5. **Real Estate & Property Management**: Lead qualification bots, document processing, and automated scheduling.
+6. **Manufacturing & Logistics**: Computer vision visual QA, defect detection, inventory counting, and carrier dispatch processing.
 
 ## Deliverables & Service Packages
 1. **AI Automation Strategy Blueprint**: Complete workflow audit, ROI assessment, and agent architecture roadmap.

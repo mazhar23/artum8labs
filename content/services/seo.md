@@ -1,20 +1,21 @@
 # Search Engine Optimization (SEO) Services - Artum8 Labs
 
 ## Service Overview
-Technical + Content SEO for platforms we build (or platforms built by others). Artum8 Labs delivers engineering-grade SEO designed for modern web frameworks, React/Next.js architectures, and complex data-driven platforms. We position SEO as a high-ROI growth engine that reduces customer acquisition costs and drives sustainable organic revenue.
+Technical + Content SEO for platforms we build (or platforms built by others). Artum8 Labs delivers engineering-grade SEO designed for modern web frameworks, React/Next.js architectures, and complex data-driven platforms. We position SEO as a high-ROI retainer add-on to Web Applications, Fintech, and Healthtech builds, as well as a standalone growth engine for existing websites.
 
 ## Key Capabilities & Features
 - **Core Web Vitals & Technical SEO**: Sub-second Largest Contentful Paint (LCP), minimal Cumulative Layout Shift (CLS), and optimal Interaction to Next Paint (INP).
 - **Programmatic SEO & Schema Architecture**: Automated generation of thousands of indexable, high-intent landing pages powered by structured JSON-LD data.
 - **SSR / Dynamic Rendering Migration**: Converting client-rendered React single-page apps into server-side rendered (SSR) or statically generated (SSG) pages for instant indexing.
 - **Semantic Content & Entity Mapping**: Topic cluster architecture, keyword intent mapping, and competitor content gap extraction.
-- **Technical Audit & Crawler Optimization**: Fixing crawl budget waste, canonical tags, sitemaps, robots.txt, and 404/redirect chains.
+- **Technical Migration Audits**: Protecting rankings during web app replatforming and database migrations.
 
-## Target Industries & Buyer Personas
-- **SaaS Founders & Marketing Leaders**: Companies needing sustainable organic user acquisition and feature page rankings.
-- **Ecommerce Operators**: Brands requiring high-throughput product page indexing, rich snippets, and catalog optimization.
-- **Healthcare & Telemedicine Platforms**: Medical organizations needing YMYL (Your Money Your Life) search authority and patient acquisition.
-- **Fintech & Financial Brands**: High-trust platforms looking to rank for competitive financial keywords and trust queries.
+## Target Industries & Business Types
+1. **SaaS Companies**: Ongoing organic acquisition, landing-page SEO, and programmatic SEO for feature and comparison pages.
+2. **Fintech & Healthtech Platforms**: High-value, high-trust purchases where organic search and E-E-A-T signals drive qualified leads.
+3. **D2C / E-commerce Brands**: Product/category page SEO, technical audits, Core Web Vitals, and Shopify optimization.
+4. **Local Multi-Location Businesses**: Clinics, financial advisory firms, and law firms needing local SEO and Google Business Profile optimization across Mumbai, India, and Delaware, USA footprint.
+5. **Enterprise Replatforming Clients**: SEO migration audits during platform rebuilds to protect domain authority and organic rankings.
 
 ## Deliverables & Service Packages
 1. **Initial Technical Audit & Repair**: 150+ point technical audit, Core Web Vitals optimization, and immediate crawler fix deployment.
