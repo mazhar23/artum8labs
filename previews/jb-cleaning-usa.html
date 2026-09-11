@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,follow" />
+    <title>JB Cleaning USA &mdash; Website Concept | Artum8 Labs</title>
+    <meta name="description" content="Cleaning website concept designed for JB Cleaning USA in Tampa Bay, FL. A preview by Artum8 Labs." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+    <style>
+        :root { --ink: #1f2937; --mid: #33445c; --accent: #2f9edb; --accent2: #7ad0c2; --paper: #f3f7fa; }
+        html { background: var(--paper); scroll-behavior: smooth; }
+        body { font-family: 'Inter', system-ui, sans-serif; color: #15181c; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .bg-ink { background: var(--ink); }
+        .bg-mid { background: var(--mid); }
+        .bg-accent { background: var(--accent); }
+        .bg-accent2 { background: var(--accent2); }
+        .bg-paper { background: var(--paper); }
+        .text-accent { color: var(--accent); }
+        .text-accent2 { color: var(--accent2); }
+        .text-mid { color: var(--mid); }
+        .border-line { border-color: rgba(21,24,28,.12); }
+        .btn-accent { background: var(--accent); color: #fff; transition: transform .18s ease, box-shadow .18s ease, filter .18s; }
+        .btn-accent:hover { filter: brightness(.94); transform: translateY(-2px); box-shadow: 0 10px 24px -10px var(--accent); }
+        .btn-ghost { border: 1.5px solid var(--ink); color: var(--ink); transition: transform .18s ease, background .18s, color .18s; }
+        .btn-ghost:hover { background: var(--ink); color: var(--paper); transform: translateY(-2px); }
+        .stat-n { color: var(--ink); }
+        .section-label { color: var(--accent); }
+        .chip { border: 1px solid rgba(255,255,255,.35); color: #fff; backdrop-filter: blur(4px); }
+        .chip:hover { border-color: var(--accent); }
+        .grainbg { background-image: radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px); background-size: 22px 22px; }
+        .photo-slot {
+            min-height: 15rem;
+            border-radius: 1rem;
+            display:flex; align-items:flex-end;
+            padding: 1.25rem;
+            color:#fff;
+            font-weight:600;
+            letter-spacing:.01em;
+            position:relative;
+            overflow:hidden;
+        }
+        .photo-slot::after {
+            content:''; position:absolute; inset:0;
+            background: linear-gradient(180deg, rgba(21,24,28,0) 40%, rgba(21,24,28,.55) 100%);
+        }
+        .photo-slot span { position:relative; z-index:1; }
+        .concept-bar { background:#0b0d10; color:#c9cdd2; }
+        .concept-bar a { color:#fff; text-decoration:underline; }
+        .fade-up { animation: fadeUp .7s ease both; }
+        @keyframes fadeUp { from { opacity:0; transform: translateY(14px);} to {opacity:1; transform:none;} }
+        .d1 { animation-delay:.05s; } .d2 { animation-delay:.12s; } .d3 { animation-delay:.2s; } .d4 { animation-delay:.28s; }
+
+        /* ===== Motion layer ===== */
+        .hero { position: relative; overflow: hidden; }
+        .orb { position: absolute; border-radius: 50%; filter: blur(70px); opacity: .55; pointer-events: none; will-change: transform; }
+        .orb-a { width: 460px; height: 460px; top: -150px; right: -90px; background: var(--accent); animation: orbFloatA 15s ease-in-out infinite; }
+        .orb-b { width: 380px; height: 380px; bottom: -130px; left: -110px; background: var(--accent2); opacity:.45; animation: orbFloatB 19s ease-in-out infinite; }
+        @keyframes orbFloatA { 0%,100% { transform: translate(0,0) scale(1);} 50% { transform: translate(-45px,55px) scale(1.15);} }
+        @keyframes orbFloatB { 0%,100% { transform: translate(0,0) scale(1);} 50% { transform: translate(55px,-45px) scale(1.12);} }
+        .spot { position: absolute; width: 340px; height: 340px; border-radius: 50%; opacity: 0; pointer-events: none; transform: translate(-50%,-50%); background: radial-gradient(circle, rgba(255,255,255,.16), transparent 62%); transition: opacity .3s; mix-blend-mode: screen; will-change: left, top; }
+        .hero:hover .spot { opacity: 1; }
+        .tilt-wrap { perspective: 1200px; }
+        .tilt { transform-style: preserve-3d; transition: transform .18s ease-out; will-change: transform; }
+        .float-badge { animation: floatY 5.5s ease-in-out infinite; box-shadow: 0 24px 50px -18px rgba(0,0,0,.45); }
+        @keyframes floatY { 0%,100% { transform: translateY(0) translateZ(60px);} 50% { transform: translateY(-10px) translateZ(60px);} }
+        .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1); }
+        .reveal.in { opacity: 1; transform: none; }
+        .tilt-card { transition: transform .2s ease-out, box-shadow .35s ease-out; }
+        .marquee { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+        .marquee-track { display: flex; align-items: center; gap: 3rem; width: max-content; animation: marquee 24s linear infinite; }
+        .marquee-track span { white-space: nowrap; }
+        @keyframes marquee { to { transform: translateX(-50%); } }
+        .count { font-variant-numeric: tabular-nums; }
+        .stat-card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.08); backdrop-filter: blur(6px); }
+        @media (prefers-reduced-motion: reduce) {
+            * { animation: none !important; transition: none !important; }
+            .reveal { opacity: 1; transform: none; }
+            .marquee-track { animation: none; width: auto; flex-wrap: wrap; }
+            .orb, .spot { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Concept bar -->
+    <div class="concept-bar text-xs mono px-4 py-2 text-center">
+        Concept design for JB Cleaning USA · Tampa Bay, FL &mdash; a preview by <a href="https://www.artum8labs.com" target="_blank" rel="noopener">Artum8 Labs</a>. Not a live cleaning site; placeholder imagery and copy only.
+    </div>
+
+    <!-- Nav -->
+    <header class="bg-paper border-b border-line sticky top-0 z-50" data-hero-nav>
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-baseline gap-2">
+                <span class="text-xl font-extrabold tracking-tight stat-n">JB Cleaning USA</span>
+                <span class="mono text-xs text-mid">Cleaning</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-mid">
+                <span>Services</span><span>Projects</span><span>Reviews</span>
+            </div>
+            <a href="tel:+17272402890" class="btn-accent rounded-full px-5 py-2 text-sm font-semibold">Call 727-240-2890</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="bg-paper border-b border-line grainbg hero" data-hero>
+        <div class="orb orb-a" aria-hidden="true"></div>
+        <div class="orb orb-b" aria-hidden="true"></div>
+        <div class="spot" data-spot aria-hidden="true"></div>
+        <div class="max-w-6xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center relative">
+            <div>
+                <p class="mono uppercase text-xs tracking-[.18em] mb-4 fade-up d1">Tampa Bay cleaning, booked in under a minute</p>
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.06] mb-6 fade-up d2" style="color:var(--ink)">A 5-star cleaning business that books itself</h1>
+                <p class="text-lg text-mid leading-relaxed mb-8 fade-up d3">JB Cleaning USA holds a 5-star reputation across Tampa Bay. Recurring-cleaning customers should be able to book, reschedule and pay without a single phone tag session — the way good cleaning businesses already are.</p>
+                <div class="flex flex-wrap gap-3 mb-8 fade-up d3">
+                    <span class="chip rounded-full px-4 py-1.5 text-sm font-medium">Recurring plans</span><span class="chip rounded-full px-4 py-1.5 text-sm font-medium">5-star service</span><span class="chip rounded-full px-4 py-1.5 text-sm font-medium">Move-in &amp; move-out</span>
+                </div>
+                <div class="flex flex-wrap gap-3 fade-up d4">
+                    <a href="tel:+17272402890" class="btn-accent rounded-full px-7 py-3 font-semibold">Call 727-240-2890</a>
+                    <a href="#cta" class="btn-ghost rounded-full px-7 py-3 font-semibold">Get a cleaning quote</a>
+                </div>
+            </div>
+            <div class="tilt-wrap relative">
+                <div class="tilt relative">
+                    <div class="photo-slot h-[26rem] md:h-[30rem] bg-mid" style="background-image:linear-gradient(150deg, var(--mid), var(--ink)); border: 1px solid rgba(255,255,255,.08)">
+                        <span class="text-lg">JB Cleaning USA &mdash; Cleaning in Tampa Bay, FL</span>
+                    </div>
+                    <div class="absolute -bottom-5 -left-5 hidden md:flex items-center gap-3 bg-accent text-white rounded-2xl px-5 py-4 float-badge">
+                        <span class="relative flex h-3 w-3" aria-hidden="true">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+                        </span>
+                        <span>
+                            <p class="mono uppercase text-[11px] tracking-widest opacity-80">Reach us direct</p>
+                            <p class="font-bold text-lg">727-240-2890</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust strip -->
+    <section class="bg-ink">
+        <div class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+            
+    <div class="text-center md:text-left reveal" style="transition-delay:0ms">
+      <p class="stat-n text-3xl font-extrabold mono"><span class="count" data-count="5.0" data-suffix="">0</span></p>
+      <p class="text-white/60 text-sm mt-1">Star reputation</p>
+    </div>
+    <div class="text-center md:text-left reveal" style="transition-delay:90ms">
+      <p class="stat-n text-3xl font-extrabold mono"><span class="count" data-count="500" data-suffix="+">0</span></p>
+      <p class="text-white/60 text-sm mt-1">Homes cleaned</p>
+    </div>
+    <div class="text-center md:text-left reveal" style="transition-delay:180ms">
+      <p class="stat-n text-3xl font-extrabold mono"><span class="count" data-count="7" data-suffix="">0</span></p>
+      <p class="text-white/60 text-sm mt-1">Days a week</p>
+    </div>
+    <div class="text-center md:text-left reveal" style="transition-delay:270ms">
+      <p class="stat-n text-3xl font-extrabold mono"><span class="count" data-count="100" data-suffix="%">0</span></p>
+      <p class="text-white/60 text-sm mt-1">Satisfaction guarantee</p>
+    </div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <section class="bg-ink border-t border-white/10 py-5 marquee">
+        <div class="marquee-track" data-marquee><span class="mono uppercase tracking-widest text-sm text-white/70">Recurring plans</span><span class="mono uppercase tracking-widest text-sm text-white/70">5-star service</span><span class="mono uppercase tracking-widest text-sm text-white/70">Move-in &amp; move-out</span></div>
+    </section>
+
+    <!-- Services -->
+    <section class="bg-paper">
+        <div class="max-w-6xl mx-auto px-6 py-20">
+            <p class="mono uppercase text-xs tracking-[.18em] mb-2 section-label reveal">Services</p>
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-12 reveal" style="color:var(--ink)">What a cleaning site has to book</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                
+    <div class="reveal tilt-card border border-line rounded-2xl p-7 bg-white hover:shadow-xl" data-tilt style="transition-delay:0ms">
+      <p class="font-bold text-lg mb-2" style="color:var(--ink)">Recurring cleaning</p>
+      <p class="text-mid leading-relaxed">Weekly or biweekly plans with the same crew and the same standard.</p>
+    </div>
+    <div class="reveal tilt-card border border-line rounded-2xl p-7 bg-white hover:shadow-xl" data-tilt style="transition-delay:80ms">
+      <p class="font-bold text-lg mb-2" style="color:var(--ink)">Deep cleans</p>
+      <p class="text-mid leading-relaxed">The spring-style reset yours deserves, done properly.</p>
+    </div>
+    <div class="reveal tilt-card border border-line rounded-2xl p-7 bg-white hover:shadow-xl" data-tilt style="transition-delay:0ms">
+      <p class="font-bold text-lg mb-2" style="color:var(--ink)">Move-in / move-out</p>
+      <p class="text-mid leading-relaxed">Bond-ready cleans with a checklist delivered to the landlord.</p>
+    </div>
+    <div class="reveal tilt-card border border-line rounded-2xl p-7 bg-white hover:shadow-xl" data-tilt style="transition-delay:80ms">
+      <p class="font-bold text-lg mb-2" style="color:var(--ink)">Office cleaning</p>
+      <p class="text-mid leading-relaxed">After-hours cycles that leave the space ready for the morning.</p>
+    </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    
+    <section class="bg-mid text-white" style="background:linear-gradient(140deg, var(--mid), var(--ink))">
+      <div class="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="mono uppercase text-xs tracking-[.18em] mb-2 text-white/60 reveal">Money questions, answered</p>
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4 reveal">Plans priced like subscriptions, not guessing</h2>
+          <p class="text-white/75 leading-relaxed reveal">Recurring plans with clear per-visit pricing, so "book me every two weeks" is one click, not one negotiation.</p>
+        </div>
+        <ul class="space-y-4 text-lg reveal">
+      <li class="flex items-start gap-3"><span class="text-accent font-bold">&#10003;</span><span>Transparent per-visit pricing</span></li>
+      <li class="flex items-start gap-3"><span class="text-accent font-bold">&#10003;</span><span>Pause or skip anytime</span></li>
+      <li class="flex items-start gap-3"><span class="text-accent font-bold">&#10003;</span><span>Priority scheduling for plan members</span></li></ul>
+      </div>
+    </section>
+
+    
+
+    <!-- Booking CTA -->
+    <section id="cta" class="bg-ink grainbg">
+        <div class="max-w-6xl mx-auto px-6 py-20 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-3 reveal">Book your cleaning</h2>
+            <p class="text-white/70 max-w-xl mx-auto mb-10 reveal">In the real build: address, size, recurring slot — booked and confirmed without back-and-forth.</p>
+            <div class="reveal inline-flex items-center gap-3 bg-white/10 backdrop-blur rounded-full pl-5 pr-1 py-1 max-w-md w-full">
+                <span class="text-white/60 text-sm">In the real build this becomes a live form</span>
+                <span class="bg-accent text-white rounded-full px-6 py-3 font-semibold whitespace-nowrap">Book now</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial concept -->
+    <section class="bg-paper border-t border-line">
+        <div class="max-w-3xl mx-auto px-6 py-16 text-center">
+            <div class="text-accent text-5xl leading-none mb-4 reveal" aria-hidden="true">&ldquo;</div>
+            <p class="text-xl md:text-2xl font-medium italic leading-relaxed reveal" style="color:var(--ink)">Same two lovely cleaners every visit, for over a year. (Placeholder for a real review.)</p>
+            <p class="mono uppercase text-xs tracking-widest text-mid mt-6 reveal">Client testimonial slot &mdash; real quote to be added at build</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ink text-white/70">
+        <div class="max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-3 gap-10">
+            <div>
+                <p class="font-bold text-lg text-white mb-3">JB Cleaning USA</p>
+                <p class="text-sm">Cleaning · Tampa Bay, FL</p>
+            </div>
+            <div>
+                <p class="mono uppercase text-[11px] tracking-widest text-white/40 mb-3">Phone</p>
+                <p class="font-semibold text-white">727-240-2890</p>
+            </div>
+            <div>
+                <p class="mono uppercase text-[11px] tracking-widest text-white/40 mb-3">Hours</p>
+                <p class="text-sm">Placeholder hours &mdash; filled from your real schedule at build</p>
+            </div>
+        </div>
+        <div class="border-t border-white/10">
+            <div class="max-w-6xl mx-auto px-6 py-6 text-sm flex flex-col md:flex-row md:items-center justify-between gap-3">
+                <p>This is a concept homepage for JB Cleaning USA. It shows a booking-first structure built to turn 5-star reviews into recurring revenue.</p>
+                <p class="mono text-xs text-white/50">&copy; 2026 JB Cleaning USA · concept by Artum8 Labs</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    (function () {
+        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        /* Hero: 3D mouse tilt + cursor glow */
+        if (!reduce) {
+            var hero = document.querySelector('[data-hero]');
+            var tilt = hero && hero.querySelector('.tilt');
+            var spot = hero && hero.querySelector('[data-spot]');
+            if (hero && tilt) {
+                hero.addEventListener('pointermove', function (e) {
+                    var r = hero.getBoundingClientRect();
+                    var x = (e.clientX - r.left) / r.width - .5;
+                    var y = (e.clientY - r.top) / r.height - .5;
+                    tilt.style.transform = 'rotateY(' + (x * 12) + 'deg) rotateX(' + (y * -12) + 'deg)';
+                    if (spot) { spot.style.left = (e.clientX - r.left) + 'px'; spot.style.top = (e.clientY - r.top) + 'px'; }
+                });
+                hero.addEventListener('pointerleave', function () { tilt.style.transform = ''; });
+            }
+        }
+
+        /* Scroll reveals + counters */
+        function animateCount(el) {
+            var target = parseFloat(el.getAttribute('data-count'));
+            var dec = Math.max(0, (String(target).split('.')[1] || '').length);
+            var suf = el.getAttribute('data-suffix') || '';
+            var pre = el.getAttribute('data-prefix') || '';
+            var dur = 1100, t0 = null;
+            function frame(ts) {
+                if (!t0) t0 = ts;
+                var p = Math.min(1, (ts - t0) / dur);
+                var ease = 1 - Math.pow(1 - p, 3);
+                var val = target * ease;
+                el.textContent = pre + val.toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec }) + suf;
+                if (p < 1) requestAnimationFrame(frame);
+            }
+            requestAnimationFrame(frame);
+        }
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) {
+                if (!en.isIntersecting) return;
+                var el = en.target;
+                if (el.hasAttribute('data-count')) animateCount(el);
+                el.classList.add('in');
+                io.unobserve(el);
+            });
+        }, { threshold: .18 });
+        document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+        /* 3D tilt on cards */
+        if (!reduce) {
+            document.querySelectorAll('[data-tilt]').forEach(function (card) {
+                card.addEventListener('pointermove', function (e) {
+                    var r = card.getBoundingClientRect();
+                    var x = (e.clientX - r.left) / r.width - .5;
+                    var y = (e.clientY - r.top) / r.height - .5;
+                    card.style.transform = 'perspective(800px) rotateY(' + (x * 7) + 'deg) rotateX(' + (y * -7) + 'deg) translateY(-5px)';
+                });
+                card.addEventListener('pointerleave', function () { card.style.transform = ''; });
+            });
+        }
+
+        /* Marquee loop */
+        document.querySelectorAll('[data-marquee]').forEach(function (t) { t.innerHTML += t.innerHTML; });
+    })();
+    </script>
+</body>
+</html>

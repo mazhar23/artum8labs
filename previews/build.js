@@ -10,14 +10,15 @@ const OUT = path.resolve(__dirname);
 const template = fs.readFileSync(path.join(__dirname, 'template.html'), 'utf8');
 const leads = [
   ...require('./data-part-a.js'),
-  ...require('./data-part-b.js')
+  ...require('./data-part-b.js'),
+  ...require('./data-part-c.js')
 ];
 
 function esc(s) {
   return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
-const slugify = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+const slugify = (s) => s.toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^[-]+|[-]+$/g, '');
 
 function renderLead(lead) {
   const b = lead.brand;
