@@ -98,14 +98,14 @@ mdFiles.forEach(file => {
 // Testing Individual Service HTML Pages
 console.log('\n4b. Testing Service HTML Pages:');
 const serviceHtmlPages = [
-    'services/web-apps.html',
-    'services/3d-webgl.html',
-    'services/fintech-solutions.html',
-    'services/healthtech-platforms.html',
+    'services/web-applications-cloud-architecture.html',
+    'services/3d-websites-webgl-experiences.html',
+    'services/fintech-solutions-payment-infrastructure.html',
+    'services/healthtech-platforms-clinical-portals.html',
     'services/seo.html',
     'services/aeo.html',
     'services/ai-automation.html',
-    'a8-automations.html'
+    'automations.html'
 ];
 
 serviceHtmlPages.forEach(file => {

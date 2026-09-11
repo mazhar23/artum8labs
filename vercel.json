@@ -84,21 +84,23 @@
     { "source": "/404", "destination": "/404.html" },
     { "source": "/services", "destination": "/services.html" },
     { "source": "/services/web-applications-cloud-architecture", "destination": "/services/web-applications-cloud-architecture.html" },
-    { "source": "/services/web-apps", "destination": "/services/web-apps.html" },
     { "source": "/services/3d-websites-webgl-experiences", "destination": "/services/3d-websites-webgl-experiences.html" },
-    { "source": "/services/3d-webgl", "destination": "/services/3d-webgl.html" },
     { "source": "/services/fintech-solutions-payment-infrastructure", "destination": "/services/fintech-solutions-payment-infrastructure.html" },
-    { "source": "/services/fintech-solutions", "destination": "/services/fintech-solutions.html" },
     { "source": "/services/healthtech-platforms-clinical-portals", "destination": "/services/healthtech-platforms-clinical-portals.html" },
-    { "source": "/services/healthtech-platforms", "destination": "/services/healthtech-platforms.html" },
     { "source": "/services/seo", "destination": "/services/seo.html" },
     { "source": "/services/aeo", "destination": "/services/aeo.html" },
     { "source": "/services/ai-automation", "destination": "/services/ai-automation.html" },
     { "source": "/automations", "destination": "/automations.html" },
-    { "source": "/a8-automations", "destination": "/a8-automations.html" },
     { "source": "/portfolio", "destination": "/portfolio.html" },
     { "source": "/team", "destination": "/team.html" },
     { "source": "/success-stories", "destination": "/success-stories.html" },
     { "source": "/innovation-lab", "destination": "/innovation-lab.html" }
+  ],
+  "redirects": [
+    { "source": "/a8-automations", "destination": "/automations", "statusCode": 301 },
+    { "source": "/services/web-apps", "destination": "/services/web-applications-cloud-architecture", "statusCode": 301 },
+    { "source": "/services/3d-webgl", "destination": "/services/3d-websites-webgl-experiences", "statusCode": 301 },
+    { "source": "/services/fintech-solutions", "destination": "/services/fintech-solutions-payment-infrastructure", "statusCode": 301 },
+    { "source": "/services/healthtech-platforms", "destination": "/services/healthtech-platforms-clinical-portals", "statusCode": 301 }
   ]
 }
