@@ -94,7 +94,18 @@
     { "source": "/portfolio", "destination": "/portfolio.html" },
     { "source": "/team", "destination": "/team.html" },
     { "source": "/success-stories", "destination": "/success-stories.html" },
-    { "source": "/innovation-lab", "destination": "/innovation-lab.html" }
+    { "source": "/innovation-lab", "destination": "/innovation-lab.html" },
+    { "source": "/services/for-your-industry", "destination": "/services/for-your-industry.html" },
+    { "source": "/services/website-design-for-hvac-companies", "destination": "/services/website-design-for-hvac-companies.html" },
+    { "source": "/services/website-design-for-landscapers", "destination": "/services/website-design-for-landscapers.html" },
+    { "source": "/services/website-design-for-plumbing-companies", "destination": "/services/website-design-for-plumbing-companies.html" },
+    { "source": "/services/website-design-for-auto-body-shops", "destination": "/services/website-design-for-auto-body-shops.html" },
+    { "source": "/services/website-design-for-cleaning-companies", "destination": "/services/website-design-for-cleaning-companies.html" },
+    { "source": "/services/website-design-for-remodeling-contractors", "destination": "/services/website-design-for-remodeling-contractors.html" },
+    { "source": "/services/website-design-for-roofing-companies", "destination": "/services/website-design-for-roofing-companies.html" },
+    { "source": "/services/website-design-for-salons-and-spas", "destination": "/services/website-design-for-salons-and-spas.html" },
+    { "source": "/services/website-design-for-home-service-companies", "destination": "/services/website-design-for-home-service-companies.html" },
+    { "source": "/services/website-design-for-dentists", "destination": "/services/website-design-for-dentists.html" }
   ],
   "redirects": [
     { "source": "/a8-automations", "destination": "/automations", "statusCode": 301 },
