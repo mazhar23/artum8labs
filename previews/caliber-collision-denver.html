@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,follow" />
+    <title>Caliber Collision Denver &mdash; Website Concept | Artum8 Labs</title>
+    <meta name="description" content="Auto Body &amp; Collision website concept designed for Caliber Collision Denver in Denver, CO. A preview by Artum8 Labs." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+    <style>
+        :root { --ink: #17151a; --mid: #33303b; --accent: #eb4522; --accent2: #9aa0ac; --paper: #f3f2f5; }
+        html { background: var(--paper); }
+        body { font-family: 'Inter', system-ui, sans-serif; color: #15181c; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .bg-ink { background: var(--ink); }
+        .bg-mid { background: var(--mid); }
+        .bg-accent { background: var(--accent); }
+        .bg-accent2 { background: var(--accent2); }
+        .bg-paper { background: var(--paper); }
+        .text-accent { color: var(--accent); }
+        .text-accent2 { color: var(--accent2); }
+        .text-mid { color: var(--mid); }
+        .border-line { border-color: rgba(21,24,28,.12); }
+        .btn-accent { background: var(--accent); color: #fff; }
+        .btn-accent:hover { filter: brightness(.94); }
+        .btn-ghost { border: 1.5px solid var(--ink); color: var(--ink); }
+        .btn-ghost:hover { background: var(--ink); color: var(--paper); }
+        .stat-n { color: var(--ink); }
+        .section-label { color: var(--accent); }
+        .chip { border: 1px solid rgba(255,255,255,.35); color: #fff; }
+        .grainbg { background-image: radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px); background-size: 22px 22px; }
+        .photo-slot {
+            min-height: 15rem;
+            border-radius: 1rem;
+            display:flex; align-items:flex-end;
+            padding: 1.25rem;
+            color:#fff;
+            font-weight:600;
+            letter-spacing:.01em;
+            position:relative;
+            overflow:hidden;
+        }
+        .photo-slot::after {
+            content:''; position:absolute; inset:0;
+            background: linear-gradient(180deg, rgba(21,24,28,0) 40%, rgba(21,24,28,.55) 100%);
+        }
+        .photo-slot span { position:relative; z-index:1; }
+        .concept-bar { background:#0b0d10; color:#c9cdd2; }
+        .concept-bar a { color:#fff; text-decoration:underline; }
+        .fade-up { animation: fadeUp .7s ease both; }
+        @keyframes fadeUp { from { opacity:0; transform: translateY(14px);} to {opacity:1; transform:none;} }
+        .d1 { animation-delay:.05s; } .d2 { animation-delay:.12s; } .d3 { animation-delay:.2s; } .d4 { animation-delay:.28s; }
+    </style>
+</head>
+<body>
+    <!-- Concept bar -->
+    <div class="concept-bar text-xs mono px-4 py-2 text-center">
+        Concept design for Caliber Collision Denver · Denver, CO &mdash; a preview by <a href="https://www.artum8labs.com" target="_blank" rel="noopener">Artum8 Labs</a>. Not a live auto body & collision site; placeholder imagery and copy only.
+    </div>
+
+    <!-- Nav -->
+    <header class="bg-paper border-b border-line sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-baseline gap-2">
+                <span class="text-xl font-extrabold tracking-tight stat-n">Caliber Collision Denver</span>
+                <span class="mono text-xs text-mid">Auto Body &amp; Collision</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-mid">
+                <span>Services</span><span>Projects</span><span>Reviews</span>
+            </div>
+            <a href="tel:+13037621865" class="btn-accent rounded-full px-5 py-2 text-sm font-semibold">Call 303-762-1865</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="bg-paper border-b border-line grainbg">
+        <div class="max-w-6xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <p class="mono uppercase text-xs tracking-[.18em] mb-4 fade-up d1">Denver collision repair since 2003</p>
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.06] mb-6 fade-up d2" style="color:var(--ink)">The shop, the estimate and the fix, all in one place</h1>
+                <p class="text-lg text-mid leading-relaxed mb-8 fade-up d3">Caliber Collision Denver has repaired Colorado vehicles for over twenty years. A site that still shows template leftover text in the browser tab is working against the reviews you earned.</p>
+                <div class="flex flex-wrap gap-3 mb-8 fade-up d3">
+                    <span class="chip rounded-full px-4 py-1.5 text-sm font-medium">Free estimates</span><span class="chip rounded-full px-4 py-1.5 text-sm font-medium">All insurance</span><span class="chip rounded-full px-4 py-1.5 text-sm font-medium">Lifetime warranty</span>
+                </div>
+                <div class="flex flex-wrap gap-3 fade-up d4">
+                    <a href="tel:+13037621865" class="btn-accent rounded-full px-7 py-3 font-semibold">Call 303-762-1865</a>
+                    <a href="#cta" class="btn-ghost rounded-full px-7 py-3 font-semibold">Get a free estimate</a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="photo-slot h-[26rem] md:h-[30rem] bg-mid" style="background-image:linear-gradient(150deg, var(--mid), var(--ink))">
+                    <span class="text-lg">Caliber Collision Denver &mdash; Auto Body &amp; Collision in Denver, CO</span>
+                </div>
+                <div class="absolute -bottom-5 -left-5 hidden md:block bg-accent text-white rounded-2xl px-5 py-4 shadow-2xl">
+                    <p class="mono uppercase text-[11px] tracking-widest opacity-80">Reach us direct</p>
+                    <p class="font-bold text-lg">303-762-1865</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust strip -->
+    <section class="bg-ink">
+        <div class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+            
+    <div class="text-center md:text-left">
+      <p class="stat-n text-3xl font-extrabold">2003</p>
+      <p class="text-white/60 text-sm mt-1">Serving Denver</p>
+    </div>
+    <div class="text-center md:text-left">
+      <p class="stat-n text-3xl font-extrabold">4.8</p>
+      <p class="text-white/60 text-sm mt-1">Google rating</p>
+    </div>
+    <div class="text-center md:text-left">
+      <p class="stat-n text-3xl font-extrabold">Lifetime</p>
+      <p class="text-white/60 text-sm mt-1">Warranty on repairs</p>
+    </div>
+    <div class="text-center md:text-left">
+      <p class="stat-n text-3xl font-extrabold">All</p>
+      <p class="text-white/60 text-sm mt-1">Major insurers</p>
+    </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="bg-paper">
+        <div class="max-w-6xl mx-auto px-6 py-20">
+            <p class="mono uppercase text-xs tracking-[.18em] mb-2 section-label">Services</p>
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-12" style="color:var(--ink)">Repair services, presented for trust</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                
+    <div class="border border-line rounded-2xl p-7 bg-white hover:shadow-lg transition-shadow">
+      <p class="font-bold text-lg mb-2" style="color:var(--ink)">Collision repair</p>
+      <p class="text-mid leading-relaxed">Frame and panel repair with OEM-certified processes and free estimates.</p>
+    </div>
+    <div class="border border-line rounded-2xl p-7 bg-white hover:shadow-lg transition-shadow">
+      <p class="font-bold text-lg mb-2" style="color:var(--ink)">Paint &amp; refinish</p>
+      <p class="text-mid leading-relaxed">Certified paint systems with a lifetime match and finish warranty.</p>
+    </div>
+    <div class="border border-line rounded-2xl p-7 bg-white hover:shadow-lg transition-shadow">
+      <p class="font-bold text-lg mb-2" style="color:var(--ink)">Dent &amp; hail PDR</p>
+      <p class="text-mid leading-relaxed">Paintless dent repair for hail-season Colorado vehicles.</p>
+    </div>
+    <div class="border border-line rounded-2xl p-7 bg-white hover:shadow-lg transition-shadow">
+      <p class="font-bold text-lg mb-2" style="color:var(--ink)">Insurance handling</p>
+      <p class="text-mid leading-relaxed">We manage the claims side so you are not coordinating the estimate.</p>
+    </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="bg-paper border-t border-line">
+      <div class="max-w-6xl mx-auto px-6 py-20">
+        <p class="mono uppercase text-xs tracking-[.18em] mb-2 section-label">Projects</p>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-3" style="color:var(--ink)">Strength in the details</h2>
+        <p class="text-mid max-w-2xl mb-12">Repair galleries, certifications and shop-story content that matches the ratings you have earned.</p>
+        <div class="grid md:grid-cols-2 gap-6"><div class="photo-slot" style="background:linear-gradient(150deg, #eb4522, #9aa0ac)"><span>Collision rebuild, Highlands Ranch</span></div><div class="photo-slot" style="background:linear-gradient(150deg, undefined, #33303b)"><span>Hail PDR, Littleton</span></div><div class="photo-slot" style="background:linear-gradient(150deg, #9aa0ac, undefined)"><span>Full refinish, DTC</span></div><div class="photo-slot" style="background:linear-gradient(150deg, #33303b, #eb4522)"><span>Insurance claim, Aurora</span></div></div>
+      </div>
+    </section>
+
+    
+
+    
+    <section class="bg-paper border-t border-line">
+      <div class="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="mono uppercase text-xs tracking-[.18em] mb-2 section-label">Insurance</p>
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4" style="color:var(--ink)">No claims maze here</h2>
+          <p class="text-mid leading-relaxed">A plain-language walkthrough of scheduling, insurance and repair status.</p>
+        </div>
+        <ul class="space-y-4 text-lg text-mid">
+      <li class="flex items-start gap-3"><span class="text-accent font-bold">&#10003;</span><span>Free estimates same day</span></li>
+      <li class="flex items-start gap-3"><span class="text-accent font-bold">&#10003;</span><span>Direct insurer billing</span></li>
+      <li class="flex items-start gap-3"><span class="text-accent font-bold">&#10003;</span><span>Repair status updates</span></li></ul>
+      </div>
+    </section>
+
+    <!-- Booking CTA -->
+    <section id="cta" class="bg-ink grainbg">
+        <div class="max-w-6xl mx-auto px-6 py-20 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-3">Talk to us</h2>
+            <p class="text-white/70 max-w-xl mx-auto mb-10">One form in the real build routes straight to your phone or calendar.</p>
+            <div class="inline-flex items-center gap-3 bg-white/10 backdrop-blur rounded-full pl-5 pr-1 py-1 max-w-md w-full">
+                <span class="text-white/60 text-sm">In the real build this becomes a live form</span>
+                <span class="bg-accent text-white rounded-full px-6 py-3 font-semibold whitespace-nowrap">Let's talk</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial concept -->
+    <section class="bg-paper border-t border-line">
+        <div class="max-w-3xl mx-auto px-6 py-16 text-center">
+            <div class="text-accent text-5xl leading-none mb-4" aria-hidden="true">&ldquo;</div>
+            <p class="text-xl md:text-2xl font-medium italic leading-relaxed" style="color:var(--ink)">Twenty years of repair work, finally presented like the operation it is. (Placeholder for a real quote.)</p>
+            <p class="mono uppercase text-xs tracking-widest text-mid mt-6">Client testimonial slot &mdash; real quote to be added at build</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ink text-white/70">
+        <div class="max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-3 gap-10">
+            <div>
+                <p class="font-bold text-lg text-white mb-3">Caliber Collision Denver</p>
+                <p class="text-sm">Auto Body &amp; Collision · Denver, CO</p>
+            </div>
+            <div>
+                <p class="mono uppercase text-[11px] tracking-widest text-white/40 mb-3">Phone</p>
+                <p class="font-semibold text-white">303-762-1865</p>
+            </div>
+            <div>
+                <p class="mono uppercase text-[11px] tracking-widest text-white/40 mb-3">Hours</p>
+                <p class="text-sm">Placeholder hours &mdash; filled from your real schedule at build</p>
+            </div>
+        </div>
+        <div class="border-t border-white/10">
+            <div class="max-w-6xl mx-auto px-6 py-6 text-sm flex flex-col md:flex-row md:items-center justify-between gap-3">
+                <p>This is a concept homepage for Caliber Collision Denver. You approve the structure and your team feeds in the real content.</p>
+                <p class="mono text-xs text-white/50">&copy; 2026 Caliber Collision Denver · concept by Artum8 Labs</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

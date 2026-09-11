@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,follow" />
+    <title>Factory Finish AutoBody &mdash; Website Concept | Artum8 Labs</title>
+    <meta name="description" content="Auto Body &amp; Collision website concept designed for Factory Finish AutoBody in Denver, CO. A preview by Artum8 Labs." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+    <style>
+        :root { --ink: #14181d; --mid: #2b3f3f; --accent: #2f7c7c; --accent2: #c8a24b; --paper: #eef1f3; }
+        html { background: var(--paper); }
+        body { font-family: 'Inter', system-ui, sans-serif; color: #15181c; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .bg-ink { background: var(--ink); }
+        .bg-mid { background: var(--mid); }
+        .bg-accent { background: var(--accent); }
+        .bg-accent2 { background: var(--accent2); }
+        .bg-paper { background: var(--paper); }
+        .text-accent { color: var(--accent); }
+        .text-accent2 { color: var(--accent2); }
+        .text-mid { color: var(--mid); }
+        .border-line { border-color: rgba(21,24,28,.12); }
+        .btn-accent { background: var(--accent); color: #fff; }
+        .btn-accent:hover { filter: brightness(.94); }
+        .btn-ghost { border: 1.5px solid var(--ink); color: var(--ink); }
+        .btn-ghost:hover { background: var(--ink); color: var(--paper); }
+        .stat-n { color: var(--ink); }
+        .section-label { color: var(--accent); }
+        .chip { border: 1px solid rgba(255,255,255,.35); color: #fff; }
+        .grainbg { background-image: radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px); background-size: 22px 22px; }
+        .photo-slot {
+            min-height: 15rem;
+            border-radius: 1rem;
+            display:flex; align-items:flex-end;
+            padding: 1.25rem;
+            color:#fff;
+            font-weight:600;
+            letter-spacing:.01em;
+            position:relative;
+            overflow:hidden;
+        }
+        .photo-slot::after {
+            content:''; position:absolute; inset:0;
+            background: linear-gradient(180deg, rgba(21,24,28,0) 40%, rgba(21,24,28,.55) 100%);
+        }
+        .photo-slot span { position:relative; z-index:1; }
+        .concept-bar { background:#0b0d10; color:#c9cdd2; }
+        .concept-bar a { color:#fff; text-decoration:underline; }
+        .fade-up { animation: fadeUp .7s ease both; }
+        @keyframes fadeUp { from { opacity:0; transform: translateY(14px);} to {opacity:1; transform:none;} }
+        .d1 { animation-delay:.05s; } .d2 { animation-delay:.12s; } .d3 { animation-delay:.2s; } .d4 { animation-delay:.28s; }
+    </style>
+</head>
+<body>
+    <!-- Concept bar -->
+    <div class="concept-bar text-xs mono px-4 py-2 text-center">
+        Concept design for Factory Finish AutoBody · Denver, CO &mdash; a preview by <a href="https://www.artum8labs.com" target="_blank" rel="noopener">Artum8 Labs</a>. Not a live auto body & collision site; placeholder imagery and copy only.
+    </div>
+
+    <!-- Nav -->
+    <header class="bg-paper border-b border-line sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-baseline gap-2">
+                <span class="text-xl font-extrabold tracking-tight stat-n">Factory Finish AutoBody</span>
+                <span class="mono text-xs text-mid">Auto Body &amp; Collision</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-mid">
+                <span>Services</span><span>Projects</span><span>Reviews</span>
+            </div>
+            <a href="#estimate" class="btn-accent rounded-full px-5 py-2 text-sm font-semibold">Start an estimate</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="bg-paper border-b border-line grainbg">
+        <div class="max-w-6xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <p class="mono uppercase text-xs tracking-[.18em] mb-4 fade-up d1">Denver collision repair, open since 2024</p>
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.06] mb-6 fade-up d2" style="color:var(--ink)">Hit? Quote it in under two minutes</h1>
+                <p class="text-lg text-mid leading-relaxed mb-8 fade-up d3">Factory Finish in Denver repairs collision and paintwork with a modern shop and a process built for speed. Your website should feel as current as the shop does.</p>
+                <div class="flex flex-wrap gap-3 mb-8 fade-up d3">
+                    <span class="chip rounded-full px-4 py-1.5 text-sm font-medium">Instant estimate form</span><span class="chip rounded-full px-4 py-1.5 text-sm font-medium">All insurance</span><span class="chip rounded-full px-4 py-1.5 text-sm font-medium">Paint &amp; collision</span>
+                </div>
+                <div class="flex flex-wrap gap-3 fade-up d4">
+                    <a href="#estimate" class="btn-accent rounded-full px-7 py-3 font-semibold">Start an estimate</a>
+                    <a href="#cta" class="btn-ghost rounded-full px-7 py-3 font-semibold">Call 720-500-7426</a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="photo-slot h-[26rem] md:h-[30rem] bg-mid" style="background-image:linear-gradient(150deg, var(--mid), var(--ink))">
+                    <span class="text-lg">Factory Finish AutoBody &mdash; Auto Body &amp; Collision in Denver, CO</span>
+                </div>
+                <div class="absolute -bottom-5 -left-5 hidden md:block bg-accent text-white rounded-2xl px-5 py-4 shadow-2xl">
+                    <p class="mono uppercase text-[11px] tracking-widest opacity-80">Reach us direct</p>
+                    <p class="font-bold text-lg">720-500-7426</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust strip -->
+    <section class="bg-ink">
+        <div class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+            
+    <div class="text-center md:text-left">
+      <p class="stat-n text-3xl font-extrabold">2024</p>
+      <p class="text-white/60 text-sm mt-1">New facility</p>
+    </div>
+    <div class="text-center md:text-left">
+      <p class="stat-n text-3xl font-extrabold">72h</p>
+      <p class="text-white/60 text-sm mt-1">Avg. turnaround</p>
+    </div>
+    <div class="text-center md:text-left">
+      <p class="stat-n text-3xl font-extrabold">All</p>
+      <p class="text-white/60 text-sm mt-1">Major insurers</p>
+    </div>
+    <div class="text-center md:text-left">
+      <p class="stat-n text-3xl font-extrabold">Written</p>
+      <p class="text-white/60 text-sm mt-1">Color-match guarantee</p>
+    </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="bg-paper">
+        <div class="max-w-6xl mx-auto px-6 py-20">
+            <p class="mono uppercase text-xs tracking-[.18em] mb-2 section-label">Services</p>
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-12" style="color:var(--ink)">Repair categories a Denver shop lives on</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                
+    <div class="border border-line rounded-2xl p-7 bg-white hover:shadow-lg transition-shadow">
+      <p class="font-bold text-lg mb-2" style="color:var(--ink)">Collision repair</p>
+      <p class="text-mid leading-relaxed">Structural and panel repair with OEM-following processes and written estimates.</p>
+    </div>
+    <div class="border border-line rounded-2xl p-7 bg-white hover:shadow-lg transition-shadow">
+      <p class="font-bold text-lg mb-2" style="color:var(--ink)">Paint &amp; color match</p>
+      <p class="text-mid leading-relaxed">Modern measuring and mixing equipment with a written match guarantee.</p>
+    </div>
+    <div class="border border-line rounded-2xl p-7 bg-white hover:shadow-lg transition-shadow">
+      <p class="font-bold text-lg mb-2" style="color:var(--ink)">Dent &amp; hail repair</p>
+      <p class="text-mid leading-relaxed">Paintless dent repair built for Colorado hail season.</p>
+    </div>
+    <div class="border border-line rounded-2xl p-7 bg-white hover:shadow-lg transition-shadow">
+      <p class="font-bold text-lg mb-2" style="color:var(--ink)">Insurance claims help</p>
+      <p class="text-mid leading-relaxed">Claims walkthrough and direct insurer billing so the paperwork is not your problem.</p>
+    </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="bg-paper border-t border-line">
+      <div class="max-w-6xl mx-auto px-6 py-20">
+        <p class="mono uppercase text-xs tracking-[.18em] mb-2 section-label">Projects</p>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-3" style="color:var(--ink)">Before / after is the whole argument</h2>
+        <p class="text-mid max-w-2xl mb-12">Damage-to-repair galleries using real jobs: the strongest trust signal a body shop has.</p>
+        <div class="grid md:grid-cols-2 gap-6"><div class="photo-slot" style="background:linear-gradient(150deg, #2f7c7c, #c8a24b)"><span>Rear panel repair, Aurora</span></div><div class="photo-slot" style="background:linear-gradient(150deg, undefined, #2b3f3f)"><span>Hail PDR, Lakewood</span></div><div class="photo-slot" style="background:linear-gradient(150deg, #c8a24b, undefined)"><span>Full repaint, Tech Center</span></div><div class="photo-slot" style="background:linear-gradient(150deg, #2b3f3f, #2f7c7c)"><span>Collision repair, Centennial</span></div></div>
+      </div>
+    </section>
+
+    
+
+    
+    <section class="bg-paper border-t border-line">
+      <div class="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="mono uppercase text-xs tracking-[.18em] mb-2 section-label">Insurance</p>
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4" style="color:var(--ink)">Claims process, explained plainly</h2>
+          <p class="text-mid leading-relaxed">A section that walks customers through the claims workflow so the anxiety never stops a call.</p>
+        </div>
+        <ul class="space-y-4 text-lg text-mid">
+      <li class="flex items-start gap-3"><span class="text-accent font-bold">&#10003;</span><span>Work with every major insurer</span></li>
+      <li class="flex items-start gap-3"><span class="text-accent font-bold">&#10003;</span><span>Digital estimate + photo intake</span></li>
+      <li class="flex items-start gap-3"><span class="text-accent font-bold">&#10003;</span><span>Direct billing available</span></li></ul>
+      </div>
+    </section>
+
+    <!-- Booking CTA -->
+    <section id="cta" class="bg-ink grainbg">
+        <div class="max-w-6xl mx-auto px-6 py-20 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-3">Book a drop-off slot</h2>
+            <p class="text-white/70 max-w-xl mx-auto mb-10">In the real build, this syncs with your shop calendar or booking tool.</p>
+            <div class="inline-flex items-center gap-3 bg-white/10 backdrop-blur rounded-full pl-5 pr-1 py-1 max-w-md w-full">
+                <span class="text-white/60 text-sm">In the real build this becomes a live form</span>
+                <span class="bg-accent text-white rounded-full px-6 py-3 font-semibold whitespace-nowrap">Book now</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial concept -->
+    <section class="bg-paper border-t border-line">
+        <div class="max-w-3xl mx-auto px-6 py-16 text-center">
+            <div class="text-accent text-5xl leading-none mb-4" aria-hidden="true">&ldquo;</div>
+            <p class="text-xl md:text-2xl font-medium italic leading-relaxed" style="color:var(--ink)">In and out in three days, and the color-match is flawless. (Placeholder for a real Denver client.)</p>
+            <p class="mono uppercase text-xs tracking-widest text-mid mt-6">Client testimonial slot &mdash; real quote to be added at build</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ink text-white/70">
+        <div class="max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-3 gap-10">
+            <div>
+                <p class="font-bold text-lg text-white mb-3">Factory Finish AutoBody</p>
+                <p class="text-sm">Auto Body &amp; Collision · Denver, CO</p>
+            </div>
+            <div>
+                <p class="mono uppercase text-[11px] tracking-widest text-white/40 mb-3">Phone</p>
+                <p class="font-semibold text-white">720-500-7426</p>
+            </div>
+            <div>
+                <p class="mono uppercase text-[11px] tracking-widest text-white/40 mb-3">Hours</p>
+                <p class="text-sm">Placeholder hours &mdash; filled from your real schedule at build</p>
+            </div>
+        </div>
+        <div class="border-t border-white/10">
+            <div class="max-w-6xl mx-auto px-6 py-6 text-sm flex flex-col md:flex-row md:items-center justify-between gap-3">
+                <p>This is a concept homepage for Factory Finish AutoBody. Approval-ready structure for a rebuild.</p>
+                <p class="mono text-xs text-white/50">&copy; 2026 Factory Finish AutoBody · concept by Artum8 Labs</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

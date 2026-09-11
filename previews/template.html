@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,follow" />
+    <title>{{NAME}} &mdash; Website Concept | Artum8 Labs</title>
+    <meta name="description" content="{{INDUSTRY}} website concept designed for {{NAME}} in {{AREA}}. A preview by Artum8 Labs." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+    <style>
+        :root { --ink: {{INK}}; --mid: {{MID}}; --accent: {{ACCENT}}; --accent2: {{ACCENT2}}; --paper: {{PAPER}}; }
+        html { background: var(--paper); }
+        body { font-family: 'Inter', system-ui, sans-serif; color: #15181c; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .bg-ink { background: var(--ink); }
+        .bg-mid { background: var(--mid); }
+        .bg-accent { background: var(--accent); }
+        .bg-accent2 { background: var(--accent2); }
+        .bg-paper { background: var(--paper); }
+        .text-accent { color: var(--accent); }
+        .text-accent2 { color: var(--accent2); }
+        .text-mid { color: var(--mid); }
+        .border-line { border-color: rgba(21,24,28,.12); }
+        .btn-accent { background: var(--accent); color: #fff; }
+        .btn-accent:hover { filter: brightness(.94); }
+        .btn-ghost { border: 1.5px solid var(--ink); color: var(--ink); }
+        .btn-ghost:hover { background: var(--ink); color: var(--paper); }
+        .stat-n { color: var(--ink); }
+        .section-label { color: var(--accent); }
+        .chip { border: 1px solid rgba(255,255,255,.35); color: #fff; }
+        .grainbg { background-image: radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px); background-size: 22px 22px; }
+        .photo-slot {
+            min-height: 15rem;
+            border-radius: 1rem;
+            display:flex; align-items:flex-end;
+            padding: 1.25rem;
+            color:#fff;
+            font-weight:600;
+            letter-spacing:.01em;
+            position:relative;
+            overflow:hidden;
+        }
+        .photo-slot::after {
+            content:''; position:absolute; inset:0;
+            background: linear-gradient(180deg, rgba(21,24,28,0) 40%, rgba(21,24,28,.55) 100%);
+        }
+        .photo-slot span { position:relative; z-index:1; }
+        .concept-bar { background:#0b0d10; color:#c9cdd2; }
+        .concept-bar a { color:#fff; text-decoration:underline; }
+        .fade-up { animation: fadeUp .7s ease both; }
+        @keyframes fadeUp { from { opacity:0; transform: translateY(14px);} to {opacity:1; transform:none;} }
+        .d1 { animation-delay:.05s; } .d2 { animation-delay:.12s; } .d3 { animation-delay:.2s; } .d4 { animation-delay:.28s; }
+    </style>
+</head>
+<body>
+    <!-- Concept bar -->
+    <div class="concept-bar text-xs mono px-4 py-2 text-center">
+        Concept design for {{NAME}} · {{AREA}} &mdash; a preview by <a href="https://www.artum8labs.com" target="_blank" rel="noopener">Artum8 Labs</a>. Not a live {{INDUSTRY_L}} site; placeholder imagery and copy only.
+    </div>
+
+    <!-- Nav -->
+    <header class="bg-paper border-b border-line sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-baseline gap-2">
+                <span class="text-xl font-extrabold tracking-tight stat-n">{{NAME}}</span>
+                <span class="mono text-xs text-mid">{{INDUSTRY}}</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-mid">
+                <span>Services</span><span>Projects</span><span>Reviews</span>
+            </div>
+            <a href="{{CTA1HREF}}" class="btn-accent rounded-full px-5 py-2 text-sm font-semibold">{{CTA1}}</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="bg-paper border-b border-line grainbg">
+        <div class="max-w-6xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <p class="mono uppercase text-xs tracking-[.18em] mb-4 fade-up d1">{{KICKER}}</p>
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.06] mb-6 fade-up d2" style="color:var(--ink)">{{HEADLINE}}</h1>
+                <p class="text-lg text-mid leading-relaxed mb-8 fade-up d3">{{SUB}}</p>
+                <div class="flex flex-wrap gap-3 mb-8 fade-up d3">
+                    {{TAGS}}
+                </div>
+                <div class="flex flex-wrap gap-3 fade-up d4">
+                    <a href="{{CTA1HREF}}" class="btn-accent rounded-full px-7 py-3 font-semibold">{{CTA1}}</a>
+                    <a href="#cta" class="btn-ghost rounded-full px-7 py-3 font-semibold">{{CTA2}}</a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="photo-slot h-[26rem] md:h-[30rem] bg-mid" style="background-image:linear-gradient(150deg, var(--mid), var(--ink))">
+                    <span class="text-lg">{{NAME}} &mdash; {{INDUSTRY}} in {{AREA}}</span>
+                </div>
+                <div class="absolute -bottom-5 -left-5 hidden md:block bg-accent text-white rounded-2xl px-5 py-4 shadow-2xl">
+                    <p class="mono uppercase text-[11px] tracking-widest opacity-80">Reach us direct</p>
+                    <p class="font-bold text-lg">{{PHONE}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust strip -->
+    <section class="bg-ink">
+        <div class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+            {{TRUST}}
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="bg-paper">
+        <div class="max-w-6xl mx-auto px-6 py-20">
+            <p class="mono uppercase text-xs tracking-[.18em] mb-2 section-label">Services</p>
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-12" style="color:var(--ink)">{{SERVICESTITLE}}</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                {{SERVICES}}
+            </div>
+        </div>
+    </section>
+
+    {{GALLERY}}
+
+    {{FINANCE}}
+
+    {{INSURANCE}}
+
+    <!-- Booking CTA -->
+    <section id="cta" class="bg-ink grainbg">
+        <div class="max-w-6xl mx-auto px-6 py-20 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-3">{{BOOKINGTITLE}}</h2>
+            <p class="text-white/70 max-w-xl mx-auto mb-10">{{BOOKINGSUB}}</p>
+            <div class="inline-flex items-center gap-3 bg-white/10 backdrop-blur rounded-full pl-5 pr-1 py-1 max-w-md w-full">
+                <span class="text-white/60 text-sm">In the real build this becomes a live form</span>
+                <span class="bg-accent text-white rounded-full px-6 py-3 font-semibold whitespace-nowrap">{{BOOKINGBUTTON}}</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial concept -->
+    <section class="bg-paper border-t border-line">
+        <div class="max-w-3xl mx-auto px-6 py-16 text-center">
+            <div class="text-accent text-5xl leading-none mb-4" aria-hidden="true">&ldquo;</div>
+            <p class="text-xl md:text-2xl font-medium italic leading-relaxed" style="color:var(--ink)">{{TESTIMONIAL}}</p>
+            <p class="mono uppercase text-xs tracking-widest text-mid mt-6">Client testimonial slot &mdash; real quote to be added at build</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ink text-white/70">
+        <div class="max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-3 gap-10">
+            <div>
+                <p class="font-bold text-lg text-white mb-3">{{NAME}}</p>
+                <p class="text-sm">{{INDUSTRY}} · {{AREA}}</p>
+            </div>
+            <div>
+                <p class="mono uppercase text-[11px] tracking-widest text-white/40 mb-3">Phone</p>
+                <p class="font-semibold text-white">{{PHONE}}</p>
+            </div>
+            <div>
+                <p class="mono uppercase text-[11px] tracking-widest text-white/40 mb-3">Hours</p>
+                <p class="text-sm">Placeholder hours &mdash; filled from your real schedule at build</p>
+            </div>
+        </div>
+        <div class="border-t border-white/10">
+            <div class="max-w-6xl mx-auto px-6 py-6 text-sm flex flex-col md:flex-row md:items-center justify-between gap-3">
+                <p>{{PROOFLINE}}</p>
+                <p class="mono text-xs text-white/50">&copy; {{YEAR}} {{NAME}} · concept by Artum8 Labs</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
