@@ -22,14 +22,20 @@ const slugify = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|
 function renderLead(lead) {
   const b = lead.brand;
   const tags = (lead.heroTags || []).map(t => `<span class="chip rounded-full px-4 py-1.5 text-sm font-medium">${esc(t)}</span>`).join('');
-  const trust = (lead.trust || []).map(s => `
-    <div class="text-center md:text-left">
-      <p class="stat-n text-3xl font-extrabold">${esc(s.n)}</p>
+  const trust = (lead.trust || []).map((s, i) => {
+    const m = String(s.n).match(/^([\d.,]+)\s*([A-Za-z%+]*)$/);
+    const stat = m
+      ? `<span class="count" data-count="${m[1]}" data-suffix="${esc(m[2])}">0</span>`
+      : esc(s.n);
+    return `
+    <div class="text-center md:text-left reveal" style="transition-delay:${i * 90}ms">
+      <p class="stat-n text-3xl font-extrabold mono">${stat}</p>
       <p class="text-white/60 text-sm mt-1">${esc(s.l)}</p>
-    </div>`).join('');
+    </div>`;
+  }).join('');
 
-  const services = (lead.services || []).map(s => `
-    <div class="border border-line rounded-2xl p-7 bg-white hover:shadow-lg transition-shadow">
+  const services = (lead.services || []).map((s, i) => `
+    <div class="reveal tilt-card border border-line rounded-2xl p-7 bg-white hover:shadow-xl" data-tilt style="transition-delay:${(i % 2) * 80}ms">
       <p class="font-bold text-lg mb-2" style="color:var(--ink)">${esc(s.t)}</p>
       <p class="text-mid leading-relaxed">${esc(s.d)}</p>
     </div>`).join('');
@@ -39,15 +45,15 @@ function renderLead(lead) {
     const palettes = [[b.accent, b.accent2], [b.ink, b.mid], [b.accent2, b.ink], [b.mid, b.accent]];
     const items = lead.gallery.items.map((it, i) => {
       const [c1, c2] = palettes[i % palettes.length];
-      return `<div class="photo-slot" style="background:linear-gradient(150deg, ${c1}, ${c2})"><span>${esc(it)}</span></div>`;
+      return `<div class="photo-slot tilt-card" data-tilt style="background:linear-gradient(150deg, ${c1}, ${c2})"><span>${esc(it)}</span></div>`;
     }).join('');
     gallery = `
     <section class="bg-paper border-t border-line">
       <div class="max-w-6xl mx-auto px-6 py-20">
-        <p class="mono uppercase text-xs tracking-[.18em] mb-2 section-label">Projects</p>
-        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-3" style="color:var(--ink)">${esc(lead.gallery.title)}</h2>
-        <p class="text-mid max-w-2xl mb-12">${esc(lead.gallery.sub)}</p>
-        <div class="grid md:grid-cols-2 gap-6">${items}</div>
+        <p class="mono uppercase text-xs tracking-[.18em] mb-2 section-label reveal">Projects</p>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-3 reveal" style="color:var(--ink)">${esc(lead.gallery.title)}</h2>
+        <p class="text-mid max-w-2xl mb-12 reveal">${esc(lead.gallery.sub)}</p>
+        <div class="grid md:grid-cols-2 gap-6"><div class="reveal">${items}</div></div>
       </div>
     </section>`;
   }
@@ -57,14 +63,14 @@ function renderLead(lead) {
     const points = lead.finance.points.map(p => `
       <li class="flex items-start gap-3"><span class="text-accent font-bold">&#10003;</span><span>${esc(p)}</span></li>`).join('');
     finance = `
-    <section class="bg-mid text-white">
+    <section class="bg-mid text-white" style="background:linear-gradient(140deg, var(--mid), var(--ink))">
       <div class="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <p class="mono uppercase text-xs tracking-[.18em] mb-2 text-white/60">Money questions, answered</p>
-          <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">${esc(lead.finance.title)}</h2>
-          <p class="text-white/75 leading-relaxed">${esc(lead.finance.sub)}</p>
+          <p class="mono uppercase text-xs tracking-[.18em] mb-2 text-white/60 reveal">Money questions, answered</p>
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4 reveal">${esc(lead.finance.title)}</h2>
+          <p class="text-white/75 leading-relaxed reveal">${esc(lead.finance.sub)}</p>
         </div>
-        <ul class="space-y-4 text-lg">${points}</ul>
+        <ul class="space-y-4 text-lg reveal">${points}</ul>
       </div>
     </section>`;
   }
@@ -77,11 +83,11 @@ function renderLead(lead) {
     <section class="bg-paper border-t border-line">
       <div class="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <p class="mono uppercase text-xs tracking-[.18em] mb-2 section-label">Insurance</p>
-          <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4" style="color:var(--ink)">${esc(lead.insurance.title)}</h2>
-          <p class="text-mid leading-relaxed">${esc(lead.insurance.sub)}</p>
+          <p class="mono uppercase text-xs tracking-[.18em] mb-2 section-label reveal">Insurance</p>
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4 reveal" style="color:var(--ink)">${esc(lead.insurance.title)}</h2>
+          <p class="text-mid leading-relaxed reveal">${esc(lead.insurance.sub)}</p>
         </div>
-        <ul class="space-y-4 text-lg text-mid">${points}</ul>
+        <ul class="space-y-4 text-lg text-mid reveal">${points}</ul>
       </div>
     </section>`;
   }
@@ -109,6 +115,8 @@ function renderLead(lead) {
     '{{CTA1HREF}}': lead.ctaPrimary.href,
     '{{CTA2}}': esc(lead.ctaSecondary.label),
     '{{TRUST}}': trust,
+    '{{MARQUEE}}': (lead.marquee || lead.heroTags || ['Design', 'Build', 'Launch']).map(t =>
+      `<span class="mono uppercase tracking-widest text-sm text-white/70">${esc(t)}</span>`).join(''),
     '{{SERVICESTITLE}}': esc(lead.servicesTitle || 'Services'),
     '{{SERVICES}}': services,
     '{{GALLERY}}': gallery,

@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
     <style>
         :root { --ink: {{INK}}; --mid: {{MID}}; --accent: {{ACCENT}}; --accent2: {{ACCENT2}}; --paper: {{PAPER}}; }
-        html { background: var(--paper); }
+        html { background: var(--paper); scroll-behavior: smooth; }
         body { font-family: 'Inter', system-ui, sans-serif; color: #15181c; }
         .mono { font-family: 'JetBrains Mono', monospace; }
         .bg-ink { background: var(--ink); }
@@ -24,13 +24,14 @@
         .text-accent2 { color: var(--accent2); }
         .text-mid { color: var(--mid); }
         .border-line { border-color: rgba(21,24,28,.12); }
-        .btn-accent { background: var(--accent); color: #fff; }
-        .btn-accent:hover { filter: brightness(.94); }
-        .btn-ghost { border: 1.5px solid var(--ink); color: var(--ink); }
-        .btn-ghost:hover { background: var(--ink); color: var(--paper); }
+        .btn-accent { background: var(--accent); color: #fff; transition: transform .18s ease, box-shadow .18s ease, filter .18s; }
+        .btn-accent:hover { filter: brightness(.94); transform: translateY(-2px); box-shadow: 0 10px 24px -10px var(--accent); }
+        .btn-ghost { border: 1.5px solid var(--ink); color: var(--ink); transition: transform .18s ease, background .18s, color .18s; }
+        .btn-ghost:hover { background: var(--ink); color: var(--paper); transform: translateY(-2px); }
         .stat-n { color: var(--ink); }
         .section-label { color: var(--accent); }
-        .chip { border: 1px solid rgba(255,255,255,.35); color: #fff; }
+        .chip { border: 1px solid rgba(255,255,255,.35); color: #fff; backdrop-filter: blur(4px); }
+        .chip:hover { border-color: var(--accent); }
         .grainbg { background-image: radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px); background-size: 22px 22px; }
         .photo-slot {
             min-height: 15rem;
@@ -53,6 +54,35 @@
         .fade-up { animation: fadeUp .7s ease both; }
         @keyframes fadeUp { from { opacity:0; transform: translateY(14px);} to {opacity:1; transform:none;} }
         .d1 { animation-delay:.05s; } .d2 { animation-delay:.12s; } .d3 { animation-delay:.2s; } .d4 { animation-delay:.28s; }
+
+        /* ===== Motion layer ===== */
+        .hero { position: relative; overflow: hidden; }
+        .orb { position: absolute; border-radius: 50%; filter: blur(70px); opacity: .55; pointer-events: none; will-change: transform; }
+        .orb-a { width: 460px; height: 460px; top: -150px; right: -90px; background: var(--accent); animation: orbFloatA 15s ease-in-out infinite; }
+        .orb-b { width: 380px; height: 380px; bottom: -130px; left: -110px; background: var(--accent2); opacity:.45; animation: orbFloatB 19s ease-in-out infinite; }
+        @keyframes orbFloatA { 0%,100% { transform: translate(0,0) scale(1);} 50% { transform: translate(-45px,55px) scale(1.15);} }
+        @keyframes orbFloatB { 0%,100% { transform: translate(0,0) scale(1);} 50% { transform: translate(55px,-45px) scale(1.12);} }
+        .spot { position: absolute; width: 340px; height: 340px; border-radius: 50%; opacity: 0; pointer-events: none; transform: translate(-50%,-50%); background: radial-gradient(circle, rgba(255,255,255,.16), transparent 62%); transition: opacity .3s; mix-blend-mode: screen; will-change: left, top; }
+        .hero:hover .spot { opacity: 1; }
+        .tilt-wrap { perspective: 1200px; }
+        .tilt { transform-style: preserve-3d; transition: transform .18s ease-out; will-change: transform; }
+        .float-badge { animation: floatY 5.5s ease-in-out infinite; box-shadow: 0 24px 50px -18px rgba(0,0,0,.45); }
+        @keyframes floatY { 0%,100% { transform: translateY(0) translateZ(60px);} 50% { transform: translateY(-10px) translateZ(60px);} }
+        .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1); }
+        .reveal.in { opacity: 1; transform: none; }
+        .tilt-card { transition: transform .2s ease-out, box-shadow .35s ease-out; }
+        .marquee { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+        .marquee-track { display: flex; align-items: center; gap: 3rem; width: max-content; animation: marquee 24s linear infinite; }
+        .marquee-track span { white-space: nowrap; }
+        @keyframes marquee { to { transform: translateX(-50%); } }
+        .count { font-variant-numeric: tabular-nums; }
+        .stat-card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.08); backdrop-filter: blur(6px); }
+        @media (prefers-reduced-motion: reduce) {
+            * { animation: none !important; transition: none !important; }
+            .reveal { opacity: 1; transform: none; }
+            .marquee-track { animation: none; width: auto; flex-wrap: wrap; }
+            .orb, .spot { display: none; }
+        }
     </style>
 </head>
 <body>
@@ -62,7 +92,7 @@
     </div>
 
     <!-- Nav -->
-    <header class="bg-paper border-b border-line sticky top-0 z-50">
+    <header class="bg-paper border-b border-line sticky top-0 z-50" data-hero-nav>
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <div class="flex items-baseline gap-2">
                 <span class="text-xl font-extrabold tracking-tight stat-n">{{NAME}}</span>
@@ -76,8 +106,11 @@
     </header>
 
     <!-- Hero -->
-    <section class="bg-paper border-b border-line grainbg">
-        <div class="max-w-6xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+    <section class="bg-paper border-b border-line grainbg hero" data-hero>
+        <div class="orb orb-a" aria-hidden="true"></div>
+        <div class="orb orb-b" aria-hidden="true"></div>
+        <div class="spot" data-spot aria-hidden="true"></div>
+        <div class="max-w-6xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center relative">
             <div>
                 <p class="mono uppercase text-xs tracking-[.18em] mb-4 fade-up d1">{{KICKER}}</p>
                 <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.06] mb-6 fade-up d2" style="color:var(--ink)">{{HEADLINE}}</h1>
@@ -90,13 +123,21 @@
                     <a href="#cta" class="btn-ghost rounded-full px-7 py-3 font-semibold">{{CTA2}}</a>
                 </div>
             </div>
-            <div class="relative">
-                <div class="photo-slot h-[26rem] md:h-[30rem] bg-mid" style="background-image:linear-gradient(150deg, var(--mid), var(--ink))">
-                    <span class="text-lg">{{NAME}} &mdash; {{INDUSTRY}} in {{AREA}}</span>
-                </div>
-                <div class="absolute -bottom-5 -left-5 hidden md:block bg-accent text-white rounded-2xl px-5 py-4 shadow-2xl">
-                    <p class="mono uppercase text-[11px] tracking-widest opacity-80">Reach us direct</p>
-                    <p class="font-bold text-lg">{{PHONE}}</p>
+            <div class="tilt-wrap relative">
+                <div class="tilt relative">
+                    <div class="photo-slot h-[26rem] md:h-[30rem] bg-mid" style="background-image:linear-gradient(150deg, var(--mid), var(--ink)); border: 1px solid rgba(255,255,255,.08)">
+                        <span class="text-lg">{{NAME}} &mdash; {{INDUSTRY}} in {{AREA}}</span>
+                    </div>
+                    <div class="absolute -bottom-5 -left-5 hidden md:flex items-center gap-3 bg-accent text-white rounded-2xl px-5 py-4 float-badge">
+                        <span class="relative flex h-3 w-3" aria-hidden="true">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+                        </span>
+                        <span>
+                            <p class="mono uppercase text-[11px] tracking-widest opacity-80">Reach us direct</p>
+                            <p class="font-bold text-lg">{{PHONE}}</p>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -109,11 +150,16 @@
         </div>
     </section>
 
+    <!-- Marquee -->
+    <section class="bg-ink border-t border-white/10 py-5 marquee">
+        <div class="marquee-track" data-marquee>{{MARQUEE}}</div>
+    </section>
+
     <!-- Services -->
     <section class="bg-paper">
         <div class="max-w-6xl mx-auto px-6 py-20">
-            <p class="mono uppercase text-xs tracking-[.18em] mb-2 section-label">Services</p>
-            <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-12" style="color:var(--ink)">{{SERVICESTITLE}}</h2>
+            <p class="mono uppercase text-xs tracking-[.18em] mb-2 section-label reveal">Services</p>
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-12 reveal" style="color:var(--ink)">{{SERVICESTITLE}}</h2>
             <div class="grid md:grid-cols-2 gap-6">
                 {{SERVICES}}
             </div>
@@ -129,9 +175,9 @@
     <!-- Booking CTA -->
     <section id="cta" class="bg-ink grainbg">
         <div class="max-w-6xl mx-auto px-6 py-20 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-3">{{BOOKINGTITLE}}</h2>
-            <p class="text-white/70 max-w-xl mx-auto mb-10">{{BOOKINGSUB}}</p>
-            <div class="inline-flex items-center gap-3 bg-white/10 backdrop-blur rounded-full pl-5 pr-1 py-1 max-w-md w-full">
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-3 reveal">{{BOOKINGTITLE}}</h2>
+            <p class="text-white/70 max-w-xl mx-auto mb-10 reveal">{{BOOKINGSUB}}</p>
+            <div class="reveal inline-flex items-center gap-3 bg-white/10 backdrop-blur rounded-full pl-5 pr-1 py-1 max-w-md w-full">
                 <span class="text-white/60 text-sm">In the real build this becomes a live form</span>
                 <span class="bg-accent text-white rounded-full px-6 py-3 font-semibold whitespace-nowrap">{{BOOKINGBUTTON}}</span>
             </div>
@@ -141,9 +187,9 @@
     <!-- Testimonial concept -->
     <section class="bg-paper border-t border-line">
         <div class="max-w-3xl mx-auto px-6 py-16 text-center">
-            <div class="text-accent text-5xl leading-none mb-4" aria-hidden="true">&ldquo;</div>
-            <p class="text-xl md:text-2xl font-medium italic leading-relaxed" style="color:var(--ink)">{{TESTIMONIAL}}</p>
-            <p class="mono uppercase text-xs tracking-widest text-mid mt-6">Client testimonial slot &mdash; real quote to be added at build</p>
+            <div class="text-accent text-5xl leading-none mb-4 reveal" aria-hidden="true">&ldquo;</div>
+            <p class="text-xl md:text-2xl font-medium italic leading-relaxed reveal" style="color:var(--ink)">{{TESTIMONIAL}}</p>
+            <p class="mono uppercase text-xs tracking-widest text-mid mt-6 reveal">Client testimonial slot &mdash; real quote to be added at build</p>
         </div>
     </section>
 
@@ -170,5 +216,72 @@
             </div>
         </div>
     </footer>
+
+    <script>
+    (function () {
+        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        /* Hero: 3D mouse tilt + cursor glow */
+        if (!reduce) {
+            var hero = document.querySelector('[data-hero]');
+            var tilt = hero && hero.querySelector('.tilt');
+            var spot = hero && hero.querySelector('[data-spot]');
+            if (hero && tilt) {
+                hero.addEventListener('pointermove', function (e) {
+                    var r = hero.getBoundingClientRect();
+                    var x = (e.clientX - r.left) / r.width - .5;
+                    var y = (e.clientY - r.top) / r.height - .5;
+                    tilt.style.transform = 'rotateY(' + (x * 12) + 'deg) rotateX(' + (y * -12) + 'deg)';
+                    if (spot) { spot.style.left = (e.clientX - r.left) + 'px'; spot.style.top = (e.clientY - r.top) + 'px'; }
+                });
+                hero.addEventListener('pointerleave', function () { tilt.style.transform = ''; });
+            }
+        }
+
+        /* Scroll reveals + counters */
+        function animateCount(el) {
+            var target = parseFloat(el.getAttribute('data-count'));
+            var dec = Math.max(0, (String(target).split('.')[1] || '').length);
+            var suf = el.getAttribute('data-suffix') || '';
+            var pre = el.getAttribute('data-prefix') || '';
+            var dur = 1100, t0 = null;
+            function frame(ts) {
+                if (!t0) t0 = ts;
+                var p = Math.min(1, (ts - t0) / dur);
+                var ease = 1 - Math.pow(1 - p, 3);
+                var val = target * ease;
+                el.textContent = pre + val.toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec }) + suf;
+                if (p < 1) requestAnimationFrame(frame);
+            }
+            requestAnimationFrame(frame);
+        }
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) {
+                if (!en.isIntersecting) return;
+                var el = en.target;
+                if (el.hasAttribute('data-count')) animateCount(el);
+                el.classList.add('in');
+                io.unobserve(el);
+            });
+        }, { threshold: .18 });
+        document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+        /* 3D tilt on cards */
+        if (!reduce) {
+            document.querySelectorAll('[data-tilt]').forEach(function (card) {
+                card.addEventListener('pointermove', function (e) {
+                    var r = card.getBoundingClientRect();
+                    var x = (e.clientX - r.left) / r.width - .5;
+                    var y = (e.clientY - r.top) / r.height - .5;
+                    card.style.transform = 'perspective(800px) rotateY(' + (x * 7) + 'deg) rotateX(' + (y * -7) + 'deg) translateY(-5px)';
+                });
+                card.addEventListener('pointerleave', function () { card.style.transform = ''; });
+            });
+        }
+
+        /* Marquee loop */
+        document.querySelectorAll('[data-marquee]').forEach(function (t) { t.innerHTML += t.innerHTML; });
+    })();
+    </script>
 </body>
 </html>
