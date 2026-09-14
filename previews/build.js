@@ -1,4 +1,4 @@
-/* Render lead data -> previews/<slug>.html 
+/* Render lead data -> previews/<slug>.html (premium cinematic template)
  * Run: node previews/build.js   (from repo root)
  */
 const fs = require('fs');
@@ -19,83 +19,97 @@ function esc(s) {
 }
 
 const slugify = (s) => s.toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^[-]+|[-]+$/g, '');
+const pad = (n) => String(n).padStart(2, '0');
 
 function renderLead(lead) {
   const b = lead.brand;
-  const tags = (lead.heroTags || []).map(t => `<span class="chip rounded-full px-4 py-1.5 text-sm font-medium">${esc(t)}</span>`).join('');
-  const trust = (lead.trust || []).map((s, i) => {
+  const seed = slugify(lead.name);
+  const tags = (lead.heroTags || []).map(t => `<span class="chip">${esc(t)}</span>`).join('');
+
+  /* ---------- Trust stats (counters) ---------- */
+  const trust = (lead.trust || []).map((s) => {
     const m = String(s.n).match(/^([\d.,]+)\s*([A-Za-z%+]*)$/);
-    const stat = m
-      ? `<span class="count" data-count="${m[1]}" data-suffix="${esc(m[2])}">0</span>`
+    const inner = m
+      ? `<span data-count="${esc(m[1])}" data-suffix="${esc(m[2])}">0</span>`
       : esc(s.n);
     return `
-    <div class="text-center md:text-left reveal" style="transition-delay:${i * 90}ms">
-      <p class="stat-n text-3xl font-extrabold mono">${stat}</p>
-      <p class="text-white/60 text-sm mt-1">${esc(s.l)}</p>
+    <div class="stat rv" data-reveal>
+        <p class="stat-n">${inner}</p>
+        <p class="stat-l">${esc(s.l)}</p>
     </div>`;
   }).join('');
 
+  /* ---------- Services cards (asymmetric grid) ---------- */
   const services = (lead.services || []).map((s, i) => `
-    <div class="reveal tilt-card border border-line rounded-2xl p-7 bg-white hover:shadow-xl" data-tilt style="transition-delay:${(i % 2) * 80}ms">
-      <p class="font-bold text-lg mb-2" style="color:var(--ink)">${esc(s.t)}</p>
-      <p class="text-mid leading-relaxed">${esc(s.d)}</p>
+    <div class="c">
+      <div class="card rv" data-reveal>
+        <span class="num">${pad(i + 1)}</span>
+        <h3>${esc(s.t)}</h3>
+        <p>${esc(s.d)}</p>
+        <span class="ghost-back">${pad(i + 1)}</span>
+      </div>
     </div>`).join('');
 
+  /* ---------- Gallery -> horizontal CSS scroll-snap rail ---------- */
   let gallery = '';
   if (lead.gallery) {
-    const palettes = [[b.accent, b.accent2], [b.ink, b.mid], [b.accent2, b.ink], [b.mid, b.accent]];
-    const items = lead.gallery.items.map((it, i) => {
-      const [c1, c2] = palettes[i % palettes.length];
-      return `<div class="photo-slot tilt-card" data-tilt style="background:linear-gradient(150deg, ${c1}, ${c2})"><span>${esc(it)}</span></div>`;
-    }).join('');
+    const items = lead.gallery.items.map((it, i) => `
+      <figure class="rail-card">
+        <img src="https://picsum.photos/seed/${seed}-p${i + 1}/1200/1400" alt="${esc(it)}" loading="lazy" />
+        <span class="rail-idx">/${pad(i + 1)}</span>
+        <figcaption class="rail-cap"><span class="serif">${esc(it)}</span></figcaption>
+      </figure>`).join('');
     gallery = `
-    <section class="bg-paper border-t border-line">
-      <div class="max-w-6xl mx-auto px-6 py-20">
-        <p class="mono uppercase text-xs tracking-[.18em] mb-2 section-label reveal">Projects</p>
-        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-3 reveal" style="color:var(--ink)">${esc(lead.gallery.title)}</h2>
-        <p class="text-mid max-w-2xl mb-12 reveal">${esc(lead.gallery.sub)}</p>
-        <div class="grid md:grid-cols-2 gap-6"><div class="reveal">${items}</div></div>
+    <section id="projects" class="section rail-section" data-section>
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label" data-reveal>Projects</p>
+          <h2 class="h-1" data-reveal>${esc(lead.gallery.title)}</h2>
+        </div>
+        <p class="lede" style="margin-top:-.6rem; margin-bottom:2.5rem" data-reveal>${esc(lead.gallery.sub)}</p>
       </div>
+      <div class="rail">${items}</div>
     </section>`;
   }
 
+  /* ---------- Finance split (dark) ---------- */
   let finance = '';
   if (lead.finance) {
-    const points = lead.finance.points.map(p => `
-      <li class="flex items-start gap-3"><span class="text-accent font-bold">&#10003;</span><span>${esc(p)}</span></li>`).join('');
+    const points = (lead.finance.points || []).map(p => `<li>${esc(p)}</li>`).join('');
     finance = `
-    <section class="bg-mid text-white" style="background:linear-gradient(140deg, var(--mid), var(--ink))">
-      <div class="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <p class="mono uppercase text-xs tracking-[.18em] mb-2 text-white/60 reveal">Money questions, answered</p>
-          <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4 reveal">${esc(lead.finance.title)}</h2>
-          <p class="text-white/75 leading-relaxed reveal">${esc(lead.finance.sub)}</p>
+    <section class="section tone-ink" data-section>
+      <div class="wrap split">
+        <div class="rv" data-reveal>
+          <p class="label" style="margin-bottom:1rem">Money questions, answered</p>
+          <h2 class="h-1">${esc(lead.finance.title)}</h2>
+          <p class="lede" style="margin-top:1rem">${esc(lead.finance.sub)}</p>
         </div>
-        <ul class="space-y-4 text-lg reveal">${points}</ul>
+        <ul class="rv" data-reveal>${points}</ul>
       </div>
     </section>`;
   }
 
+  /* ---------- Insurance split (light) ---------- */
   let insurance = '';
   if (lead.insurance) {
-    const points = lead.insurance.points.map(p => `
-      <li class="flex items-start gap-3"><span class="text-accent font-bold">&#10003;</span><span>${esc(p)}</span></li>`).join('');
+    const points = (lead.insurance.points || []).map(p => `<li>${esc(p)}</li>`).join('');
     insurance = `
-    <section class="bg-paper border-t border-line">
-      <div class="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <p class="mono uppercase text-xs tracking-[.18em] mb-2 section-label reveal">Insurance</p>
-          <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4 reveal" style="color:var(--ink)">${esc(lead.insurance.title)}</h2>
-          <p class="text-mid leading-relaxed reveal">${esc(lead.insurance.sub)}</p>
+    <section class="section" data-section>
+      <div class="wrap split">
+        <div class="rv" data-reveal>
+          <p class="label" style="margin-bottom:1rem">Insurance</p>
+          <h2 class="h-1">${esc(lead.insurance.title)}</h2>
+          <p class="lede" style="margin-top:1rem">${esc(lead.insurance.sub)}</p>
         </div>
-        <ul class="space-y-4 text-lg text-mid reveal">${points}</ul>
+        <ul class="rv" data-reveal>${points}</ul>
       </div>
     </section>`;
   }
 
   const bookingTitle = lead.bookingTitle || 'Talk to us';
   const bookingSub = lead.bookingSub || 'One form in the real build routes straight to your phone or calendar.';
-  const bookingButton = lead.booking ? lead.bookingTitle && lead.bookingSub ? 'Book now' : 'Book now' : "Let's talk";
+  const bookingButton = lead.booking ? 'Direct booking slot, first-come' : 'Phone-first contact';
+  const seeLink = lead.gallery ? '#projects' : '#services';
 
   const fill = {
     '{{NAME}}': lead.name.replace(/&/g, '&amp;'),
@@ -103,6 +117,8 @@ function renderLead(lead) {
     '{{INDUSTRY_L}}': lead.industry.toLowerCase(),
     '{{AREA}}': esc(lead.area),
     '{{PHONE}}': esc(lead.phone),
+    '{{PHONELINK}}': lead.phoneLink || 'tel:+1',
+    '{{PHOTOSEED}}': seed,
     '{{INK}}': b.dark,
     '{{MID}}': b.mid,
     '{{ACCENT}}': b.accent,
@@ -114,10 +130,10 @@ function renderLead(lead) {
     '{{TAGS}}': tags,
     '{{CTA1}}': esc(lead.ctaPrimary.label),
     '{{CTA1HREF}}': lead.ctaPrimary.href,
-    '{{CTA2}}': esc(lead.ctaSecondary.label),
+    '{{SEELINK}}': seeLink,
     '{{TRUST}}': trust,
     '{{MARQUEE}}': (lead.marquee || lead.heroTags || ['Design', 'Build', 'Launch']).map(t =>
-      `<span class="mono uppercase tracking-widest text-sm text-white/70">${esc(t)}</span>`).join(''),
+      `<span>${esc(t)}</span>`).join(''),
     '{{SERVICESTITLE}}': esc(lead.servicesTitle || 'Services'),
     '{{SERVICES}}': services,
     '{{GALLERY}}': gallery,
