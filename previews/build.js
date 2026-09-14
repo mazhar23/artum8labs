@@ -11,7 +11,8 @@ const template = fs.readFileSync(path.join(__dirname, 'template.html'), 'utf8');
 const leads = [
   ...require('./data-part-a.js'),
   ...require('./data-part-b.js'),
-  ...require('./data-part-c.js')
+  ...require('./data-part-c.js'),
+  ...require('./data-part-new.js')
 ];
 
 function esc(s) {
