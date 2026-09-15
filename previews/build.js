@@ -13,7 +13,8 @@ const leads = [
   ...require('./data-part-b.js'),
   ...require('./data-part-c.js'),
   ...require('./data-part-new.js'),
-  ...require('./data-part-4.js')
+  ...require('./data-part-4.js'),
+  ...require('./data-part-5.js')
 ];
 
 function esc(s) {
