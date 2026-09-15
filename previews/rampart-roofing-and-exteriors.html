@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,follow" />
+    <title>Rampart Roofing &amp; Exteriors &mdash; Website Concept | Artum8 Labs</title>
+    <meta name="description" content="Roofing website concept designed for Rampart Roofing &amp; Exteriors in Colorado Springs,, CO. A preview by Artum8 Labs." />
+    <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
+        "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.js",
+        "gsap/ScrollTrigger": "https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.js",
+        "lenis": "https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.mjs"
+      }
+    }
+    </script>
+
+    <style>
+        :root {
+            --t1: #7fb069;
+            --t2: #d9a441;
+            --ink: #14261c;
+            --ink-2: #2c4a35;
+            --paper: #f4f1ea;
+            --ease: cubic-bezier(.16,1,.3,1);
+            /* fluid type via CSS clamp */
+            --s-hero: clamp(2.9rem, 8.4vw + 1rem, 8.25rem);
+            --s-1: clamp(2.2rem, 4.6vw + .6rem, 5rem);
+            --s-2: clamp(1.5rem, 2.4vw + .5rem, 2.75rem);
+            --s-3: clamp(1.05rem, 1.1vw + .6rem, 1.35rem);
+            --wrap: clamp(1.25rem, 6vw, 6rem);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { background: var(--ink); -webkit-font-smoothing: antialiased; }
+        html.lenis, html.lenis body { height: auto; }
+        .lenis.lenis-smooth { scroll-behavior: auto !important; }
+        body {
+            font-family: 'Space Grotesk', system-ui, sans-serif;
+            color: var(--ink);
+            background: var(--paper);
+            overflow-x: hidden;
+            line-height: 1.5;
+        }
+        ::selection { background: var(--t1); color: var(--paper); }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .serif { font-family: 'Instrument Serif', serif; font-weight: 400; }
+
+        img { display: block; max-width: 100%; }
+        a { color: inherit; }
+        .wrap { width: min(1400px, 100% - var(--wrap)*2); margin-inline: auto; }
+
+        /* ---------- Concept bar ---------- */
+        .concept-bar {
+            background: var(--ink);
+            color: color-mix(in srgb, var(--paper) 62%, transparent);
+            font-size: 11px;
+            letter-spacing: .06em;
+            padding: .55rem 1rem;
+            text-align: center;
+            border-bottom: 1px solid color-mix(in srgb, var(--t1) 28%, transparent);
+        }
+        .concept-bar a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+
+        /* ---------- Nav ---------- */
+        header.nav {
+            position: sticky; top: 0; z-index: 60;
+            padding-block: .9rem;
+            transition: background .4s var(--ease), box-shadow .4s var(--ease);
+        }
+        header.nav.scrolled {
+            background: color-mix(in srgb, var(--paper) 82%, transparent);
+            backdrop-filter: blur(14px);
+            box-shadow: 0 1px 0 color-mix(in srgb, var(--ink) 10%, transparent);
+        }
+        .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+        .nav-brand .mono { display: block; font-size: 10px; letter-spacing: .22em; text-transform: uppercase; opacity: .62; }
+        .nav-brand b { font-size: 1.05rem; letter-spacing: -.02em; }
+        .nav-links { display: none; gap: 2.2rem; font-size: .9rem; }
+        @media (min-width: 820px) { .nav-links { display: flex; } }
+
+        /* ---------- Buttons ---------- */
+        .btn {
+            display: inline-flex; align-items: center; gap: .6rem;
+            border-radius: 999px; padding: .95rem 1.7rem;
+            font-weight: 600; font-size: .95rem; letter-spacing: -.01em;
+            text-decoration: none; border: 1px solid transparent;
+            transition: transform .35s var(--ease), box-shadow .35s var(--ease), background .35s var(--ease), color .35s var(--ease);
+            will-change: transform;
+        }
+        .btn-accent { background: var(--t1); color: color-mix(in srgb, var(--paper) 92%, #000 8%); }
+        .btn-accent:hover { transform: translateY(-3px); box-shadow: 0 18px 40px -18px var(--t1); }
+        .btn-ghost { border-color: color-mix(in srgb, var(--ink) 22%, transparent); color: var(--ink); }
+        .btn-ghost:hover { background: var(--ink); color: var(--paper); transform: translateY(-3px); }
+        .btn-white { background: var(--paper); color: var(--ink); }
+        .btn-white:hover { transform: translateY(-3px); box-shadow: 0 18px 40px -18px var(--t1); }
+
+        /* ---------- Section label ---------- */
+        .label {
+            display: inline-flex; align-items: center; gap: .7rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px; letter-spacing: .24em; text-transform: uppercase;
+            color: var(--t1);
+        }
+        .label::before { content:""; width: 34px; height: 1px; background: var(--t1); }
+
+        /* =========================================================
+           HERO  — WebGL live scene + photography + blend typography
+           ========================================================= */
+        .hero {
+            position: relative;
+            min-height: 112vh;
+            overflow: hidden;
+            color: var(--paper);
+            display: flex; flex-direction: column; justify-content: flex-end;
+            isolation: isolate;
+            scroll-snap-align: none;
+        }
+        .hero-canvas { position: absolute; inset: 0; z-index: -3; }
+        .hero-canvas canvas { width: 100% !important; height: 100% !important; display: block; }
+
+        /* photographic layer sits INSIDE the live WebGL scene via blend */
+        .hero-photo {
+            position: absolute; inset: 0; z-index: -2;
+            mix-blend-mode: screen;
+            opacity: .5;
+            background: url('https://picsum.photos/seed/rampart-roofing-and-exteriors/1800/2200') center/cover no-repeat;
+            will-change: transform;
+        }
+        .hero-photo::after {
+            content:""; position: absolute; inset: 0;
+            background:
+                linear-gradient(180deg, color-mix(in srgb, var(--ink) 78%, transparent) 0%, color-mix(in srgb, var(--ink) 30%, transparent) 45%, var(--ink) 100%);
+            mix-blend-mode: multiply;
+        }
+        .hero-grain {
+            position: absolute; inset: 0; z-index: -1; pointer-events: none;
+            background-image:
+                radial-gradient(color-mix(in srgb, var(--t1) 14%, transparent) 1px, transparent 1px),
+                radial-gradient(rgba(255,255,255,.05) 1px, transparent 1px);
+            background-size: 180px 180px, 260px 260px;
+            background-position: 0 0, 90px 60px;
+            mix-blend-mode: overlay;
+        }
+
+        .hero-inner { position: relative; z-index: 2; padding-bottom: clamp(3rem, 7vh, 5.5rem); }
+        .hero-kicker {
+            display: flex; align-items: center; gap: .9rem;
+            font-family: 'JetBrains Mono', monospace; font-size: 12px;
+            letter-spacing: .26em; text-transform: uppercase;
+            color: color-mix(in srgb, var(--t1) 82%, var(--paper));
+            margin-bottom: 1.1rem;
+        }
+        .hero-kicker::after { content:""; height:1px; width: 90px; background: var(--t1); }
+
+        /* Giant serif headline — blend overlay sits inside the photography */
+        .hero-title {
+            font-family: 'Instrument Serif', serif;
+            font-size: var(--s-hero);
+            line-height: .98;
+            letter-spacing: -.02em;
+            font-style: italic;
+            color: var(--paper);
+            mix-blend-mode: overlay;
+            max-width: 16em;
+            text-shadow: 0 2px 40px color-mix(in srgb, var(--ink) 40%, transparent);
+        }
+        .hero-title em {
+            font-style: italic;
+            color: var(--t1);
+            mix-blend-mode: screen;
+        }
+        .hero-meta {
+            display: grid; gap: 1.4rem; align-items: end;
+            margin-top: 2.2rem;
+        }
+        @media (min-width: 900px) {
+            .hero-meta { grid-template-columns: 1.1fr .9fr; }
+        }
+        .hero-sub {
+            font-size: var(--s-3); color: color-mix(in srgb, var(--paper) 78%, transparent);
+            max-width: 46ch; font-weight: 400;
+        }
+        .hero-cta { display: flex; flex-wrap: wrap; gap: .9rem; }
+        .hero-tags { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.4rem; }
+        .chip {
+            border: 1px solid color-mix(in srgb, var(--paper) 26%, transparent);
+            color: var(--paper);
+            border-radius: 999px; padding: .5rem 1rem; font-size: .82rem;
+            backdrop-filter: blur(6px);
+            transition: border-color .3s var(--ease), background .3s var(--ease);
+        }
+        .chip:hover { border-color: var(--t1); background: color-mix(in srgb, var(--t1) 16%, transparent); }
+
+        /* floating phone-card mock, parallax on mouse (foreground layer) */
+        .hero-float {
+            position: absolute; right: var(--wrap); top: 18vh; z-index: 5;
+            display: none;
+            pointer-events: none;
+        }
+        @media (min-width: 1100px) { .hero-float { display: block; } }
+        .float-card {
+            width: 250px; border-radius: 22px; overflow: hidden;
+            background: color-mix(in srgb, var(--paper) 94%, transparent);
+            color: var(--ink);
+            box-shadow: 0 30px 80px -30px rgba(0,0,0,.55);
+            transform: rotate(4deg);
+            will-change: transform;
+        }
+        .float-card .fc-img { height: 150px; background: url('https://picsum.photos/seed/rampart-roofing-and-exteriorsb/500/300') center/cover; }
+        .float-card .fc-body { padding: 1rem 1.1rem 1.1rem; }
+        .float-card .fc-line { height: 7px; border-radius: 4px; background: color-mix(in srgb, var(--ink) 12%, transparent); margin-bottom: .5rem; }
+        .float-card .fc-line.short { width: 70%; }
+        .float-card .fc-btn { margin-top: .7rem; background: var(--t1); color: var(--paper); border-radius: 999px; text-align: center; padding: .5rem; font-size: .75rem; font-weight: 600; }
+
+        /* scroll cue wordmark */
+        .hero-scroll {
+            position: absolute; bottom: 1.6rem; left: 50%; transform: translateX(-50%);
+            font-family: 'JetBrains Mono', monospace; font-size: 10px;
+            letter-spacing: .3em; text-transform: uppercase;
+            color: color-mix(in srgb, var(--paper) 45%, transparent);
+            display: flex; align-items: center; gap: .8rem; z-index: 3;
+        }
+        .hero-scroll::before, .hero-scroll::after { content:""; width: 34px; height: 1px; background: color-mix(in srgb, var(--paper) 30%, transparent); }
+
+        /* =========================================================
+           MARQUEE — accent ribbon, two-tone
+           ========================================================= */
+        .marquee {
+            background: var(--ink);
+            color: var(--paper);
+            border-block: 1px solid color-mix(in srgb, var(--t1) 34%, transparent);
+            overflow: hidden;
+            -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+                    mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+        }
+        .marquee-track { display: flex; gap: 3rem; width: max-content; padding-block: 1.15rem; will-change: transform; }
+        .marquee-track span {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px; letter-spacing: .26em; text-transform: uppercase;
+            color: color-mix(in srgb, var(--paper) 74%, transparent);
+            white-space: nowrap; display: flex; align-items: center; gap: 3rem;
+        }
+        .marquee-track span::after { content:"✦"; color: var(--t1); font-size: 10px; }
+
+        /* =========================================================
+           SERVICES — asymmetric grid, depth children
+           ========================================================= */
+        .section { padding-block: clamp(4.5rem, 10vw, 8.5rem); background: var(--paper); color: var(--ink); }
+        .section-head { display: grid; gap: 1rem; margin-bottom: clamp(2.5rem, 6vw, 4rem); }
+        @media (min-width: 820px) {
+            .section-head { grid-template-columns: 1fr 1fr; align-items: end; }
+            .section-head.sub { margin-top: -1.6rem; }
+        }
+        .h-1 { font-size: var(--s-1); line-height: 1.02; letter-spacing: -.03em; font-weight: 500; }
+        .h-2 { font-size: var(--s-2); font-weight: 500; letter-spacing: -.02em; }
+        .lede { max-width: 44ch; color: color-mix(in srgb, var(--ink) 72%, transparent); font-size: var(--s-3); }
+        .services-grid { display: grid; gap: 1.2rem; }
+        @media (min-width: 900px) {
+            .services-grid { grid-template-columns: 1.2fr 1fr 1fr; grid-auto-rows: minmax(150px, auto); }
+            .services-grid .c:nth-child(2) { transform: translateY(2.2rem); }
+            .services-grid .c:nth-child(4) { transform: translateY(2.2rem); }
+        }
+        .card {
+            position: relative;
+            border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+            border-radius: 20px;
+            padding: 1.6rem;
+            background: #fff;
+            overflow: hidden;
+            transition: transform .4s var(--ease), box-shadow .4s var(--ease), border-color .4s var(--ease);
+            will-change: transform;
+        }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 30px 60px -30px color-mix(in srgb, var(--t1) 55%, transparent); border-color: color-mix(in srgb, var(--t1) 40%, transparent); }
+        .card .num { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 1.7rem; color: var(--t1); }
+        .card h3 { margin: .7rem 0 .5rem; font-size: 1.15rem; font-weight: 600; letter-spacing: -.01em; }
+        .card p { font-size: .92rem; color: color-mix(in srgb, var(--ink) 70%, transparent); }
+        .card .ghost-back {
+            position: absolute; right: -18px; bottom: -24px; font-size: 8rem; line-height: 1;
+            font-family: 'Instrument Serif', serif; font-style: italic;
+            color: color-mix(in srgb, var(--t1) 8%, transparent);
+            user-select: none;
+        }
+
+        /* =========================================================
+           TRUST — duotone stat band
+           ========================================================= */
+        .trust-band {
+            background: var(--ink); color: var(--paper);
+            position: relative; overflow: hidden;
+            scroll-snap-align: start;
+        }
+        .trust-band::before {
+            content:""; position: absolute; inset: 0;
+            background:
+                radial-gradient(60% 90% at 85% 0%, color-mix(in srgb, var(--t1) 34%, transparent), transparent 60%),
+                radial-gradient(50% 70% at 10% 100%, color-mix(in srgb, var(--t2) 22%, transparent), transparent 60%);
+        }
+        .trust-grid { position: relative; display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem clamp(2rem,6vw,5rem); padding-block: clamp(3.5rem,8vw,6rem); }
+        @media (min-width: 900px) { .trust-grid { grid-template-columns: repeat(4, 1fr); } }
+        .stat { border-left: 2px solid color-mix(in srgb, var(--t1) 55%, transparent); padding-left: 1.2rem; }
+        .stat-n {
+            font-family: 'JetBrains Mono', monospace; font-weight: 500;
+            font-size: clamp(1.9rem, 3.4vw, 3.1rem);
+            letter-spacing: -.03em; line-height: 1;
+        }
+        .stat-l { margin-top: .45rem; font-size: .82rem; color: color-mix(in srgb, var(--paper) 62%, transparent); text-transform: uppercase; letter-spacing: .12em; }
+
+        /* =========================================================
+           GALLERY — horizontal CSS scroll-snap rail, mix-blend labels
+           ========================================================= */
+        .rail-section { background: var(--paper); }
+        .rail {
+            display: flex; gap: clamp(1rem, 3vw, 2rem);
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 0 var(--wrap) 2rem;
+            scrollbar-width: none;
+        }
+        .rail::-webkit-scrollbar { display: none; }
+        .rail-card {
+            scroll-snap-align: center;
+            flex: 0 0 clamp(74vw, 46vw, 560px);
+            height: clamp(420px, 62vh, 620px);
+            position: relative; border-radius: 22px; overflow: hidden;
+            isolation: isolate;
+            will-change: transform;
+        }
+        .rail-card img {
+            position: absolute; inset: -12%; width: 124%; height: 124%; object-fit: cover;
+            will-change: transform; z-index: -2;
+        }
+        .rail-card::after {  /* duotone between the two hex colours */
+            content:""; position: absolute; inset: 0; z-index: -1;
+            background:
+                linear-gradient(20deg, color-mix(in srgb, var(--t1) 46%, var(--ink) 54%) 0%, color-mix(in srgb, var(--ink) 88%, #000 12%) 100%);
+            mix-blend-mode: multiply;
+        }
+        .rail-cap {
+            position: absolute; inset-inline: 1.4rem; bottom: 1.3rem;
+            color: var(--paper);
+            mix-blend-mode: overlay;                  /* typography sits inside photography */
+            font-size: clamp(1.4rem, 3vw, 2.1rem);
+            line-height: 1.04;
+        }
+        .rail-cap .serif { font-style: italic; color: color-mix(in srgb, #fff 88%, var(--t1)); }
+        .rail-idx { position: absolute; top: 1.1rem; left: 1.3rem; color: #fff; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .2em; }
+
+        /* =========================================================
+           SPLIT SECTIONS (finance / insurance)
+           ========================================================= */
+        .split { display: grid; gap: 2.5rem; align-items: center; }
+        @media (min-width: 900px) { .split { grid-template-columns: 1fr 1fr; } }
+        .split ul { list-style: none; display: grid; gap: 1rem; margin-top: 1.6rem; }
+        .split li { display: flex; gap: .9rem; align-items: flex-start; font-size: .98rem; color: color-mix(in srgb, var(--ink) 78%, transparent); }
+        .split li::before { content:"→"; color: var(--t1); font-family: 'JetBrains Mono', monospace; margin-top: .1rem; }
+        .tone-ink { background: var(--ink); color: var(--paper); }
+        .tone-ink .lede, .tone-ink .split li { color: color-mix(in srgb, var(--paper) 76%, transparent); }
+
+        /* ---------- Big ghost wordmark (blend overlay on photography band) ---------- */
+        .wordmark {
+            position: relative; overflow: hidden;
+            background: url('https://picsum.photos/seed/rampart-roofing-and-exteriorsc/1800/900') center/cover fixed;
+            color: #fff;
+            text-align: center;
+            padding-block: clamp(4rem, 10vw, 8rem);
+        }
+        .wordmark::before { content:""; position:absolute; inset:0; background: linear-gradient(180deg, color-mix(in srgb,var(--ink) 88%, transparent), color-mix(in srgb,var(--ink) 88%, transparent)); }
+        .wordmark p {
+            position: relative;
+            font-family: 'Instrument Serif', serif; font-style: italic;
+            font-size: clamp(2.4rem, 7vw, 6rem);
+            line-height: 1;
+            mix-blend-mode: overlay;
+            letter-spacing: -.02em;
+        }
+
+        /* =========================================================
+           CTA + FOOTER
+           ========================================================= */
+        .cta-band { background: var(--ink); color: var(--paper); position: relative; overflow: hidden; text-align: center; }
+        .cta-band::before { content:""; position:absolute; inset:0; background: radial-gradient(55% 80% at 50% 110%, color-mix(in srgb, var(--t1) 40%, transparent), transparent 65%); }
+        .cta-in { position: relative; padding-block: clamp(5rem, 12vw, 9rem); display: grid; gap: 1.4rem; justify-items: center; }
+        .cta-in .h-1 { max-width: 16ch; }
+        .cta-pill {
+            display: inline-flex; align-items: center; gap: .8rem;
+            background: color-mix(in srgb, var(--paper) 10%, transparent);
+            border: 1px solid color-mix(in srgb, var(--paper) 20%, transparent);
+            border-radius: 999px; padding: .45rem .6rem .45rem 1.3rem;
+            font-size: .88rem; color: color-mix(in srgb, var(--paper) 78%, transparent);
+        }
+        .cta-pill .btn { padding: .7rem 1.3rem; font-size: .85rem; }
+        footer { background: var(--ink); color: color-mix(in srgb, var(--paper) 64%, transparent); }
+        .foot-grid { display: grid; gap: 2.5rem; padding-block: clamp(3rem, 7vw, 5rem); }
+        @media (min-width: 820px) { .foot-grid { grid-template-columns: 1.4fr 1fr 1fr; } }
+        footer h4 { font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: .24em; color: color-mix(in srgb, var(--paper) 42%, transparent); margin-bottom: .9rem; }
+        footer .brand-name { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 1.8rem; color: var(--paper); }
+        .foot-bar { border-top: 1px solid color-mix(in srgb, var(--paper) 12%, transparent); padding-block: 1.4rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; font-size: .8rem; }
+
+        /* ---------- Reveals ---------- */
+        .rv { opacity: 0; transform: translateY(34px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
+        .rv.in { opacity: 1; transform: none; }
+
+        /* ---------- Reduced motion ---------- */
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .rv { opacity: 1; transform: none; transition: none; }
+            .hero-title, .rail-cap, .wordmark p { mix-blend-mode: normal; }
+            .hero-float { display: none; }
+            .marquee-track { animation: none; width: max-content; }
+        }
+        .no-js .rv { opacity: 1; }
+    </style>
+</head>
+<body>
+
+    <!-- Concept bar -->
+    <div class="concept-bar mono">
+        Concept design for Rampart Roofing &amp; Exteriors · Colorado Springs,, CO &mdash; a preview by <a href="https://www.artum8labs.com" target="_blank" rel="noopener">Artum8 Labs</a>. Not a live roofing site; placeholder copy, imagery and live WebGL renders only.
+    </div>
+
+    <!-- Nav -->
+    <header class="nav" data-nav>
+        <div class="wrap nav-inner">
+            <a class="nav-brand" href="#top">
+                <b>Rampart Roofing &amp; Exteriors</b>
+                <span class="mono">Roofing</span>
+            </a>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#cta">Contact</a>
+            </div>
+            <a href="tel:+117194877663" class="btn btn-accent">Call +1 719-487-7663</a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <main id="top">
+    <section class="hero" data-hero>
+        <div class="hero-canvas" data-webgl aria-hidden="true"></div>
+        <div class="hero-photo" data-hero-photo aria-hidden="true"></div>
+        <div class="hero-grain" aria-hidden="true"></div>
+
+        <div class="hero-float" data-float>
+            <div class="float-card">
+                <div class="fc-img"></div>
+                <div class="fc-body">
+                    <div class="fc-line short"></div>
+                    <div class="fc-line"></div>
+                    <div class="fc-line short"></div>
+                    <div class="fc-btn">Estimated in 24h</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrap hero-inner">
+            <div class="hero-kicker" data-rv>Colorado Springs, Colorado roofing, replaced without the runaround</div>
+            <h1 class="hero-title" data-hero-title>Certified up front, quoted first <em>&mdash; Colorado Springs,, CO.</em></h1>
+            <div class="hero-meta">
+                <p class="hero-sub" data-rv>Credentials with no quote path. This concept gives Rampart the GAF-backed trust up front, a fixed-quote flow and a proof gallery so the certifications finally sell the work.</p>
+                <div>
+                    <div class="hero-cta" data-rv>
+                        <a href="tel:+117194877663" class="btn btn-accent">Call +1 719-487-7663</a>
+                        <a href="#projects" class="btn btn-white">See the concept</a>
+                    </div>
+                    <div class="hero-tags" data-rv><span class="chip">Licensed &amp; insured</span><span class="chip">Free inspections</span><span class="chip">Fixed quotes</span></div>
+                </div>
+            </div>
+        </div>
+        <span class="hero-scroll">scroll</span>
+    </section>
+
+    <!-- Marquee -->
+    <section class="marquee" aria-hidden="true">
+        <div class="marquee-track" data-marquee><span>Licensed &amp; insured</span><span>Free inspections</span><span>Fixed quotes</span></div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section" data-section>
+        <div class="wrap">
+            <div class="section-head">
+                <p class="label" data-rv>What the rebuilt site does</p>
+                <h2 class="h-1" data-rv>Services the rebuilt site sells</h2>
+            </div>
+            <div class="services-grid">
+    <div class="c">
+      <div class="card rv" data-reveal>
+        <span class="num">01</span>
+        <h3>Roof replacement</h3>
+        <p>Full-system replacement scoped to a fixed quote up front.</p>
+        <span class="ghost-back">01</span>
+      </div>
+    </div>
+    <div class="c">
+      <div class="card rv" data-reveal>
+        <span class="num">02</span>
+        <h3>Repairs &amp; leaks</h3>
+        <p>Storm damage, leaks and missing shingles triaged same-day.</p>
+        <span class="ghost-back">02</span>
+      </div>
+    </div>
+    <div class="c">
+      <div class="card rv" data-reveal>
+        <span class="num">03</span>
+        <h3>Insurance claims</h3>
+        <p>The claim filed and documented, from inspection to approval.</p>
+        <span class="ghost-back">03</span>
+      </div>
+    </div>
+    <div class="c">
+      <div class="card rv" data-reveal>
+        <span class="num">04</span>
+        <h3>Inspections &amp; maintenance</h3>
+        <p>Annual roof checkups that keep the warranty valid.</p>
+        <span class="ghost-back">04</span>
+      </div>
+    </div></div>
+        </div>
+    </section>
+
+    <!-- Trust stats -->
+    <section class="trust-band" data-section>
+        <div class="wrap trust-grid">
+    <div class="stat rv" data-reveal>
+        <p class="stat-n">Colorado</p>
+        <p class="stat-l">Springs</p>
+    </div>
+    <div class="stat rv" data-reveal>
+        <p class="stat-n">GAF</p>
+        <p class="stat-l">certified</p>
+    </div>
+    <div class="stat rv" data-reveal>
+        <p class="stat-n">Fixed</p>
+        <p class="stat-l">quotes</p>
+    </div>
+    <div class="stat rv" data-reveal>
+        <p class="stat-n">Proof</p>
+        <p class="stat-l">gallery</p>
+    </div></div>
+    </section>
+
+    
+    <section id="projects" class="section rail-section" data-section>
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label" data-reveal>Projects</p>
+          <h2 class="h-1" data-reveal>The proof section a roofer needs</h2>
+        </div>
+        <p class="lede" style="margin-top:-.6rem; margin-bottom:2.5rem" data-reveal>Completed roofs organized by system — real photos, scope and timelines at build.</p>
+      </div>
+      <div class="rail">
+      <figure class="rail-card">
+        <img src="https://picsum.photos/seed/rampart-roofing-and-exteriors-p1/1200/1400" alt="Shingle replacement" loading="lazy" />
+        <span class="rail-idx">/01</span>
+        <figcaption class="rail-cap"><span class="serif">Shingle replacement</span></figcaption>
+      </figure>
+      <figure class="rail-card">
+        <img src="https://picsum.photos/seed/rampart-roofing-and-exteriors-p2/1200/1400" alt="Tile / foam system" loading="lazy" />
+        <span class="rail-idx">/02</span>
+        <figcaption class="rail-cap"><span class="serif">Tile / foam system</span></figcaption>
+      </figure>
+      <figure class="rail-card">
+        <img src="https://picsum.photos/seed/rampart-roofing-and-exteriors-p3/1200/1400" alt="Storm &amp; claims job" loading="lazy" />
+        <span class="rail-idx">/03</span>
+        <figcaption class="rail-cap"><span class="serif">Storm &amp; claims job</span></figcaption>
+      </figure>
+      <figure class="rail-card">
+        <img src="https://picsum.photos/seed/rampart-roofing-and-exteriors-p4/1200/1400" alt="Flat / commercial roof" loading="lazy" />
+        <span class="rail-idx">/04</span>
+        <figcaption class="rail-cap"><span class="serif">Flat / commercial roof</span></figcaption>
+      </figure></div>
+    </section>
+
+    
+    <section class="section tone-ink" data-section>
+      <div class="wrap split">
+        <div class="rv" data-reveal>
+          <p class="label" style="margin-bottom:1rem">Money questions, answered</p>
+          <h2 class="h-1">Fixed roof replacement, claims included</h2>
+          <p class="lede" style="margin-top:1rem">A section that answers the quote and insurance questions before the call.</p>
+        </div>
+        <ul class="rv" data-reveal><li>Free inspection, fixed quote</li><li>Insurance claims handled end-to-end</li><li>Financing shown on the page</li></ul>
+      </div>
+    </section>
+
+    
+
+    <!-- Photography wordmark -->
+    <section class="wordmark" data-section>
+        <p data-rv>Built to be seen.</p>
+    </section>
+
+    <!-- Booking CTA -->
+    <section id="cta" class="cta-band" data-cta data-section>
+        <div class="wrap cta-in">
+            <p class="label" style="color: var(--t1)" data-rv>Ready when you are</p>
+            <h2 class="h-1" data-rv>Get a fixed-price quote</h2>
+            <p class="lede" data-rv>In the real build, one form routes straight to your phone or calendar.</p>
+            <div class="cta-pill" data-rv>
+                <span class="hero-sub" style="color: inherit; font-size:.9rem">Direct booking slot, first-come</span>
+                <span class="btn btn-accent">Send it to my inbox</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="section" data-section>
+        <div class="wrap" style="max-width: 900px">
+            <p class="label mb-4" data-rv>Future proof</p>
+            <p class="serif" style="font-size: clamp(1.6rem, 3.4vw, 2.6rem); line-height: 1.25; color: var(--ink)" data-rv>The first page finally matches how the work is done. (Placeholder for a real Colorado Springs,, CO review.)</p>
+            <p class="mono" style="margin-top:1.2rem; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--t1)" data-rv>Client testimonial slot &mdash; real quote at build</p>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="wrap foot-grid">
+            <div>
+                <p class="brand-name">Rampart Roofing &amp; Exteriors</p>
+                <p style="margin-top:.5rem">Roofing · Colorado Springs,, CO</p>
+            </div>
+            <div>
+                <h4>Reach us direct</h4>
+                <p class="mono"><a href="tel:+117194877663">+1 719-487-7663</a></p>
+            </div>
+            <div>
+                <h4>Hours</h4>
+                <p>Placeholder schedule &mdash; filled from your real calendar at build</p>
+            </div>
+        </div>
+        <div class="wrap foot-bar">
+            <p>This is a concept homepage for Rampart Roofing &amp; Exteriors. It shows the structure and feel a rebuild can have; your real photos, brand and numbers go in at build time.</p>
+            <p class="mono">&copy; 2026 Rampart Roofing &amp; Exteriors · concept by Artum8 Labs</p>
+        </div>
+    </footer>
+
+    <!-- ==================== MOTION CORE ==================== -->
+    <script type="module">
+    import * as THREE from 'three';
+    import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+    import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+    import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+    import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+    import { BokehPass } from 'three/addons/postprocessing/BokehPass.js';
+    import gsap from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    import Lenis from 'lenis';
+
+    gsap.registerPlugin(ScrollTrigger);
+    const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const accent = getComputedStyle(document.documentElement).getPropertyValue('--t1').trim();
+    const accent2 = getComputedStyle(document.documentElement).getPropertyValue('--t2').trim();
+    const ink = getComputedStyle(document.documentElement).getPropertyValue('--ink').trim();
+    const paper = getComputedStyle(document.documentElement).getPropertyValue('--paper').trim();
+
+    /* ---------- Lenis smooth scroll + GSAP sync ---------- */
+    let lenis = null;
+    if (!prefersReduce) {
+        try {
+            lenis = new Lenis({ lerp: 0.085, wheelMultiplier: 1.0 });
+            lenis.on('scroll', ScrollTrigger.update);
+            gsap.ticker.add((t) => lenis.raf(t * 1000));
+            gsap.ticker.lagSmoothing(0);
+        } catch (e) { lenis = null; }
+    }
+    // anchor clicks -> lenis or native
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', (ev) => {
+            const id = a.getAttribute('href');
+            if (id.length < 2) return;
+            const el = document.querySelector(id);
+            if (!el) return;
+            ev.preventDefault();
+            if (lenis) lenis.scrollTo(el, { offset: -70, duration: 1.4 });
+            else el.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    /* ---------- Nav scrolled state ---------- */
+    const nav = document.querySelector('[data-nav]');
+    const onNav = () => nav.classList.toggle('scrolled', (window.scrollY || 0) > 40);
+    window.addEventListener('scroll', onNav, { passive: true }); onNav();
+
+    /* ---------- WebGL hero scene ---------- */
+    const webglHost = document.querySelector('[data-webgl]');
+    let composer = null, camera = null, scene = null, renderer = null;
+    let heroGroup = null, shards = [];
+    let clock = new THREE.Clock();
+    let mouseX = 0, mouseY = 0;
+
+    function hexToRgb(hex) {
+        const h = hex.replace('#', '');
+        return { r: parseInt(h.slice(0,2),16)/255, g: parseInt(h.slice(2,4),16)/255, b: parseInt(h.slice(4,6),16)/255 };
+    }
+    const c1 = hexToRgb(accent), c2 = hexToRgb(ink);
+
+    function initWebGL() {
+        if (!window.WebGLRenderingContext) return false;
+        try {
+            renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false, powerPreference: 'high-performance' });
+        } catch (e) { return false; }
+        renderer.setPixelRatio(Math.min(devicePixelRatio, 1.5));
+        renderer.setClearColor(ink, 1);
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 1.15;
+        renderer.domElement.style.position = 'absolute';
+        renderer.domElement.style.inset = '0';
+        webglHost.appendChild(renderer.domElement);
+
+        scene = new THREE.Scene();
+        camera = new THREE.PerspectiveCamera(55, 1, 0.6, 60);
+        camera.position.set(0, 0, 9);
+
+        /* background gradient shader plane — two hex colours carry the emotion */
+        const bgGeo = new THREE.PlaneGeometry(36, 24, 1, 1);
+        const bgMat = new THREE.ShaderMaterial({
+            uniforms: {
+                uT1: { value: new THREE.Vector3(c1.r, c1.g, c1.b) },
+                uT2: { value: new THREE.Vector3(c2.r, c2.g, c2.b) },
+                uTime: { value: 0 },
+                uAspect: { value: 1 }
+            },
+            vertexShader: `varying vec2 vUv; void main(){ vUv=uv; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }`,
+            fragmentShader: `
+                varying vec2 vUv;
+                uniform vec3 uT1; uniform vec3 uT2; uniform float uTime; uniform float uAspect;
+                float hash(vec2 p){ return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453); }
+                float noise(vec2 p){
+                    vec2 i=floor(p), f=fract(p);
+                    vec2 u=f*f*(3.0-2.0*f);
+                    return mix(mix(hash(i),hash(i+vec2(1,0)),u.x), mix(hash(i+vec2(0,1)),hash(i+vec2(1,1)),u.x), u.y);
+                }
+                void main(){
+                    vec2 p = vUv; p.x *= uAspect;
+                    float t = uTime * 0.05;
+                    float n = noise(vec2(p.x*2.0 + t, p.y*3.0 - t*0.6));
+                    n += 0.5 * noise(vec2(p.x*5.0 - t*1.3, p.y*6.0 + t));
+                    float m = smoothstep(0.15, 0.9, n);
+                    vec3 col = mix(uT2, uT1, m * 0.55);
+                    col += uT1 * (0.05 + 0.05 * sin(p.y * 40.0 - uTime * 2.0));
+                    float vig = smoothstep(0.9, 0.35, length(p - vec2(0.5 * uAspect, 0.5)));
+                    col = mix(col, uT2, (1.0 - vig) * 0.35);
+                    gl_FragColor = vec4(col, 1.0);
+                }`
+        });
+        const bg = new THREE.Mesh(bgGeo, bgMat);
+        bg.position.z = -12;
+        scene.add(bg);
+
+        /* floating shards at different depths -> real depth for DOF */
+        heroGroup = new THREE.Group();
+        const geoPool = [
+            new THREE.IcosahedronGeometry(0.5, 0),
+            new THREE.CircleGeometry(0.55, 32),
+            new THREE.OctahedronGeometry(0.5, 0)
+        ];
+        const shardMat = (col, isRing) => new THREE.ShaderMaterial({
+            transparent: !isRing,
+            opacity: isRing ? 0.9 : 0.7,
+            depthWrite: true,
+            uniforms: {
+                uCol: { value: new THREE.Vector3(col.r, col.g, col.b) },
+                uT2: { value: new THREE.Vector3(c2.r, c2.g, c2.b) },
+                uTime: { value: 0 }
+            },
+            vertexShader: `varying vec2 vUv; varying vec3 vPos; void main(){ vUv=uv; vPos=position; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }`,
+            fragmentShader: `
+                varying vec2 vUv; varying vec3 vPos;
+                uniform vec3 uCol; uniform vec3 uT2; uniform float uTime;
+                void main(){
+                    float d = smoothstep(0.35, 0.0, length(vUv - 0.5));
+                    vec3 col = mix(uT2, uCol, 0.25 + 0.75 * d);
+                    col += uCol * 0.18 * sin(vUv.x * 30.0 + uTime * 2.0);
+                    gl_FragColor = vec4(col, 1.0);
+                }`
+        });
+        const SPREAD = 7.5;
+        for (let i = 0; i < 16; i++) {
+            const isRing = i % 3 === 0;
+            const g = isRing ? new THREE.RingGeometry(0.5, 0.62, 48) : geoPool[i % geoPool.length];
+            const col = i % 2 ? c1 : c2;
+            const m = isRing ? new THREE.MeshBasicMaterial({ color: i % 2 ? accent : ink, transparent: true, opacity: 0.75, side: THREE.DoubleSide }) : shardMat(col, false);
+            const mesh = new THREE.Mesh(g, m);
+            mesh.position.set(
+                (Math.random() - 0.5) * SPREAD * 2,
+                (Math.random() - 0.5) * 8,
+                (Math.random() - 0.5) * 8 - 1
+            );
+            mesh.userData = {
+                speed: 0.3 + Math.random() * 0.8,
+                rot: (Math.random() * 2 - 1) * 0.6,
+                base: mesh.position.clone(),
+                ring: isRing
+            };
+            scene.add(mesh);
+            shards.push(mesh);
+        }
+
+        /* DOF + bloom composer */
+        composer = new EffectComposer(renderer);
+        composer.addPass(new RenderPass(scene, camera));
+        try {
+            const bokeh = new BokehPass(scene, camera, { focus: 7.0, aperture: 0.00012, maxblur: 0.006, width: 1024, height: 768 });
+            composer.addPass(bokeh);
+            composer.bokeh = bokeh;
+        } catch (e) { /* DOF optional */ }
+        const bloom = new UnrealBloomPass(new THREE.Vector2(1024, 768), 0.25, 0.7, 0.85);
+        composer.addPass(bloom);
+        composer.addPass(new OutputPass());
+
+        const doResize = () => {
+            const w = webglHost.clientWidth, h = webglHost.clientHeight;
+            if (!w || !h) return;
+            camera.aspect = w / h;
+            camera.updateProjectionMatrix();
+            renderer.setSize(w, h);
+            composer.setSize(w, h);
+            bgMat.uniforms.uAspect.value = w / h;
+        };
+        doResize();
+        window.addEventListener('resize', doResize);
+
+        /* pointer parallax - camera moves */
+        window.addEventListener('pointermove', (e) => {
+            mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+            mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+        });
+
+        /* GSAP ScrollTrigger: camera z dolly while scrolling the hero */
+        if (!prefersReduce) {
+            gsap.fromTo(camera.position, { z: 8.6 }, {
+                z: 4.2, ease: 'none',
+                scrollTrigger: { trigger: '[data-hero]', start: 'top top', end: 'bottom top', scrub: 0.6 }
+            });
+            if (composer.bokeh) {
+                gsap.fromTo(composer.bokeh.material.uniforms.focus, { value: 7.4 }, {
+                    value: 4.2, ease: 'none',
+                    scrollTrigger: { trigger: '[data-hero]', start: 'top top', end: 'bottom top', scrub: 0.6 }
+                });
+            }
+        }
+
+        /* requestAnimationFrame render + gentle self-motion */
+        let rafId = null;
+        function renderLoop(ts) {
+            rafId = requestAnimationFrame(renderLoop);
+            const t = clock.getElapsedTime();
+            bgMat.uniforms.uTime.value = t;
+            camera.position.x += (mouseX * 0.6 - camera.position.x) * 0.04;
+            camera.position.y += (mouseY * 0.4 - camera.position.y) * 0.04;
+            camera.lookAt(0, 0, -2);
+            for (let i = 0; i < shards.length; i++) {
+                const m = shards[i], d = m.userData;
+                m.position.x = d.base.x + Math.sin(t * d.speed + i) * 0.7;
+                m.position.y = d.base.y + Math.cos(t * d.speed * 0.8 + i * 2) * 0.5;
+                if (d.ring) m.rotation.z = t * 0.4; else m.rotation.y = t * d.rot;
+                if (m.material.uniforms && m.material.uniforms.uTime) m.material.uniforms.uTime.value = t;
+            }
+            composer.render();
+        }
+        renderLoop();
+        return true;
+    }
+    if (webglHost && !prefersReduce) { const ok = initWebGL(); if (!ok) webglHost.remove(); }
+    else if (webglHost) webglHost.remove();
+
+    /* ---------- Hero entrance choreography ---------- */
+    if (!prefersReduce) {
+        const title = document.querySelector('[data-hero-title]');
+        if (title) {
+            gsap.from(title, { yPercent: 30, opacity: 0, duration: 1.3, ease: 'power3.out', delay: 0.1 });
+            gsap.from(title.querySelector('em'), { opacity: 0, duration: 1.1, ease: 'power2.out', delay: 0.55 });
+        }
+        gsap.utils.toArray('[data-hero] [data-rv]').forEach(el => {
+            gsap.from(el, { y: 34, opacity: 0, duration: 1, ease: 'power3.out', delay: 0.25 });
+        });
+
+        /* Scroll reveals */
+        gsap.utils.toArray('[data-section]').forEach((sec) => {
+            const elems = sec.querySelectorAll('.rv, [data-reveal]');
+            ScrollTrigger.batch(elems, {
+                start: 'top 88%',
+                once: true,
+                onEnter: (b) => gsap.to(b, { y: 0, opacity: 1, duration: 1, ease: 'power3.out', stagger: 0.09 })
+            });
+        });
+        /* parallax photography + float card + marquee drift */
+        gsap.utils.toArray('[data-hero-photo]').forEach(el => {
+            gsap.fromTo(el, { yPercent: -6 }, { yPercent: 6, ease: 'none', scrollTrigger: { trigger: '[data-hero]', scrub: 0.8 } });
+        });
+        const fl = document.querySelector('[data-float]');
+        if (fl) {
+            gsap.fromTo(fl, { y: -40 }, { y: 90, ease: 'none', scrollTrigger: { trigger: '[data-hero]', scrub: 0.8 } });
+            /* L3D tilt from pointer */
+            window.addEventListener('pointermove', (e) => {
+                const r = fl.getBoundingClientRect();
+                const mx = (e.clientX - r.left) / r.width - 0.5;
+                const my = (e.clientY - r.top) / r.height - 0.5;
+                gsap.to(fl, { rotate: 4 + mx * 6, y: (gsap.getProperty(fl, 'y') || 0) - my * 18, duration: 0.4, ease: 'power2.out' });
+            });
+        }
+        /* marquee continuous drift */
+        document.querySelectorAll('[data-marquee]').forEach((track) => {
+            const content = track.innerHTML;
+            track.innerHTML = content + content;
+            gsap.to(track, { xPercent: -50, ease: 'none', duration: 26, repeat: -1 });
+        });
+        /* image parallax inside rail cards (fake 3D foreground/background) */
+        ScrollTrigger.batch(document.querySelectorAll('.rail-card'), {
+            start: 'top bottom',
+            once: true,
+            onEnter: (b) => {
+                b.forEach((card) => {
+                    const img = card.querySelector('img');
+                    if (img) gsap.fromTo(img, { yPercent: -8 }, { yPercent: 8, ease: 'none', scrollTrigger: { trigger: card, scrub: 0.6 } });
+                });
+                gsap.to(b, { opacity: 1, duration: 0.9, ease: 'power2.out', stagger: 0.08 });
+            }
+        });
+    } else {
+        document.querySelectorAll('.rv').forEach((el) => el.classList.add('in'));
+        /* static marquee fallback */
+        document.querySelectorAll('[data-marquee]').forEach((t) => (t.innerHTML = t.innerHTML + t.innerHTML));
+    }
+
+    /* file-clean: keep live counters hardware-cheap */
+    document.querySelectorAll('[data-count]').forEach((el) => {
+        const target = parseFloat(el.getAttribute('data-count'));
+        const dec = Math.max(0, (String(target).split('.')[1] || '').length);
+        const suf = el.getAttribute('data-suffix') || '';
+        const pre = el.getAttribute('data-prefix') || '';
+        if (prefersReduce) { el.textContent = pre + target.toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec }) + suf; return; }
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach((en) => {
+                if (!en.isIntersecting) return;
+                io.unobserve(el);
+                const t0 = performance.now(), dur = 1100;
+                const frame = (ts) => {
+                    const p = Math.min(1, (ts - t0) / dur);
+                    const e = 1 - Math.pow(1 - p, 3);
+                    el.textContent = pre + (target * e).toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec }) + suf;
+                    if (p < 1) requestAnimationFrame(frame);
+                };
+                requestAnimationFrame(frame);
+            });
+        }, { threshold: 0.4 });
+        io.observe(el);
+    });
+
+    /* refresh ScrollTrigger after fonts/images settle */
+    window.addEventListener('load', () => ScrollTrigger.refresh());
+    </script>
+</body>
+</html>
