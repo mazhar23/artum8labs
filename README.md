@@ -1,82 +1,33 @@
-# HTML
+# Artum8 Labs — Digital Innovation Studio
 
-A modern HTML project utilizing Tailwind CSS for building responsive web applications with minimal setup.
+Live site: https://www.artum8labs.com
 
-## 🚀 Features
+Artum8 Labs is a US-incorporated (Delaware LLC) digital innovation studio that designs, architects, and ships mission-critical software for founders who cannot afford to gamble on delivery. Architecture-first, senior-led, compliance-aware.
 
-- **HTML5** - Modern HTML structure with best practices
-- **Tailwind CSS** - Utility-first CSS framework for rapid UI development
-- **Custom Components** - Pre-built component classes for buttons and containers
-- **NPM Scripts** - Easy-to-use commands for development and building
-- **Responsive Design** - Mobile-first approach for all screen sizes
+## Services
 
-## 📋 Prerequisites
+- **Web Applications** — full-stack SaaS platforms, scalable cloud backends, microservices, and reactive SPAs (React, Next.js, Node.js, TypeScript).
+- **3D Websites & WebGL** — interactive 3D environments, kinetic typography, particle physics, and WebGL experiences (Three.js, GSAP, OGL).
+- **Fintech Solutions** — payment gateways, high-throughput transaction systems, crypto exchanges, double-entry accounting ledgers (PCI-DSS-aligned patterns).
+- **Healthtech Platforms** — HIPAA-compliant patient management, telemedicine suites, real-time medical monitoring interfaces.
+- **AI Engineering & SaaS Automation** — intelligent agents, conversational interfaces, automated data extraction, workflow pipelines (fixed-price A8 Automations sprints).
+- **SEO / AEO** — technical SEO and AI-search optimization (llms.txt, machine-readable content) so clients get cited by ChatGPT, Perplexity, and Claude.
 
-- Node.js (v12.x or higher)
-- npm or yarn
+## Why teams choose us
 
-## 🛠️ Installation
+- Senior full-stack architect (founder) leads architecture and delivery directly — no reseller of juniors.
+- US-incorporated contracting entity: US invoices, US contracts, US phone line, US timezone overlap.
+- 100% IP transfer on every engagement.
+- Compliance depth for fintech and healthtech builds.
+- Fixed-scope pricing with milestone delivery.
 
-1. Install dependencies:
-```bash
-npm install
-# or
-yarn install
-```
+## Contact
 
-2. Start the development server:
-```bash
-npm run dev
-# or
-yarn dev
-```
+- Lead Architect: Mazhar Khan — mazharkhan@programmer.net
+- General: hello@artum8labs.com
+- Inquiry: https://www.artum8labs.com/contact
+- SLA: initial engineering assessment within 24 hours.
 
-## 📁 Project Structure
+## Repository note
 
-```
-html_app/
-├── css/
-│   ├── tailwind.css   # Tailwind source file with custom utilities
-│   └── main.css       # Compiled CSS (generated)
-├── pages/             # HTML pages
-├── index.html         # Main entry point
-├── package.json       # Project dependencies and scripts
-└── tailwind.config.js # Tailwind CSS configuration
-```
-
-## 🎨 Styling
-
-This project uses Tailwind CSS for styling. Custom utility classes include:
-
-
-## 🧩 Customization
-
-To customize the Tailwind configuration, edit the `tailwind.config.js` file:
-
-
-## 📦 Build for Production
-
-Build the CSS for production:
-
-```bash
-npm run build:css
-# or
-yarn build:css
-```
-
-## 📱 Responsive Design
-
-The app is built with responsive design using Tailwind CSS breakpoints:
-
-- `sm`: 640px and up
-- `md`: 768px and up
-- `lg`: 1024px and up
-- `xl`: 1280px and up
-- `2xl`: 1536px and up
-
-## 🙏 Acknowledgments
-
-- Built with [Rocket.new](https://rocket.new)
-- Powered by HTML and Tailwind CSS
-
-Built with ❤️ on Rocket.new
+This repository contains the source for the live artum8labs.com site and per-prospect concept previews generated for SMB outreach. The `previews/` directory holds static HTML concept drafts that are intentionally `noindex`.
