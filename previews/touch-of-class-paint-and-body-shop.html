@@ -8,9 +8,9 @@
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#0e0e10;--surface:#1a1a1e;--surface2:#26262c;
-  --primary:#ffffff;--primary-light:#e4e4e9;--accent:#f8e71c;
-  --text:#f5f5f7;--text-muted:#9e9eb0;--text-dim:#5c5c68;
+  --bg:#0f172a;--surface:#1e293b;--surface2:#334155;
+  --primary:#4f46e5;--primary-light:#818cf8;--accent:#f59e0b;
+  --text:#f1f5f9;--text-muted:#94a3b8;--text-dim:#64748b;
   --gradient:linear-gradient(135deg, #4f46e5, #7c3aed, #a855f7);--gradient-accent:linear-gradient(135deg, #f59e0b, #ef4444);
   --glow:rgba(79,70,229,0.15);--glow2:rgba(168,85,247,0.1);
   --radius:20px;--radius-sm:12px;
@@ -26,7 +26,7 @@ html{background:var(--bg);}
 
 
 /* ─── Nav ─── */
-nav{position:sticky;top:0;z-index:100;backdrop-filter:blur(20px) saturate(1.5);-webkit-backdrop-filter:blur(20px) saturate(1.5);background:rgba(14,14,16,0.8);border-bottom:1px solid rgba(255,255,255,0.04)}
+nav{position:sticky;top:0;z-index:100;backdrop-filter:blur(20px) saturate(1.5);-webkit-backdrop-filter:blur(20px) saturate(1.5);background:rgba(15,23,42,0.8);border-bottom:1px solid rgba(255,255,255,0.04)}
 nav .container{display:flex;align-items:center;justify-content:space-between;height:60px}
 .logo{font-size:1.1rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.02em}
 .nav-links{display:flex;gap:28px;font-size:.8rem;font-weight:500;color:var(--text-dim)}
@@ -38,14 +38,14 @@ nav .container{display:flex;align-items:center;justify-content:space-between;hei
 .hero::before{content:'';position:absolute;top:-60%;left:-40%;width:180%;height:180%;background:radial-gradient(ellipse at 30% 20%,var(--glow) 0%,transparent 50%),radial-gradient(ellipse at 70% 80%,var(--glow2) 0%,transparent 50%);animation:heroFloat 25s ease-in-out infinite;pointer-events:none}
 @keyframes heroFloat{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-3%,2%) scale(1.02)}}
 .hero .container{position:relative;z-index:1;text-align:center}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:100px;padding:6px 20px;font-size:.72rem;font-weight:600;color:var(--primary-light);margin-bottom:24px;letter-spacing:.04em}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(79,70,229,0.1);border:1px solid rgba(79,70,229,0.2);border-radius:100px;padding:6px 20px;font-size:.72rem;font-weight:600;color:var(--primary-light);margin-bottom:24px;letter-spacing:.04em}
 .hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
 .hero h1{font-size:clamp(2rem,5vw,3.8rem);font-weight:900;line-height:1.08;margin-bottom:20px;letter-spacing:-.03em}
 .hero h1 .highlight{background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero-sub{max-width:620px;margin:0 auto 36px;font-size:1.05rem;color:var(--text-muted);line-height:1.7}
-.hero-cta{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;border-radius:100px;font-size:.9rem;font-weight:600;color:#fff;background:var(--gradient);box-shadow:0 4px 24px rgba(255,255,255,0.3);transition:all .25s;cursor:pointer;border:none;text-decoration:none}
-.hero-cta:hover{transform:translateY(-2px);box-shadow:0 8px 36px rgba(255,255,255,0.4);opacity:1}
+.hero-cta{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;border-radius:100px;font-size:.9rem;font-weight:600;color:#fff;background:var(--gradient);box-shadow:0 4px 24px rgba(79,70,229,0.3);transition:all .25s;cursor:pointer;border:none;text-decoration:none}
+.hero-cta:hover{transform:translateY(-2px);box-shadow:0 8px 36px rgba(79,70,229,0.4);opacity:1}
 .hero-cta svg{width:18px;height:18px}
 
 /* ─── Mockup Preview ─── */
@@ -60,10 +60,30 @@ nav .container{display:flex;align-items:center;justify-content:space-between;hei
 .mockup-logo{font-size:.85rem;font-weight:700;color:var(--primary-light);letter-spacing:.06em;margin-bottom:20px;text-transform:uppercase}
 .mockup-h{font-size:clamp(1.6rem,4vw,2.8rem);font-weight:900;line-height:1.12;margin-bottom:16px;letter-spacing:-.02em;position:relative;z-index:1}
 .mockup-loc{font-size:.8rem;color:var(--text-dim);margin-bottom:28px;letter-spacing:.04em}
-.mockup-btn{display:inline-flex;padding:12px 32px;border-radius:100px;font-size:.82rem;font-weight:600;color:#fff;background:var(--gradient);box-shadow:0 4px 20px rgba(255,255,255,0.25);position:relative;z-index:1}
+.mockup-btn{display:inline-flex;padding:12px 32px;border-radius:100px;font-size:.82rem;font-weight:600;color:#fff;background:var(--gradient);box-shadow:0 4px 20px rgba(79,70,229,0.25);position:relative;z-index:1}
 .mockup-stats{display:flex;justify-content:center;gap:48px;margin-top:32px;padding-top:28px;border-top:1px solid rgba(255,255,255,0.06);position:relative;z-index:1}
 .mockup-stat-val{font-size:1.3rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .mockup-stat-label{font-size:.65rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:.1em;margin-top:2px}
+
+/* ─── Phone & Nav premium ─── */
+.phone-link{display:inline-flex;align-items:center;gap:8px;color:var(--text);font-size:.82rem;font-weight:600;transition:color .2s}
+.phone-link:hover{color:var(--accent);opacity:1}
+.nav-cta-link{display:inline-flex;align-items:center;padding:8px 22px;border-radius:100px;font-size:.78rem;font-weight:600;color:#fff;background:var(--gradient);box-shadow:0 2px 14px rgba(79,70,229,0.3)}
+.nav-cta-link:hover{transform:translateY(-1px);box-shadow:0 4px 22px rgba(79,70,229,0.4);opacity:1}
+.hero-phone{margin-top:18px;font-size:.88rem;color:var(--text-muted);font-weight:500}
+.hero-phone a{color:var(--accent);text-decoration:none;border-bottom:1px dashed rgba(245,158,11,0.4);padding-bottom:1px}
+.hero-phone a:hover{border-bottom-color:var(--accent)}
+.mockup-call{display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:10px 28px;border-radius:100px;font-size:.78rem;font-weight:600;color:#fff;background:var(--gradient-accent);box-shadow:0 4px 18px rgba(245,158,11,0.25);text-decoration:none;transition:all .25s;position:relative;z-index:1}
+.mockup-call:hover{transform:translateY(-2px);opacity:1}
+
+/* ─── Reviews ─── */
+.reviews-section{background:rgba(30,41,59,0.5)}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.review-card{background:var(--surface);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius-sm);padding:28px 24px;position:relative;overflow:hidden}
+.review-card::before{content:'"';position:absolute;top:10px;right:20px;font-size:4rem;font-weight:900;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;opacity:.12;line-height:1}
+.review-stars{color:var(--accent);font-size:.85rem;margin-bottom:12px;letter-spacing:2px}
+.review-text{font-size:.82rem;color:var(--text-muted);line-height:1.7;margin-bottom:16px;font-style:italic}
+.review-author{font-size:.75rem;font-weight:600;color:var(--text-dim)}
 
 /* ─── Sections ─── */
 section{padding:64px 0}
@@ -72,7 +92,7 @@ section{padding:64px 0}
 .section-desc{text-align:center;max-width:560px;margin:0 auto 40px;color:var(--text-muted);font-size:.9rem;line-height:1.7}
 
 /* ─── Issues ─── */
-.issues-section{background:rgba(26,26,30,0.4)}
+.issues-section{background:rgba(30,41,59,0.4)}
 .issues-grid{display:flex;flex-direction:column;gap:14px}
 .issue-card{display:flex;gap:16px;align-items:flex-start;background:var(--surface);border:1px solid rgba(255,255,255,0.05);border-radius:var(--radius-sm);padding:20px 24px;transition:all .3s;animation:fadeUp .5s ease backwards}
 .issue-card:hover{border-color:rgba(255,255,255,0.1);transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,0.2)}
@@ -84,8 +104,8 @@ section{padding:64px 0}
 /* ─── Services ─── */
 .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
 .service-card{position:relative;background:var(--surface);border:1px solid rgba(255,255,255,0.05);border-radius:var(--radius);padding:32px 28px;transition:all .3s;animation:fadeUp .5s ease backwards}
-.service-card:hover{border-color:rgba(255,255,255,0.3);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.25)}
-.service-card.featured{border-color:rgba(248,231,28,0.3);background:linear-gradient(180deg,rgba(248,231,28,0.04) 0%,var(--surface) 50%)}
+.service-card:hover{border-color:rgba(79,70,229,0.3);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.25)}
+.service-card.featured{border-color:rgba(245,158,11,0.3);background:linear-gradient(180deg,rgba(245,158,11,0.04) 0%,var(--surface) 50%)}
 .service-badge{font-size:.58rem;font-weight:700;letter-spacing:.14em;color:var(--accent);margin-bottom:14px}
 .service-icon{font-size:1.8rem;margin-bottom:14px}
 .service-name{font-size:1rem;font-weight:700;margin-bottom:6px}
@@ -97,8 +117,8 @@ section{padding:64px 0}
 .cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,var(--glow) 0%,transparent 60%);pointer-events:none}
 .cta-section h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;margin-bottom:12px;position:relative;z-index:1}
 .cta-section p{color:var(--text-muted);margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;font-size:.9rem;position:relative;z-index:1}
-.cta-btn{display:inline-flex;align-items:center;gap:10px;padding:18px 40px;border-radius:100px;font-size:.95rem;font-weight:700;color:#fff;background:var(--gradient);box-shadow:0 6px 30px rgba(255,255,255,0.35);transition:all .25s;cursor:pointer;border:none;text-decoration:none;position:relative;z-index:1}
-.cta-btn:hover{transform:translateY(-3px);box-shadow:0 10px 40px rgba(255,255,255,0.45);opacity:1}
+.cta-btn{display:inline-flex;align-items:center;gap:10px;padding:18px 40px;border-radius:100px;font-size:.95rem;font-weight:700;color:#fff;background:var(--gradient);box-shadow:0 6px 30px rgba(79,70,229,0.35);transition:all .25s;cursor:pointer;border:none;text-decoration:none;position:relative;z-index:1}
+.cta-btn:hover{transform:translateY(-3px);box-shadow:0 10px 40px rgba(79,70,229,0.45);opacity:1}
 .cta-note{font-size:.75rem;color:var(--text-dim);margin-top:16px;position:relative;z-index:1}
 
 /* ─── Footer ─── */
@@ -126,9 +146,10 @@ footer strong{color:var(--text-muted)}
 <div class="container">
   <div class="logo">Artum 8 Labs</div>
   <div class="nav-links">
-    
+    <a href="#issues">Issues</a>
     <a href="#services">Services</a>
-    <a href="#cta">Get Started</a>
+    <a class="phone-link" href="tel:+13055329800">📞 +1 305-532-9800</a>
+    <a href="#cta" class="nav-cta-link">Get Started</a>
   </div>
 </div>
 </nav>
@@ -138,10 +159,13 @@ footer strong{color:var(--text-muted)}
   <div class="hero-badge">Website Redesign Concept for Touch of Class Paint &amp; Body Shop</div>
   <h1><span class="highlight">Touch of Class Paint &amp; Body Shop</span><br>deserves a stronger online presence.</h1>
   <p class="hero-sub">A modern, conversion-focused website that helps customers find you, trust you, and choose you over competitors.</p>
-  <a href="#cta" class="hero-cta">
-    View Your Custom Plan
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-  </a>
+  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+    <a href="#cta" class="hero-cta" style="margin:0">
+      View Your Custom Plan
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <a href="tel:+13055329800" class="hero-cta" style="margin:0;background:transparent;border:1px solid rgba(255,255,255,0.15);box-shadow:none;color:var(--text)">📞 +1 305-532-9800</a>
+  </div>
 </div>
 </section>
 
@@ -152,13 +176,14 @@ footer strong{color:var(--text-muted)}
       <span class="mockup-dot r"></span>
       <span class="mockup-dot y"></span>
       <span class="mockup-dot g"></span>
-      <span class="mockup-url">www.touchofclassmiami.com/</span>
+      <span class="mockup-url">www.touchofclassmiami.com</span>
     </div>
     <div class="mockup-body">
       <div class="mockup-logo">Touch of Class Paint &amp; Body Shop</div>
       <div class="mockup-h">Your Business.<br>Amplified Online.</div>
-      <div class="mockup-loc"> — Auto body shop</div>
+      <div class="mockup-loc">Miami Beach, FL — Auto body shop</div>
       <div class="mockup-btn">Get Started</div>
+      <a class="mockup-call" href="tel:+13055329800">📞 Call +1 305-532-9800</a>
       <div class="mockup-stats">
         <div><div class="mockup-stat-val">Modern</div><div class="mockup-stat-label">Design</div></div>
         <div><div class="mockup-stat-val">Local</div><div class="mockup-stat-label">SEO</div></div>
@@ -170,6 +195,64 @@ footer strong{color:var(--text-muted)}
 </section>
 
 
+  <section class="issues-section" id="issues">
+    <div class="container">
+      <div class="section-label">CURRENT ISSUES</div>
+      <div class="section-title">What's hurting your online presence</div>
+      <div class="section-desc">We analyzed your website and found these specific issues that are costing you customers.</div>
+      <div class="issues-grid">
+        
+        <div class="issue-card" style="animation-delay:0s">
+          <div class="issue-severity">🔴</div>
+          <div class="issue-body">
+            <div class="issue-title">Site loads slowly on mobile</div>
+            <div class="issue-desc">This issue is directly affecting your site's performance, user experience, and search rankings.</div>
+          </div>
+        </div>
+
+        <div class="issue-card" style="animation-delay:0.12s">
+          <div class="issue-severity">🟡</div>
+          <div class="issue-body">
+            <div class="issue-title">No booking or call CTA on homepage</div>
+            <div class="issue-desc">This issue is directly affecting your site's performance, user experience, and search rankings.</div>
+          </div>
+        </div>
+
+        <div class="issue-card" style="animation-delay:0.24s">
+          <div class="issue-severity">🔵</div>
+          <div class="issue-body">
+            <div class="issue-title">Outdated design pattern</div>
+            <div class="issue-desc">This issue is directly affecting your site's performance, user experience, and search rankings.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="reviews-section">
+<div class="container">
+  <div class="section-label">TRUSTED LOCALLY</div>
+  <div class="section-title">What neighborhood reviews say</div>
+  <div class="section-desc">Your area is full of people searching for a business like Touch of Class Paint &amp; Body Shop — make sure they choose you first.</div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"Finally a website that actually works on my phone. Called them straight from the page."</div>
+      <div class="review-author">Local customer</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"Found everything I needed in seconds — services, pricing, phone number right there."</div>
+      <div class="review-author">Nearby resident</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"Looks modern and trustworthy. This is how a professional business should present itself."</div>
+      <div class="review-author">Verified visitor</div>
+    </div>
+  </div>
+</div>
+</section>
 
 <section id="services">
 <div class="container">
@@ -213,6 +296,7 @@ footer strong{color:var(--text-muted)}
     Schedule a Free Consultation
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
   </a>
+  <div class="hero-phone">Prefer to talk? Call us at <a href="tel:+13055329800">+1 305-532-9800</a></div>
   <div class="cta-note">No obligation. We'll discuss your goals and send a custom proposal.</div>
 </div>
 </section>
@@ -220,6 +304,8 @@ footer strong{color:var(--text-muted)}
 <footer>
 <div class="container">
   <p><strong>Artum 8 Labs</strong> — Helping local businesses grow online.</p>
+  <p>www.touchofclassmiami.com</p>
+  <p><a href="tel:+13055329800" style="color:var(--text-dim)">📞 +1 305-532-9800</a></p>
   <p>This is a design concept prepared for Touch of Class Paint &amp; Body Shop. &copy; 2026 Artum 8 Labs.</p>
 </div>
 </footer>
@@ -255,9 +341,9 @@ footer strong{color:var(--text-muted)}
     return result ? [parseInt(result[1], 16)/255, parseInt(result[2], 16)/255, parseInt(result[3], 16)/255] : [0,0,0];
   };
   
-  const color1 = hexToRgb('#ffffff');
-  const color2 = hexToRgb('#f8e71c');
-  const bgColor = hexToRgb('#0e0e10');
+  const color1 = hexToRgb('#4f46e5');
+  const color2 = hexToRgb('#f59e0b');
+  const bgColor = hexToRgb('#0f172a');
 
   const material = new THREE.ShaderMaterial({
     uniforms: {
