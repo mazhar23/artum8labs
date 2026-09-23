@@ -39,4 +39,4 @@ Artum8 Labs engineers mission-critical software solutions across seven specializ
 - Detailed page: [AI Automation for Business](https://www.artum8labs.com/services/ai-automation)
 
 ## Get an Estimate
-Submit your project brief at https://www.artum8labs.com/contact or email <mazharkhan@programmer.net>.
+Submit your project brief at https://www.artum8labs.com/contact or email <hello@artum8labs.com>.

@@ -23,7 +23,7 @@ Artum8 Labs is a US-incorporated (Delaware LLC) digital innovation studio that d
 
 ## Contact
 
-- Lead Architect: Mazhar Khan — mazharkhan@programmer.net
+- Lead Architect: Mazhar Khan — hello@artum8labs.com
 - General: hello@artum8labs.com
 - Inquiry: https://www.artum8labs.com/contact
 - SLA: initial engineering assessment within 24 hours.

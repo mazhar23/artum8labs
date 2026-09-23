@@ -4,7 +4,7 @@
 
 ## Direct Inquiries
 - **Lead Architect**: Mazhar Khan
-- **Direct Email**: <mazharkhan@programmer.net>
+- **Direct Email**: <hello@artum8labs.com>
 - **General Inquiries**: <hello@artum8labs.com>
 - **Sales & Estimates**: <projects@artum8labs.com>
 - **Phone (India)**: +91 8898660011 | +91 9904038110

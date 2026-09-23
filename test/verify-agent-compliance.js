@@ -128,7 +128,7 @@ console.log('\n5. Testing Agent Instructions / When-to-Use Guidance:');
 const llmsTxt = fs.readFileSync(path.join(__dirname, '../llms.txt'), 'utf8');
 assert(llmsTxt.toLowerCase().includes('when to use'), 'llms.txt contains "When to Use" guidance');
 assert(llmsTxt.toLowerCase().includes('when not to use') || llmsTxt.toLowerCase().includes('out of scope'), 'llms.txt contains "When NOT to Use" guidance');
-assert(llmsTxt.includes('mazharkhan@programmer.net'), 'llms.txt contains primary engineering contact');
+assert(llmsTxt.includes('hello@artum8labs.com'), 'llms.txt contains primary engineering contact');
 
 assert(fs.existsSync(path.join(__dirname, '../.well-known/agent-instructions.txt')), '.well-known/agent-instructions.txt exists');
 

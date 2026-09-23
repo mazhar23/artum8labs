@@ -1,7 +1,7 @@
 # Terms of Service — Artum8 Labs
 
 > Last Updated: September 2026 | Effective Immediately
-> Legal & Governance Inquiries: mazharkhan@programmer.net
+> Legal & Governance Inquiries: hello@artum8labs.com
 
 Welcome to Artum8 Labs. By accessing our website, engaging our engineering services, or submitting project briefs, you agree to comply with and be bound by the following terms.
 
@@ -20,5 +20,5 @@ Artum8 Labs delivers software engineered to professional industry standards. Exc
 
 ## 5. Contact Information
 For legal inquiries, contracts, or terms clarification, contact:
-- **Email**: <mazharkhan@programmer.net> / <hello@artum8labs.com>
+- **Email**: <hello@artum8labs.com>
 - **Address**: Artum8 Labs, G Block, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051, India

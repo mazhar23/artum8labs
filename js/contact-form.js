@@ -1,10 +1,10 @@
 /**
  * Artum8 Labs - Contact & Inquiry Form Handler
- * Dispatches inquiries directly to mazharkhan@programmer.net via FormSubmit AJAX endpoint.
+ * Dispatches inquiries directly to hello@artum8labs.com via FormSubmit AJAX endpoint.
  */
 
 (function () {
-    const TARGET_EMAIL = 'mazharkhan@programmer.net';
+    const TARGET_EMAIL = 'hello@artum8labs.com';
 
     function setupForm(form) {
         if (form.dataset.inquiryInitialized === 'true') return;

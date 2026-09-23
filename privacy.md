@@ -1,7 +1,7 @@
 # Privacy Policy — Artum8 Labs
 
 > **Last Updated:** September 2026 | **Effective Immediately**
-> **Data Protection Officer:** Mazhar Khan — mazharkhan@programmer.net
+> **Data Protection Officer:** Mazhar Khan — hello@artum8labs.com
 > **Canonical URL:** https://www.artum8labs.com/privacy
 
 Artum8 Labs ("we", "our", or "the Studio") is committed to safeguarding your privacy and ensuring full transparency across all digital operations. This Privacy Policy explains how we collect, store, process, and protect personal and commercial information gathered via our website (artum8labs.com) and through direct client communications.
@@ -73,8 +73,7 @@ To exercise any of your data rights, request deletion, or submit a privacy compl
 
 **Artum8 Labs — Data Governance**
 Attention: Mazhar Khan, Lead Architect & Data Protection Officer
-Email: mazharkhan@programmer.net
-Alternate: hello@artum8labs.com
+Email: hello@artum8labs.com
 Studio HQ: G Block, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051, India
 US Address: 8 The Green, Suite A, Dover, Delaware 19901, USA
 

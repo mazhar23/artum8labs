@@ -1,25 +1,25 @@
-# Portfolio & Case Studies — Artum8 Labs
+# Capability Demonstrations & Technical Case Studies — Artum8 Labs
 
-Selected production case studies engineered by Artum8 Labs:
+Production-grade engineering builds and prototypes developed by Artum8 Labs:
 
-## 1. FinanceFlow Pro
+## 1. High-Frequency Trading Engine Demo
 - **Domain**: Fintech & Institutional Trading
 - **Stack**: React, TypeScript, WebSocket Engine, Tailwind CSS, Python Analytics
-- **Impact**: +340% increase in daily active user engagement; sub-50ms data refresh rate across 10,000+ simultaneous tickers.
+- **Benchmark**: Sub-50ms data refresh rate across 10,000+ simultaneous tickers via binary WebSockets.
 
-## 2. MedConnect Platform
+## 2. Telemedicine Virtual Care Prototype
 - **Domain**: Healthtech & Telemedicine
 - **Stack**: Next.js, WebRTC, Node.js, HIPAA-Compliant AWS Infrastructure
-- **Impact**: +250% patient onboarding satisfaction; -65% average consultation wait time.
+- **Benchmark**: 99.99% uptime architecture with E2E WebRTC video and FHIR record integration.
 
-## 3. ShopMax 3D Experience
+## 3. Headless 3D Commerce Engine
 - **Domain**: eCommerce & 3D Interactive Web
 - **Stack**: Three.js, WebGL Shaders, React, Shopify Storefront API
-- **Impact**: +420% conversion rate increase; -38% decrease in return rates.
+- **Benchmark**: Sub-second page rendering with 60 FPS interactive 3D asset customization.
 
-## 4. BrandVision Experiential Universe
+## 4. WebGL Spatial Brand Showcase
 - **Domain**: Brand Experience & WebGL
 - **Stack**: Three.js, GSAP, OGL, GLSL Shaders
-- **Impact**: +180% average session duration; international design recognition.
+- **Benchmark**: Smooth 60 FPS canvas rendering loop with custom GLSL shaders across viewports.
 
-For full case studies, visit https://www.artum8labs.com/portfolio.
+For full technical capability breakdowns, visit https://www.artum8labs.com/portfolio.

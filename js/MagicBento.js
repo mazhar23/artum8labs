@@ -14,58 +14,58 @@ class MagicBento {
     this.cardData = [
       {
         color: '#1a1a1a',
-        title: 'FinanceFlow Inc.',
-        description: 'Trading Platform - +340% User Engagement',
-        label: 'FINTECH',
+        title: 'Trading Platform',
+        description: 'High-Frequency Architecture - <50ms Stream Latency',
+        label: 'FINTECH DEMO',
         image: '../images/Financeflow.svg'
       },
       {
         color: '#1a1a1a',
-        title: 'MedConnect',
-        description: 'Telemedicine Platform - +250% Patient Satisfaction',
-        label: 'HEALTHTECH',
+        title: 'Telemedicine System',
+        description: 'HIPAA Virtual Care Build - 99.99% Uptime Architecture',
+        label: 'HEALTHTECH DEMO',
         image: '../images/Medconnect.svg'
       },
       {
         color: '#1a1a1a',
-        title: 'ShopMax',
-        description: 'E-commerce Platform - +420% Conversion Rate',
-        label: 'ECOMMERCE',
+        title: 'Headless Commerce Engine',
+        description: '3D Configurator - Sub-Second Page Render',
+        label: 'ECOMMERCE DEMO',
         image: '../images/ShopMax.svg'
       },
       {
         color: '#1a1a1a',
-        title: 'BrandVision',
-        description: '3D Brand Experience - +180% Time on Site',
-        label: 'BRANDING',
+        title: 'WebGL Brand Experience',
+        description: 'Interactive Spatial Web - 60 FPS 3D Engine',
+        label: '3D/WEBGL DEMO',
         image: '../images/Brandvision.svg'
       },
       {
         color: '#1a1a1a',
-        title: 'CryptoTrade',
-        description: 'Crypto Exchange - 100% Security Compliance',
-        label: 'FINTECH',
+        title: 'Crypto Settlement Engine',
+        description: 'Multi-Sig Vault Build - SOC2 / Compliance Architecture',
+        label: 'BLOCKCHAIN DEMO',
         image: '../images/Cryptotrade.svg'
       },
       {
         color: '#1a1a1a',
-        title: 'HealthCare+',
-        description: 'Patient Management - -65% Load Time',
-        label: 'HEALTHTECH',
+        title: 'Patient Data Engine',
+        description: 'FHIR Interoperability - Instant Record Retrieval',
+        label: 'HEALTH DATA DEMO',
         image: '../images/healthcare++.svg'
       },
       {
         color: '#1a1a1a',
-        title: 'EcommerceMax',
-        description: 'Retail Platform - $2.5M Revenue Impact',
-        label: 'ECOMMERCE',
+        title: 'Enterprise Retail Pipeline',
+        description: 'Microservice Catalog - Edge Caching Built-In',
+        label: 'RETAIL DEMO',
         image: '../images/company-logo-2.svg'
       },
       {
         color: '#1a1a1a',
-        title: 'FinTech Pro',
-        description: 'Payment Gateway - 99.9% Uptime',
-        label: 'FINTECH',
+        title: 'High-Throughput Gateway',
+        description: 'Sub-Second Payment API - Zero Downtime Routing',
+        label: 'PAYMENTS DEMO',
         image: '../images/company-logo-3.svg'
       }
     ];

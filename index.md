@@ -12,11 +12,11 @@ Artum8 Labs is a digital innovation studio that designs, architects, and builds 
 4. **Healthtech Platforms**: HIPAA-compliant patient management, telemedicine suites, and real-time medical monitoring interfaces.
 5. **AI Engineering & SaaS Automation**: Intelligent agents, conversational interfaces, automated data extraction, and workflow pipelines.
 
-## Featured Portfolio
-- **FinanceFlow Pro**: Fintech trading and investment platform (+340% user engagement).
-- **MedConnect**: Telemedicine and patient triage system (+250% patient satisfaction).
-- **ShopMax**: 3D interactive eCommerce platform (+420% conversion rate).
-- **BrandVision**: Interactive 3D brand world (+180% average session time).
+## Capability Demonstrations
+- **High-Frequency Trading Engine**: Fintech trading prototype (<50ms WebSocket latency).
+- **Telemedicine Virtual Care Platform**: HIPAA-compliant virtual care build (99.99% uptime architecture).
+- **Headless 3D Commerce Engine**: Interactive eCommerce 3D configurator (sub-second rendering).
+- **WebGL Spatial Brand Showcase**: Interactive 3D canvas experience (60 FPS WebGL shaders).
 
 ## Global Studio Locations
 - **Mumbai HQ**: G Block, Bandra Kurla Complex, Bandra East, Mumbai, MH 400051, India (Tel: +91 8898660011)
@@ -24,7 +24,7 @@ Artum8 Labs is a digital innovation studio that designs, architects, and builds 
 - **USA Office**: On The Green, Dover, Delaware, USA (Tel: +1 302-888-8088)
 
 ## Direct Contact & Transformation Inquiries
-- **Lead Architect**: Mazhar Khan (<mazharkhan@programmer.net>)
+- **Lead Architect**: Mazhar Khan (<hello@artum8labs.com>)
 - **General Inquiries**: <hello@artum8labs.com>
 - **Start Transformation**: https://www.artum8labs.com/contact
 - **SLA**: Initial engineering assessment within 24 hours.

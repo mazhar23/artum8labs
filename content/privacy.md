@@ -1,7 +1,7 @@
 # Privacy Policy — Artum8 Labs
 
 > Last Updated: September 2026 | Effective Immediately
-> Data Protection Contact: mazharkhan@programmer.net
+> Data Protection Contact: hello@artum8labs.com
 
 Artum8 Labs ("we", "our", or "us") respects your privacy and is committed to protecting the personal information you share with us. This Privacy Policy explains our data collection, processing, and protection practices in compliance with global standards including GDPR, CCPA, and India's Digital Personal Data Protection (DPDP) Act.
 
@@ -26,4 +26,4 @@ Under applicable privacy legislation, you have the right to:
 - Request correction or complete deletion of your personal records.
 - Object to or restrict processing of your personal data.
 
-To exercise any data privacy rights, email <mazharkhan@programmer.net> or <hello@artum8labs.com>.
+To exercise any data privacy rights, email <hello@artum8labs.com>.

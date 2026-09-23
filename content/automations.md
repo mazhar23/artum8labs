@@ -53,4 +53,4 @@ A working, pitch-ready software product delivered in 4 weeks for your next launc
 ---
 
 ## Get a Fixed Quote in 24 Hours
-Submit your use case at https://www.artum8labs.com/automations or email <mazharkhan@programmer.net>.
+Submit your use case at https://www.artum8labs.com/automations or email <hello@artum8labs.com>.
