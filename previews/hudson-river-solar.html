@@ -3,448 +3,198 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="HUDSON RIVER SOLAR — A modern website redesign concept for HUDSON, NY. Concept preview.">
 <title>HUDSON RIVER SOLAR — Website Redesign Concept</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --bg:#0c0f0a;--surface:#141a12;--surface2:#1c2418;
-  --primary:#f59e0b;--primary-light:#fbbf24;--accent:#f97316;
-  --text:#fffbeb;--text-muted:#94a3b8;--text-dim:#64748b;
-  --gradient:linear-gradient(135deg, #f59e0b, #d97706, #b45309);--gradient-accent:linear-gradient(135deg, #f97316, #ef4444);
-  --glow:rgba(245,158,11,0.15);--glow2:rgba(249,115,22,0.1);
-  --radius:20px;--radius-sm:12px;
-}
+*{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh;overflow-x:hidden}
-a{color:var(--primary-light);text-decoration:none;transition:opacity .2s}
-a:hover{opacity:.85}
-.container{max-width:1000px;margin:0 auto;padding:0 28px;position:relative;z-index:1}
-#webgl-canvas{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:0;pointer-events:none;}
-body{background:transparent !important;}
-html{background:var(--bg);}
-
-
-/* ─── Nav ─── */
-nav{position:sticky;top:0;z-index:100;backdrop-filter:blur(20px) saturate(1.5);-webkit-backdrop-filter:blur(20px) saturate(1.5);background:rgba(12,15,10,0.8);border-bottom:1px solid rgba(255,255,255,0.04)}
-nav .container{display:flex;align-items:center;justify-content:space-between;height:60px}
-.logo{font-size:1.1rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.02em}
-.nav-links{display:flex;gap:28px;font-size:.8rem;font-weight:500;color:var(--text-dim)}
-.nav-links a{color:var(--text-dim);transition:color .2s}
-.nav-links a:hover{color:var(--text);opacity:1}
-
-/* ─── Hero ─── */
-.hero{position:relative;overflow:hidden;padding:100px 0 80px}
-.hero::before{content:'';position:absolute;top:-60%;left:-40%;width:180%;height:180%;background:radial-gradient(ellipse at 30% 20%,var(--glow) 0%,transparent 50%),radial-gradient(ellipse at 70% 80%,var(--glow2) 0%,transparent 50%);animation:heroFloat 25s ease-in-out infinite;pointer-events:none}
-@keyframes heroFloat{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-3%,2%) scale(1.02)}}
-.hero .container{position:relative;z-index:1;text-align:center}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.2);border-radius:100px;padding:6px 20px;font-size:.72rem;font-weight:600;color:var(--primary-light);margin-bottom:24px;letter-spacing:.04em}
-.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
-.hero h1{font-size:clamp(2rem,5vw,3.8rem);font-weight:900;line-height:1.08;margin-bottom:20px;letter-spacing:-.03em}
-.hero h1 .highlight{background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-sub{max-width:620px;margin:0 auto 36px;font-size:1.05rem;color:var(--text-muted);line-height:1.7}
-.hero-cta{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;border-radius:100px;font-size:.9rem;font-weight:600;color:#fff;background:var(--gradient);box-shadow:0 4px 24px rgba(245,158,11,0.3);transition:all .25s;cursor:pointer;border:none;text-decoration:none}
-.hero-cta:hover{transform:translateY(-2px);box-shadow:0 8px 36px rgba(245,158,11,0.4);opacity:1}
-.hero-cta svg{width:18px;height:18px}
-
-/* ─── Mockup Preview ─── */
-.mockup-section{padding:60px 0 40px}
-.mockup-frame{position:relative;max-width:800px;margin:0 auto;border-radius:var(--radius);overflow:hidden;background:var(--surface);border:1px solid rgba(255,255,255,0.06);box-shadow:0 20px 60px rgba(0,0,0,0.4),0 0 80px var(--glow)}
-.mockup-toolbar{display:flex;align-items:center;gap:8px;padding:14px 20px;background:var(--surface2);border-bottom:1px solid rgba(255,255,255,0.04)}
-.mockup-dot{width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,0.08)}
-.mockup-dot.r{background:#ff5f57}.mockup-dot.y{background:#ffbd2e}.mockup-dot.g{background:#28c840}
-.mockup-url{flex:1;margin-left:12px;padding:5px 14px;border-radius:8px;background:rgba(255,255,255,0.04);font-size:.7rem;color:var(--text-dim);font-family:'Inter',monospace}
-.mockup-body{padding:48px 40px;text-align:center;position:relative;min-height:340px;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.mockup-body::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,var(--glow) 0%,transparent 70%);pointer-events:none}
-.mockup-logo{font-size:.85rem;font-weight:700;color:var(--primary-light);letter-spacing:.06em;margin-bottom:20px;text-transform:uppercase}
-.mockup-h{font-size:clamp(1.6rem,4vw,2.8rem);font-weight:900;line-height:1.12;margin-bottom:16px;letter-spacing:-.02em;position:relative;z-index:1}
-.mockup-loc{font-size:.8rem;color:var(--text-dim);margin-bottom:28px;letter-spacing:.04em}
-.mockup-btn{display:inline-flex;padding:12px 32px;border-radius:100px;font-size:.82rem;font-weight:600;color:#fff;background:var(--gradient);box-shadow:0 4px 20px rgba(245,158,11,0.25);position:relative;z-index:1}
-.mockup-stats{display:flex;justify-content:center;gap:48px;margin-top:32px;padding-top:28px;border-top:1px solid rgba(255,255,255,0.06);position:relative;z-index:1}
-.mockup-stat-val{font-size:1.3rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.mockup-stat-label{font-size:.65rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:.1em;margin-top:2px}
-
-/* ─── Phone & Nav premium ─── */
-.phone-link{display:inline-flex;align-items:center;gap:8px;color:var(--text);font-size:.82rem;font-weight:600;transition:color .2s}
-.phone-link:hover{color:var(--accent);opacity:1}
-.nav-cta-link{display:inline-flex;align-items:center;padding:8px 22px;border-radius:100px;font-size:.78rem;font-weight:600;color:#fff;background:var(--gradient);box-shadow:0 2px 14px rgba(245,158,11,0.3)}
-.nav-cta-link:hover{transform:translateY(-1px);box-shadow:0 4px 22px rgba(245,158,11,0.4);opacity:1}
-.hero-phone{margin-top:18px;font-size:.88rem;color:var(--text-muted);font-weight:500}
-.hero-phone a{color:var(--accent);text-decoration:none;border-bottom:1px dashed rgba(249,115,22,0.4);padding-bottom:1px}
-.hero-phone a:hover{border-bottom-color:var(--accent)}
-.mockup-call{display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:10px 28px;border-radius:100px;font-size:.78rem;font-weight:600;color:#fff;background:var(--gradient-accent);box-shadow:0 4px 18px rgba(249,115,22,0.25);text-decoration:none;transition:all .25s;position:relative;z-index:1}
-.mockup-call:hover{transform:translateY(-2px);opacity:1}
-
-/* ─── Reviews ─── */
-.reviews-section{background:rgba(20,26,18,0.5)}
-.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
-.review-card{background:var(--surface);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius-sm);padding:28px 24px;position:relative;overflow:hidden}
-.review-card::before{content:'"';position:absolute;top:10px;right:20px;font-size:4rem;font-weight:900;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;opacity:.12;line-height:1}
-.review-stars{color:var(--accent);font-size:.85rem;margin-bottom:12px;letter-spacing:2px}
-.review-text{font-size:.82rem;color:var(--text-muted);line-height:1.7;margin-bottom:16px;font-style:italic}
-.review-author{font-size:.75rem;font-weight:600;color:var(--text-dim)}
-
-/* ─── Sections ─── */
-section{padding:64px 0}
-.section-label{text-align:center;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--primary-light);margin-bottom:12px}
-.section-title{text-align:center;font-size:clamp(1.4rem,3.5vw,2.2rem);font-weight:800;margin-bottom:12px;letter-spacing:-.02em}
-.section-desc{text-align:center;max-width:560px;margin:0 auto 40px;color:var(--text-muted);font-size:.9rem;line-height:1.7}
-
-/* ─── Issues ─── */
-.issues-section{background:rgba(20,26,18,0.4)}
-.issues-grid{display:flex;flex-direction:column;gap:14px}
-.issue-card{display:flex;gap:16px;align-items:flex-start;background:var(--surface);border:1px solid rgba(255,255,255,0.05);border-radius:var(--radius-sm);padding:20px 24px;transition:all .3s;animation:fadeUp .5s ease backwards}
-.issue-card:hover{border-color:rgba(255,255,255,0.1);transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,0.2)}
-.issue-severity{font-size:1.3rem;flex-shrink:0;margin-top:2px}
-.issue-title{font-size:.88rem;font-weight:600;margin-bottom:4px}
-.issue-desc{font-size:.78rem;color:var(--text-dim);line-height:1.6}
-@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-
-/* ─── Services ─── */
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-.service-card{position:relative;background:var(--surface);border:1px solid rgba(255,255,255,0.05);border-radius:var(--radius);padding:32px 28px;transition:all .3s;animation:fadeUp .5s ease backwards}
-.service-card:hover{border-color:rgba(245,158,11,0.3);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.25)}
-.service-card.featured{border-color:rgba(249,115,22,0.3);background:linear-gradient(180deg,rgba(249,115,22,0.04) 0%,var(--surface) 50%)}
-.service-badge{font-size:.58rem;font-weight:700;letter-spacing:.14em;color:var(--accent);margin-bottom:14px}
-.service-icon{font-size:1.8rem;margin-bottom:14px}
-.service-name{font-size:1rem;font-weight:700;margin-bottom:6px}
-.service-price{font-size:1.05rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:10px}
-.service-desc{font-size:.78rem;color:var(--text-dim);line-height:1.6}
-
-/* ─── CTA ─── */
-.cta-section{text-align:center;padding:80px 0;position:relative;overflow:hidden}
-.cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,var(--glow) 0%,transparent 60%);pointer-events:none}
-.cta-section h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;margin-bottom:12px;position:relative;z-index:1}
-.cta-section p{color:var(--text-muted);margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;font-size:.9rem;position:relative;z-index:1}
-.cta-btn{display:inline-flex;align-items:center;gap:10px;padding:18px 40px;border-radius:100px;font-size:.95rem;font-weight:700;color:#fff;background:var(--gradient);box-shadow:0 6px 30px rgba(245,158,11,0.35);transition:all .25s;cursor:pointer;border:none;text-decoration:none;position:relative;z-index:1}
-.cta-btn:hover{transform:translateY(-3px);box-shadow:0 10px 40px rgba(245,158,11,0.45);opacity:1}
-.cta-note{font-size:.75rem;color:var(--text-dim);margin-top:16px;position:relative;z-index:1}
-
-/* ─── Footer ─── */
-footer{padding:40px 0;border-top:1px solid rgba(255,255,255,0.04);text-align:center;font-size:.72rem;color:var(--text-dim)}
-footer p{margin:4px 0}
-footer strong{color:var(--text-muted)}
-
-/* ─── Responsive ─── */
-@media(max-width:768px){
-  .nav-links{display:none}
-  .mockup-body{padding:32px 24px}
-  .mockup-stats{gap:24px}
-  .services-grid{grid-template-columns:1fr}
-  .hero{padding:60px 0 50px}
+[data-rv]{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+[data-rv].in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  [data-rv]{opacity:1 !important;transform:none !important}
+  *{animation:none !important;transition:none !important}
 }
-@media(max-width:480px){
-  .mockup-stats{flex-direction:column;gap:16px}
+
+body.color-blocks{
+  --paper:#f4f1e8; --ink:#1c1a17; --muted:#8a8578;
+  --tile-a:#ed83b0; --tile-b:#e4dc62; --tile-c:#92c78f; --tile-d:#76c6de; --tile-e:#6963c6;
+  background:var(--paper); color:var(--ink);
+  font-family:'Space Grotesk',sans-serif; line-height:1.5;
 }
+.color-blocks .c-inner{max-width:1120px;margin:0 auto;padding:0 28px}
+.color-blocks .c-top{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:18px 28px;background:var(--paper);border-bottom:2px solid var(--ink);font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
+.color-blocks .c-top .chunk{display:flex;gap:18px;align-items:center}
+.color-blocks .c-top .chunk u{text-decoration:none;border-bottom:2px solid var(--ink)}
+.color-blocks .c-top a{color:var(--ink);text-decoration:none}
+.color-blocks .c-top a:hover{background:var(--tile-c);color:var(--ink)}
+.color-blocks .hero{padding:90px 0 20px}
+.color-blocks .hero-tag{font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:30px}
+.color-blocks .hero-h{font-size:clamp(2.4rem,6.5vw,5.4rem);font-weight:700;letter-spacing:-.03em;line-height:.98;margin:0}
+.color-blocks .hero-h span{display:inline-block;padding:0 .06em}
+.color-blocks .hero-h .invert{background:var(--ink);color:var(--paper)}
+.color-blocks .hero-h .tile-a{background:var(--tile-a)}.color-blocks .hero-h .tile-b{background:var(--tile-b)}
+.color-blocks .hero-h .tile-c{background:var(--tile-c)}.color-blocks .hero-h .tile-d{background:var(--tile-d)}
+.color-blocks .hero-sub{font-family:'Space Mono',monospace;font-size:.8rem;color:var(--muted);max-width:48ch;margin-top:28px;line-height:1.8}
+.color-blocks .tile-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:48px}
+.color-blocks .tile{padding:18px 6px;text-align:center;font-family:'Space Mono',monospace;font-size:.8rem;letter-spacing:.04em;border:2px solid var(--ink);min-height:64px;display:flex;align-items:center;justify-content:center;text-decoration:none;color:var(--ink)}
+.color-blocks .tile:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--ink)}
+.color-blocks .tile.t-a{background:var(--tile-a)}.color-blocks .tile.t-b{background:var(--tile-b)}
+.color-blocks .tile.t-c{background:var(--tile-c)}.color-blocks .tile.t-d{background:var(--tile-d)}
+.color-blocks .tile.t-e{background:var(--tile-e);color:#fff}
+.color-blocks .tile.t-ink{background:var(--ink);color:var(--paper)}
+.color-blocks section.c-sec{border-top:2px solid var(--ink);padding:64px 0}
+.color-blocks .sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:36px;font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
+.color-blocks .sec head .h{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.5rem,3.5vw,2.4rem);font-weight:700;letter-spacing:-.02em;text-transform:none}
+.color-blocks .sec-h{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.5rem,3.5vw,2.4rem);font-weight:700;letter-spacing:-.02em;margin:0}
+.color-blocks .issue-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.color-blocks .issue{border:2px solid var(--ink);padding:22px;background:#fff;transition:transform .15s}
+.color-blocks .issue:hover{transform:rotate(-.6deg)}
+.color-blocks .issue .f-n{font-family:'Space Mono',monospace;font-size:.66rem;display:block;margin-bottom:12px}
+.color-blocks .issue:nth-child(1) .f-n{color:#000}
+.color-blocks .issue .f-t{font-weight:700;font-size:1rem;margin-bottom:6px}
+.color-blocks .issue .f-d{font-size:.8rem;color:var(--muted);line-height:1.6}
+.color-blocks .works{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.color-blocks .work{border:2px solid var(--ink);background:#fff;padding:26px;display:flex;justify-content:space-between;align-items:flex-start;gap:14px;transition:transform .15s}
+.color-blocks .work:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--ink)}
+.color-blocks .work .w-k{font-family:'Space Mono',monospace;font-size:.64rem;display:block;margin-bottom:16px}
+.color-blocks .work .w-t{font-weight:700;font-size:1.35rem;letter-spacing:-.01em}
+.color-blocks .work .w-d{font-size:.8rem;color:var(--muted);margin-top:8px;line-height:1.6}
+.color-blocks .work .w-p{font-family:'Space Mono',monospace;font-size:.72rem;font-weight:700;white-space:nowrap}
+.color-blocks .review-strip{border:2px solid var(--ink);background:var(--tile-a);padding:28px 24px;display:flex;gap:18px;align-items:center;margin-bottom:12px}
+.color-blocks .review-strip .rv-tile{flex:none;width:56px;height:56px;border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-weight:700;background:#fff}
+.color-blocks .review-strip blockquote{margin:0;font-weight:600;font-size:1.05rem}
+.color-blocks .review-strip cite{font-style:normal;font-family:'Space Mono',monospace;font-size:.68rem;opacity:.75;display:block;margin-top:6px}
+.color-blocks .cta{padding:70px 0 0;border-top:2px solid var(--ink)}
+.color-blocks .cta-h{font-size:clamp(2rem,5vw,3.8rem);font-weight:700;letter-spacing:-.03em;line-height:1.02;margin:0 0 30px}
+.color-blocks .cta-h span{background:var(--tile-b)}
+.color-blocks .btn{display:inline-flex;padding:18px 36px;border:2px solid var(--ink);background:var(--paper);font-family:'Space Mono',monospace;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--ink);transition:all .15s}
+.color-blocks .btn:hover{background:var(--ink);color:var(--paper)}
+.color-blocks .btn.alt{margin-left:10px;background:var(--tile-c)}
+.color-blocks .btn.alt:hover{background:var(--ink);color:var(--paper)}
+.color-blocks .c-foot{border-top:2px solid var(--ink);margin-top:64px;padding:26px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.08em}
+.color-blocks .c-foot a{color:var(--ink)}
+@media(max-width:720px){
+  .color-blocks .tile-grid{grid-template-columns:repeat(3,1fr)}
+  .color-blocks .works{grid-template-columns:1fr}
+  .color-blocks .btn.alt{margin-left:0;margin-top:10px}
+}
+
 </style>
 </head>
-<body>
-<canvas id="webgl-canvas"></canvas>
+<body class="color-blocks" data-layout="color-blocks">
 
-<nav>
-<div class="container">
-  <div class="logo">Artum 8 Labs</div>
-  <div class="nav-links">
-    
-    <a href="#services">Services</a>
-    
-    <a href="#cta" class="nav-cta-link">Get Started</a>
-  </div>
-</div>
+<nav class="c-top">
+  <span class="chunk"><u>ARTUM8</u><span>· LABS</span></span>
+  <span class="chunk">
+    <span>Get Free Quote</span>
+    <span>HUDSON, NY</span>
+    <a href="https://cal.com/artum8labs">book ↗</a>
+  </span>
 </nav>
+<main class="c-inner" id="top">
+  <header class="hero">
+    <p class="hero-tag">Website concept — HUDSON RIVER SOLAR · solar-installers</p>
+    <h1 class="hero-h">HUDSON<br>
+      <span class="tile-d">Power Their</span><br>
+      <span class="invert">goes online.</span>
+    </h1>
+    <p class="hero-sub">A bold, trust-building website that educates homeowners and drives more solar consultation bookings.</p>
+    <div class="tile-grid">
+    <a class="tile t-a" href="#fix">design<br>Tax</a>
 
-<section class="hero">
-<div class="container">
-  <div class="hero-badge">Website Redesign Concept for HUDSON RIVER SOLAR</div>
-  <h1><span class="highlight">HUDSON RIVER SOLAR</span><br>deserves a stronger online presence.</h1>
-  <p class="hero-sub">A bold, trust-building website that educates homeowners and drives more solar consultation bookings.</p>
-  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-    <a href="#cta" class="hero-cta" style="margin:0">
-      View Your Custom Plan
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
-    
-  </div>
-</div>
-</section>
+    <a class="tile t-b" href="#fix">local seo<br>Local</a>
 
-<section class="mockup-section">
-<div class="container">
-  <div class="mockup-frame">
-    <div class="mockup-toolbar">
-      <span class="mockup-dot r"></span>
-      <span class="mockup-dot y"></span>
-      <span class="mockup-dot g"></span>
-      <span class="mockup-url">www.hudsonriversolar.com</span>
+    <a class="tile t-c" href="#fix">convert<br>A+</a>
+
+    <a class="tile t-d" href="#fix">mobile<br>100%</a>
+
+    <a class="tile t-e" href="#fix">book<br>Get Free Quote</a>
+
+    <a class="tile t-ink" href="#fix">Power Their Home. Grow Your Business.<br>2026</a></div>
+  </header>
+
+  <section class="c-sec">
+    <div class="sec-head" data-rv>
+      <h2 class="sec-h">Nothing wrong with being found.</h2>
+      <span>the issues</span>
     </div>
-    <div class="mockup-body">
-      <div class="mockup-logo">HUDSON RIVER SOLAR</div>
-      <div class="mockup-h">Power Their Home.<br>Grow Your Business.</div>
-      <div class="mockup-loc">HUDSON, NY — solar-installers</div>
-      <div class="mockup-btn">Get Free Quote</div>
-      
-      <div class="mockup-stats">
-        <div><div class="mockup-stat-val">Tax</div><div class="mockup-stat-label">Credits</div></div>
-        <div><div class="mockup-stat-val">Local</div><div class="mockup-stat-label">Trusted</div></div>
-        <div><div class="mockup-stat-val">A+</div><div class="mockup-stat-label">Design</div></div>
+    <div class="issue-grid"><div class="issue" data-rv>
+      <span class="f-n">#00 — found</span>
+      <p class="f-t">No website yet</p>
+      <p class="f-d">Start with a strong first impression — and HUDSON RIVER SOLAR won't need a second chance.</p>
+    </div></div>
+  </section>
+
+  <section class="c-sec">
+    <div class="sec-head" data-rv>
+      <h2 class="sec-h">What we build.</h2>
+      <span>services · HUDSON, NY</span>
+    </div>
+    <div class="works">
+    <div class="work" data-rv style="transform:none">
+      <div>
+        <span class="w-k" style="background:var(--tile-a)">Get Free Quote — 01</span>
+        <p class="w-t">Solar Company Website</p>
+        <p class="w-d">Bold, trust-building design with savings calculator, project gallery, and instant quotes.</p>
       </div>
+      <span class="w-p">$4,000 – $8,000</span>
     </div>
+
+    <div class="work" data-rv style="transform:none">
+      <div>
+        <span class="w-k" style="background:var(--tile-b)">Get Free Quote — 02</span>
+        <p class="w-t">Lead Generation</p>
+        <p class="w-d">Google Ads plus landing pages optimized for solar consultation bookings.</p>
+      </div>
+      <span class="w-p">$800/mo</span>
+    </div>
+
+    <div class="work" data-rv style="transform:none">
+      <div>
+        <span class="w-k" style="background:var(--tile-a)">Get Free Quote — 03</span>
+        <p class="w-t">Review Builder</p>
+        <p class="w-d">Automated review requests to build your 5-star reputation.</p>
+      </div>
+      <span class="w-p">$300/mo</span>
+    </div></div>
+  </section>
+
+  <div class="review-strip" data-rv>
+    <span class="rv-tile">★5</span>
+    <blockquote>A site like this tells me a business is serious.
+      <cite>concept review — HUDSON RIVER SOLAR × Artum 8 Labs</cite>
+    </blockquote>
   </div>
-</div>
-</section>
 
-
-
-<section class="reviews-section">
-<div class="container">
-  <div class="section-label">TRUSTED LOCALLY</div>
-  <div class="section-title">What neighborhood reviews say</div>
-  <div class="section-desc">Your area is full of people searching for a business like HUDSON RIVER SOLAR — make sure they choose you first.</div>
-  <div class="reviews-grid">
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <div class="review-text">"Finally a website that actually works on my phone. Called them straight from the page."</div>
-      <div class="review-author">Local customer</div>
-    </div>
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <div class="review-text">"Found everything I needed in seconds — services, pricing, phone number right there."</div>
-      <div class="review-author">Nearby resident</div>
-    </div>
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <div class="review-text">"Looks modern and trustworthy. This is how a professional business should present itself."</div>
-      <div class="review-author">Verified visitor</div>
-    </div>
-  </div>
-</div>
-</section>
-
-<section id="services">
-<div class="container">
-  <div class="section-label">OUR RECOMMENDATION</div>
-  <div class="section-title">Services tailored for HUDSON RIVER SOLAR</div>
-  <div class="section-desc">Based on our analysis, here's exactly what we recommend to transform your online presence.</div>
-  <div class="services-grid">
-    
-    <div class="service-card featured" style="animation-delay:0s">
-      <div class="service-badge">RECOMMENDED</div>
-      <div class="service-icon">☀️</div>
-      <div class="service-name">Solar Company Website</div>
-      <div class="service-price">$4,000 — $8,000</div>
-      <div class="service-desc">Bold, trust-building design with savings calculator, project gallery, and instant quotes.</div>
-    </div>
-
-    <div class="service-card" style="animation-delay:0.1s">
+  <section class="cta" id="fix">
+    <h2 class="cta-h">Let us put you <span>on the map.</span></h2>
+    <div>
+      <a class="btn" href="https://cal.com/artum8labs">Book a free call</a>
       
-      <div class="service-icon">📊</div>
-      <div class="service-name">Lead Generation</div>
-      <div class="service-price">$800/mo</div>
-      <div class="service-desc">Google Ads + landing pages optimized for solar consultation bookings.</div>
     </div>
-
-    <div class="service-card" style="animation-delay:0.2s">
-      
-      <div class="service-icon">⭐</div>
-      <div class="service-name">Review Builder</div>
-      <div class="service-price">$300/mo</div>
-      <div class="service-desc">Automated review requests to build your 5-star reputation.</div>
-    </div>
-  </div>
-</div>
-</section>
-
-<section class="cta-section" id="cta">
-<div class="container">
-  <h2>Ready to grow?</h2>
-  <p>Every price is negotiable — let's find the right package that fits your budget and goals.</p>
-  <a href="https://cal.com/artum8labs" class="cta-btn" target="_blank">
-    Schedule a Free Consultation
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-  </a>
-  
-  <div class="cta-note">No obligation. We'll discuss your goals and send a custom proposal.</div>
-</div>
-</section>
-
-<footer>
-<div class="container">
-  <p><strong>Artum 8 Labs</strong> — Helping local businesses grow online.</p>
-  <p>www.hudsonriversolar.com</p>
-  
-  <p>This is a design concept prepared for HUDSON RIVER SOLAR. &copy; 2026 Artum 8 Labs.</p>
-</div>
+  </section>
+</main>
+<footer class="c-foot">
+  <span>© 2026 Artum 8 Labs</span>
+  <span>www.hudsonriversolar.com</span>
+  <span>concept · HUDSON RIVER SOLAR</span>
 </footer>
-
-<!-- WebGL & Lenis Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
 <script>
-  // Setup Lenis
-  const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
-  let scrollY = 0;
-  let scrollVelocity = 0;
-  lenis.on('scroll', (e) => {
-    scrollY = e.scroll;
-    scrollVelocity = e.velocity;
-  });
-
-  // Setup Three.js
-  const canvas = document.getElementById('webgl-canvas');
-  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-  renderer.setSize(window.innerWidth, window.innerHeight);
-
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
-  camera.position.z = 5;
-
-  // Custom GLSL Shader for Distant Peaks / Fog
-  const geometry = new THREE.PlaneGeometry(12, 12, 64, 64);
-  
-  const hexToRgb = (hex) => {
-    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-    return result ? [parseInt(result[1], 16)/255, parseInt(result[2], 16)/255, parseInt(result[3], 16)/255] : [0,0,0];
-  };
-  
-  const color1 = hexToRgb('#f59e0b');
-  const color2 = hexToRgb('#f97316');
-  const bgColor = hexToRgb('#0c0f0a');
-
-  const material = new THREE.ShaderMaterial({
-    uniforms: {
-      uTime: { value: 0 },
-      uScroll: { value: 0 },
-      uVelocity: { value: 0 },
-      uColor1: { value: new THREE.Vector3(...color1) },
-      uColor2: { value: new THREE.Vector3(...color2) },
-      uBgColor: { value: new THREE.Vector3(...bgColor) }
-    },
-    vertexShader: `
-      uniform float uTime;
-      uniform float uScroll;
-      uniform float uVelocity;
-      varying vec2 vUv;
-      varying float vElevation;
-
-      // Classic Perlin 3D Noise 
-      vec4 permute(vec4 x){return mod(((x*34.0)+1.0)*x, 289.0);}
-      vec4 taylorInvSqrt(vec4 r){return 1.79284291400159 - 0.85373472095314 * r;}
-      float cnoise(vec3 P){
-        vec3 Pi0 = floor(P); vec3 Pi1 = Pi0 + vec3(1.0);
-        Pi0 = mod(Pi0, 289.0); Pi1 = mod(Pi1, 289.0);
-        vec3 Pf0 = fract(P); vec3 Pf1 = Pf0 - vec3(1.0);
-        vec4 ix = vec4(Pi0.x, Pi1.x, Pi0.x, Pi1.x);
-        vec4 iy = vec4(Pi0.yy, Pi1.yy);
-        vec4 iz0 = Pi0.zzzz; vec4 iz1 = Pi1.zzzz;
-        vec4 ixy = permute(permute(ix) + iy);
-        vec4 ixy0 = permute(ixy + iz0); vec4 ixy1 = permute(ixy + iz1);
-        vec4 gx0 = ixy0 / 7.0; vec4 gy0 = fract(floor(gx0) / 7.0) - 0.5;
-        gx0 = fract(gx0); vec4 gz0 = vec4(0.5) - abs(gx0) - abs(gy0);
-        vec4 sz0 = step(gz0, vec4(0.0));
-        gx0 -= sz0 * (step(0.0, gx0) - 0.5); gy0 -= sz0 * (step(0.0, gy0) - 0.5);
-        vec4 gx1 = ixy1 / 7.0; vec4 gy1 = fract(floor(gx1) / 7.0) - 0.5;
-        gx1 = fract(gx1); vec4 gz1 = vec4(0.5) - abs(gx1) - abs(gy1);
-        vec4 sz1 = step(gz1, vec4(0.0));
-        gx1 -= sz1 * (step(0.0, gx1) - 0.5); gy1 -= sz1 * (step(0.0, gy1) - 0.5);
-        vec3 g000 = vec3(gx0.x,gy0.x,gz0.x); vec3 g100 = vec3(gx0.y,gy0.y,gz0.y);
-        vec3 g010 = vec3(gx0.z,gy0.z,gz0.z); vec3 g110 = vec3(gx0.w,gy0.w,gz0.w);
-        vec3 g001 = vec3(gx1.x,gy1.x,gz1.x); vec3 g101 = vec3(gx1.y,gy1.y,gz1.y);
-        vec3 g011 = vec3(gx1.z,gy1.z,gz1.z); vec3 g111 = vec3(gx1.w,gy1.w,gz1.w);
-        vec4 norm0 = taylorInvSqrt(vec4(dot(g000, g000), dot(g010, g010), dot(g100, g100), dot(g110, g110)));
-        g000 *= norm0.x; g010 *= norm0.y; g100 *= norm0.z; g110 *= norm0.w;
-        vec4 norm1 = taylorInvSqrt(vec4(dot(g001, g001), dot(g011, g011), dot(g101, g101), dot(g111, g111)));
-        g001 *= norm1.x; g011 *= norm1.y; g101 *= norm1.z; g111 *= norm1.w;
-        float n000 = dot(g000, Pf0); float n100 = dot(g100, vec3(Pf1.x, Pf0.yz));
-        float n010 = dot(g010, vec3(Pf0.x, Pf1.y, Pf0.z)); float n110 = dot(g110, vec3(Pf1.xy, Pf0.z));
-        float n001 = dot(g001, vec3(Pf0.xy, Pf1.z)); float n101 = dot(g101, vec3(Pf1.x, Pf0.y, Pf1.z));
-        float n011 = dot(g011, vec3(Pf0.x, Pf1.yz)); float n111 = dot(g111, Pf1);
-        vec3 fade_xyz = Pf0 * Pf0 * (3.0 - 2.0 * Pf0);
-        vec4 n_z = mix(vec4(n000, n100, n010, n110), vec4(n001, n101, n011, n111), fade_xyz.z);
-        vec2 n_yz = mix(n_z.xy, n_z.zw, fade_xyz.y);
-        float n_xyz = mix(n_yz.x, n_yz.y, fade_xyz.x); 
-        return 2.2 * n_xyz;
-      }
-
-      void main() {
-        vUv = uv;
-        vec3 pos = position;
-        
-        // Displacement
-        float noiseFreq = 1.5;
-        float noiseAmp = 0.6;
-        vec3 noisePos = vec3(pos.x * noiseFreq + uTime * 0.1, pos.y * noiseFreq - uScroll * 0.002, pos.z);
-        
-        // Velocity distorts the wave
-        float elevation = cnoise(noisePos) * noiseAmp;
-        elevation += cnoise(noisePos * 2.5) * 0.2;
-        elevation -= (uVelocity * 0.003) * pos.y;
-        
-        pos.z += elevation;
-        vElevation = elevation;
-        
-        gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
-      }
-    `,
-    fragmentShader: `
-      uniform vec3 uColor1;
-      uniform vec3 uColor2;
-      uniform vec3 uBgColor;
-      varying vec2 vUv;
-      varying float vElevation;
-      
-      void main() {
-        float mixStrength = (vElevation + 0.6) * 0.8;
-        vec3 mixedColor = mix(uBgColor, uColor1, mixStrength);
-        mixedColor = mix(mixedColor, uColor2, vElevation * 1.5);
-        
-        // Soft gradient falloff (fog)
-        float dist = distance(vUv, vec2(0.5));
-        float alpha = smoothstep(0.6, 0.2, dist);
-        
-        gl_FragColor = vec4(mixedColor, alpha * 0.6);
-      }
-    `,
-    transparent: true,
-    wireframe: false,
-    depthWrite: false
-  });
-
-  const mesh = new THREE.Mesh(geometry, material);
-  mesh.rotation.x = -Math.PI * 0.3;
-  mesh.position.y = -1.5;
-  scene.add(mesh);
-
-  // Animation Loop
-  const clock = new THREE.Clock();
-  
-  function raf(time) {
-    lenis.raf(time);
-    const elapsedTime = clock.getElapsedTime();
-    
-    // Update Uniforms
-    material.uniforms.uTime.value = elapsedTime;
-    material.uniforms.uScroll.value = scrollY;
-    
-    // Smooth velocity
-    material.uniforms.uVelocity.value += (scrollVelocity - material.uniforms.uVelocity.value) * 0.1;
-    
-    // Physical camera movement on scroll
-    camera.position.y = -scrollY * 0.001;
-    
-    renderer.render(scene, camera);
-    requestAnimationFrame(raf);
+(function(){
+  var items = document.querySelectorAll('[data-rv]');
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(function(el){ el.classList.add('in'); });
+    return;
   }
-  
-  requestAnimationFrame(raf);
-
-  // Resize handler
-  window.addEventListener('resize', () => {
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-  });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  items.forEach(function(el){ io.observe(el); });
+})();
 </script>
 </body>
 </html>
