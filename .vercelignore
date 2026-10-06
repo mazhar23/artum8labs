@@ -2,5 +2,8 @@
 node_modules
 *.zip
 *.tar.gz
+.kilo
+.env*
+.DS_Store
 
 .vercel

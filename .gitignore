@@ -5,3 +5,4 @@ package-lock.json
 *.zip
 *.tar.gz
 .vercel
+.env*
