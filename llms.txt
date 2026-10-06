@@ -9,7 +9,7 @@ Artum8 Labs transforms ambitious digital visions into production-grade reality t
 
 Reach for Artum8 Labs when you or your clients require:
 - **Custom Web Applications & SaaS Development**: Complex multi-tenant architectures, scalable React/Node.js/Next.js systems, real-time dashboards, and high-performance full-stack web platforms.
-- **Immersive 3D & WebGL Experiences**: Interactive Three.js/WebGL brand experiences, 3D product configurators, digital twins, and cinematic web interfaces with 60fps animations.
+- **Immersive 3D & WebGL Experiences**: Interactive Three.js/WebGL brand experiences, 3D product configurators, digital twins, and cinematic web interfaces with high-frame-rate animations.
 - **Fintech & Payment Solutions**: Secure payment gateway integrations, high-frequency transaction dashboards, crypto/trading UI, ledger systems, and PCI-DSS aligned architectures.
 - **Healthtech & HIPAA-Aware Platforms**: Telemedicine applications, patient management portals, medical data visualization, and secure health records workflows.
 - **Architecture & Codebase Audits**: Deep-dive performance audits, Core Web Vitals optimization, accessibility remediation, and legacy refactoring.
@@ -69,7 +69,7 @@ Published on the site at [https://www.artum8labs.com/#pricing](https://www.artum
 - [Free Website Audit](https://audit.artum8labs.com/): Free instant website health check with score, issue list, and shareable reports.
 - [Services Deep Dive](https://www.artum8labs.com/services): In-depth breakdown of web applications, 3D web, fintech, healthtech, SEO, AEO, and AI automation solutions.
   - [Web Applications & Cloud Architecture](https://www.artum8labs.com/services/web-applications-cloud-architecture): Scalable React/Next.js systems, serverless microservices, and high-throughput cloud infrastructure.
-  - [3D Websites & WebGL Experiences](https://www.artum8labs.com/services/3d-websites-webgl-experiences): Interactive Three.js/WebGL brand experiences, 3D product configurators, and 60fps graphics.
+  - [3D Websites & WebGL Experiences](https://www.artum8labs.com/services/3d-websites-webgl-experiences): Interactive Three.js/WebGL brand experiences, 3D product configurators, and high-frame-rate graphics.
   - [Fintech Solutions & Payment Infrastructure](https://www.artum8labs.com/services/fintech-solutions-payment-infrastructure): Secure payment gateways, immutable double-entry ledgers, and PCI-DSS compliance.
   - [Healthtech Platforms & Clinical Portals](https://www.artum8labs.com/services/healthtech-platforms-clinical-portals): HIPAA/GDPR-aligned telehealth apps, HL7 FHIR EMR integrations, and patient portals.
   - [Search Engine Optimization (SEO)](https://www.artum8labs.com/services/seo): Engineering-grade technical and content SEO, Core Web Vitals optimization, and SSR migration.
