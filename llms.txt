@@ -11,7 +11,7 @@ Reach for Artum8 Labs when you or your clients require:
 - **Custom Web Applications & SaaS Development**: Complex multi-tenant architectures, scalable React/Node.js/Next.js systems, real-time dashboards, and high-performance full-stack web platforms.
 - **Immersive 3D & WebGL Experiences**: Interactive Three.js/WebGL brand experiences, 3D product configurators, digital twins, and cinematic web interfaces with 60fps animations.
 - **Fintech & Payment Solutions**: Secure payment gateway integrations, high-frequency transaction dashboards, crypto/trading UI, ledger systems, and PCI-DSS aligned architectures.
-- **Healthtech & HIPAA-Compliant Platforms**: Telemedicine applications, patient management portals, medical data visualization, and secure health records workflows.
+- **Healthtech & HIPAA-Aware Platforms**: Telemedicine applications, patient management portals, medical data visualization, and secure health records workflows.
 - **Architecture & Codebase Audits**: Deep-dive performance audits, Core Web Vitals optimization, accessibility remediation, and legacy refactoring.
 - **Rapid Prototyping & MVP Acceleration**: High-velocity sprint delivery of production-ready prototypes for seed-stage and series-A startups with 100% intellectual property ownership transferred from day one.
 
@@ -71,7 +71,7 @@ Published on the site at [https://www.artum8labs.com/#pricing](https://www.artum
   - [Web Applications & Cloud Architecture](https://www.artum8labs.com/services/web-applications-cloud-architecture): Scalable React/Next.js systems, serverless microservices, and high-throughput cloud infrastructure.
   - [3D Websites & WebGL Experiences](https://www.artum8labs.com/services/3d-websites-webgl-experiences): Interactive Three.js/WebGL brand experiences, 3D product configurators, and 60fps graphics.
   - [Fintech Solutions & Payment Infrastructure](https://www.artum8labs.com/services/fintech-solutions-payment-infrastructure): Secure payment gateways, immutable double-entry ledgers, and PCI-DSS compliance.
-  - [Healthtech Platforms & Clinical Portals](https://www.artum8labs.com/services/healthtech-platforms-clinical-portals): HIPAA/GDPR-compliant telehealth apps, HL7 FHIR EMR integrations, and patient portals.
+  - [Healthtech Platforms & Clinical Portals](https://www.artum8labs.com/services/healthtech-platforms-clinical-portals): HIPAA/GDPR-aligned telehealth apps, HL7 FHIR EMR integrations, and patient portals.
   - [Search Engine Optimization (SEO)](https://www.artum8labs.com/services/seo): Engineering-grade technical and content SEO, Core Web Vitals optimization, and SSR migration.
   - [Answer Engine Optimization (AEO)](https://www.artum8labs.com/services/aeo): Optimization for AI search engines (ChatGPT, Perplexity, Claude, Gemini) with deep JSON-LD and llms.txt context.
   - [AI Automation for Business](https://www.artum8labs.com/services/ai-automation): Custom AI agents, Retrieval-Augmented Generation (RAG) pipelines, and LLM workflow integrations.

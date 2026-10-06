@@ -15,42 +15,42 @@ class MagicBento {
       {
         color: '#1a1a1a',
         title: 'Trading Platform',
-        description: 'High-Frequency Architecture - <50ms Stream Latency',
+        description: 'High-Frequency Trading Dashboard Demo',
         label: 'FINTECH DEMO',
         image: '../images/Financeflow.svg'
       },
       {
         color: '#1a1a1a',
         title: 'Telemedicine System',
-        description: 'HIPAA Virtual Care Build - 99.99% Uptime Architecture',
+        description: 'HIPAA-Aware Virtual Care Build',
         label: 'HEALTHTECH DEMO',
         image: '../images/Medconnect.svg'
       },
       {
         color: '#1a1a1a',
         title: 'Headless Commerce Engine',
-        description: '3D Configurator - Sub-Second Page Render',
+        description: '3D Product Configurator Demo',
         label: 'ECOMMERCE DEMO',
         image: '../images/ShopMax.svg'
       },
       {
         color: '#1a1a1a',
         title: 'WebGL Brand Experience',
-        description: 'Interactive Spatial Web - 60 FPS 3D Engine',
+        description: 'Interactive Spatial Web Experience',
         label: '3D/WEBGL DEMO',
         image: '../images/Brandvision.svg'
       },
       {
         color: '#1a1a1a',
         title: 'Crypto Settlement Engine',
-        description: 'Multi-Sig Vault Build - SOC2 / Compliance Architecture',
+        description: 'Multi-Sig Vault Demo',
         label: 'BLOCKCHAIN DEMO',
         image: '../images/Cryptotrade.svg'
       },
       {
         color: '#1a1a1a',
         title: 'Patient Data Engine',
-        description: 'FHIR Interoperability - Instant Record Retrieval',
+        description: 'FHIR Interoperability Demo',
         label: 'HEALTH DATA DEMO',
         image: '../images/healthcare++.svg'
       },
@@ -64,7 +64,7 @@ class MagicBento {
       {
         color: '#1a1a1a',
         title: 'High-Throughput Gateway',
-        description: 'Sub-Second Payment API - Zero Downtime Routing',
+        description: 'Payment API Gateway Demo',
         label: 'PAYMENTS DEMO',
         image: '../images/company-logo-3.svg'
       }
