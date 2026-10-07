@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="JR Landscapes LLC — A modern website redesign concept for Denver, CO. Concept preview.">
+<title>JR Landscapes LLC — Website Redesign Concept</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+footer{overflow-wrap:anywhere}
+[data-rv]{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+[data-rv].in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  [data-rv]{opacity:1 !important;transform:none !important}
+  *{animation:none !important;transition:none !important}
+}
+
+body.color-blocks{
+  --paper:#f4f1e8; --ink:#1c1a17; --muted:#8a8578;
+  --tile-a:#ed83b0; --tile-b:#e4dc62; --tile-c:#92c78f; --tile-d:#76c6de; --tile-e:#6963c6;
+  background:var(--paper); color:var(--ink);
+  font-family:'Space Grotesk',sans-serif; line-height:1.5;
+}
+.color-blocks .c-inner{max-width:1120px;margin:0 auto;padding:0 28px}
+.color-blocks .c-top{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:18px 28px;background:var(--paper);border-bottom:2px solid var(--ink);font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
+.color-blocks .c-top .chunk{display:flex;gap:18px;align-items:center}
+.color-blocks .c-top .chunk u{text-decoration:none;border-bottom:2px solid var(--ink)}
+.color-blocks .c-top a{color:var(--ink);text-decoration:none}
+.color-blocks .c-top a:hover{background:var(--tile-c);color:var(--ink)}
+.color-blocks .hero{padding:90px 0 20px}
+.color-blocks .hero-tag{font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:30px}
+.color-blocks .hero-h{font-size:clamp(2.4rem,6.5vw,5.4rem);font-weight:700;letter-spacing:-.03em;line-height:.98;margin:0}
+.color-blocks .hero-h span{display:inline-block;padding:0 .06em}
+.color-blocks .hero-h .invert{background:var(--ink);color:var(--paper)}
+.color-blocks .hero-h .tile-a{background:var(--tile-a)}.color-blocks .hero-h .tile-b{background:var(--tile-b)}
+.color-blocks .hero-h .tile-c{background:var(--tile-c)}.color-blocks .hero-h .tile-d{background:var(--tile-d)}
+.color-blocks .hero-sub{font-family:'Space Mono',monospace;font-size:.8rem;color:var(--muted);max-width:48ch;margin-top:28px;line-height:1.8}
+.color-blocks .tile-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:48px}
+.color-blocks .tile{padding:18px 6px;text-align:center;font-family:'Space Mono',monospace;font-size:.8rem;letter-spacing:.04em;border:2px solid var(--ink);min-height:64px;display:flex;align-items:center;justify-content:center;text-decoration:none;color:var(--ink)}
+.color-blocks .tile:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--ink)}
+.color-blocks .tile.t-a{background:var(--tile-a)}.color-blocks .tile.t-b{background:var(--tile-b)}
+.color-blocks .tile.t-c{background:var(--tile-c)}.color-blocks .tile.t-d{background:var(--tile-d)}
+.color-blocks .tile.t-e{background:var(--tile-e);color:#fff}
+.color-blocks .tile.t-ink{background:var(--ink);color:var(--paper)}
+.color-blocks section.c-sec{border-top:2px solid var(--ink);padding:64px 0}
+.color-blocks .sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:36px;font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
+.color-blocks .sec head .h{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.5rem,3.5vw,2.4rem);font-weight:700;letter-spacing:-.02em;text-transform:none}
+.color-blocks .sec-h{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.5rem,3.5vw,2.4rem);font-weight:700;letter-spacing:-.02em;margin:0}
+.color-blocks .issue-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.color-blocks .issue{border:2px solid var(--ink);padding:22px;background:#fff;transition:transform .15s}
+.color-blocks .issue:hover{transform:rotate(-.6deg)}
+.color-blocks .issue .f-n{font-family:'Space Mono',monospace;font-size:.66rem;display:block;margin-bottom:12px}
+.color-blocks .issue:nth-child(1) .f-n{color:#000}
+.color-blocks .issue .f-t{font-weight:700;font-size:1rem;margin-bottom:6px}
+.color-blocks .issue .f-d{font-size:.8rem;color:var(--muted);line-height:1.6}
+.color-blocks .works{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.color-blocks .work{border:2px solid var(--ink);background:#fff;padding:26px;display:flex;justify-content:space-between;align-items:flex-start;gap:14px;transition:transform .15s}
+.color-blocks .work:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--ink)}
+.color-blocks .work .w-k{font-family:'Space Mono',monospace;font-size:.64rem;display:block;margin-bottom:16px}
+.color-blocks .work .w-t{font-weight:700;font-size:1.35rem;letter-spacing:-.01em}
+.color-blocks .work .w-d{font-size:.8rem;color:var(--muted);margin-top:8px;line-height:1.6}
+.color-blocks .work .w-p{font-family:'Space Mono',monospace;font-size:.72rem;font-weight:700;white-space:nowrap}
+.color-blocks .review-strip{border:2px solid var(--ink);background:var(--tile-a);padding:28px 24px;display:flex;gap:18px;align-items:center;margin-bottom:12px}
+.color-blocks .review-strip .rv-tile{flex:none;width:56px;height:56px;border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-weight:700;background:#fff}
+.color-blocks .review-strip blockquote{margin:0;font-weight:600;font-size:1.05rem}
+.color-blocks .review-strip cite{font-style:normal;font-family:'Space Mono',monospace;font-size:.68rem;opacity:.75;display:block;margin-top:6px}
+.color-blocks .cta{padding:70px 0 0;border-top:2px solid var(--ink)}
+.color-blocks .cta-h{font-size:clamp(2rem,5vw,3.8rem);font-weight:700;letter-spacing:-.03em;line-height:1.02;margin:0 0 30px}
+.color-blocks .cta-h span{background:var(--tile-b)}
+.color-blocks .btn{display:inline-flex;padding:18px 36px;border:2px solid var(--ink);background:var(--paper);font-family:'Space Mono',monospace;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--ink);transition:all .15s}
+.color-blocks .btn:hover{background:var(--ink);color:var(--paper)}
+.color-blocks .btn.alt{margin-left:10px;background:var(--tile-c)}
+.color-blocks .btn.alt:hover{background:var(--ink);color:var(--paper)}
+.color-blocks .c-foot{border-top:2px solid var(--ink);margin-top:64px;padding:26px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.08em}
+.color-blocks .c-foot a{color:var(--ink)}
+@media(max-width:720px){
+  .color-blocks .tile-grid{grid-template-columns:repeat(3,1fr)}
+  .color-blocks .works{grid-template-columns:1fr}
+  .color-blocks .btn.alt{margin-left:0;margin-top:10px}
+}
+@media(max-width:600px){
+  .color-blocks .c-top{font-size:.6rem}
+  .color-blocks .c-top .chunk:nth-child(2) span{display:none}
+}
+
+</style>
+</head>
+<body class="color-blocks" data-layout="color-blocks">
+
+<nav class="c-top">
+  <span class="chunk"><u>ARTUM8</u><span>· LABS</span></span>
+  <span class="chunk">
+    <span>Get Estimate</span>
+    <span>Denver, CO</span>
+    <a href="https://cal.com/artum8labs">book ↗</a>
+  </span>
+</nav>
+<main class="c-inner" id="top">
+  <header class="hero">
+    <p class="hero-tag">Website concept — JR Landscapes LLC · landscaping</p>
+    <h1 class="hero-h">JR<br>
+      <span class="tile-d">Outdoor Spaces.</span><br>
+      <span class="invert">goes online.</span>
+    </h1>
+    <p class="hero-sub">A visually rich website with project galleries, seasonal CTAs, and instant quote requests.</p>
+    <div class="tile-grid">
+    <a class="tile t-a" href="#fix">design<br>Gallery</a>
+
+    <a class="tile t-b" href="#fix">local seo<br>Local</a>
+
+    <a class="tile t-c" href="#fix">convert<br>A+</a>
+
+    <a class="tile t-d" href="#fix">mobile<br>100%</a>
+
+    <a class="tile t-e" href="#fix">book<br>Get Estimate</a>
+
+    <a class="tile t-ink" href="#fix">Outdoor Spaces. Reimagined.<br>2026</a></div>
+  </header>
+
+  <section class="c-sec">
+    <div class="sec-head" data-rv>
+      <h2 class="sec-h">Nothing wrong with being found.</h2>
+      <span>the issues</span>
+    </div>
+    <div class="issue-grid">
+    <div class="issue" data-rv>
+      <span class="f-n">#01 — found</span>
+      <p class="f-t">Deprecated presentational HTML</p>
+      <p class="f-d">Deprecated tags make your site render inconsistently across devices and browsers.</p>
+    </div>
+
+    <div class="issue" data-rv>
+      <span class="f-n">#02 — found</span>
+      <p class="f-t">High inline styles (97)</p>
+      <p class="f-d">Heavy inline CSS means slow loads and poor maintainability.</p>
+    </div></div>
+  </section>
+
+  <section class="c-sec">
+    <div class="sec-head" data-rv>
+      <h2 class="sec-h">What we build.</h2>
+      <span>services · Denver, CO</span>
+    </div>
+    <div class="works">
+    <div class="work" data-rv style="transform:none">
+      <div>
+        <span class="w-k" style="background:var(--tile-a)">Get Estimate — 01</span>
+        <p class="w-t">Landscaping Website</p>
+        <p class="w-d">Visual portfolio, seasonal CTAs, instant estimates, and project showcase.</p>
+      </div>
+      <span class="w-p">$3,500 – $7,000</span>
+    </div>
+
+    <div class="work" data-rv style="transform:none">
+      <div>
+        <span class="w-k" style="background:var(--tile-b)">Get Estimate — 02</span>
+        <p class="w-t">Project Photography</p>
+        <p class="w-d">Professional before/after photography of your best landscapes.</p>
+      </div>
+      <span class="w-p">$600</span>
+    </div>
+
+    <div class="work" data-rv style="transform:none">
+      <div>
+        <span class="w-k" style="background:var(--tile-a)">Get Estimate — 03</span>
+        <p class="w-t">Local SEO</p>
+        <p class="w-d">Rank for landscaping and hardscape searches in your service area.</p>
+      </div>
+      <span class="w-p">$500/mo</span>
+    </div></div>
+  </section>
+
+  <div class="review-strip" data-rv>
+    <span class="rv-tile">★5</span>
+    <blockquote>A site like this tells me a business is serious. Deprecated presentational HTML? Fixed.
+      <cite>concept review — JR Landscapes LLC × Artum 8 Labs</cite>
+    </blockquote>
+  </div>
+
+  <section class="cta" id="fix">
+    <h2 class="cta-h">Let us put you <span>on the map.</span></h2>
+    <div>
+      <a class="btn" href="https://cal.com/artum8labs">Book a free call</a>
+      <a class="btn alt" href="tel:+17206036785">Call +1 720-603-6785</a>
+    </div>
+  </section>
+</main>
+<footer class="c-foot">
+  <span>© 2026 Artum 8 Labs</span>
+  <span>www.jrlandscapesllc.com</span>
+  <span><a href="tel:+17206036785">+1 720-603-6785</a></span>
+</footer>
+<script>
+(function(){
+  var C = {"ambient":"float","ambientSel":".hero","grain":false,"cursor":false,"loader":false,"progress":false,"clock":".c-top .chunk:last-child","type":null,"stagger":[".issue",".work"],"pop":[".tile"],"para":[[".hero-h",-10]],"magnet":[".btn"],"count":null};
+  if (!C || !document.body) return;
+  var KEY = document.body.getAttribute('data-layout') || '';
+  var RM = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  var FINE = !!(window.matchMedia && window.matchMedia('(hover:hover) and (pointer:fine)').matches);
+  var HIDDEN = false;
+  document.addEventListener('visibilitychange', function(){ HIDDEN = document.hidden; });
+
+  function q(s){ try { return document.querySelectorAll(s); } catch (err) { return []; } }
+  function q1(s){ if (s) { return q(s)[0] || null; } return null; }
+  function css(s){ try { var st = document.createElement('style'); st.textContent = s; (document.head || document.body).appendChild(st); } catch (err) {} }
+  function accent(){
+    try { var v = getComputedStyle(document.body).getPropertyValue('--accent').trim(); if (v) return v; } catch (err) {}
+    return '#2346d4';
+  }
+  var ACC = accent();
+
+  css('.' + KEY + ' .cursor-anim{animation:amcblink 1.1s step-end infinite}'
+    + '@keyframes amcblink{0%,100%{opacity:1}50%{opacity:0}}');
+
+  // ── scroll-scrubbed micro-motion (the GSAP/Framer-Motion "feel", dep-free) ──
+  function para(){
+    if (!C.para || !C.para.length) return;
+    var els = [];
+    C.para.forEach(function(p){ q(p[0]).forEach(function(el){ els.push({ el: el, sp: p[1] || 0 }); }); });
+    function loop(){
+      var vh = window.innerHeight || 800;
+      els.forEach(function(o){
+        var el = o.el;
+        if (!el || el.dataset && el.dataset.done === '1') return;
+        var r = el.getBoundingClientRect();
+        if (!r.width && !r.height) return;
+        var c = r.top + r.height / 2;
+        var k = (vh * 0.5 - c) / (vh * 0.9);
+        k = Math.max(-1, Math.min(1, k));
+        el.style.transform = 'translateY(' + (k * o.sp).toFixed(2) + 'px)';
+      });
+    }
+    window.addEventListener('scroll', loop, { passive: true });
+    loop();
+  }
+
+  // ── counters (count-up on view) ──────────────────────────────────────
+  function counters(){
+    if (!C.count || !C.count.length) return;
+    C.count.forEach(function(sel){
+      q(sel).forEach(function(el){
+        var txt = (el.textContent || '').trim();
+        var m = txt.match(/^([-+]?[0-9]+.?[0-9]*)(.*)$/);
+        if (!m) return;
+        var targetNum = parseFloat(m[1]);
+        var suffix = m[2];
+        var dec = m[1].indexOf('.') >= 0 ? (m[1].split('.')[1] || '').length : 0;
+        var started = false;
+        if (!('IntersectionObserver' in window)) return;
+        var io = new IntersectionObserver(function(en){
+          en.forEach(function(x){
+            if (x.isIntersecting && !started) {
+              started = true;
+              io.disconnect();
+              animate();
+            }
+          });
+        }, { threshold: 0.4 });
+        io.observe(el);
+        function animate(){
+          var t0 = performance.now(), dur = 1100;
+          el.style.fontVariantNumeric = 'tabular-nums';
+          (function f(now){
+            var k = Math.min(1, (now - t0) / dur);
+            var e = 1 - Math.pow(1 - k, 4);
+            el.textContent = (targetNum * e).toFixed(dec) + suffix;
+            if (k < 1) requestAnimationFrame(f);
+            else el.textContent = m[1] + suffix;
+          })(t0);
+        }
+      });
+    });
+  }
+
+  // ── stagger / pop reveals (beyond data-rv: adds delays + tile pops) ──
+  function stag(){
+    if (!('IntersectionObserver' in window)) {
+      q('[data-rv]').forEach(function(el){ el.classList.add('in'); });
+    }
+    function apply(list, mode){
+      if (!list || !list.length) return;
+      list.forEach(function(sel){
+        var els = q(sel);
+        els.forEach(function(el, i){
+          if (RM) return;
+          var delay = Math.min(i * 0.08, 0.9);
+          var hasRV = el.getAttribute('data-rv') !== null;
+          if (!hasRV) {
+            el.style.opacity = '0';
+            el.style.transform = mode === 'pop' ? 'translateY(14px) scale(.96)' : 'translateY(18px)';
+            el.style.transition = 'opacity .6s ' + delay + 's cubic-bezier(.16,1,.3,1), transform .6s ' + delay + 's cubic-bezier(.16,1,.3,1)';
+          } else {
+            el.style.transitionDelay = delay + 's';
+          }
+          var io = new IntersectionObserver(function(en){
+            en.forEach(function(x){
+              if (x.isIntersecting) {
+                if (hasRV) {
+                  el.classList.add('in');
+                  setTimeout(function(){ el.style.transitionDelay = '0s'; }, (delay + 0.6) * 1000);
+                } else {
+                  el.style.opacity = '1';
+                  el.style.transform = 'none';
+                }
+                io.disconnect();
+              }
+            });
+          }, { threshold: 0.1 });
+          io.observe(el);
+        });
+      });
+    }
+    apply(C.stagger, 'rise');
+    apply(C.pop, 'pop');
+  }
+
+  // ── magnetic hover (buttons) ─────────────────────────────────────────
+  function magnet(){
+    if (!C.magnet || !C.magnet.length || !FINE) return;
+    C.magnet.forEach(function(sel){
+      q(sel).forEach(function(el){
+        var tx = 0, ty = 0, ox = 0, oy = 0, act = false, fr = null;
+        function loop(){
+          if (!act) return;
+          ox += (tx - ox) * 0.16;
+          oy += (ty - oy) * 0.16;
+          el.style.transform = 'translate(' + ox.toFixed(2) + 'px,' + oy.toFixed(2) + 'px)';
+          if (Math.abs(tx - ox) + Math.abs(ty - oy) > 0.2) {
+            fr = requestAnimationFrame(loop);
+          }
+        }
+        el.addEventListener('mousemove', function(ev){
+          var r = el.getBoundingClientRect();
+          tx = (ev.clientX - (r.left + r.width / 2)) * 0.2;
+          ty = (ev.clientY - (r.top + r.height / 2)) * 0.3;
+          if (!act) { act = true; loop(); }
+        });
+        el.addEventListener('mouseleave', function(){
+          act = false;
+          if (fr) cancelAnimationFrame(fr);
+          el.style.transform = '';
+        });
+      });
+    });
+  }
+
+  // ── custom cursor (dot + trailing ring) ──────────────────────────────
+  function cursor(){
+    if (!FINE) return;
+    var dot = document.createElement('div');
+    dot.className = 'amc-dot';
+    var ring = document.createElement('div');
+    ring.className = 'amc-ring';
+    css('.amc-dot{position:fixed;top:0;left:0;width:9px;height:9px;border-radius:50%;background:' + ACC + ';z-index:9001;pointer-events:none;opacity:0;transform:translate(-50%,-50%)}'
+      + '.amc-ring{position:fixed;top:0;left:0;width:36px;height:36px;border:1px solid ' + ACC + ';border-radius:50%;z-index:9000;pointer-events:none;opacity:0;transform:translate(-50%,-50%);transition:width .3s cubic-bezier(.16,1,.3,1),height .3s cubic-bezier(.16,1,.3,1),background .3s,opacity .3s}'
+      + '.amc-ring.hover{width:60px;height:60px;background:rgba(127,127,127,.08)}');
+    document.body.appendChild(dot);
+    document.body.appendChild(ring);
+    var cx = -100, cy = -100, rx = -100, ry = -100, shown = false;
+    document.addEventListener('mousemove', function(ev){
+      cx = ev.clientX; cy = ev.clientY;
+      if (!shown) { shown = true; dot.style.opacity = '1'; ring.style.opacity = '1'; }
+    });
+    (function follow(){
+      rx += (cx - rx) * 0.16;
+      ry += (cy - ry) * 0.16;
+      dot.style.left = cx + 'px';
+      dot.style.top = cy + 'px';
+      ring.style.left = rx + 'px';
+      ring.style.top = ry + 'px';
+      requestAnimationFrame(follow);
+    })();
+    document.addEventListener('mouseover', function(ev){
+      var t = ev.target;
+      while (t && t !== document.body) {
+        if (t.closest && t.closest('a,button,.btn,.index-row,.work-row,.work-item,.route,.tile,.svc-row,.finding,.issue')) {
+          ring.classList.add('hover'); return;
+        }
+        t = t.parentElement;
+      }
+      ring.classList.remove('hover');
+    });
+  }
+
+  // ── scroll progress bar ──────────────────────────────────────────────
+  function progressbar(){
+    var bar = document.createElement('div');
+    bar.className = 'amc-bar';
+    css('.amc-bar{position:fixed;top:0;left:0;height:3px;width:100%;z-index:800;background:' + ACC + ';transform:scaleX(0);transform-origin:0 0}');
+    document.body.appendChild(bar);
+    function u(){
+      var m = (document.documentElement.scrollHeight || 1) - (window.innerHeight || 1);
+      var p = m > 0 ? (window.scrollY || 0) / m : 0;
+      bar.style.transform = 'scaleX(' + p + ')';
+    }
+    window.addEventListener('scroll', u, { passive: true });
+    u();
+  }
+
+  // ── live clock (color-blocks header) ─────────────────────────────────
+  function clock(){
+    var host = q1(C.clock);
+    if (!host) return;
+    var s = document.createElement('span');
+    s.className = 'amc-clock';
+    css('.' + KEY + ' .amc-clock{margin-left:auto;font-variant-numeric:tabular-nums}');
+    host.appendChild(s);
+    function u(){
+      var d = new Date();
+      function p(x){ return ('0' + x).slice(-2); }
+      s.textContent = p(d.getHours()) + ':' + p(d.getMinutes()) + ':' + p(d.getSeconds());
+    }
+    u();
+    setInterval(u, 1000);
+  }
+
+  // ── typewriter (mono hero) ───────────────────────────────────────────
+  function typer(){
+    var sel = C.type;
+    if (!sel || RM) return;
+    var el = q1(sel);
+    if (!el) return;
+    var orig = el.innerHTML;
+    var segs = orig.split('<br>');
+    var lines = [];
+    segs.forEach(function(sg){
+      var t = document.createElement('span');
+      t.innerHTML = sg;
+      lines.push(t.textContent);
+    });
+    var oldH = el.offsetHeight || 0;
+    el.innerHTML = '';
+    if (oldH) el.style.minHeight = oldH + 'px';
+    var li = 0, ci = 0, caret = null;
+    function mkCaret(){
+      var c = document.createElement('span');
+      c.className = 'cursor cursor-anim';
+      c.textContent = '_';
+      return c;
+    }
+    function tick(){
+      if (li >= lines.length) {
+        if (caret) el.appendChild(caret);
+        return;
+      }
+      caret = mkCaret();
+      el.innerHTML = '';
+      for (var i = 0; i < li; i++) {
+        var l = document.createElement('span');
+        l.textContent = lines[i];
+        el.appendChild(l);
+        el.appendChild(document.createElement('br'));
+      }
+      var cur = document.createElement('span');
+      cur.textContent = lines[li].slice(0, ci + 1);
+      el.appendChild(cur);
+      el.appendChild(caret);
+      if (ci + 1 >= lines[li].length) {
+        li++;
+        ci = 0;
+        if (li >= lines.length) return;
+        setTimeout(tick, 240);
+      } else {
+        ci++;
+        setTimeout(tick, 32);
+      }
+    }
+    setTimeout(tick, 1000);
+  }
+
+  // ── ambient canvas scenes (WebGL-look, canvas2D, zero deps) ──────────
+  function ambient(){
+    var sel = C.ambientSel, kind = C.ambient;
+    var host = q1(sel);
+    if (!host || !kind) return;
+    css('.' + KEY + ' ' + sel + '{position:relative;overflow:hidden}'
+      + '.' + KEY + ' ' + sel + '>*{position:relative;z-index:1}');
+    var wrap = document.createElement('div');
+    wrap.className = 'amc-wrap';
+    var cv = document.createElement('canvas');
+    cv.className = 'amc';
+    wrap.appendChild(cv);
+    host.appendChild(wrap);
+    css('.' + KEY + ' .amc-wrap{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}'
+      + '.' + KEY + ' .amc{position:absolute;inset:0;width:100%;height:100%;display:block}');
+    var c = cv.getContext('2d');
+    if (!c) return;
+    var W = 0, H = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
+    function size(){
+      var r = host.getBoundingClientRect();
+      W = Math.max(40, r.width); H = Math.max(40, r.height);
+      cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+      c.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    size();
+    window.addEventListener('resize', size);
+
+    // (a) drifting particle field + connecting lines — kott
+    if (kind === 'dots') {
+      var n = 26, pts = [];
+      for (var i = 0; i < n; i++) {
+        pts.push({ x: Math.random() * W, y: Math.random() * H, r: 0.8 + Math.random() * 1.9, a: 0.12 + Math.random() * 0.25, vy: 0.15 + Math.random() * 0.4, ph: Math.random() * 6.283 });
+      }
+      (function draw(t){
+        if (!HIDDEN) {
+          c.clearRect(0, 0, W, H);
+          var tt = t * 0.001;
+          var i, j, p;
+          for (i = 0; i < n; i++) {
+            p = pts[i];
+            p.y += p.vy * 0.4;
+            if (p.y > H + 12) { p.y = -12; p.x = Math.random() * W; }
+            p.x += Math.sin(tt + p.ph) * 0.35;
+            c.globalAlpha = p.a;
+            c.fillStyle = ACC;
+            c.beginPath(); c.arc(p.x, p.y, p.r, 0, 6.283); c.fill();
+          }
+          c.globalAlpha = 0.09;
+          c.strokeStyle = ACC;
+          c.lineWidth = 0.6;
+          for (i = 0; i < n; i++) {
+            for (j = i + 1; j < n; j++) {
+              var a = pts[i], b = pts[j], dx = a.x - b.x, dy = a.y - b.y;
+              if (dx * dx + dy * dy < 7600) {
+                c.beginPath(); c.moveTo(a.x, a.y); c.lineTo(b.x, b.y); c.stroke();
+              }
+            }
+          }
+          c.globalAlpha = 1;
+        }
+        requestAnimationFrame(draw);
+      })(performance.now());
+    }
+
+    // (b) bobbing color orbs — color-blocks
+    if (kind === 'float') {
+      var pal = C.pal || ['#ed83b0', '#e4dc62', '#92c78f', '#76c6de', '#6963c6'];
+      var orbs = [];
+      for (var k = 0; k < 12; k++) {
+        orbs.push({ x: Math.random() * W, y: Math.random() * H, r: 8 + Math.random() * 30, vx: (Math.random() - .5) * .25, vy: (Math.random() - .5) * .25, ph: Math.random() * 6.283, col: pal[k % pal.length], a: .08 + Math.random() * .16 });
+      }
+      (function draw(t){
+        if (!HIDDEN) {
+          c.clearRect(0, 0, W, H);
+          var tt = t * 0.001;
+          for (var i = 0; i < orbs.length; i++) {
+            var o = orbs[i];
+            o.x += o.vx + Math.sin(tt + o.ph) * .06;
+            o.y += o.vy + Math.cos(tt + o.ph) * .05;
+            if (o.x < -o.r) o.x = W + o.r; if (o.x > W + o.r) o.x = -o.r;
+            if (o.y < -o.r) o.y = H + o.r; if (o.y > H + o.r) o.y = -o.r;
+            c.globalAlpha = o.a;
+            c.fillStyle = o.col;
+            c.beginPath(); c.arc(o.x, o.y, o.r, 0, 6.283); c.fill();
+          }
+          c.globalAlpha = 1;
+        }
+        requestAnimationFrame(draw);
+      })(performance.now());
+    }
+
+    // (c) matrix-rain column — mono
+    if (kind === 'rain') {
+      var cols = Math.max(5, Math.floor(W / 22)), drops = [];
+      for (var r = 0; r < cols; r++) {
+        drops.push({ x: r * 22 + 10, y: -Math.random() * H, sp: .7 + Math.random() * 1.5, len: 10 + Math.random() * 12 });
+      }
+      var GLY = '!#$%&*+-=:;<=>?@0123456789ACLNZ';
+      (function draw(t){
+        if (!HIDDEN) {
+          c.clearRect(0, 0, W, H);
+          c.font = '13px JetBrains Mono,monospace';
+          for (var i = 0; i < drops.length; i++) {
+            var d = drops[i];
+            d.y += d.sp;
+            if (d.y > H + 30) { d.y = -30; d.x = Math.random() * W; d.len = 10 + Math.random() * 12; }
+            for (var j = 0; j < d.len; j++) {
+              var gy = d.y - j * 14;
+              if (gy < -14 || gy > H) continue;
+              var ch = GLY.charAt(Math.floor(Math.random() * GLY.length));
+              var fade = 1 - (j / d.len);
+              c.globalAlpha = j === 0 ? .85 : (.08 + .5 * fade * fade);
+              c.fillStyle = j === 0 ? ACC : '#8f9b8a';
+              c.fillText(ch, d.x, gy);
+            }
+          }
+          c.globalAlpha = 1;
+        }
+        requestAnimationFrame(draw);
+      })(performance.now());
+    }
+
+    // (d) barcode sweep + faint grid — swiss
+    if (kind === 'scan') {
+      (function draw(t){
+        if (!HIDDEN) {
+          c.clearRect(0, 0, W, H);
+          var i;
+          c.strokeStyle = 'rgba(0,0,0,.045)';
+          c.lineWidth = 1;
+          for (i = 24; i < H; i += 26) { c.beginPath(); c.moveTo(0, i); c.lineTo(W, i); c.stroke(); }
+          for (i = 24; i < W; i += 26) { c.beginPath(); c.moveTo(i, 0); c.lineTo(i, H); c.stroke(); }
+          var span = W + 200;
+          var x = ((t * 0.00032) % 1) * span - 100;
+          var g = c.createLinearGradient(x - 60, 0, x + 60, 0);
+          g.addColorStop(0, 'rgba(200,18,28,0)');
+          g.addColorStop(.5, 'rgba(200,18,28,.45)');
+          g.addColorStop(1, 'rgba(200,18,28,0)');
+          c.globalAlpha = .5;
+          c.fillStyle = g;
+          c.fillRect(x - 60, -2, 120, H + 4);
+          c.globalAlpha = .8;
+          c.strokeStyle = ACC;
+          c.beginPath(); c.moveTo(x, -2); c.lineTo(x, H + 2); c.stroke();
+          c.globalAlpha = 1;
+        }
+        requestAnimationFrame(draw);
+      })(performance.now());
+    }
+  }
+
+  // ── film grain (editorial / warm) ────────────────────────────────────
+  function grain(){
+    var cv = document.createElement('canvas');
+    cv.className = 'amc-grain';
+    css('.amc-grain{position:fixed;inset:0;width:100%;height:100%;z-index:250;pointer-events:none;opacity:.055;image-rendering:pixelated}');
+    document.body.appendChild(cv);
+    var c = cv.getContext('2d');
+    if (!c) return;
+    var W = Math.max(64, Math.floor((window.innerWidth || 900) / 3));
+    var H = Math.max(64, Math.floor((window.innerHeight || 700) / 3));
+    cv.width = W; cv.height = H;
+    var img = c.createImageData(W, H);
+    function noise(){
+      var d = img.data;
+      for (var i = 0; i < d.length; i += 4) {
+        var v = (Math.random() * 255) | 0;
+        d[i] = v; d[i + 1] = v; d[i + 2] = v; d[i + 3] = 28;
+      }
+      c.putImageData(img, 0, 0);
+    }
+    noise();
+    if (!RM) setInterval(noise, 100);
+  }
+
+  // ── intro loader (counter for kott, boot log for mono) ───────────────
+  function loader(){
+    var mode = C.loader;
+    if (!mode || RM) return;
+    var lo = document.createElement('div');
+    lo.className = 'amc-lo';
+    if (mode === 'counter') {
+      lo.innerHTML = '<div class="amc-lo-c">0%</div>';
+    } else if (mode === 'boot') {
+      lo.innerHTML = '<div class="amc-lo-b"></div>';
+    }
+    css('.amc-lo{position:fixed;inset:0;z-index:9998;display:flex;align-items:center;justify-content:center;background:var(--paper,var(--bg,#0e0f12));color:var(--ink,#f2f3f5);transition:opacity .6s}'
+      + '.amc-lo.out{opacity:0;pointer-events:none}'
+      + '.amc-lo-c{font-size:clamp(4rem,18vw,9rem);font-weight:800;letter-spacing:-.04em;font-family:"Syne","Archivo","JetBrains Mono",sans-serif}'
+      + '.amc-lo-b{font-family:"JetBrains Mono",monospace;font-size:.9rem;line-height:1.9;white-space:pre;color:var(--accent,#b7e44c)}');
+    document.body.appendChild(lo);
+    var timed = false;
+    function drop(){
+      if (timed) return; timed = true;
+      lo.classList.add('out');
+      setTimeout(function(){ if (lo.parentNode) lo.parentNode.removeChild(lo); }, 700);
+    }
+    if (mode === 'counter') {
+      var cEl = q1('.amc-lo-c');
+      var t0 = performance.now(), dur = 1150;
+      (function f(now){
+        var k = Math.min(1, (now - t0) / dur);
+        var e = 1 - Math.pow(1 - k, 3);
+        if (cEl) cEl.textContent = Math.round(e * 100) + '%';
+        if (k < 1) requestAnimationFrame(f);
+        else drop();
+      })(t0);
+    } else if (mode === 'boot') {
+      var bEl = q1('.amc-lo-b');
+      var logs = [
+        '$ init concept.ts ...',
+        '$ binding assets ................. ok',
+        '$ resolving local presence ....... ok',
+        '$ preparing first impression ..... ok',
+        '$ READY.'
+      ];
+      var li = 0;
+      (function tick(){
+        if (bEl) bEl.textContent = logs.slice(0, li + 1).join('\n');
+        li++;
+        if (li < logs.length) setTimeout(tick, 170);
+        else drop();
+      })();
+    }
+    setTimeout(drop, 2600);
+  }
+
+  // ── run ──────────────────────────────────────────────────────────────
+  if (C.ambient) ambient();
+  if (C.grain) grain();
+  if (C.progress) progressbar();
+  if (C.clock) clock();
+  counters();
+  stag();
+  para();
+  magnet();
+  if (C.cursor) cursor();
+  if (C.type) typer();
+  loader();
+
+  // legacy: keep revealScript's behaviour for any stray [data-rv]
+  var ioLegacy = ('IntersectionObserver' in window) ? new IntersectionObserver(function(en){
+      en.forEach(function(x){ if (x.isIntersecting) { x.target.classList.add('in'); ioLegacy.unobserve(x.target); } });
+    }, { threshold: 0.12 }) : null;
+  q('[data-rv]').forEach(function(el){ if (ioLegacy) ioLegacy.observe(el); else el.classList.add('in'); });
+})();
+</script>
+</body>
+</html>
