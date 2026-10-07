@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Watt Masters — A modern website redesign concept for Phoenix, AZ. Concept preview.">
+<title>Watt Masters — Website Redesign Concept</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fragment+Mono&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+footer{overflow-wrap:anywhere}
+[data-rv]{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+[data-rv].in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  [data-rv]{opacity:1 !important;transform:none !important}
+  *{animation:none !important;transition:none !important}
+}
+
+body.editorial-pages{
+  --bg:#0e0e0f; --ink:#f2f1ec; --muted:#9c9a94; --line:rgba(255,255,255,.12);
+  --accent:#e5341b; --paper:#141416;
+  background:var(--bg); color:var(--ink);
+  font-family:'Inter',system-ui,sans-serif; line-height:1.6;
+}
+.editorial-pages .e-page{max-width:1180px;margin:0 auto;padding:0 30px}
+.editorial-pages .e-nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:20px 30px;background:rgba(14,14,15,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);font-family:'Fragment Mono',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.editorial-pages .e-nav b{color:var(--ink);font-weight:400}
+.editorial-pages .e-nav .status{display:flex;gap:8px;align-items:center}
+.editorial-pages .e-nav .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.editorial-pages .e-nav a{color:var(--ink);text-decoration:none}
+.editorial-pages .hero{padding:130px 0 50px}
+.editorial-pages .p-no{font-family:'Fragment Mono',monospace;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:60px;display:flex;align-items:center;gap:14px}
+.editorial-pages .p-no::after{content:'';flex:1;height:1px;background:var(--line)}
+.editorial-pages .hero-kicker{font-family:'Fragment Mono',monospace;font-size:.74rem;color:var(--muted);margin-bottom:30px;text-transform:uppercase;letter-spacing:.14em}
+.editorial-pages .hero-h{font-size:clamp(2.4rem,6.5vw,5.2rem);font-weight:800;letter-spacing:-.03em;line-height:1.02;margin:0 0 14px}
+.editorial-pages .hero-h .red{color:var(--accent)}
+.editorial-pages .hero-statement{font-family:'Fragment Mono',monospace;font-size:.8rem;color:var(--muted);max-width:56ch;margin-top:40px;padding-left:18px;border-left:2px solid var(--accent);line-height:1.8}
+.editorial-pages .hero-meta{display:flex;flex-wrap:wrap;gap:34px;margin-top:48px;padding-top:26px;border-top:1px solid var(--line);font-family:'Fragment Mono',monospace;font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+.editorial-pages .hero-meta b{color:var(--ink);font-weight:400}
+.editorial-pages section.card{padding:70px 0;border-top:1px solid var(--line)}
+.editorial-pages .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:44px}
+.editorial-pages .sec-head .h{font-size:clamp(1.6rem,3.8vw,2.6rem);font-weight:800;letter-spacing:-.02em;line-height:1.1;margin:0}
+.editorial-pages .sec-head .p{font-family:'Fragment Mono',monospace;font-size:.68rem;color:var(--accent);letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
+.editorial-pages .work-list{border-top:1px solid var(--line)}
+.editorial-pages .work-item{display:grid;grid-template-columns:90px 1fr auto;gap:20px;align-items:center;padding:26px 6px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.editorial-pages .work-item:hover{background:rgba(229,52,27,.05)}
+.editorial-pages .work-item .w-year{font-family:'Fragment Mono',monospace;font-size:.72rem;color:var(--muted)}
+.editorial-pages .work-item .w-t{font-weight:600;font-size:clamp(1.05rem,2.4vw,1.5rem)}
+.editorial-pages .work-item .w-tag{font-family:'Fragment Mono',monospace;font-size:.62rem;color:var(--accent);border:1px solid rgba(229,52,27,.4);padding:5px 10px;letter-spacing:.08em;text-transform:uppercase}
+.editorial-pages .finding-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.editorial-pages .finding{border:1px solid var(--line);padding:26px;transition:border-color .2s}
+.editorial-pages .finding:hover{border-color:var(--accent)}
+.editorial-pages .finding .f-n{font-family:'Fragment Mono',monospace;font-size:.66rem;color:var(--accent);display:block;margin-bottom:14px}
+.editorial-pages .finding .f-t{font-weight:600;font-size:1rem;margin-bottom:8px}
+.editorial-pages .finding .f-d{font-size:.82rem;color:var(--muted);line-height:1.7}
+.editorial-pages .quote{border-left:3px solid var(--accent);padding:10px 0 10px 28px;margin-top:44px}
+.editorial-pages .quote p{font-size:clamp(1.2rem,2.6vw,1.8rem);font-weight:500;letter-spacing:-.01em;line-height:1.4}
+.editorial-pages .quote cite{font-family:'Fragment Mono',monospace;font-style:normal;font-size:.68rem;color:var(--muted);display:block;margin-top:14px}
+.editorial-pages .svc-row{display:grid;grid-template-columns:1fr auto;gap:16px;padding:20px 4px;border-bottom:1px solid var(--line)}
+.editorial-pages .svc-row .s-t{font-weight:600;font-size:1.05rem}
+.editorial-pages .svc-row .s-d{color:var(--muted);font-size:.82rem;margin-top:4px}
+.editorial-pages .svc-row .s-p{font-family:'Fragment Mono',monospace;font-size:.8rem;color:var(--accent);white-space:nowrap}
+.editorial-pages .getin{padding:110px 0 90px;border-top:1px solid var(--line)}
+.editorial-pages .gi-h{font-size:clamp(2.2rem,6vw,4.6rem);font-weight:800;letter-spacing:-.03em;line-height:1.02;margin:0 0 10px}
+.editorial-pages .gi-h .red{color:var(--accent)}
+.editorial-pages .gi-d{font-family:'Fragment Mono',monospace;font-size:.8rem;color:var(--muted);max-width:50ch;margin-bottom:40px}
+.editorial-pages .btn{display:inline-flex;padding:19px 40px;background:var(--accent);color:#fff;text-decoration:none;font-family:'Fragment Mono',monospace;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;transition:background .2s}
+.editorial-pages .btn:hover{background:var(--ink);color:var(--bg)}
+.editorial-pages .btn.ghost{background:transparent;border:1px solid var(--line);color:var(--ink);margin-left:12px}
+.editorial-pages .btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+.editorial-pages .foot{padding:40px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:'Fragment Mono',monospace;font-size:.68rem;color:var(--muted);letter-spacing:.08em}
+.editorial-pages .foot a{color:var(--ink);text-decoration:none}
+@media(max-width:680px){
+  .editorial-pages .work-item{grid-template-columns:64px 1fr}
+  .editorial-pages .work-item .w-tag{display:none}
+  .editorial-pages .btn.ghost{margin-left:0;margin-top:12px}
+  .editorial-pages .hero-meta{gap:18px}
+}
+
+</style>
+</head>
+<body class="editorial-pages" data-layout="editorial-pages">
+
+<nav class="e-nav">
+  <a href="#top"><b>Artum 8 Labs</b></a>
+  <div class="status"><span class="dot"></span><span>concept 2026</span></div>
+  <a href="https://cal.com/artum8labs">Book a call ↗</a>
+</nav>
+<main class="e-page" id="top">
+  <header class="hero">
+    <p class="p-no">H. 01 / hero</p>
+    <p class="hero-kicker">Website concept — Watt Masters</p>
+    <h1 class="hero-h">Watt Masters.<br><span class="red">The site it deserves.</span></h1>
+    <p class="hero-statement">A bold, trust-building website that educates homeowners and drives more solar consultation bookings.</p>
+    <div class="hero-meta">
+      <span>location <b>Phoenix, AZ</b></span>
+      <span>category <b>solar-installers</b></span>
+      <span>scope <b>Get Free Quote</b></span>
+      <span>replies <b>within 24 hrs</b></span>
+    </div>
+  </header>
+
+  <section class="card" id="services">
+    <div class="sec-head" data-rv>
+      <h2 class="h">What working together<br>actually looks like.</h2>
+      <span class="p">P. 02 / scope</span>
+    </div>
+    <div class="work-list">
+    <a class="work-item" href="https://cal.com/artum8labs" data-rv>
+      <span class="w-year">'24</span>
+      <span class="w-t">Solar Company Website</span>
+      <span class="w-tag">phase design</span>
+    </a>
+
+    <a class="work-item" href="https://cal.com/artum8labs" data-rv>
+      <span class="w-year">'25</span>
+      <span class="w-t">Lead Generation</span>
+      <span class="w-tag">phase launch</span>
+    </a>
+
+    <a class="work-item" href="https://cal.com/artum8labs" data-rv>
+      <span class="w-year">'26</span>
+      <span class="w-t">Review Builder</span>
+      <span class="w-tag">phase growth</span>
+    </a></div>
+  </section>
+
+  <section class="card" id="issues">
+    <div class="sec-head" data-rv>
+      <h2 class="h">The current state<br>of your online presence.</h2>
+      <span class="p">P. 03 / findings</span>
+    </div>
+    <div class="finding-list"><div class="finding" data-rv>
+      <span class="f-n">00 / FOUND</span>
+      <p class="f-t">No website yet</p>
+      <p class="f-d">With no site, Watt Masters is invisible to the Local of customers who search online first.</p>
+    </div></div>
+    <div class="quote" data-rv>
+      <p>&#8220;A modern site is the first impression your business gets in 2026.&#8221;</p>
+      <cite>concept note — Artum 8 Labs</cite>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="sec-head" data-rv>
+      <h2 class="h">Priced for a local<br>budget, built like a brand.</h2>
+      <span class="p">P. 04 / investment</span>
+    </div>
+    
+    <div class="svc-row" data-rv>
+      <div>
+        <p class="s-t">01&ensp;Solar Company Website</p>
+        <p class="s-d">Bold, trust-building design with savings calculator, project gallery, and instant quotes.</p>
+      </div>
+      <span class="s-p">$4,000 – $8,000</span>
+    </div>
+
+    <div class="svc-row" data-rv>
+      <div>
+        <p class="s-t">02&ensp;Lead Generation</p>
+        <p class="s-d">Google Ads plus landing pages optimized for solar consultation bookings.</p>
+      </div>
+      <span class="s-p">$800/mo</span>
+    </div>
+
+    <div class="svc-row" data-rv>
+      <div>
+        <p class="s-t">03&ensp;Review Builder</p>
+        <p class="s-d">Automated review requests to build your 5-star reputation.</p>
+      </div>
+      <span class="s-p">$300/mo</span>
+    </div>
+  </section>
+
+  <section class="getin" id="fix">
+    <p class="p-no">P. 05 / contact</p>
+    <h2 class="gi-h">Write to us.<br><span class="red">Replies within 24 hrs.</span></h2>
+    <p class="gi-d">Power Their Home. Grow Your Business.</p>
+    <div>
+      <a class="btn" href="https://cal.com/artum8labs">Book a free call</a>
+      <a class="btn ghost" href="tel:+16024857901">Call +1 602-485-7901</a>
+    </div>
+  </section>
+</main>
+<footer class="foot">
+  <span>© 2026 Artum 8 Labs</span>
+  <span>www.wattmasters.com</span>
+  <span><a href="tel:+16024857901">+1 602-485-7901</a></span>
+</footer>
+<script>
+(function(){
+  var C = {"ambient":null,"grain":true,"cursor":true,"loader":false,"progress":true,"clock":null,"type":null,"stagger":[".work-item",".finding"],"pop":null,"para":[[".hero-h",-12],[".quote p",8]],"magnet":null,"count":null};
+  if (!C || !document.body) return;
+  var KEY = document.body.getAttribute('data-layout') || '';
+  var RM = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  var FINE = !!(window.matchMedia && window.matchMedia('(hover:hover) and (pointer:fine)').matches);
+  var HIDDEN = false;
+  document.addEventListener('visibilitychange', function(){ HIDDEN = document.hidden; });
+
+  function q(s){ try { return document.querySelectorAll(s); } catch (err) { return []; } }
+  function q1(s){ if (s) { return q(s)[0] || null; } return null; }
+  function css(s){ try { var st = document.createElement('style'); st.textContent = s; (document.head || document.body).appendChild(st); } catch (err) {} }
+  function accent(){
+    try { var v = getComputedStyle(document.body).getPropertyValue('--accent').trim(); if (v) return v; } catch (err) {}
+    return '#2346d4';
+  }
+  var ACC = accent();
+
+  css('.' + KEY + ' .cursor-anim{animation:amcblink 1.1s step-end infinite}'
+    + '@keyframes amcblink{0%,100%{opacity:1}50%{opacity:0}}');
+
+  // ── scroll-scrubbed micro-motion (the GSAP/Framer-Motion "feel", dep-free) ──
+  function para(){
+    if (!C.para || !C.para.length) return;
+    var els = [];
+    C.para.forEach(function(p){ q(p[0]).forEach(function(el){ els.push({ el: el, sp: p[1] || 0 }); }); });
+    function loop(){
+      var vh = window.innerHeight || 800;
+      els.forEach(function(o){
+        var el = o.el;
+        if (!el || el.dataset && el.dataset.done === '1') return;
+        var r = el.getBoundingClientRect();
+        if (!r.width && !r.height) return;
+        var c = r.top + r.height / 2;
+        var k = (vh * 0.5 - c) / (vh * 0.9);
+        k = Math.max(-1, Math.min(1, k));
+        el.style.transform = 'translateY(' + (k * o.sp).toFixed(2) + 'px)';
+      });
+    }
+    window.addEventListener('scroll', loop, { passive: true });
+    loop();
+  }
+
+  // ── counters (count-up on view) ──────────────────────────────────────
+  function counters(){
+    if (!C.count || !C.count.length) return;
+    C.count.forEach(function(sel){
+      q(sel).forEach(function(el){
+        var txt = (el.textContent || '').trim();
+        var m = txt.match(/^([-+]?[0-9]+.?[0-9]*)(.*)$/);
+        if (!m) return;
+        var targetNum = parseFloat(m[1]);
+        var suffix = m[2];
+        var dec = m[1].indexOf('.') >= 0 ? (m[1].split('.')[1] || '').length : 0;
+        var started = false;
+        if (!('IntersectionObserver' in window)) return;
+        var io = new IntersectionObserver(function(en){
+          en.forEach(function(x){
+            if (x.isIntersecting && !started) {
+              started = true;
+              io.disconnect();
+              animate();
+            }
+          });
+        }, { threshold: 0.4 });
+        io.observe(el);
+        function animate(){
+          var t0 = performance.now(), dur = 1100;
+          el.style.fontVariantNumeric = 'tabular-nums';
+          (function f(now){
+            var k = Math.min(1, (now - t0) / dur);
+            var e = 1 - Math.pow(1 - k, 4);
+            el.textContent = (targetNum * e).toFixed(dec) + suffix;
+            if (k < 1) requestAnimationFrame(f);
+            else el.textContent = m[1] + suffix;
+          })(t0);
+        }
+      });
+    });
+  }
+
+  // ── stagger / pop reveals (beyond data-rv: adds delays + tile pops) ──
+  function stag(){
+    if (!('IntersectionObserver' in window)) {
+      q('[data-rv]').forEach(function(el){ el.classList.add('in'); });
+    }
+    function apply(list, mode){
+      if (!list || !list.length) return;
+      list.forEach(function(sel){
+        var els = q(sel);
+        els.forEach(function(el, i){
+          if (RM) return;
+          var delay = Math.min(i * 0.08, 0.9);
+          var hasRV = el.getAttribute('data-rv') !== null;
+          if (!hasRV) {
+            el.style.opacity = '0';
+            el.style.transform = mode === 'pop' ? 'translateY(14px) scale(.96)' : 'translateY(18px)';
+            el.style.transition = 'opacity .6s ' + delay + 's cubic-bezier(.16,1,.3,1), transform .6s ' + delay + 's cubic-bezier(.16,1,.3,1)';
+          } else {
+            el.style.transitionDelay = delay + 's';
+          }
+          var io = new IntersectionObserver(function(en){
+            en.forEach(function(x){
+              if (x.isIntersecting) {
+                if (hasRV) {
+                  el.classList.add('in');
+                  setTimeout(function(){ el.style.transitionDelay = '0s'; }, (delay + 0.6) * 1000);
+                } else {
+                  el.style.opacity = '1';
+                  el.style.transform = 'none';
+                }
+                io.disconnect();
+              }
+            });
+          }, { threshold: 0.1 });
+          io.observe(el);
+        });
+      });
+    }
+    apply(C.stagger, 'rise');
+    apply(C.pop, 'pop');
+  }
+
+  // ── magnetic hover (buttons) ─────────────────────────────────────────
+  function magnet(){
+    if (!C.magnet || !C.magnet.length || !FINE) return;
+    C.magnet.forEach(function(sel){
+      q(sel).forEach(function(el){
+        var tx = 0, ty = 0, ox = 0, oy = 0, act = false, fr = null;
+        function loop(){
+          if (!act) return;
+          ox += (tx - ox) * 0.16;
+          oy += (ty - oy) * 0.16;
+          el.style.transform = 'translate(' + ox.toFixed(2) + 'px,' + oy.toFixed(2) + 'px)';
+          if (Math.abs(tx - ox) + Math.abs(ty - oy) > 0.2) {
+            fr = requestAnimationFrame(loop);
+          }
+        }
+        el.addEventListener('mousemove', function(ev){
+          var r = el.getBoundingClientRect();
+          tx = (ev.clientX - (r.left + r.width / 2)) * 0.2;
+          ty = (ev.clientY - (r.top + r.height / 2)) * 0.3;
+          if (!act) { act = true; loop(); }
+        });
+        el.addEventListener('mouseleave', function(){
+          act = false;
+          if (fr) cancelAnimationFrame(fr);
+          el.style.transform = '';
+        });
+      });
+    });
+  }
+
+  // ── custom cursor (dot + trailing ring) ──────────────────────────────
+  function cursor(){
+    if (!FINE) return;
+    var dot = document.createElement('div');
+    dot.className = 'amc-dot';
+    var ring = document.createElement('div');
+    ring.className = 'amc-ring';
+    css('.amc-dot{position:fixed;top:0;left:0;width:9px;height:9px;border-radius:50%;background:' + ACC + ';z-index:9001;pointer-events:none;opacity:0;transform:translate(-50%,-50%)}'
+      + '.amc-ring{position:fixed;top:0;left:0;width:36px;height:36px;border:1px solid ' + ACC + ';border-radius:50%;z-index:9000;pointer-events:none;opacity:0;transform:translate(-50%,-50%);transition:width .3s cubic-bezier(.16,1,.3,1),height .3s cubic-bezier(.16,1,.3,1),background .3s,opacity .3s}'
+      + '.amc-ring.hover{width:60px;height:60px;background:rgba(127,127,127,.08)}');
+    document.body.appendChild(dot);
+    document.body.appendChild(ring);
+    var cx = -100, cy = -100, rx = -100, ry = -100, shown = false;
+    document.addEventListener('mousemove', function(ev){
+      cx = ev.clientX; cy = ev.clientY;
+      if (!shown) { shown = true; dot.style.opacity = '1'; ring.style.opacity = '1'; }
+    });
+    (function follow(){
+      rx += (cx - rx) * 0.16;
+      ry += (cy - ry) * 0.16;
+      dot.style.left = cx + 'px';
+      dot.style.top = cy + 'px';
+      ring.style.left = rx + 'px';
+      ring.style.top = ry + 'px';
+      requestAnimationFrame(follow);
+    })();
+    document.addEventListener('mouseover', function(ev){
+      var t = ev.target;
+      while (t && t !== document.body) {
+        if (t.closest && t.closest('a,button,.btn,.index-row,.work-row,.work-item,.route,.tile,.svc-row,.finding,.issue')) {
+          ring.classList.add('hover'); return;
+        }
+        t = t.parentElement;
+      }
+      ring.classList.remove('hover');
+    });
+  }
+
+  // ── scroll progress bar ──────────────────────────────────────────────
+  function progressbar(){
+    var bar = document.createElement('div');
+    bar.className = 'amc-bar';
+    css('.amc-bar{position:fixed;top:0;left:0;height:3px;width:100%;z-index:800;background:' + ACC + ';transform:scaleX(0);transform-origin:0 0}');
+    document.body.appendChild(bar);
+    function u(){
+      var m = (document.documentElement.scrollHeight || 1) - (window.innerHeight || 1);
+      var p = m > 0 ? (window.scrollY || 0) / m : 0;
+      bar.style.transform = 'scaleX(' + p + ')';
+    }
+    window.addEventListener('scroll', u, { passive: true });
+    u();
+  }
+
+  // ── live clock (color-blocks header) ─────────────────────────────────
+  function clock(){
+    var host = q1(C.clock);
+    if (!host) return;
+    var s = document.createElement('span');
+    s.className = 'amc-clock';
+    css('.' + KEY + ' .amc-clock{margin-left:auto;font-variant-numeric:tabular-nums}');
+    host.appendChild(s);
+    function u(){
+      var d = new Date();
+      function p(x){ return ('0' + x).slice(-2); }
+      s.textContent = p(d.getHours()) + ':' + p(d.getMinutes()) + ':' + p(d.getSeconds());
+    }
+    u();
+    setInterval(u, 1000);
+  }
+
+  // ── typewriter (mono hero) ───────────────────────────────────────────
+  function typer(){
+    var sel = C.type;
+    if (!sel || RM) return;
+    var el = q1(sel);
+    if (!el) return;
+    var orig = el.innerHTML;
+    var segs = orig.split('<br>');
+    var lines = [];
+    segs.forEach(function(sg){
+      var t = document.createElement('span');
+      t.innerHTML = sg;
+      lines.push(t.textContent);
+    });
+    var oldH = el.offsetHeight || 0;
+    el.innerHTML = '';
+    if (oldH) el.style.minHeight = oldH + 'px';
+    var li = 0, ci = 0, caret = null;
+    function mkCaret(){
+      var c = document.createElement('span');
+      c.className = 'cursor cursor-anim';
+      c.textContent = '_';
+      return c;
+    }
+    function tick(){
+      if (li >= lines.length) {
+        if (caret) el.appendChild(caret);
+        return;
+      }
+      caret = mkCaret();
+      el.innerHTML = '';
+      for (var i = 0; i < li; i++) {
+        var l = document.createElement('span');
+        l.textContent = lines[i];
+        el.appendChild(l);
+        el.appendChild(document.createElement('br'));
+      }
+      var cur = document.createElement('span');
+      cur.textContent = lines[li].slice(0, ci + 1);
+      el.appendChild(cur);
+      el.appendChild(caret);
+      if (ci + 1 >= lines[li].length) {
+        li++;
+        ci = 0;
+        if (li >= lines.length) return;
+        setTimeout(tick, 240);
+      } else {
+        ci++;
+        setTimeout(tick, 32);
+      }
+    }
+    setTimeout(tick, 1000);
+  }
+
+  // ── ambient canvas scenes (WebGL-look, canvas2D, zero deps) ──────────
+  function ambient(){
+    var sel = C.ambientSel, kind = C.ambient;
+    var host = q1(sel);
+    if (!host || !kind) return;
+    css('.' + KEY + ' ' + sel + '{position:relative;overflow:hidden}'
+      + '.' + KEY + ' ' + sel + '>*{position:relative;z-index:1}');
+    var wrap = document.createElement('div');
+    wrap.className = 'amc-wrap';
+    var cv = document.createElement('canvas');
+    cv.className = 'amc';
+    wrap.appendChild(cv);
+    host.appendChild(wrap);
+    css('.' + KEY + ' .amc-wrap{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}'
+      + '.' + KEY + ' .amc{position:absolute;inset:0;width:100%;height:100%;display:block}');
+    var c = cv.getContext('2d');
+    if (!c) return;
+    var W = 0, H = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
+    function size(){
+      var r = host.getBoundingClientRect();
+      W = Math.max(40, r.width); H = Math.max(40, r.height);
+      cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+      c.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    size();
+    window.addEventListener('resize', size);
+
+    // (a) drifting particle field + connecting lines — kott
+    if (kind === 'dots') {
+      var n = 26, pts = [];
+      for (var i = 0; i < n; i++) {
+        pts.push({ x: Math.random() * W, y: Math.random() * H, r: 0.8 + Math.random() * 1.9, a: 0.12 + Math.random() * 0.25, vy: 0.15 + Math.random() * 0.4, ph: Math.random() * 6.283 });
+      }
+      (function draw(t){
+        if (!HIDDEN) {
+          c.clearRect(0, 0, W, H);
+          var tt = t * 0.001;
+          var i, j, p;
+          for (i = 0; i < n; i++) {
+            p = pts[i];
+            p.y += p.vy * 0.4;
+            if (p.y > H + 12) { p.y = -12; p.x = Math.random() * W; }
+            p.x += Math.sin(tt + p.ph) * 0.35;
+            c.globalAlpha = p.a;
+            c.fillStyle = ACC;
+            c.beginPath(); c.arc(p.x, p.y, p.r, 0, 6.283); c.fill();
+          }
+          c.globalAlpha = 0.09;
+          c.strokeStyle = ACC;
+          c.lineWidth = 0.6;
+          for (i = 0; i < n; i++) {
+            for (j = i + 1; j < n; j++) {
+              var a = pts[i], b = pts[j], dx = a.x - b.x, dy = a.y - b.y;
+              if (dx * dx + dy * dy < 7600) {
+                c.beginPath(); c.moveTo(a.x, a.y); c.lineTo(b.x, b.y); c.stroke();
+              }
+            }
+          }
+          c.globalAlpha = 1;
+        }
+        requestAnimationFrame(draw);
+      })(performance.now());
+    }
+
+    // (b) bobbing color orbs — color-blocks
+    if (kind === 'float') {
+      var pal = C.pal || ['#ed83b0', '#e4dc62', '#92c78f', '#76c6de', '#6963c6'];
+      var orbs = [];
+      for (var k = 0; k < 12; k++) {
+        orbs.push({ x: Math.random() * W, y: Math.random() * H, r: 8 + Math.random() * 30, vx: (Math.random() - .5) * .25, vy: (Math.random() - .5) * .25, ph: Math.random() * 6.283, col: pal[k % pal.length], a: .08 + Math.random() * .16 });
+      }
+      (function draw(t){
+        if (!HIDDEN) {
+          c.clearRect(0, 0, W, H);
+          var tt = t * 0.001;
+          for (var i = 0; i < orbs.length; i++) {
+            var o = orbs[i];
+            o.x += o.vx + Math.sin(tt + o.ph) * .06;
+            o.y += o.vy + Math.cos(tt + o.ph) * .05;
+            if (o.x < -o.r) o.x = W + o.r; if (o.x > W + o.r) o.x = -o.r;
+            if (o.y < -o.r) o.y = H + o.r; if (o.y > H + o.r) o.y = -o.r;
+            c.globalAlpha = o.a;
+            c.fillStyle = o.col;
+            c.beginPath(); c.arc(o.x, o.y, o.r, 0, 6.283); c.fill();
+          }
+          c.globalAlpha = 1;
+        }
+        requestAnimationFrame(draw);
+      })(performance.now());
+    }
+
+    // (c) matrix-rain column — mono
+    if (kind === 'rain') {
+      var cols = Math.max(5, Math.floor(W / 22)), drops = [];
+      for (var r = 0; r < cols; r++) {
+        drops.push({ x: r * 22 + 10, y: -Math.random() * H, sp: .7 + Math.random() * 1.5, len: 10 + Math.random() * 12 });
+      }
+      var GLY = '!#$%&*+-=:;<=>?@0123456789ACLNZ';
+      (function draw(t){
+        if (!HIDDEN) {
+          c.clearRect(0, 0, W, H);
+          c.font = '13px JetBrains Mono,monospace';
+          for (var i = 0; i < drops.length; i++) {
+            var d = drops[i];
+            d.y += d.sp;
+            if (d.y > H + 30) { d.y = -30; d.x = Math.random() * W; d.len = 10 + Math.random() * 12; }
+            for (var j = 0; j < d.len; j++) {
+              var gy = d.y - j * 14;
+              if (gy < -14 || gy > H) continue;
+              var ch = GLY.charAt(Math.floor(Math.random() * GLY.length));
+              var fade = 1 - (j / d.len);
+              c.globalAlpha = j === 0 ? .85 : (.08 + .5 * fade * fade);
+              c.fillStyle = j === 0 ? ACC : '#8f9b8a';
+              c.fillText(ch, d.x, gy);
+            }
+          }
+          c.globalAlpha = 1;
+        }
+        requestAnimationFrame(draw);
+      })(performance.now());
+    }
+
+    // (d) barcode sweep + faint grid — swiss
+    if (kind === 'scan') {
+      (function draw(t){
+        if (!HIDDEN) {
+          c.clearRect(0, 0, W, H);
+          var i;
+          c.strokeStyle = 'rgba(0,0,0,.045)';
+          c.lineWidth = 1;
+          for (i = 24; i < H; i += 26) { c.beginPath(); c.moveTo(0, i); c.lineTo(W, i); c.stroke(); }
+          for (i = 24; i < W; i += 26) { c.beginPath(); c.moveTo(i, 0); c.lineTo(i, H); c.stroke(); }
+          var span = W + 200;
+          var x = ((t * 0.00032) % 1) * span - 100;
+          var g = c.createLinearGradient(x - 60, 0, x + 60, 0);
+          g.addColorStop(0, 'rgba(200,18,28,0)');
+          g.addColorStop(.5, 'rgba(200,18,28,.45)');
+          g.addColorStop(1, 'rgba(200,18,28,0)');
+          c.globalAlpha = .5;
+          c.fillStyle = g;
+          c.fillRect(x - 60, -2, 120, H + 4);
+          c.globalAlpha = .8;
+          c.strokeStyle = ACC;
+          c.beginPath(); c.moveTo(x, -2); c.lineTo(x, H + 2); c.stroke();
+          c.globalAlpha = 1;
+        }
+        requestAnimationFrame(draw);
+      })(performance.now());
+    }
+  }
+
+  // ── film grain (editorial / warm) ────────────────────────────────────
+  function grain(){
+    var cv = document.createElement('canvas');
+    cv.className = 'amc-grain';
+    css('.amc-grain{position:fixed;inset:0;width:100%;height:100%;z-index:250;pointer-events:none;opacity:.055;image-rendering:pixelated}');
+    document.body.appendChild(cv);
+    var c = cv.getContext('2d');
+    if (!c) return;
+    var W = Math.max(64, Math.floor((window.innerWidth || 900) / 3));
+    var H = Math.max(64, Math.floor((window.innerHeight || 700) / 3));
+    cv.width = W; cv.height = H;
+    var img = c.createImageData(W, H);
+    function noise(){
+      var d = img.data;
+      for (var i = 0; i < d.length; i += 4) {
+        var v = (Math.random() * 255) | 0;
+        d[i] = v; d[i + 1] = v; d[i + 2] = v; d[i + 3] = 28;
+      }
+      c.putImageData(img, 0, 0);
+    }
+    noise();
+    if (!RM) setInterval(noise, 100);
+  }
+
+  // ── intro loader (counter for kott, boot log for mono) ───────────────
+  function loader(){
+    var mode = C.loader;
+    if (!mode || RM) return;
+    var lo = document.createElement('div');
+    lo.className = 'amc-lo';
+    if (mode === 'counter') {
+      lo.innerHTML = '<div class="amc-lo-c">0%</div>';
+    } else if (mode === 'boot') {
+      lo.innerHTML = '<div class="amc-lo-b"></div>';
+    }
+    css('.amc-lo{position:fixed;inset:0;z-index:9998;display:flex;align-items:center;justify-content:center;background:var(--paper,var(--bg,#0e0f12));color:var(--ink,#f2f3f5);transition:opacity .6s}'
+      + '.amc-lo.out{opacity:0;pointer-events:none}'
+      + '.amc-lo-c{font-size:clamp(4rem,18vw,9rem);font-weight:800;letter-spacing:-.04em;font-family:"Syne","Archivo","JetBrains Mono",sans-serif}'
+      + '.amc-lo-b{font-family:"JetBrains Mono",monospace;font-size:.9rem;line-height:1.9;white-space:pre;color:var(--accent,#b7e44c)}');
+    document.body.appendChild(lo);
+    var timed = false;
+    function drop(){
+      if (timed) return; timed = true;
+      lo.classList.add('out');
+      setTimeout(function(){ if (lo.parentNode) lo.parentNode.removeChild(lo); }, 700);
+    }
+    if (mode === 'counter') {
+      var cEl = q1('.amc-lo-c');
+      var t0 = performance.now(), dur = 1150;
+      (function f(now){
+        var k = Math.min(1, (now - t0) / dur);
+        var e = 1 - Math.pow(1 - k, 3);
+        if (cEl) cEl.textContent = Math.round(e * 100) + '%';
+        if (k < 1) requestAnimationFrame(f);
+        else drop();
+      })(t0);
+    } else if (mode === 'boot') {
+      var bEl = q1('.amc-lo-b');
+      var logs = [
+        '$ init concept.ts ...',
+        '$ binding assets ................. ok',
+        '$ resolving local presence ....... ok',
+        '$ preparing first impression ..... ok',
+        '$ READY.'
+      ];
+      var li = 0;
+      (function tick(){
+        if (bEl) bEl.textContent = logs.slice(0, li + 1).join('\n');
+        li++;
+        if (li < logs.length) setTimeout(tick, 170);
+        else drop();
+      })();
+    }
+    setTimeout(drop, 2600);
+  }
+
+  // ── run ──────────────────────────────────────────────────────────────
+  if (C.ambient) ambient();
+  if (C.grain) grain();
+  if (C.progress) progressbar();
+  if (C.clock) clock();
+  counters();
+  stag();
+  para();
+  magnet();
+  if (C.cursor) cursor();
+  if (C.type) typer();
+  loader();
+
+  // legacy: keep revealScript's behaviour for any stray [data-rv]
+  var ioLegacy = ('IntersectionObserver' in window) ? new IntersectionObserver(function(en){
+      en.forEach(function(x){ if (x.isIntersecting) { x.target.classList.add('in'); ioLegacy.unobserve(x.target); } });
+    }, { threshold: 0.12 }) : null;
+  q('[data-rv]').forEach(function(el){ if (ioLegacy) ioLegacy.observe(el); else el.classList.add('in'); });
+})();
+</script>
+</body>
+</html>
