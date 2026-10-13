@@ -1,8 +1,13 @@
 # Services Ecosystem — Artum8 Labs
 
-Artum8 Labs engineers mission-critical software solutions across seven specialized practice area domains:
+Artum8 Labs engineers mission-critical software solutions across specialized practice area domains:
 
-## 1. Web Applications & Cloud Architecture
+## 1. Shopify & E-Commerce Web Design and Development
+- Bespoke Shopify Liquid themes, headless Hydrogen & Next.js storefronts, and Shopify Plus engineering.
+- Interactive 3D WebGL product configurators, conversion rate optimization, and sub-second Core Web Vitals.
+- Detailed page: [Shopify & E-Commerce Web Development](https://www.artum8labs.com/services/shopify-ecommerce-development)
+
+## 2. Web Applications & Cloud Architecture
 - Multi-tenant SaaS platforms built with Next.js, React, Node.js, and TypeScript.
 - Microservices, GraphQL/REST APIs, event-driven architectures, and serverless edge functions.
 - High-availability database design with PostgreSQL, MongoDB, and Redis caching layers.

@@ -28,6 +28,8 @@ const MARKDOWN_ROUTES = {
   '/terms.html': '/content/terms.md',
   '/services': '/content/services.md',
   '/services.html': '/content/services.md',
+  '/services/shopify-ecommerce-development': '/content/services/shopify-ecommerce.md',
+  '/services/shopify-ecommerce-development.html': '/content/services/shopify-ecommerce.md',
   '/services/web-applications-cloud-architecture': '/content/services/web-apps.md',
   '/services/web-applications-cloud-architecture.html': '/content/services/web-apps.md',
   '/services/3d-websites-webgl-experiences': '/content/services/3d-webgl.md',

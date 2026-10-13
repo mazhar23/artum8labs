@@ -14,7 +14,7 @@ At Artum8 Labs, we bridge the gap between creative vision and technical executio
 ## Physical Studio Locations
 1. **Mumbai Headquarters**: G Block, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051, India (Phone: +91 8898660011)
 2. **GIFT City Tech Center**: 8th Floor, GIFT One Tower, Building 56A, Gandhinagar, Gujarat 382355, India (Phone: +91 9904038110)
-3. **United States Studio**: On The Green, Dover, Delaware, USA (Phone: +1 302-888-8088)
+3. **United States Studio**: 8 The Green, Suite R, Dover, DE 19901, USA (Phone: +1 (302) 888-8088)
 
 ## Verified Contact Details
 - Direct Technical Review: <hello@artum8labs.com>

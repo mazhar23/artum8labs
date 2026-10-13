@@ -2,14 +2,14 @@
 
 Live site: https://www.artum8labs.com
 
-Artum8 Labs is a US-incorporated (Delaware LLC) digital innovation studio that designs, architects, and ships mission-critical software for founders who cannot afford to gamble on delivery. Architecture-first, senior-led, compliance-aware.
+Artum8 Labs is a US-incorporated (Delaware LLC) digital innovation studio that designs, architects, and ships production-grade software for founders who cannot afford to gamble on delivery. Architecture-first, senior-led, compliance-aware.
 
 ## Services
 
 - **Web Applications** — full-stack SaaS platforms, scalable cloud backends, microservices, and reactive SPAs (React, Next.js, Node.js, TypeScript).
 - **3D Websites & WebGL** — interactive 3D environments, kinetic typography, particle physics, and WebGL experiences (Three.js, GSAP, OGL).
 - **Fintech Solutions** — payment gateways, high-throughput transaction systems, crypto exchanges, double-entry accounting ledgers (PCI-DSS-aligned patterns).
-- **Healthtech Platforms** — HIPAA-compliant patient management, telemedicine suites, real-time medical monitoring interfaces.
+- **Healthtech Platforms** — HIPAA-aware patient management, telemedicine suites, real-time medical monitoring interfaces.
 - **AI Engineering & SaaS Automation** — intelligent agents, conversational interfaces, automated data extraction, workflow pipelines (fixed-price A8 Automations sprints).
 - **SEO / AEO** — technical SEO and AI-search optimization (llms.txt, machine-readable content) so clients get cited by ChatGPT, Perplexity, and Claude.
 

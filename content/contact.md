@@ -13,10 +13,10 @@
 ## Global Office Locations
 - **Mumbai (HQ)**: G Block, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051, India
 - **Gandhinagar**: 8th Floor, GIFT One Tower, Building 56A, Gandhinagar, Gujarat 382355, India
-- **Delaware (USA)**: On The Green, Dover, Delaware, USA
+- **Delaware (USA)**: 8 The Green, Suite R, Dover, DE 19901, USA
 
 ## Transformation Inquiry SLA
-- **Initial Review**: Under 2 hours during active business hours.
+- **Initial Review**: Same business day during active business hours.
 - **Detailed Proposal**: Within 24-48 hours.
 - **Project Kickoff**: 1-2 weeks from MSA execution.
 - **Web Form**: Submit an interactive brief directly at https://www.artum8labs.com/contact

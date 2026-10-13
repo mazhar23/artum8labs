@@ -76,6 +76,7 @@ const mdFiles = [
     'content/privacy.md',
     'content/terms.md',
     'content/services.md',
+    'content/services/shopify-ecommerce.md',
     'content/services/web-apps.md',
     'content/services/3d-webgl.md',
     'content/services/fintech.md',
@@ -98,6 +99,7 @@ mdFiles.forEach(file => {
 // Testing Individual Service HTML Pages
 console.log('\n4b. Testing Service HTML Pages:');
 const serviceHtmlPages = [
+    'services/shopify-ecommerce-development.html',
     'services/web-applications-cloud-architecture.html',
     'services/3d-websites-webgl-experiences.html',
     'services/fintech-solutions-payment-infrastructure.html',

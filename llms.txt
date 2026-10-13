@@ -58,7 +58,7 @@ Published on the site at [https://www.artum8labs.com/#pricing](https://www.artum
 - **Primary Direct Email**: hello@artum8labs.com
 - **General Inquiries**: hello@artum8labs.com
 - **HQ Location**: G Block, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051, India
-- **US Studio**: On The Green, Dover, Delaware, USA
+- **US Studio**: 8 The Green, Suite R, Dover, DE 19901, USA
 - **Phone**: +91 8898660011 (India) | +1 (302) 888-8088 (USA)
 - **Response SLA**: Initial technical assessment within 24 hours.
 
@@ -68,9 +68,10 @@ Published on the site at [https://www.artum8labs.com/#pricing](https://www.artum
 - [Pricing & Engagement Ranges](https://www.artum8labs.com/#pricing): Ballpark starting ranges for websites, web apps, automation sprints, and retainers.
 - [Free Website Audit](https://audit.artum8labs.com/): Free instant website health check with score, issue list, and shareable reports.
 - [Services Deep Dive](https://www.artum8labs.com/services): In-depth breakdown of web applications, 3D web, fintech, healthtech, SEO, AEO, and AI automation solutions.
+  - [Shopify & E-Commerce Web Design & Development](https://www.artum8labs.com/services/shopify-ecommerce-development): Custom Shopify themes, headless Next.js commerce, 3D WebGL product configurators, and high-converting product selling stores.
   - [Web Applications & Cloud Architecture](https://www.artum8labs.com/services/web-applications-cloud-architecture): Scalable React/Next.js systems, serverless microservices, and high-throughput cloud infrastructure.
   - [3D Websites & WebGL Experiences](https://www.artum8labs.com/services/3d-websites-webgl-experiences): Interactive Three.js/WebGL brand experiences, 3D product configurators, and high-frame-rate graphics.
-  - [Fintech Solutions & Payment Infrastructure](https://www.artum8labs.com/services/fintech-solutions-payment-infrastructure): Secure payment gateways, immutable double-entry ledgers, and PCI-DSS compliance.
+  - [Fintech Solutions & Payment Infrastructure](https://www.artum8labs.com/services/fintech-solutions-payment-infrastructure): Secure payment gateways, immutable double-entry ledgers, and PCI-DSS-aligned architecture.
   - [Healthtech Platforms & Clinical Portals](https://www.artum8labs.com/services/healthtech-platforms-clinical-portals): HIPAA/GDPR-aligned telehealth apps, HL7 FHIR EMR integrations, and patient portals.
   - [Search Engine Optimization (SEO)](https://www.artum8labs.com/services/seo): Engineering-grade technical and content SEO, Core Web Vitals optimization, and SSR migration.
   - [Answer Engine Optimization (AEO)](https://www.artum8labs.com/services/aeo): Optimization for AI search engines (ChatGPT, Perplexity, Claude, Gemini) with deep JSON-LD and llms.txt context.
