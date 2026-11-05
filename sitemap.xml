@@ -196,4 +196,28 @@
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://www.artum8labs.com/aeo-vs-geo</loc>
+    <lastmod>2026-11-05</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.artum8labs.com/headless-shopify-vs-theme</loc>
+    <lastmod>2026-11-05</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.artum8labs.com/ai-agents-vs-automation</loc>
+    <lastmod>2026-11-05</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.artum8labs.com/custom-patient-portal-vs-ehr-portal</loc>
+    <lastmod>2026-11-05</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>

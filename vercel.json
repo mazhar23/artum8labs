@@ -155,6 +155,10 @@
     { "source": "/services/website-design-for-salons-and-spas", "destination": "/services/website-design-for-salons-and-spas.html" },
     { "source": "/services/website-design-for-home-service-companies", "destination": "/services/website-design-for-home-service-companies.html" },
     { "source": "/services/website-design-for-dentists", "destination": "/services/website-design-for-dentists.html" }
+    ,{ "source": "/aeo-vs-geo", "destination": "/aeo-vs-geo.html" }
+    ,{ "source": "/headless-shopify-vs-theme", "destination": "/headless-shopify-vs-theme.html" }
+    ,{ "source": "/ai-agents-vs-automation", "destination": "/ai-agents-vs-automation.html" }
+    ,{ "source": "/custom-patient-portal-vs-ehr-portal", "destination": "/custom-patient-portal-vs-ehr-portal.html" }
   ],
   "redirects": [
     { "source": "/a8-automations", "destination": "/automations", "statusCode": 301 },
